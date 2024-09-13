@@ -1,0 +1,45 @@
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+
+const Home = () => {
+	const [pedidos, setPedidos] = useState([]);
+
+	// Carrega os pedidos ao montar o componente
+	useEffect(() => {
+		axios.get('http://localhost:8080/pedido/lista-pedidos')
+			.then(response => setPedidos(response.data))
+			.catch(error => console.error("Erro ao buscar pedidos: ", error));
+
+		//Conecta ao servidor via SSE para receber novos pedidos em tempo real
+		const eventSource = new EventSource('http://localhost:8080/pedido/stream')
+
+		eventSource.addEventListener('novo-pedido', (event) => {
+			const novosPedidos = JSON.parse(event.data); // Converte o JSON para objeto JavaScript
+			setPedidos(novosPedidos);  // Atualiza a lista de pedidos com os novos dados
+		});
+
+		eventSource.onerror = function(event) {
+			console.error("Erro na conexão SSE:", event);
+		};
+
+		return () => {
+			eventSource.close();
+		};
+	}, []);
+
+	return (
+		<div>
+			<ul>
+				{pedidos.map((pedido, index) => (
+					<li key={index}>
+						<h1>Senha: {pedido.reference_id}</h1>
+						<h2>Quantidade: {pedido.quantity} </h2>
+						<h3>Descricao: {pedido.description} </h3>
+					</li>
+				))}
+			</ul>
+		</div>
+	)
+};
+
+export default Home;

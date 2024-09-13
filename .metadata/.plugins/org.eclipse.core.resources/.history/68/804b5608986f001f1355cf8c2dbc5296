@@ -1,0 +1,34 @@
+package com.lucas.demo.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
+public class Pedidos {
+	
+	//@JsonProperty("items")
+	private List<Pedido> pedidos = new ArrayList<>();
+
+	public Pedidos() {
+	
+	}
+	public Pedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
+	
+	@Override
+    public String toString() {
+        return "Pedidos{" +
+                "pedidos=" + pedidos +
+                '}';
+    }
+}

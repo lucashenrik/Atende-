@@ -1,0 +1,30 @@
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+
+const Home = () => {
+	const [pedidos, setPedidos] = useState([]);
+
+	// Carrega os pedidos ao montar o componente
+	useEffect(() => {
+		axios.get('http://localhost:8080/pedido/lista-pedidos')
+			.then(response => setPedidos(response.data))
+			.catch(error => console.error("Erro ao buscar pedidos: ", error));
+
+	}, []);
+
+	return (
+		<div>
+			<ul>
+				{pedidos.map((pedido, index) => (
+					<li key={index}>
+						<h1>Senha: {pedido.reference_id}</h1>
+						<h2>Quantidade: {pedido.quantity} </h2>
+						<h3>Descricao: {pedido.description} </h3>
+					</li>
+				))}
+			</ul>
+		</div>
+	)
+};
+
+export default Home;

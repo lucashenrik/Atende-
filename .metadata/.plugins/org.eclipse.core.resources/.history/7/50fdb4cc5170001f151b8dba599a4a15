@@ -1,0 +1,10 @@
+import React from 'react'
+import ReactDom from 'react-dom'
+
+import { BoaTarde, BoaNoite } from './componentes/Multiplios'
+
+ReactDom.render(<div>
+	<BoaTarde nome="Ana" />
+	<BoaNoite nome="Bia" />
+</div>
+	, document.getElementById('root'))

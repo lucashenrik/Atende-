@@ -1,0 +1,39 @@
+package com.lucas.demo.service;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Service
+public class ArquivoService {
+
+	public String escreverCodigo(String notificationCode) {
+
+		ObjectMapper mapper = new ObjectMapper();
+
+		Map<String, String> data = new HashMap<>();
+		data.put("notificationCode", notificationCode);
+
+		try (PrintWriter escrever = new PrintWriter(new FileWriter("notificationCode.json"))) {
+			// Converter o Map para JSON e escrever no arquivo
+			String json = mapper.writeValueAsString(data);
+
+			escrever.println(json);
+
+			String url = "https://ws.pagseguro.uol.com.br/v3/transactions/notifications/" + notificationCode
+					+ "?{{credenciais}}";
+
+			return url;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return ("ALANJKKS");
+		}
+
+	}
+}

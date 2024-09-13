@@ -1,0 +1,25 @@
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+const BuscarPedidos = ({ modo }) => {
+	const [pedidos, setPedidos] = useState([]);
+
+	useEffect(() => {
+		axios.get('http://localhost:8080/pedido/lista-pedidos')
+			.then(response => setPedidos(response.data))
+			.catch(error => console.error("Erro ao buscar pedidos: ", error));
+	}, []);
+
+	return (
+		<div>
+			<ul>
+				<li>
+					<h1>Senha: {pedidos.id}</h1>
+					<h2>Quantidade: {pedidos.quantity} </h2>
+					<h3>Descricao: {pedidos.description} </h3>					
+				</li>
+			</ul>
+		</div>
+	)
+}
