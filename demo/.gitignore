@@ -3,6 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+!demo/src/frontend/react/app/**
 
 ### STS ###
 .apt_generated
