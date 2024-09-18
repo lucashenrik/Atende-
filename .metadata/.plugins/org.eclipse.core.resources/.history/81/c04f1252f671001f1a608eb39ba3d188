@@ -1,0 +1,54 @@
+package com.lucas.demo.infra;
+
+import java.util.Date;
+
+import javax.crypto.SecretKey;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtParser;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
+
+@Component
+public class JwtUtil {
+
+	@Value("${jwt.secret}")
+	private String secretKey;
+
+	@Value("${jwt.expiration}")
+	private Long expirationTime;
+
+	private SecretKey getSecretKey() {
+		return Keys.hmacShaKeyFor(secretKey.getBytes());
+	}
+
+	 public String generateToken(String login) {
+	        SecretKey key = getSecretKey();
+	        
+		return Jwts.builder().setSubject(login) // define o subject do token, normalmente o nome de usuario
+				.setIssuedAt(new Date()) // define a data em que o token foi emitido
+				.setExpiration(new Date(System.currentTimeMillis() + expirationTime))
+				.signWith(SignatureAlgorithm.HS256, secretKey).compact(); // Gera o token em formato compacto
+	}
+
+	public boolean validateToken(String token) {
+		try {
+			JwtParser parser = Jwts.parserBuilder().setSigningKey(secretKey).build();
+			parser.parseClaimsJws(token);
+			return true;
+		} catch (Exception e) {
+			return false; // retorna false se o token nao for valido
+		}
+	}
+
+	public String getLoginDoToken(String token) {
+		JwtParser parser = Jwts.parserBuilder().setSigningKey(secretKey).build();
+		Claims claims = parser.parseClaimsJws(token).getBody();
+		return claims.getSubject(); // Obtém o subject do token, que é o nome de usuário ou identificação do
+									// usuário.
+	}
+}

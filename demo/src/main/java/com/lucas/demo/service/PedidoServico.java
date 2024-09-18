@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,6 +39,9 @@ public class PedidoServico {
 	int iMemoria;
 
 	List<Map<String, String>> pedidosEmArquivo = new ArrayList<>();
+
+	List<String> prefixos = Arrays.asList("Jantinha", "Batata", "Porção", "Taboa");
+
 	int iArquivo;
 
 	public Item xmlParaPedido(String xml) throws JAXBException {
@@ -65,31 +69,122 @@ public class PedidoServico {
 		return urlProcess;
 	}
 
+	/*
+	 * public void processarItens(String json) { ObjectMapper objectMapper = new
+	 * ObjectMapper();
+	 * 
+	 * 
+	 * try { JsonNode rootNode = objectMapper.readTree(json); JsonNode itemsNode =
+	 * rootNode.path("items");
+	 * 
+	 * if (itemsNode.isArray()) { List<Item> items = new ArrayList<>();
+	 * 
+	 * for (JsonNode itemNode : itemsNode) { Item novoItem =
+	 * objectMapper.treeToValue(itemNode, Item.class);
+	 * 
+	 * if (começaComPrefixo(novoItem.getName())) { items.add(novoItem); // Exibir os
+	 * itens for (Item item : items) { arquivoServ.escreverPedido(item); //
+	 * System.out.println("Item: " + item); } // System.out.println("tamanho: " +
+	 * pedidoMemoria.size()); }else { System.out.println("Nao eh comida"); }
+	 * 
+	 * }
+	 * 
+	 * } } catch (IOException e) { e.printStackTrace(); } }
+	 */
+
+	/*
+	 * public void processarItens(String json) { ObjectMapper objectMapper = new
+	 * ObjectMapper();
+	 * 
+	 * List<Item> items = new ArrayList<>(); // Lista final dos itens processados
+	 * 
+	 * try { JsonNode rootNode = objectMapper.readTree(json); JsonNode itemsNode =
+	 * rootNode.path("items");
+	 * 
+	 * if (itemsNode.isArray()) { List<Item> itemsTemp = new ArrayList<>();
+	 * 
+	 * for (JsonNode itemNode : itemsNode) { Item novoItem =
+	 * objectMapper.treeToValue(itemNode, Item.class);
+	 * 
+	 * // Verificar se o item começa com um dos prefixos if
+	 * (começaComPrefixo(novoItem.getName())) {
+	 * 
+	 * Item itemExistente = encontrarItemNaLista(itemsTemp, novoItem);
+	 * 
+	 * if (itemExistente != null) { // Se o item já existir, aumentar a quantidade
+	 * itemExistente.setQuantity(itemExistente.getQuantity() +
+	 * novoItem.getQuantity()); items.add(itemExistente); } else {
+	 * items.add(novoItem); }
+	 * 
+	 * itemsTemp.add(novoItem);
+	 * 
+	 * // Exibir os itens for (Item item : items) {
+	 * arquivoServ.escreverPedido(item); System.out.println("Item: " + item); } //
+	 * System.out.println("tamanho: " + pedidoMemoria.size()); } else {
+	 * System.out.println("Nao eh comida"); }
+	 * 
+	 * }
+	 * 
+	 * } } catch (IOException e) { e.printStackTrace(); } }
+	 * 
+	 * 
+	 * 
+	 * private Item encontrarItemNaLista(List<Item> itemsTemp, Item novoItem) { for
+	 * (Item item : itemsTemp) { // &&
+	 * (item.getReferenceId().equals(novoItem.getReferenceId()))) if
+	 * (item.getName().equals(novoItem.getName())) { return item; } } return null; }
+	 */
+
 	public void processarItens(String json) {
 		ObjectMapper objectMapper = new ObjectMapper();
+
+		List<Item> items = new ArrayList<>(); // Lista final dos itens processados
 
 		try {
 			JsonNode rootNode = objectMapper.readTree(json);
 			JsonNode itemsNode = rootNode.path("items");
 
 			if (itemsNode.isArray()) {
-				List<Item> items = new ArrayList<>();
-
 				for (JsonNode itemNode : itemsNode) {
-					Item item = objectMapper.treeToValue(itemNode, Item.class);
-					items.add(item);
+					Item novoItem = objectMapper.treeToValue(itemNode, Item.class);
+
+					// Verificar se o item começa com um dos prefixos
+					if (começaComPrefixo(novoItem.getName())) {
+
+						Item itemExistente = encontrarItemNaLista(items, novoItem);
+
+						if (itemExistente != null) {
+							// Se o item já existir, aumentar a quantidade
+							itemExistente.setQuantity(itemExistente.getQuantity() + novoItem.getQuantity());
+						} else {
+							// Se não existir, adicionar o novo item à lista
+							items.add(novoItem);
+						}
+					} else {
+						System.out.println("Não é comida");
+					}
 				}
 
-				// Exibir os itens
+				// Exibir e escrever os itens processados
 				for (Item item : items) {
 					arquivoServ.escreverPedido(item);
-					// System.out.println("Item: " + item);
+					System.out.println("Item: " + item);
 				}
-				// System.out.println("tamanho: " + pedidoMemoria.size());
+
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+// Método para encontrar um item com o mesmo nome e ID de referência na lista
+	private Item encontrarItemNaLista(List<Item> items, Item novoItem) {
+		for (Item item : items) {
+			if (item.getName().equals(novoItem.getName())) {
+				return item;
+			}
+		}
+		return null;
 	}
 
 	public void adicionarPedido(Item item) {
@@ -107,7 +202,7 @@ public class PedidoServico {
 
 		System.out.println("Pedido memoria.size: " + pedidoMemoria.size());
 	}
-	
+
 	public void carregarPedidos() {
 		File arquivo = new File(caminhoArq);
 		// System.out.println("Verificando se o arquivo existe...");
@@ -134,9 +229,14 @@ public class PedidoServico {
 	}
 
 	public List<Map<String, String>> getPedidoList() {
-		if (pedidosEmArquivo == null || pedidosEmArquivo.isEmpty()) {
-			System.out.println("Nenhum pedido encontrado no arquivo.");
-		}
+		// if (pedidosEmArquivo == null || pedidosEmArquivo.isEmpty()) {
+		// System.out.println("Nenhum pedido encontrado no arquivo.");
+		// return pedidosEmArquivo;
+		// }
 		return pedidosEmArquivo;
+	}
+
+	private boolean começaComPrefixo(String descricao) {
+		return prefixos.stream().anyMatch(descricao::startsWith);
 	}
 }

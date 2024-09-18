@@ -1,0 +1,61 @@
+package com.lucas.demo.infra;
+
+import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+
+public class JwtFilter extends OncePerRequestFilter {
+
+    private final String SECRET_KEY = "seu-segredo"; // Certifique-se de usar um segredo seguro e confiável
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
+
+        String authHeader = request.getHeader("Authorization");
+
+        if (authHeader != null && authHeader.startsWith("Bearer ")) {
+            String token = authHeader.substring(7); // Remove "Bearer "
+
+            try {
+                // Valida o token JWT e obtém as informações
+                Claims claims = Jwts.parser()
+                        .setSigningKey(SECRET_KEY.getBytes())
+                        .parseClaimsJws(token)
+                        .getBody();
+
+                // Cria um Authentication com as informações do token
+                Authentication auth = createAuthentication(claims);
+                SecurityContextHolder.getContext().setAuthentication(auth);
+            } catch (Exception e) {
+                // Em caso de erro na validação do token
+                SecurityContextHolder.clearContext();
+            }
+        }
+
+        filterChain.doFilter(request, response);
+    }
+
+    private Authentication createAuthentication(Claims claims) {
+        // Exemplo simplificado, você pode adicionar lógica para obter mais detalhes do usuário
+        String username = claims.getSubject();
+        List<SimpleGrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
+
+        // Cria um objeto Authentication com o username e authorities
+        return new UsernamePasswordAuthenticationToken(username, null, authorities);
+    }
+}

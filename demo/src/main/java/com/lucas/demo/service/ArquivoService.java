@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -86,8 +87,38 @@ public class ArquivoService {
 			}
 		}
 
-		// Aqui, você deve adicionar o novo pedido à lista
+		// Inicialize novoPedido se ainda não estiver inicializado
 		Map<String, String> novoPedido = new HashMap<>();
+
+		// Obtenha a descrição do item, ou use o nome do item se a chave "description"
+		// não existir
+		/*
+		 * String description = novoPedido.getOrDefault("description", item.getName());
+		 * 
+		 * List<String> prefixos = Arrays.asList("Jantinha", "Batata", "Porção",
+		 * "Taboa");
+		 * 
+		 * boolean comecaComPrefixo = prefixos.stream()
+		 * .anyMatch(description::startsWith);
+		 * 
+		 * // Compare a descrição com a string "Jantinha" usando equals if
+		 * (comecaComPrefixo) { novoPedido.put("quantity",
+		 * String.valueOf(item.getQuantity())); novoPedido.put("reference_id",
+		 * String.valueOf(item.getReferenceId())); novoPedido.put("description",
+		 * item.getName()); novoPedido.put("status", "andamento");
+		 * 
+		 * pedidoList.add(novoPedido); // Adiciona o novo item à lista
+		 * 
+		 * escrever(pedidoList, caminhoArq); // Adiciona o novo pedido e escreve no
+		 * arquivo
+		 * 
+		 * pedidoServ.adicionarPedido(item);
+		 * 
+		 * }else { System.out.println("Nao eh uma comida"); }
+		 */
+
+		// Aqui, você deve adicionar o novo pedido à lista Map<String, String>
+		novoPedido = new HashMap<>();
 		novoPedido.put("quantity", String.valueOf(item.getQuantity()));
 		novoPedido.put("reference_id", String.valueOf(item.getReferenceId()));
 		novoPedido.put("description", item.getName());
@@ -100,6 +131,7 @@ public class ArquivoService {
 		pedidoServ.adicionarPedido(item);
 
 		escrever(pedidoList, caminhoArq);
+
 	}
 
 	/*
