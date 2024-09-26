@@ -1,6 +1,0 @@
-import React from 'react'
-import ReactDom from 'react-dom'
-
-import Primeiro from './componentes/Primeiro'
-
-ReactDom.render(<h1>React 2</h1>, document.getElementById('root'))

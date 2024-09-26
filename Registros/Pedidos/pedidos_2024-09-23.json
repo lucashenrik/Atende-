@@ -1,0 +1,16 @@
+[ {
+  "quantity" : "5",
+  "reference_id" : "8",
+  "description" : "Taboa de Carne",
+  "status" : "andamento"
+}, {
+  "quantity" : "1",
+  "reference_id" : "8",
+  "description" : "Porção de Disco",
+  "status" : "andamento"
+}, {
+  "quantity" : "1",
+  "reference_id" : "8",
+  "description" : "Batata Simples",
+  "status" : "entregue"
+} ]

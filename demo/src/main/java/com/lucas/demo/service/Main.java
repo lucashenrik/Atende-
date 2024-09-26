@@ -1,12 +1,8 @@
 package com.lucas.demo.service;
 
-import javax.xml.bind.JAXBException;
-
-import com.lucas.demo.model.Item;
-
 public class Main {
     public static void main(String[] args) {
-    	 String xml = "<pedido><id>123</id><quantity>2</quantity><description>Test product</description></pedido>";
+    /*	 String xml = "<pedido><id>123</id><quantity>2</quantity><description>Test product</description></pedido>";
         
         PedidoServico pedidoService = new PedidoServico();
         
@@ -20,6 +16,10 @@ public class Main {
             
         } catch (JAXBException e) {
             e.printStackTrace();
-        }
-    }
+        }*/
+    
+    	//PedidoServico pedidoServ = new PedidoServico();
+    	
+    	//pedidoServ.contarPedidos();
+    }  	
 }

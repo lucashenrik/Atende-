@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lucas.demo.exceptions.ErroArquivoException;
 import com.lucas.demo.model.Item;
 
 @Service
@@ -83,7 +84,7 @@ public class ArquivoService {
 				pedidoList = mapper.readValue(file, new TypeReference<List<Map<String, String>>>() {
 				});
 			} catch (IOException e) {
-				e.printStackTrace();
+				throw new ErroArquivoException("Não foi possivel ler o arquivo.", e.getCause());
 			}
 		}
 
@@ -117,7 +118,7 @@ public class ArquivoService {
 		 * }else { System.out.println("Nao eh uma comida"); }
 		 */
 
-		// Aqui, você deve adicionar o novo pedido à lista Map<String, String>
+		//Adicionar o novo pedido à lista Map<String, String>
 		novoPedido = new HashMap<>();
 		novoPedido.put("quantity", String.valueOf(item.getQuantity()));
 		novoPedido.put("reference_id", String.valueOf(item.getReferenceId()));
@@ -128,7 +129,7 @@ public class ArquivoService {
 
 		escrever(pedidoList, caminhoArq);
 
-		pedidoServ.adicionarPedido(item);
+		pedidoServ.adicionarItem(item);
 
 		escrever(pedidoList, caminhoArq);
 

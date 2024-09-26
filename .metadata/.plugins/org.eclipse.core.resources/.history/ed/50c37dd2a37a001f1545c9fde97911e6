@@ -1,0 +1,62 @@
+package com.lucas.demo.controllers;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lucas.demo.exceptions.ErroArquivoException;
+import com.lucas.demo.service.PrefixosService;
+
+@RestController
+@RequestMapping("/prefixos")
+public class PrefixosController {
+
+	@Autowired
+	PrefixosService prefixoServ;
+	
+	@GetMapping("/buscar-prefixo")
+	public ResponseEntity<?> buscarPrefixos(){
+		
+		prefixoServ.carregarPrefixos();
+		
+		List<String> prefixos = prefixoServ.getPrefixos();
+		
+		return ResponseEntity.ok(prefixos);
+	}
+	
+	@PostMapping("/adicionar-prefixo")
+	public ResponseEntity<?> addPrefixo(@RequestBody Map<String, String> request){
+		String novoPrefixo = request.get("prefixo");
+		prefixoServ.adicionarPrefixo(novoPrefixo);
+		
+		return ResponseEntity.ok("Prefixo adicionado com sucesso!!");
+	}
+	
+	/*@DeleteMapping("/excluir-prefixo")
+	public ResponseEntity<?> excluirPrefixo(@RequestBody String prefixo){
+		prefixoServ.excluirPrefixo(prefixo);
+		
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}*/
+	
+	@PostMapping("/excluir-prefixo")
+	public ResponseEntity<?> excluirPrefixo(@RequestBody Map<String, String> request) {
+	    String prefixo = request.get("prefixo");
+	    System.out.println("Prefixo a ser excluído: " + prefixo); // Verificação
+
+	    try {
+	        prefixoServ.excluirPrefixo(prefixo);
+	        return ResponseEntity.ok("Prefixo excluído com sucesso.");
+	    } catch (ErroArquivoException e) {
+	        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+	    }
+	}
+}

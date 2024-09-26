@@ -1,0 +1,20 @@
+package com.lucas.demo.exceptions;
+
+public class ErroLeituraArquivoException extends RuntimeException {
+
+	public ErroLeituraArquivoException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
+	public ErroLeituraArquivoException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "ErroLeituraArquivoException: " + getMessage() + "- Causa: " + getCause();
+	}
+	
+	
+}

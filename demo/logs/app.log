@@ -1,0 +1,157 @@
+2024-09-25 13:39:26 - Starting DemoApplication using Java 21.0.3 with PID 13916 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-25 13:39:26 - No active profile set, falling back to 1 default profile: "default"
+2024-09-25 13:39:26 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-25 13:39:26 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-25 13:39:26 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-25 13:39:27 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-25 13:39:27 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-25 13:39:27 - Tomcat initialized with port 8080 (http)
+2024-09-25 13:39:27 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:39:27 - Starting service [Tomcat]
+2024-09-25 13:39:27 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25 13:39:27 - Initializing Spring embedded WebApplicationContext
+2024-09-25 13:39:27 - Root WebApplicationContext: initialization completed in 1215 ms
+2024-09-25 13:39:28 - Iniciando carregamento de prefixos...
+2024-09-25 13:39:28 - LiveReload server is running on port 35729
+2024-09-25 13:39:28 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:39:28 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 13:39:28 - Started DemoApplication in 2.409 seconds (process running for 2.86)
+2024-09-25 13:40:07 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25 13:40:07 - Initializing Servlet 'dispatcherServlet'
+2024-09-25 13:40:07 - Completed initialization in 1 ms
+2024-09-25 13:40:29 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa]
+2024-09-25 13:40:45 - Prefixo adicionado com sucesso: Espeto
+2024-09-25 13:40:52 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa]
+2024-09-25 13:40:52 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa]
+2024-09-25 13:40:52 - Resolved [ErroArquivoException: Prefixo não encontrado. - Causa: null]
+2024-09-25 13:41:59 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-09-25 13:41:59 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:41:59 - Starting DemoApplication using Java 21.0.3 with PID 13916 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-25 13:41:59 - No active profile set, falling back to 1 default profile: "default"
+2024-09-25 13:41:59 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-25 13:41:59 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-25 13:42:00 - Tomcat initialized with port 8080 (http)
+2024-09-25 13:42:00 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:42:00 - Starting service [Tomcat]
+2024-09-25 13:42:00 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25 13:42:00 - Initializing Spring embedded WebApplicationContext
+2024-09-25 13:42:00 - Root WebApplicationContext: initialization completed in 307 ms
+2024-09-25 13:42:00 - Iniciando carregamento de prefixos...
+2024-09-25 13:42:00 - LiveReload server is running on port 35729
+2024-09-25 13:42:00 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:42:00 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 13:42:00 - Started DemoApplication in 0.5 seconds (process running for 154.557)
+2024-09-25 13:42:00 - Condition evaluation unchanged
+2024-09-25 13:42:02 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25 13:42:02 - Initializing Servlet 'dispatcherServlet'
+2024-09-25 13:42:02 - Completed initialization in 0 ms
+2024-09-25 13:48:49 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-09-25 13:48:49 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:48:49 - Starting DemoApplication using Java 21.0.3 with PID 13916 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-25 13:48:49 - No active profile set, falling back to 1 default profile: "default"
+2024-09-25 13:48:49 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-25 13:48:49 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-25 13:48:49 - Tomcat initialized with port 8080 (http)
+2024-09-25 13:48:49 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:48:49 - Starting service [Tomcat]
+2024-09-25 13:48:49 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25 13:48:49 - Initializing Spring embedded WebApplicationContext
+2024-09-25 13:48:49 - Root WebApplicationContext: initialization completed in 256 ms
+2024-09-25 13:48:49 - Iniciando carregamento de prefixos...
+2024-09-25 13:48:49 - LiveReload server is running on port 35729
+2024-09-25 13:48:49 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:48:49 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 13:48:49 - Started DemoApplication in 0.44 seconds (process running for 563.85)
+2024-09-25 13:48:49 - Condition evaluation unchanged
+2024-09-25 13:49:22 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-09-25 13:49:22 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:49:22 - Starting DemoApplication using Java 21.0.3 with PID 13916 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-25 13:49:22 - No active profile set, falling back to 1 default profile: "default"
+2024-09-25 13:49:22 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-25 13:49:22 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-25 13:49:22 - Tomcat initialized with port 8080 (http)
+2024-09-25 13:49:22 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:49:22 - Starting service [Tomcat]
+2024-09-25 13:49:22 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25 13:49:22 - Initializing Spring embedded WebApplicationContext
+2024-09-25 13:49:22 - Root WebApplicationContext: initialization completed in 260 ms
+2024-09-25 13:49:22 - Iniciando carregamento de prefixos...
+2024-09-25 13:49:23 - LiveReload server is running on port 35729
+2024-09-25 13:49:23 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:49:23 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 13:49:23 - Started DemoApplication in 0.536 seconds (process running for 597.447)
+2024-09-25 13:49:23 - Condition evaluation unchanged
+2024-09-25 13:49:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25 13:49:29 - Initializing Servlet 'dispatcherServlet'
+2024-09-25 13:49:29 - Completed initialization in 1 ms
+2024-09-25 13:49:29 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espeto]
+2024-09-25 13:49:37 - Prefixo adicionado com sucesso: Espetoo
+2024-09-25 13:49:41 - Iniciando carregamento de prefixos...
+2024-09-25 13:49:41 - Iniciando carregamento de prefixos...
+2024-09-25 13:49:44 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espeto, Espetoo]
+2024-09-25 13:49:49 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espeto, Espetoo]
+2024-09-25 13:49:54 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espeto, Espetoo]
+2024-09-25 13:49:54 - Iniciando carregamento de prefixos...
+2024-09-25 13:49:54 - Resolved [ErroArquivoException: Prefixo não encontrado. - Causa: null]
+2024-09-25 13:49:58 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espetoo]
+2024-09-25 13:49:58 - Iniciando carregamento de prefixos...
+2024-09-25 13:50:01 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espetoo]
+2024-09-25 13:50:04 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espetoo]
+2024-09-25 13:50:37 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-09-25 13:50:37 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:50:38 - Starting DemoApplication using Java 21.0.3 with PID 13916 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-25 13:50:38 - No active profile set, falling back to 1 default profile: "default"
+2024-09-25 13:50:38 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-25 13:50:38 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-25 13:50:38 - Tomcat initialized with port 8080 (http)
+2024-09-25 13:50:38 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:50:38 - Starting service [Tomcat]
+2024-09-25 13:50:38 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25 13:50:38 - Initializing Spring embedded WebApplicationContext
+2024-09-25 13:50:38 - Root WebApplicationContext: initialization completed in 289 ms
+2024-09-25 13:50:38 - Iniciando carregamento de prefixos...
+2024-09-25 13:50:38 - LiveReload server is running on port 35729
+2024-09-25 13:50:38 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:50:38 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 13:50:38 - Started DemoApplication in 0.481 seconds (process running for 672.798)
+2024-09-25 13:50:38 - Condition evaluation unchanged
+2024-09-25 13:50:41 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25 13:50:41 - Initializing Servlet 'dispatcherServlet'
+2024-09-25 13:50:41 - Completed initialization in 1 ms
+2024-09-25 13:50:41 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa]
+2024-09-25 13:50:58 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-09-25 13:50:58 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:50:58 - Starting DemoApplication using Java 21.0.3 with PID 13916 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-25 13:50:58 - No active profile set, falling back to 1 default profile: "default"
+2024-09-25 13:50:58 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-25 13:50:58 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-25 13:50:58 - Tomcat initialized with port 8080 (http)
+2024-09-25 13:50:58 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:50:58 - Starting service [Tomcat]
+2024-09-25 13:50:58 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25 13:50:58 - Initializing Spring embedded WebApplicationContext
+2024-09-25 13:50:58 - Root WebApplicationContext: initialization completed in 192 ms
+2024-09-25 13:50:58 - Iniciando carregamento de prefixos...
+2024-09-25 13:50:58 - LiveReload server is running on port 35729
+2024-09-25 13:50:58 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:50:58 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 13:50:58 - Started DemoApplication in 0.317 seconds (process running for 692.892)
+2024-09-25 13:50:58 - Condition evaluation unchanged
+2024-09-25 13:51:52 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-09-25 13:51:52 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:51:53 - Starting DemoApplication using Java 21.0.3 with PID 13916 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-25 13:51:53 - No active profile set, falling back to 1 default profile: "default"
+2024-09-25 13:51:53 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-25 13:51:53 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-25 13:51:53 - Tomcat initialized with port 8080 (http)
+2024-09-25 13:51:53 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:51:53 - Starting service [Tomcat]
+2024-09-25 13:51:53 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25 13:51:53 - Initializing Spring embedded WebApplicationContext
+2024-09-25 13:51:53 - Root WebApplicationContext: initialization completed in 204 ms
+2024-09-25 13:51:53 - Iniciando carregamento de prefixos...
+2024-09-25 13:51:53 - LiveReload server is running on port 35729
+2024-09-25 13:51:53 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-25 13:51:53 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-25 13:51:53 - Started DemoApplication in 0.319 seconds (process running for 747.682)
+2024-09-25 13:51:53 - Condition evaluation unchanged

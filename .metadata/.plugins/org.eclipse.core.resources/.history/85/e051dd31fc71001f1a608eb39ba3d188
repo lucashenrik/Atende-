@@ -1,5 +1,0 @@
-package com.lucas.demo.infra;
-
-public class JwtFilter {
-
-}
