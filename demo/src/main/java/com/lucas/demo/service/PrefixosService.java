@@ -71,6 +71,8 @@ public class PrefixosService {
 
 	public List<Prefixo> carregarPrefixos() {
 
+		prefixosCarregados.clear();  // Limpa a lista antes de adicionar novos
+		
 		if (!prefixosCarregados.isEmpty()) {
 			// System.out.println("Prefixos já carregados: " + prefixosCarregados);
 			logger.info("Prefixos já carregados: " + prefixosCarregados);
@@ -87,7 +89,9 @@ public class PrefixosService {
 			try {
 				prefixosList = objectMapper.readValue(file, new TypeReference<List<Prefixo>>() {
 				});
-				prefixosCarregados.clear();  // Limpa a lista antes de adicionar novos
+				
+				//
+				
 				// Extrair os prefixos como uma lista de strings
 				for (Prefixo p : prefixosList) {
 					prefixosCarregados.add(p.getPrefixo());

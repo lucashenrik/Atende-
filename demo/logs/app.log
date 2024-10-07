@@ -155,3 +155,1704 @@
 2024-09-25 13:51:53 - Tomcat started on port 8080 (http) with context path '/'
 2024-09-25 13:51:53 - Started DemoApplication in 0.319 seconds (process running for 747.682)
 2024-09-25 13:51:53 - Condition evaluation unchanged
+2024-09-26 13:41:06 - Starting DemoApplication using Java 21.0.3 with PID 14068 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 13:41:06 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 13:41:07 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-26 13:41:07 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-26 13:41:07 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-26 13:41:21 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 13:41:24 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 13:41:35 - Tomcat initialized with port 8080 (http)
+2024-09-26 13:41:36 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:41:36 - Starting service [Tomcat]
+2024-09-26 13:41:36 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 13:41:37 - Initializing Spring embedded WebApplicationContext
+2024-09-26 13:41:37 - Root WebApplicationContext: initialization completed in 29748 ms
+2024-09-26 13:41:40 - Iniciando carregamento de prefixos...
+2024-09-26 13:41:46 - LiveReload server is running on port 35729
+2024-09-26 13:41:46 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:41:47 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 13:41:47 - Started DemoApplication in 56.638 seconds (process running for 59.409)
+2024-09-26 13:42:07 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 13:42:07 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 13:42:07 - Completed initialization in 1 ms
+2024-09-26 13:42:07 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa]
+2024-09-26 13:42:24 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 13:42:24 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:24 - Starting DemoApplication using Java 21.0.3 with PID 14068 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 13:42:24 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 13:42:24 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 13:42:24 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 13:42:24 - Tomcat initialized with port 8080 (http)
+2024-09-26 13:42:24 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:24 - Starting service [Tomcat]
+2024-09-26 13:42:24 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 13:42:24 - Initializing Spring embedded WebApplicationContext
+2024-09-26 13:42:24 - Root WebApplicationContext: initialization completed in 315 ms
+2024-09-26 13:42:24 - Iniciando carregamento de prefixos...
+2024-09-26 13:42:24 - LiveReload server is running on port 35729
+2024-09-26 13:42:24 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:24 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 13:42:24 - Started DemoApplication in 0.517 seconds (process running for 96.469)
+2024-09-26 13:42:24 - Condition evaluation unchanged
+2024-09-26 13:42:28 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 13:42:28 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 13:42:28 - Completed initialization in 1 ms
+2024-09-26 13:42:39 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 13:42:39 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:39 - Starting DemoApplication using Java 21.0.3 with PID 14068 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 13:42:39 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 13:42:39 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 13:42:39 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 13:42:39 - Tomcat initialized with port 8080 (http)
+2024-09-26 13:42:39 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:39 - Starting service [Tomcat]
+2024-09-26 13:42:39 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 13:42:39 - Initializing Spring embedded WebApplicationContext
+2024-09-26 13:42:39 - Root WebApplicationContext: initialization completed in 239 ms
+2024-09-26 13:42:40 - Iniciando carregamento de prefixos...
+2024-09-26 13:42:40 - LiveReload server is running on port 35729
+2024-09-26 13:42:40 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:40 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 13:42:40 - Started DemoApplication in 0.483 seconds (process running for 111.671)
+2024-09-26 13:42:40 - Condition evaluation unchanged
+2024-09-26 13:42:42 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 13:42:42 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:42 - Starting DemoApplication using Java 21.0.3 with PID 14068 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 13:42:42 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 13:42:42 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 13:42:42 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 13:42:42 - Tomcat initialized with port 8080 (http)
+2024-09-26 13:42:42 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:42 - Starting service [Tomcat]
+2024-09-26 13:42:42 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 13:42:42 - Initializing Spring embedded WebApplicationContext
+2024-09-26 13:42:42 - Root WebApplicationContext: initialization completed in 222 ms
+2024-09-26 13:42:42 - Iniciando carregamento de prefixos...
+2024-09-26 13:42:43 - LiveReload server is running on port 35729
+2024-09-26 13:42:43 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 13:42:43 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 13:42:43 - Started DemoApplication in 0.38 seconds (process running for 114.531)
+2024-09-26 13:42:43 - Condition evaluation unchanged
+2024-09-26 13:42:45 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 13:42:45 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 13:42:45 - Completed initialization in 1 ms
+2024-09-26 13:54:27 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:54:27 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:54:27 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:54:27 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:55:56 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:55:57 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:00 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:01 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:05 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:06 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:09 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:10 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:13 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:14 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:18 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:19 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:22 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:23 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:27 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:28 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:31 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:32 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:36 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:37 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:40 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:41 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:44 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:56:45 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:57:56 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:57:57 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:58:00 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:58:01 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 13:58:05 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'notificationCode' for method parameter type String is not present]
+2024-09-26 14:15:33 - Starting DemoApplication using Java 21.0.3 with PID 4804 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 14:15:33 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 14:15:33 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-26 14:15:33 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-26 14:15:33 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-26 14:15:34 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 14:15:34 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 14:15:34 - Tomcat initialized with port 8080 (http)
+2024-09-26 14:15:34 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:15:34 - Starting service [Tomcat]
+2024-09-26 14:15:34 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 14:15:34 - Initializing Spring embedded WebApplicationContext
+2024-09-26 14:15:34 - Root WebApplicationContext: initialization completed in 1333 ms
+2024-09-26 14:15:35 - Iniciando carregamento de prefixos...
+2024-09-26 14:15:35 - LiveReload server is running on port 35729
+2024-09-26 14:15:35 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:15:35 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 14:15:35 - Started DemoApplication in 2.439 seconds (process running for 2.843)
+2024-09-26 14:15:42 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 14:15:42 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 14:15:42 - Completed initialization in 1 ms
+2024-09-26 14:17:19 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:19 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:20 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:20 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:21 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:22 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:23 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:23 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:23 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:23 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:23 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:23 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:23 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:24 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:25 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:26 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:27 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:27 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:27 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:27 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:27 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:27 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:27 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:27 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:28 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:29 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:30 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:31 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:32 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:33 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:34 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:35 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:36 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:37 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:38 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:38 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:38 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:38 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:38 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:38 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:38 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:39 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:40 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:41 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:42 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:43 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:44 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:45 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:46 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:47 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:48 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:49 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:50 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:51 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:52 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:53 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:54 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:55 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:56 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:57 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:58 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:17:59 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:00 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:01 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:02 - Resolved [ErroArquivoException: Não foi possivel ler o arquivo. - Causa: null]
+2024-09-26 14:18:40 - Starting DemoApplication using Java 21.0.3 with PID 13392 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 14:18:40 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 14:18:40 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-26 14:18:40 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-26 14:18:40 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-26 14:18:41 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 14:18:41 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 14:18:41 - Tomcat initialized with port 8080 (http)
+2024-09-26 14:18:41 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:18:41 - Starting service [Tomcat]
+2024-09-26 14:18:41 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 14:18:41 - Initializing Spring embedded WebApplicationContext
+2024-09-26 14:18:41 - Root WebApplicationContext: initialization completed in 1286 ms
+2024-09-26 14:18:42 - Iniciando carregamento de prefixos...
+2024-09-26 14:18:42 - LiveReload server is running on port 35729
+2024-09-26 14:18:42 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:18:42 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 14:18:42 - Started DemoApplication in 2.371 seconds (process running for 2.83)
+2024-09-26 14:18:50 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 14:18:50 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 14:18:50 - Completed initialization in 2 ms
+2024-09-26 14:19:50 - Starting DemoApplication using Java 21.0.3 with PID 1404 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 14:19:50 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 14:19:50 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-26 14:19:50 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-26 14:19:50 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-26 14:19:51 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 14:19:51 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 14:19:51 - Tomcat initialized with port 8080 (http)
+2024-09-26 14:19:52 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:19:52 - Starting service [Tomcat]
+2024-09-26 14:19:52 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 14:19:52 - Initializing Spring embedded WebApplicationContext
+2024-09-26 14:19:52 - Root WebApplicationContext: initialization completed in 1466 ms
+2024-09-26 14:19:52 - Iniciando carregamento de prefixos...
+2024-09-26 14:19:52 - LiveReload server is running on port 35729
+2024-09-26 14:19:52 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:19:52 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 14:19:52 - Started DemoApplication in 2.591 seconds (process running for 3.082)
+2024-09-26 14:19:54 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 14:19:54 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 14:19:54 - Completed initialization in 1 ms
+2024-09-26 14:21:56 - Starting DemoApplication using Java 21.0.3 with PID 13620 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 14:21:56 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 14:21:56 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-26 14:21:56 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-26 14:21:56 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-26 14:21:57 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 14:21:57 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 14:21:57 - Tomcat initialized with port 8080 (http)
+2024-09-26 14:21:57 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:21:57 - Starting service [Tomcat]
+2024-09-26 14:21:57 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 14:21:57 - Initializing Spring embedded WebApplicationContext
+2024-09-26 14:21:57 - Root WebApplicationContext: initialization completed in 1224 ms
+2024-09-26 14:21:57 - Iniciando carregamento de prefixos...
+2024-09-26 14:21:58 - LiveReload server is running on port 35729
+2024-09-26 14:21:58 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:21:58 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 14:21:58 - Started DemoApplication in 2.335 seconds (process running for 2.779)
+2024-09-26 14:22:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 14:22:08 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 14:22:08 - Completed initialization in 1 ms
+2024-09-26 14:23:42 - Starting DemoApplication using Java 21.0.3 with PID 4760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 14:23:42 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 14:23:42 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-26 14:23:42 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-26 14:23:42 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-26 14:23:43 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 14:23:43 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 14:23:43 - Tomcat initialized with port 8080 (http)
+2024-09-26 14:23:43 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:23:43 - Starting service [Tomcat]
+2024-09-26 14:23:43 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 14:23:43 - Initializing Spring embedded WebApplicationContext
+2024-09-26 14:23:43 - Root WebApplicationContext: initialization completed in 1596 ms
+2024-09-26 14:23:44 - Iniciando carregamento de prefixos...
+2024-09-26 14:23:44 - LiveReload server is running on port 35729
+2024-09-26 14:23:44 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:23:44 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 14:23:44 - Started DemoApplication in 2.843 seconds (process running for 3.388)
+2024-09-26 14:23:46 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 14:23:46 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 14:23:46 - Completed initialization in 1 ms
+2024-09-26 14:25:06 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 14:25:06 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:25:06 - Starting DemoApplication using Java 21.0.3 with PID 4760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 14:25:06 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 14:25:06 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 14:25:06 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 14:25:06 - Tomcat initialized with port 8080 (http)
+2024-09-26 14:25:06 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:25:06 - Starting service [Tomcat]
+2024-09-26 14:25:06 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 14:25:06 - Initializing Spring embedded WebApplicationContext
+2024-09-26 14:25:06 - Root WebApplicationContext: initialization completed in 340 ms
+2024-09-26 14:25:06 - Iniciando carregamento de prefixos...
+2024-09-26 14:25:07 - LiveReload server is running on port 35729
+2024-09-26 14:25:07 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:25:07 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 14:25:07 - Started DemoApplication in 0.586 seconds (process running for 86.024)
+2024-09-26 14:25:07 - Condition evaluation unchanged
+2024-09-26 14:25:09 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 14:25:09 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 14:25:09 - Completed initialization in 0 ms
+2024-09-26 14:26:06 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 14:26:06 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:26:06 - Starting DemoApplication using Java 21.0.3 with PID 4760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 14:26:06 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 14:26:06 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 14:26:06 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 14:26:06 - Tomcat initialized with port 8080 (http)
+2024-09-26 14:26:06 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:26:06 - Starting service [Tomcat]
+2024-09-26 14:26:06 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 14:26:07 - Initializing Spring embedded WebApplicationContext
+2024-09-26 14:26:07 - Root WebApplicationContext: initialization completed in 274 ms
+2024-09-26 14:26:07 - Iniciando carregamento de prefixos...
+2024-09-26 14:26:07 - LiveReload server is running on port 35729
+2024-09-26 14:26:07 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 14:26:07 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 14:26:07 - Started DemoApplication in 0.477 seconds (process running for 146.101)
+2024-09-26 14:26:07 - Condition evaluation unchanged
+2024-09-26 14:26:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 14:26:08 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 14:26:08 - Completed initialization in 1 ms
+2024-09-26 23:41:12 - Starting DemoApplication using Java 21.0.3 with PID 1752 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 23:41:12 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 23:41:12 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-26 23:41:12 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-26 23:41:12 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-26 23:41:15 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 23:41:15 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 23:41:16 - Tomcat initialized with port 8080 (http)
+2024-09-26 23:41:16 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:41:16 - Starting service [Tomcat]
+2024-09-26 23:41:16 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 23:41:16 - Initializing Spring embedded WebApplicationContext
+2024-09-26 23:41:16 - Root WebApplicationContext: initialization completed in 3939 ms
+2024-09-26 23:41:16 - Iniciando carregamento de prefixos...
+2024-09-26 23:41:17 - LiveReload server is running on port 35729
+2024-09-26 23:41:17 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:41:17 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 23:41:17 - Started DemoApplication in 7.817 seconds (process running for 10.548)
+2024-09-26 23:45:21 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 23:45:21 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 23:45:21 - Completed initialization in 1 ms
+2024-09-26 23:47:33 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 23:47:33 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:47:34 - Starting DemoApplication using Java 21.0.3 with PID 1752 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 23:47:34 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 23:47:34 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 23:47:34 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 23:47:34 - Tomcat initialized with port 8080 (http)
+2024-09-26 23:47:34 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:47:34 - Starting service [Tomcat]
+2024-09-26 23:47:34 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 23:47:34 - Initializing Spring embedded WebApplicationContext
+2024-09-26 23:47:34 - Root WebApplicationContext: initialization completed in 411 ms
+2024-09-26 23:47:34 - Iniciando carregamento de prefixos...
+2024-09-26 23:47:34 - LiveReload server is running on port 35729
+2024-09-26 23:47:34 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:47:34 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 23:47:34 - Started DemoApplication in 0.654 seconds (process running for 387.803)
+2024-09-26 23:47:34 - Condition evaluation unchanged
+2024-09-26 23:57:39 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 23:57:39 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:57:39 - Starting DemoApplication using Java 21.0.3 with PID 1752 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 23:57:39 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 23:57:39 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 23:57:39 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 23:57:39 - Tomcat initialized with port 8080 (http)
+2024-09-26 23:57:39 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:57:39 - Starting service [Tomcat]
+2024-09-26 23:57:39 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 23:57:39 - Initializing Spring embedded WebApplicationContext
+2024-09-26 23:57:39 - Root WebApplicationContext: initialization completed in 259 ms
+2024-09-26 23:57:39 - Iniciando carregamento de prefixos...
+2024-09-26 23:57:39 - LiveReload server is running on port 35729
+2024-09-26 23:57:39 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:57:39 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 23:57:39 - Started DemoApplication in 0.474 seconds (process running for 992.778)
+2024-09-26 23:57:39 - Condition evaluation unchanged
+2024-09-26 23:59:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 23:59:08 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 23:59:08 - Completed initialization in 1 ms
+2024-09-26 23:59:16 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 23:59:16 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:17 - Starting DemoApplication using Java 21.0.3 with PID 1752 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 23:59:17 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 23:59:17 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 23:59:17 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 23:59:17 - Tomcat initialized with port 8080 (http)
+2024-09-26 23:59:17 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:17 - Starting service [Tomcat]
+2024-09-26 23:59:17 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 23:59:17 - Initializing Spring embedded WebApplicationContext
+2024-09-26 23:59:17 - Root WebApplicationContext: initialization completed in 350 ms
+2024-09-26 23:59:17 - Iniciando carregamento de prefixos...
+2024-09-26 23:59:17 - LiveReload server is running on port 35729
+2024-09-26 23:59:17 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:17 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 23:59:17 - Started DemoApplication in 0.551 seconds (process running for 1090.598)
+2024-09-26 23:59:17 - Condition evaluation unchanged
+2024-09-26 23:59:18 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 23:59:18 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 23:59:18 - Completed initialization in 0 ms
+2024-09-26 23:59:35 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 23:59:35 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:35 - Starting DemoApplication using Java 21.0.3 with PID 1752 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 23:59:35 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 23:59:35 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 23:59:35 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 23:59:35 - Tomcat initialized with port 8080 (http)
+2024-09-26 23:59:35 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:35 - Starting service [Tomcat]
+2024-09-26 23:59:35 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 23:59:35 - Initializing Spring embedded WebApplicationContext
+2024-09-26 23:59:35 - Root WebApplicationContext: initialization completed in 428 ms
+2024-09-26 23:59:35 - Iniciando carregamento de prefixos...
+2024-09-26 23:59:36 - LiveReload server is running on port 35729
+2024-09-26 23:59:36 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:36 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 23:59:36 - Started DemoApplication in 0.747 seconds (process running for 1109.105)
+2024-09-26 23:59:36 - Condition evaluation unchanged
+2024-09-26 23:59:37 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-26 23:59:37 - Initializing Servlet 'dispatcherServlet'
+2024-09-26 23:59:37 - Completed initialization in 0 ms
+2024-09-26 23:59:56 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-26 23:59:56 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:56 - Starting DemoApplication using Java 21.0.3 with PID 1752 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-26 23:59:56 - No active profile set, falling back to 1 default profile: "default"
+2024-09-26 23:59:57 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-26 23:59:57 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-26 23:59:57 - Tomcat initialized with port 8080 (http)
+2024-09-26 23:59:57 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:57 - Starting service [Tomcat]
+2024-09-26 23:59:57 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-26 23:59:57 - Initializing Spring embedded WebApplicationContext
+2024-09-26 23:59:57 - Root WebApplicationContext: initialization completed in 184 ms
+2024-09-26 23:59:57 - Iniciando carregamento de prefixos...
+2024-09-26 23:59:57 - LiveReload server is running on port 35729
+2024-09-26 23:59:57 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-26 23:59:57 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-26 23:59:57 - Started DemoApplication in 0.308 seconds (process running for 1130.225)
+2024-09-26 23:59:57 - Condition evaluation unchanged
+2024-09-27 00:00:02 - Starting DemoApplication using Java 21.0.3 with PID 7256 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 00:00:02 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 00:00:02 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-27 00:00:02 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-27 00:00:02 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-27 00:00:03 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 00:00:03 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 00:00:03 - Tomcat initialized with port 8080 (http)
+2024-09-27 00:00:03 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:00:03 - Starting service [Tomcat]
+2024-09-27 00:00:03 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 00:00:03 - Initializing Spring embedded WebApplicationContext
+2024-09-27 00:00:03 - Root WebApplicationContext: initialization completed in 1209 ms
+2024-09-27 00:00:04 - Iniciando carregamento de prefixos...
+2024-09-27 00:00:04 - LiveReload server is running on port 35729
+2024-09-27 00:00:04 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:00:04 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 00:00:04 - Started DemoApplication in 2.29 seconds (process running for 2.705)
+2024-09-27 00:00:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 00:00:52 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 00:00:52 - Completed initialization in 2 ms
+2024-09-27 00:01:37 - Starting DemoApplication using Java 21.0.3 with PID 5424 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 00:01:37 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 00:01:37 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-27 00:01:37 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-27 00:01:37 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-27 00:01:38 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 00:01:38 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 00:01:38 - Tomcat initialized with port 8080 (http)
+2024-09-27 00:01:38 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:01:38 - Starting service [Tomcat]
+2024-09-27 00:01:38 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 00:01:38 - Initializing Spring embedded WebApplicationContext
+2024-09-27 00:01:38 - Root WebApplicationContext: initialization completed in 1312 ms
+2024-09-27 00:01:38 - Iniciando carregamento de prefixos...
+2024-09-27 00:01:39 - LiveReload server is running on port 35729
+2024-09-27 00:01:39 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:01:39 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 00:01:39 - Started DemoApplication in 2.353 seconds (process running for 2.815)
+2024-09-27 00:01:43 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 00:01:43 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 00:01:43 - Completed initialization in 1 ms
+2024-09-27 00:01:50 - Starting DemoApplication using Java 21.0.3 with PID 9156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 00:01:50 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 00:01:50 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-27 00:01:50 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-27 00:01:50 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-27 00:01:51 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 00:01:51 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 00:01:51 - Tomcat initialized with port 8080 (http)
+2024-09-27 00:01:51 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:01:51 - Starting service [Tomcat]
+2024-09-27 00:01:51 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 00:01:51 - Initializing Spring embedded WebApplicationContext
+2024-09-27 00:01:51 - Root WebApplicationContext: initialization completed in 1370 ms
+2024-09-27 00:01:51 - Iniciando carregamento de prefixos...
+2024-09-27 00:01:52 - LiveReload server is running on port 35729
+2024-09-27 00:01:52 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:01:52 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 00:01:52 - Started DemoApplication in 2.391 seconds (process running for 2.843)
+2024-09-27 00:01:55 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 00:01:55 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 00:01:55 - Completed initialization in 1 ms
+2024-09-27 00:02:03 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 00:02:03 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:02:03 - Starting DemoApplication using Java 21.0.3 with PID 9156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 00:02:03 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 00:02:04 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 00:02:04 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 00:02:04 - Tomcat initialized with port 8080 (http)
+2024-09-27 00:02:04 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:02:04 - Starting service [Tomcat]
+2024-09-27 00:02:04 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 00:02:04 - Initializing Spring embedded WebApplicationContext
+2024-09-27 00:02:04 - Root WebApplicationContext: initialization completed in 290 ms
+2024-09-27 00:02:04 - Iniciando carregamento de prefixos...
+2024-09-27 00:02:04 - LiveReload server is running on port 35729
+2024-09-27 00:02:04 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:02:04 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 00:02:04 - Started DemoApplication in 0.49 seconds (process running for 14.981)
+2024-09-27 00:02:04 - Condition evaluation unchanged
+2024-09-27 00:02:05 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 00:02:05 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 00:02:05 - Completed initialization in 1 ms
+2024-09-27 00:02:19 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 00:02:19 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:02:19 - Starting DemoApplication using Java 21.0.3 with PID 9156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 00:02:19 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 00:02:19 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 00:02:19 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 00:02:19 - Tomcat initialized with port 8080 (http)
+2024-09-27 00:02:19 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:02:19 - Starting service [Tomcat]
+2024-09-27 00:02:19 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 00:02:19 - Initializing Spring embedded WebApplicationContext
+2024-09-27 00:02:19 - Root WebApplicationContext: initialization completed in 276 ms
+2024-09-27 00:02:19 - Iniciando carregamento de prefixos...
+2024-09-27 00:02:19 - LiveReload server is running on port 35729
+2024-09-27 00:02:19 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:02:19 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 00:02:19 - Started DemoApplication in 0.454 seconds (process running for 30.166)
+2024-09-27 00:02:19 - Condition evaluation unchanged
+2024-09-27 00:02:31 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 00:02:31 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 00:02:31 - Completed initialization in 1 ms
+2024-09-27 00:02:46 - Starting DemoApplication using Java 21.0.3 with PID 11876 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 00:02:46 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 00:02:46 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-27 00:02:46 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-27 00:02:46 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-27 00:02:47 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 00:02:47 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 00:02:47 - Tomcat initialized with port 8080 (http)
+2024-09-27 00:02:47 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:02:47 - Starting service [Tomcat]
+2024-09-27 00:02:47 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 00:02:47 - Initializing Spring embedded WebApplicationContext
+2024-09-27 00:02:47 - Root WebApplicationContext: initialization completed in 1258 ms
+2024-09-27 00:02:47 - Iniciando carregamento de prefixos...
+2024-09-27 00:02:48 - LiveReload server is running on port 35729
+2024-09-27 00:02:48 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 00:02:48 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 00:02:48 - Started DemoApplication in 2.372 seconds (process running for 2.913)
+2024-09-27 00:02:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 00:02:53 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 00:02:53 - Completed initialization in 1 ms
+2024-09-27 11:49:25 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:49:25 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:49:25 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-27 11:49:25 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-27 11:49:25 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-27 11:49:27 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:49:27 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:49:27 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:49:27 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:49:27 - Starting service [Tomcat]
+2024-09-27 11:49:27 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:49:29 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:49:29 - Root WebApplicationContext: initialization completed in 4104 ms
+2024-09-27 11:49:30 - Iniciando carregamento de prefixos...
+2024-09-27 11:49:30 - LiveReload server is running on port 35729
+2024-09-27 11:49:30 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:49:31 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:49:31 - Started DemoApplication in 6.401 seconds (process running for 8.828)
+2024-09-27 11:53:05 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 11:53:05 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 11:53:05 - Completed initialization in 1 ms
+2024-09-27 11:54:32 - Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-09-27 11:54:32 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:54:33 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:54:33 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:54:33 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:54:33 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:54:33 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:54:33 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:54:33 - Starting service [Tomcat]
+2024-09-27 11:54:33 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:54:33 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:54:33 - Root WebApplicationContext: initialization completed in 293 ms
+2024-09-27 11:54:33 - Iniciando carregamento de prefixos...
+2024-09-27 11:54:33 - LiveReload server is running on port 35729
+2024-09-27 11:54:33 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:54:33 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:54:33 - Started DemoApplication in 0.492 seconds (process running for 311.282)
+2024-09-27 11:54:33 - Condition evaluation unchanged
+2024-09-27 11:55:53 - Restarting due to 5 class path changes (1 addition, 0 deletions, 4 modifications)
+2024-09-27 11:55:53 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:55:53 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:55:53 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:55:53 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:55:53 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:55:53 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:55:53 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:55:53 - Starting service [Tomcat]
+2024-09-27 11:55:53 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:55:53 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:55:53 - Root WebApplicationContext: initialization completed in 305 ms
+2024-09-27 11:55:53 - Iniciando carregamento de prefixos...
+2024-09-27 11:55:53 - LiveReload server is running on port 35729
+2024-09-27 11:55:53 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:55:53 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:55:53 - Started DemoApplication in 0.476 seconds (process running for 391.663)
+2024-09-27 11:55:53 - Condition evaluation unchanged
+2024-09-27 11:56:31 - Restarting due to 5 class path changes (0 additions, 0 deletions, 5 modifications)
+2024-09-27 11:56:31 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:56:32 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:56:32 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:56:32 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:56:32 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:56:32 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:56:32 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:56:32 - Starting service [Tomcat]
+2024-09-27 11:56:32 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:56:32 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:56:32 - Root WebApplicationContext: initialization completed in 281 ms
+2024-09-27 11:56:32 - Iniciando carregamento de prefixos...
+2024-09-27 11:56:32 - LiveReload server is running on port 35729
+2024-09-27 11:56:32 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:56:32 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:56:32 - Started DemoApplication in 0.449 seconds (process running for 430.252)
+2024-09-27 11:56:32 - Condition evaluation unchanged
+2024-09-27 11:56:56 - Restarting due to 6 class path changes (0 additions, 1 deletion, 5 modifications)
+2024-09-27 11:56:56 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:56:56 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:56:56 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:56:56 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:56:56 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:56:56 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:56:56 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:56:56 - Starting service [Tomcat]
+2024-09-27 11:56:56 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:56:56 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:56:56 - Root WebApplicationContext: initialization completed in 326 ms
+2024-09-27 11:56:56 - Iniciando carregamento de prefixos...
+2024-09-27 11:56:56 - LiveReload server is running on port 35729
+2024-09-27 11:56:56 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:56:56 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:56:56 - Started DemoApplication in 0.503 seconds (process running for 454.634)
+2024-09-27 11:56:56 - Condition evaluation unchanged
+2024-09-27 11:57:22 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-27 11:57:22 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:57:22 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:57:22 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:57:22 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:57:22 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:57:23 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:57:23 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:57:23 - Starting service [Tomcat]
+2024-09-27 11:57:23 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:57:23 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:57:23 - Root WebApplicationContext: initialization completed in 228 ms
+2024-09-27 11:57:23 - Iniciando carregamento de prefixos...
+2024-09-27 11:57:23 - LiveReload server is running on port 35729
+2024-09-27 11:57:23 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:57:23 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:57:23 - Started DemoApplication in 0.357 seconds (process running for 480.906)
+2024-09-27 11:57:23 - Condition evaluation unchanged
+2024-09-27 11:57:37 - Restarting due to 8 class path changes (0 additions, 1 deletion, 7 modifications)
+2024-09-27 11:57:37 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:57:37 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:57:37 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:57:38 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:57:38 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:57:38 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:57:38 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:57:38 - Starting service [Tomcat]
+2024-09-27 11:57:38 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:57:38 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:57:38 - Root WebApplicationContext: initialization completed in 207 ms
+2024-09-27 11:57:38 - Iniciando carregamento de prefixos...
+2024-09-27 11:57:38 - LiveReload server is running on port 35729
+2024-09-27 11:57:38 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:57:38 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:57:38 - Started DemoApplication in 0.328 seconds (process running for 495.997)
+2024-09-27 11:57:38 - Condition evaluation unchanged
+2024-09-27 11:58:09 - Restarting due to 5 class path changes (1 addition, 0 deletions, 4 modifications)
+2024-09-27 11:58:09 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:58:09 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:58:09 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:58:09 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:58:09 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:58:09 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:58:09 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:58:09 - Starting service [Tomcat]
+2024-09-27 11:58:09 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:58:09 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:58:09 - Root WebApplicationContext: initialization completed in 251 ms
+2024-09-27 11:58:09 - Iniciando carregamento de prefixos...
+2024-09-27 11:58:09 - LiveReload server is running on port 35729
+2024-09-27 11:58:09 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:58:09 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:58:09 - Started DemoApplication in 0.382 seconds (process running for 527.316)
+2024-09-27 11:58:09 - Condition evaluation unchanged
+2024-09-27 11:58:37 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-27 11:58:37 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:58:37 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:58:37 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:58:37 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:58:37 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:58:37 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:58:37 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:58:37 - Starting service [Tomcat]
+2024-09-27 11:58:37 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:58:37 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:58:37 - Root WebApplicationContext: initialization completed in 202 ms
+2024-09-27 11:58:37 - Iniciando carregamento de prefixos...
+2024-09-27 11:58:37 - LiveReload server is running on port 35729
+2024-09-27 11:58:37 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:58:37 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:58:37 - Started DemoApplication in 0.357 seconds (process running for 555.617)
+2024-09-27 11:58:37 - Condition evaluation unchanged
+2024-09-27 11:58:41 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 11:58:41 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 11:58:41 - Completed initialization in 1 ms
+2024-09-27 11:59:36 - Restarting due to 9 class path changes (0 additions, 1 deletion, 8 modifications)
+2024-09-27 11:59:36 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:36 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:59:36 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:59:36 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:59:36 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:59:36 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:59:36 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:36 - Starting service [Tomcat]
+2024-09-27 11:59:36 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:59:36 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:59:36 - Root WebApplicationContext: initialization completed in 195 ms
+2024-09-27 11:59:36 - Iniciando carregamento de prefixos...
+2024-09-27 11:59:36 - LiveReload server is running on port 35729
+2024-09-27 11:59:36 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:36 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:59:36 - Started DemoApplication in 0.334 seconds (process running for 614.509)
+2024-09-27 11:59:36 - Condition evaluation unchanged
+2024-09-27 11:59:39 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-27 11:59:39 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:39 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:59:39 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:59:39 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:59:39 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:59:39 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:59:39 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:39 - Starting service [Tomcat]
+2024-09-27 11:59:39 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:59:39 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:59:39 - Root WebApplicationContext: initialization completed in 195 ms
+2024-09-27 11:59:39 - Iniciando carregamento de prefixos...
+2024-09-27 11:59:39 - LiveReload server is running on port 35729
+2024-09-27 11:59:39 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:39 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:59:39 - Started DemoApplication in 0.33 seconds (process running for 617.319)
+2024-09-27 11:59:39 - Condition evaluation unchanged
+2024-09-27 11:59:53 - Restarting due to 3 class path changes (1 addition, 0 deletions, 2 modifications)
+2024-09-27 11:59:53 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:53 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 11:59:53 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 11:59:53 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 11:59:53 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 11:59:53 - Tomcat initialized with port 8080 (http)
+2024-09-27 11:59:53 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:53 - Starting service [Tomcat]
+2024-09-27 11:59:53 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 11:59:53 - Initializing Spring embedded WebApplicationContext
+2024-09-27 11:59:53 - Root WebApplicationContext: initialization completed in 182 ms
+2024-09-27 11:59:53 - Iniciando carregamento de prefixos...
+2024-09-27 11:59:53 - LiveReload server is running on port 35729
+2024-09-27 11:59:53 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 11:59:53 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 11:59:53 - Started DemoApplication in 0.287 seconds (process running for 631.279)
+2024-09-27 11:59:53 - Condition evaluation unchanged
+2024-09-27 11:59:57 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 11:59:57 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 11:59:57 - Completed initialization in 0 ms
+2024-09-27 12:00:27 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 12:00:27 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:00:27 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:00:27 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:00:27 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:00:27 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:00:27 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:00:27 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:00:27 - Starting service [Tomcat]
+2024-09-27 12:00:27 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:00:27 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:00:27 - Root WebApplicationContext: initialization completed in 191 ms
+2024-09-27 12:00:27 - Iniciando carregamento de prefixos...
+2024-09-27 12:00:27 - LiveReload server is running on port 35729
+2024-09-27 12:00:27 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:00:27 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:00:27 - Started DemoApplication in 0.294 seconds (process running for 665.668)
+2024-09-27 12:00:27 - Condition evaluation unchanged
+2024-09-27 12:00:37 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 12:00:37 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:00:37 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:00:37 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:00:37 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:00:37 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:00:37 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:00:37 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:00:37 - Starting service [Tomcat]
+2024-09-27 12:00:37 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:00:37 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:00:37 - Root WebApplicationContext: initialization completed in 221 ms
+2024-09-27 12:00:37 - Iniciando carregamento de prefixos...
+2024-09-27 12:00:37 - LiveReload server is running on port 35729
+2024-09-27 12:00:37 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:00:37 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:00:37 - Started DemoApplication in 0.322 seconds (process running for 675.608)
+2024-09-27 12:00:37 - Condition evaluation unchanged
+2024-09-27 12:00:42 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 12:00:42 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 12:00:42 - Completed initialization in 0 ms
+2024-09-27 12:02:31 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 12:02:31 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:02:31 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:02:31 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:02:31 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:02:31 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:02:31 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:02:31 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:02:31 - Starting service [Tomcat]
+2024-09-27 12:02:31 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:02:31 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:02:31 - Root WebApplicationContext: initialization completed in 182 ms
+2024-09-27 12:02:31 - Iniciando carregamento de prefixos...
+2024-09-27 12:02:31 - LiveReload server is running on port 35729
+2024-09-27 12:02:31 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:02:31 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:02:31 - Started DemoApplication in 0.299 seconds (process running for 789.53)
+2024-09-27 12:02:31 - Condition evaluation unchanged
+2024-09-27 12:02:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 12:02:34 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 12:02:34 - Completed initialization in 0 ms
+2024-09-27 12:04:01 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 12:04:01 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:04:02 - Starting DemoApplication using Java 21.0.3 with PID 10576 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:04:02 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:04:02 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:04:02 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:04:02 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:04:02 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:04:02 - Starting service [Tomcat]
+2024-09-27 12:04:02 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:04:02 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:04:02 - Root WebApplicationContext: initialization completed in 239 ms
+2024-09-27 12:04:02 - Iniciando carregamento de prefixos...
+2024-09-27 12:04:02 - LiveReload server is running on port 35729
+2024-09-27 12:04:02 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:04:02 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:04:02 - Started DemoApplication in 0.394 seconds (process running for 880.132)
+2024-09-27 12:04:02 - Condition evaluation unchanged
+2024-09-27 12:04:03 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 12:04:03 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 12:04:03 - Completed initialization in 0 ms
+2024-09-27 12:05:36 - Starting DemoApplication using Java 21.0.3 with PID 8760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:05:36 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:05:36 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-27 12:05:36 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-27 12:05:36 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-27 12:05:37 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:05:37 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:05:37 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:05:37 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:05:37 - Starting service [Tomcat]
+2024-09-27 12:05:37 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:05:37 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:05:37 - Root WebApplicationContext: initialization completed in 1397 ms
+2024-09-27 12:05:37 - Iniciando carregamento de prefixos...
+2024-09-27 12:05:38 - LiveReload server is running on port 35729
+2024-09-27 12:05:38 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:05:38 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:05:38 - Started DemoApplication in 2.597 seconds (process running for 3.071)
+2024-09-27 12:05:42 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 12:05:42 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 12:05:42 - Completed initialization in 1 ms
+2024-09-27 12:09:59 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 12:09:59 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:09:59 - Starting DemoApplication using Java 21.0.3 with PID 8760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:09:59 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:10:00 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:10:00 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:10:00 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:10:00 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:10:00 - Starting service [Tomcat]
+2024-09-27 12:10:00 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:10:00 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:10:00 - Root WebApplicationContext: initialization completed in 327 ms
+2024-09-27 12:10:00 - Iniciando carregamento de prefixos...
+2024-09-27 12:10:00 - LiveReload server is running on port 35729
+2024-09-27 12:10:00 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:10:00 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:10:00 - Started DemoApplication in 0.554 seconds (process running for 265.079)
+2024-09-27 12:10:00 - Condition evaluation unchanged
+2024-09-27 12:10:02 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 12:10:02 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 12:10:02 - Completed initialization in 0 ms
+2024-09-27 12:10:39 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 12:10:39 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:10:39 - Starting DemoApplication using Java 21.0.3 with PID 8760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:10:39 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:10:39 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:10:39 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:10:39 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:10:39 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:10:39 - Starting service [Tomcat]
+2024-09-27 12:10:39 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:10:39 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:10:39 - Root WebApplicationContext: initialization completed in 273 ms
+2024-09-27 12:10:40 - Iniciando carregamento de prefixos...
+2024-09-27 12:10:40 - LiveReload server is running on port 35729
+2024-09-27 12:10:40 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:10:40 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:10:40 - Started DemoApplication in 0.456 seconds (process running for 304.719)
+2024-09-27 12:10:40 - Condition evaluation unchanged
+2024-09-27 12:13:43 - Restarting due to 6 class path changes (0 additions, 1 deletion, 5 modifications)
+2024-09-27 12:13:43 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:13:43 - Starting DemoApplication using Java 21.0.3 with PID 8760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:13:43 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:13:44 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:13:44 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:13:44 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:13:44 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:13:44 - Starting service [Tomcat]
+2024-09-27 12:13:44 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:13:44 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:13:44 - Root WebApplicationContext: initialization completed in 244 ms
+2024-09-27 12:13:44 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'pedidoControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico' defined in file [C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes\com\lucas\demo\service\PedidoServico.class]: Failed to instantiate [com.lucas.demo.service.PedidoServico]: Constructor threw exception
+2024-09-27 12:13:44 - Stopping service [Tomcat]
+2024-09-27 12:13:44 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-27 12:13:44 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'pedidoControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico' defined in file [C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes\com\lucas\demo\service\PedidoServico.class]: Failed to instantiate [com.lucas.demo.service.PedidoServico]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico' defined in file [C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes\com\lucas\demo\service\PedidoServico.class]: Failed to instantiate [com.lucas.demo.service.PedidoServico]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.lucas.demo.service.PedidoServico]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 34 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "ublic", public expected
+
+	at com.lucas.demo.service.PedidoServico.<init>(PedidoServico.java:212)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 36 common frames omitted
+2024-09-27 12:13:50 - Starting DemoApplication using Java 21.0.3 with PID 8760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:13:50 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:13:51 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:13:51 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:13:51 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:13:51 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:13:51 - Starting service [Tomcat]
+2024-09-27 12:13:51 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:13:51 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:13:51 - Root WebApplicationContext: initialization completed in 272 ms
+2024-09-27 12:13:51 - Iniciando carregamento de prefixos...
+2024-09-27 12:13:51 - LiveReload server is running on port 35729
+2024-09-27 12:13:51 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:13:51 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:13:51 - Started DemoApplication in 0.419 seconds (process running for 495.867)
+2024-09-27 12:13:51 - Condition evaluation unchanged
+2024-09-27 12:13:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 12:13:53 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 12:13:53 - Completed initialization in 0 ms
+2024-09-27 12:15:07 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 12:15:07 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:15:07 - Starting DemoApplication using Java 21.0.3 with PID 8760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:15:07 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:15:07 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:15:07 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:15:07 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:15:07 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:15:07 - Starting service [Tomcat]
+2024-09-27 12:15:07 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:15:07 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:15:07 - Root WebApplicationContext: initialization completed in 229 ms
+2024-09-27 12:15:07 - Iniciando carregamento de prefixos...
+2024-09-27 12:15:07 - LiveReload server is running on port 35729
+2024-09-27 12:15:07 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:15:07 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:15:07 - Started DemoApplication in 0.36 seconds (process running for 572.125)
+2024-09-27 12:15:07 - Condition evaluation unchanged
+2024-09-27 12:15:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 12:15:12 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 12:15:12 - Completed initialization in 1 ms
+2024-09-27 12:16:14 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 12:16:14 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:16:14 - Starting DemoApplication using Java 21.0.3 with PID 8760 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 12:16:14 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 12:16:14 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 12:16:14 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 12:16:14 - Tomcat initialized with port 8080 (http)
+2024-09-27 12:16:14 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:16:14 - Starting service [Tomcat]
+2024-09-27 12:16:14 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 12:16:14 - Initializing Spring embedded WebApplicationContext
+2024-09-27 12:16:14 - Root WebApplicationContext: initialization completed in 185 ms
+2024-09-27 12:16:14 - Iniciando carregamento de prefixos...
+2024-09-27 12:16:14 - LiveReload server is running on port 35729
+2024-09-27 12:16:14 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 12:16:14 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 12:16:14 - Started DemoApplication in 0.318 seconds (process running for 639.146)
+2024-09-27 12:16:14 - Condition evaluation unchanged
+2024-09-27 12:16:17 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 12:16:17 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 12:16:17 - Completed initialization in 1 ms
+2024-09-27 13:22:34 - Starting DemoApplication using Java 21.0.3 with PID 5588 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 13:22:34 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 13:22:34 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-27 13:22:34 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-27 13:22:34 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-27 13:22:35 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 13:22:35 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 13:22:35 - Tomcat initialized with port 8080 (http)
+2024-09-27 13:22:35 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:22:35 - Starting service [Tomcat]
+2024-09-27 13:22:35 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 13:22:35 - Initializing Spring embedded WebApplicationContext
+2024-09-27 13:22:35 - Root WebApplicationContext: initialization completed in 1231 ms
+2024-09-27 13:22:35 - Iniciando carregamento de prefixos...
+2024-09-27 13:22:36 - LiveReload server is running on port 35729
+2024-09-27 13:22:36 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:22:36 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 13:22:36 - Started DemoApplication in 2.302 seconds (process running for 2.759)
+2024-09-27 13:22:54 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 13:22:54 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 13:22:54 - Completed initialization in 1 ms
+2024-09-27 13:23:01 - Starting DemoApplication using Java 21.0.3 with PID 8696 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 13:23:01 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 13:23:01 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-09-27 13:23:01 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-27 13:23:01 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-27 13:23:02 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 13:23:02 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 13:23:03 - Tomcat initialized with port 8080 (http)
+2024-09-27 13:23:03 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:23:03 - Starting service [Tomcat]
+2024-09-27 13:23:03 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 13:23:03 - Initializing Spring embedded WebApplicationContext
+2024-09-27 13:23:03 - Root WebApplicationContext: initialization completed in 1275 ms
+2024-09-27 13:23:03 - Iniciando carregamento de prefixos...
+2024-09-27 13:23:03 - LiveReload server is running on port 35729
+2024-09-27 13:23:03 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:23:03 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 13:23:03 - Started DemoApplication in 2.333 seconds (process running for 2.787)
+2024-09-27 13:23:09 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 13:23:09 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 13:23:09 - Completed initialization in 1 ms
+2024-09-27 13:37:47 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 13:37:47 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:37:47 - Starting DemoApplication using Java 21.0.3 with PID 8696 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 13:37:47 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 13:37:48 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 13:37:48 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 13:37:48 - Tomcat initialized with port 8080 (http)
+2024-09-27 13:37:48 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:37:48 - Starting service [Tomcat]
+2024-09-27 13:37:48 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 13:37:48 - Initializing Spring embedded WebApplicationContext
+2024-09-27 13:37:48 - Root WebApplicationContext: initialization completed in 332 ms
+2024-09-27 13:37:48 - Iniciando carregamento de prefixos...
+2024-09-27 13:37:48 - LiveReload server is running on port 35729
+2024-09-27 13:37:48 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:37:48 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 13:37:48 - Started DemoApplication in 0.53 seconds (process running for 887.331)
+2024-09-27 13:37:48 - Condition evaluation unchanged
+2024-09-27 13:37:58 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 13:37:58 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 13:37:58 - Completed initialization in 1 ms
+2024-09-27 13:38:42 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 13:38:42 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:38:42 - Starting DemoApplication using Java 21.0.3 with PID 8696 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 13:38:42 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 13:38:43 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 13:38:43 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 13:38:43 - Tomcat initialized with port 8080 (http)
+2024-09-27 13:38:43 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:38:43 - Starting service [Tomcat]
+2024-09-27 13:38:43 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 13:38:43 - Initializing Spring embedded WebApplicationContext
+2024-09-27 13:38:43 - Root WebApplicationContext: initialization completed in 368 ms
+2024-09-27 13:38:43 - Iniciando carregamento de prefixos...
+2024-09-27 13:38:43 - LiveReload server is running on port 35729
+2024-09-27 13:38:43 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:38:43 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 13:38:43 - Started DemoApplication in 0.654 seconds (process running for 942.529)
+2024-09-27 13:38:43 - Condition evaluation unchanged
+2024-09-27 13:39:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 13:39:23 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 13:39:23 - Completed initialization in 0 ms
+2024-09-27 13:40:27 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 13:40:27 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:40:28 - Starting DemoApplication using Java 21.0.3 with PID 8696 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 13:40:28 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 13:40:28 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 13:40:28 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 13:40:28 - Tomcat initialized with port 8080 (http)
+2024-09-27 13:40:28 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:40:28 - Starting service [Tomcat]
+2024-09-27 13:40:28 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 13:40:28 - Initializing Spring embedded WebApplicationContext
+2024-09-27 13:40:28 - Root WebApplicationContext: initialization completed in 403 ms
+2024-09-27 13:40:28 - Iniciando carregamento de prefixos...
+2024-09-27 13:40:28 - LiveReload server is running on port 35729
+2024-09-27 13:40:28 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:40:28 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 13:40:28 - Started DemoApplication in 0.609 seconds (process running for 1047.69)
+2024-09-27 13:40:28 - Condition evaluation unchanged
+2024-09-27 13:40:32 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 13:40:32 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 13:40:32 - Completed initialization in 0 ms
+2024-09-27 13:43:11 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-27 13:43:11 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:43:11 - Starting DemoApplication using Java 21.0.3 with PID 8696 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-09-27 13:43:11 - No active profile set, falling back to 1 default profile: "default"
+2024-09-27 13:43:11 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-09-27 13:43:11 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-09-27 13:43:11 - Tomcat initialized with port 8080 (http)
+2024-09-27 13:43:11 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:43:11 - Starting service [Tomcat]
+2024-09-27 13:43:11 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-27 13:43:11 - Initializing Spring embedded WebApplicationContext
+2024-09-27 13:43:11 - Root WebApplicationContext: initialization completed in 281 ms
+2024-09-27 13:43:11 - Iniciando carregamento de prefixos...
+2024-09-27 13:43:11 - LiveReload server is running on port 35729
+2024-09-27 13:43:11 - Starting ProtocolHandler ["http-nio-8080"]
+2024-09-27 13:43:11 - Tomcat started on port 8080 (http) with context path '/'
+2024-09-27 13:43:11 - Started DemoApplication in 0.429 seconds (process running for 1210.704)
+2024-09-27 13:43:11 - Condition evaluation unchanged
+2024-09-27 13:43:17 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-27 13:43:17 - Initializing Servlet 'dispatcherServlet'
+2024-09-27 13:43:17 - Completed initialization in 0 ms
+2024-10-07 11:10:31 - Starting DemoApplication using Java 21.0.3 with PID 6100 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-07 11:10:31 - No active profile set, falling back to 1 default profile: "default"
+2024-10-07 11:10:32 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-07 11:10:32 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-07 11:10:32 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-07 11:10:37 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-07 11:10:37 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-07 11:10:38 - Tomcat initialized with port 8080 (http)
+2024-10-07 11:10:38 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:10:38 - Starting service [Tomcat]
+2024-10-07 11:10:38 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-07 11:10:38 - Initializing Spring embedded WebApplicationContext
+2024-10-07 11:10:38 - Root WebApplicationContext: initialization completed in 6636 ms
+2024-10-07 11:10:39 - Iniciando carregamento de prefixos...
+2024-10-07 11:10:39 - LiveReload server is running on port 35729
+2024-10-07 11:10:39 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:10:39 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-07 11:10:39 - Started DemoApplication in 11.606 seconds (process running for 14.296)
+2024-10-07 11:10:46 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-07 11:10:46 - Initializing Servlet 'dispatcherServlet'
+2024-10-07 11:10:46 - Completed initialization in 2 ms
+2024-10-07 11:15:28 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa]
+2024-10-07 11:15:43 - Prefixo adicionado com sucesso: Espetoo
+2024-10-07 11:15:46 - Iniciando carregamento de prefixos...
+2024-10-07 11:15:49 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espetoo]
+2024-10-07 11:15:49 - Iniciando carregamento de prefixos...
+2024-10-07 11:15:51 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espetoo]
+2024-10-07 11:15:53 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espetoo]
+2024-10-07 11:16:07 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-07 11:16:07 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:16:07 - Starting DemoApplication using Java 21.0.3 with PID 6100 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-07 11:16:07 - No active profile set, falling back to 1 default profile: "default"
+2024-10-07 11:16:07 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-07 11:16:07 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-07 11:16:08 - Tomcat initialized with port 8080 (http)
+2024-10-07 11:16:08 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:16:08 - Starting service [Tomcat]
+2024-10-07 11:16:08 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-07 11:16:08 - Initializing Spring embedded WebApplicationContext
+2024-10-07 11:16:08 - Root WebApplicationContext: initialization completed in 284 ms
+2024-10-07 11:16:08 - Iniciando carregamento de prefixos...
+2024-10-07 11:16:08 - LiveReload server is running on port 35729
+2024-10-07 11:16:08 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:16:08 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-07 11:16:08 - Started DemoApplication in 0.487 seconds (process running for 342.605)
+2024-10-07 11:16:08 - Condition evaluation unchanged
+2024-10-07 11:16:09 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-07 11:16:09 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:16:09 - Starting DemoApplication using Java 21.0.3 with PID 6100 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-07 11:16:09 - No active profile set, falling back to 1 default profile: "default"
+2024-10-07 11:16:09 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-07 11:16:09 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-07 11:16:09 - Tomcat initialized with port 8080 (http)
+2024-10-07 11:16:09 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:16:09 - Starting service [Tomcat]
+2024-10-07 11:16:09 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-07 11:16:09 - Initializing Spring embedded WebApplicationContext
+2024-10-07 11:16:09 - Root WebApplicationContext: initialization completed in 241 ms
+2024-10-07 11:16:09 - Iniciando carregamento de prefixos...
+2024-10-07 11:16:10 - LiveReload server is running on port 35729
+2024-10-07 11:16:10 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:16:10 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-07 11:16:10 - Started DemoApplication in 0.396 seconds (process running for 344.467)
+2024-10-07 11:16:10 - Condition evaluation unchanged
+2024-10-07 11:16:15 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-07 11:16:15 - Initializing Servlet 'dispatcherServlet'
+2024-10-07 11:16:15 - Completed initialization in 0 ms
+2024-10-07 11:16:15 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa]
+2024-10-07 11:20:39 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa]
+2024-10-07 11:20:41 - Prefixo adicionado com sucesso: Espetoo
+2024-10-07 11:20:46 - Iniciando carregamento de prefixos...
+2024-10-07 11:20:50 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espetoo]
+2024-10-07 11:20:50 - Iniciando carregamento de prefixos...
+2024-10-07 11:20:53 - Prefixos já carregados: [Jantinha, Batata, Porção, Taboa, Espetoo]
+2024-10-07 11:21:27 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-07 11:21:27 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:21:27 - Starting DemoApplication using Java 21.0.3 with PID 6100 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-07 11:21:27 - No active profile set, falling back to 1 default profile: "default"
+2024-10-07 11:21:27 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-07 11:21:27 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-07 11:21:27 - Tomcat initialized with port 8080 (http)
+2024-10-07 11:21:27 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:21:27 - Starting service [Tomcat]
+2024-10-07 11:21:27 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-07 11:21:27 - Initializing Spring embedded WebApplicationContext
+2024-10-07 11:21:27 - Root WebApplicationContext: initialization completed in 313 ms
+2024-10-07 11:21:27 - Iniciando carregamento de prefixos...
+2024-10-07 11:21:27 - LiveReload server is running on port 35729
+2024-10-07 11:21:27 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-07 11:21:27 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-07 11:21:27 - Started DemoApplication in 0.518 seconds (process running for 662.375)
+2024-10-07 11:21:27 - Condition evaluation unchanged
+2024-10-07 11:21:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-07 11:21:29 - Initializing Servlet 'dispatcherServlet'
+2024-10-07 11:21:29 - Completed initialization in 0 ms
+2024-10-07 11:21:29 - Prefixo adicionado com sucesso: Espetoo
+2024-10-07 11:21:32 - Iniciando carregamento de prefixos...
+2024-10-07 11:21:34 - Iniciando carregamento de prefixos...
+2024-10-07 11:21:34 - Iniciando carregamento de prefixos...
+2024-10-07 11:21:36 - Iniciando carregamento de prefixos...
+2024-10-07 11:21:38 - Iniciando carregamento de prefixos...
+2024-10-07 11:24:10 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-07 11:24:10 - Stopping ProtocolHandler ["http-nio-8080"]
