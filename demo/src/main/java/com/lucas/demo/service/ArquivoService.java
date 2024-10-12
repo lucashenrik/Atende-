@@ -5,8 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lucas.demo.exceptions.ErroArquivoException;
-import com.lucas.demo.model.Item;
+import com.lucas.demo.model.ItemXml;
 
 @Service
 public class ArquivoService {
@@ -35,7 +36,19 @@ public class ArquivoService {
 
 		List<Map<String, String>> codigosList = new ArrayList<>(); // Inicializa a lista vazia
 
-		LocalDate data = LocalDate.now();
+		// LocalDate data = LocalDate.now();
+		LocalDate data;
+
+		// Obtenha a data atual e a hora atual
+		LocalDate hoje = LocalDate.now();
+		LocalTime agora = LocalTime.now();
+
+		// Se a hora atual for antes das 7h, usaremos o dia anterior
+		if (agora.isBefore(LocalTime.of(7, 0))) {
+			data = hoje.minusDays(1); // Usa a data anterior (dia 6)
+		} else {
+			data = hoje; // Usa a data atual (dia 7)
+		}
 
 		// Especifica o caminho onde o arquivo será salvo
 		String diretorio = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\Registros\\Codigos-de-notificacao";
@@ -67,7 +80,7 @@ public class ArquivoService {
 		escrever(codigosList, caminhoArq);
 	}
 
-	public synchronized void escreverPedido(Item item) {
+	/*public synchronized void escreverPedido(Item item) {
 		List<Map<String, String>> pedidoList = new ArrayList<>();
 
 		LocalDate data = LocalDate.now();
@@ -91,7 +104,7 @@ public class ArquivoService {
 		// Inicialize novoPedido se ainda não estiver inicializado
 		Map<String, String> novoPedido = new HashMap<>();
 
-		//Adicionar o novo pedido à lista Map<String, String>
+		// Adicionar o novo pedido à lista Map<String, String>
 		novoPedido = new HashMap<>();
 		novoPedido.put("quantity", String.valueOf(item.getQuantity()));
 		novoPedido.put("reference_id", String.valueOf(item.getReferenceId()));
@@ -100,17 +113,60 @@ public class ArquivoService {
 
 		pedidoList.add(novoPedido); // Adiciona o novo item à lista
 
-	    // Escreve no arquivo apenas uma vez após adicionar todos os pedidos
+		// Escreve no arquivo apenas uma vez após adicionar todos os pedidos
 		escrever(pedidoList, caminhoArq);
 
 		// Adiciona o item à memória e realiza a lógica adicional
 		pedidoServ.adicionarItem(item);
 
-		//escrever(pedidoList, caminhoArq);
+		// escrever(pedidoList, caminhoArq);
+
+	}*/
+	
+	public synchronized void escreverPedido(ItemXml item) {
+		List<Map<String, String>> pedidoList = new ArrayList<>();
+
+		LocalDate data = LocalDate.now();
+
+		String diretorio = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\Registros\\Pedidos";
+		String caminhoArq = diretorio + "\\pedidos_" + data + ".json";
+
+		File file = new File(caminhoArq);
+
+		// Verifica se o arquivo já existe e lê seu conteúdo
+		if (file.exists()) {
+			try {
+				// Corrigido: lendo o arquivo JSON existente para a lista
+				pedidoList = mapper.readValue(file, new TypeReference<List<Map<String, String>>>() {
+				});
+			} catch (IOException e) {
+				throw new ErroArquivoException("Não foi possivel ler o arquivo.", e.getCause());
+			}
+		}
+		
+		// Inicialize novoPedido se ainda não estiver inicializado
+		Map<String, String> novoPedido = new HashMap<>();
+
+		// Adicionar o novo pedido à lista Map<String, String>
+		novoPedido = new HashMap<>();
+		novoPedido.put("quantity", String.valueOf(item.getQuantity()));
+		novoPedido.put("reference_id", String.valueOf(item.getReferenceId()));
+		novoPedido.put("description", item.getName());
+		novoPedido.put("status", "andamento");
+
+		pedidoList.add(novoPedido); // Adiciona o novo item à lista
+
+		// Escreve no arquivo apenas uma vez após adicionar todos os pedidos
+		escrever(pedidoList, caminhoArq);
+
+		// Adiciona o item à memória e realiza a lógica adicional
+		pedidoServ.adicionarItem(item);
+
+		// escrever(pedidoList, caminhoArq);
 
 	}
 
-	public synchronized void alterarStatus(String senha, String novoStatus) {
+	/*public synchronized void alterarStatus(String senha, String novoStatus) {
 		ObjectMapper objectMapper = new ObjectMapper();
 
 		try {
@@ -145,6 +201,7 @@ public class ArquivoService {
 
 					if (referenceIdStr.equals(senha)) {
 						pedidoNovo.put("status", novoStatus); // Atualiza o status
+						pedidoNovo.put("hora", LocalTime.now());
 						pedidoEncontrado = true;
 						break;
 					}
@@ -156,12 +213,80 @@ public class ArquivoService {
 				// Escreve a lista de pedidos de volta no arquivo JSON
 				objectMapper.writeValue(file, pedidos);
 				System.out.println("Status atualizado com sucesso!");
+				//pedidoServ.limparLista();
+				// Atualizar pedidos após alteração de status
+	            pedidoServ.carregarPedidos();  // Recarregar pedidos para refletir as alterações
 			}
 
+            
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}*/
+	
+	public synchronized void alterarStatus(String senha, String novoStatus) {
+	    ObjectMapper objectMapper = new ObjectMapper();
+
+	    try {
+	        // Local onde o arquivo está armazenado
+	        LocalDate data = LocalDate.now();
+	        String diretorio = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\Registros\\Pedidos";
+	        String caminhoArq = diretorio + "\\pedidos_" + data + ".json";
+
+	        // Carrega o arquivo de pedidos para a lista
+	        File file = new File(caminhoArq);
+	        List<Map<String, Object>> pedidos;
+
+	        if (file.exists()) {
+	            // Lê o arquivo JSON e converte para lista de pedidos
+	            pedidos = objectMapper.readValue(file, new TypeReference<List<Map<String, Object>>>() {});
+	        } else {
+	            System.out.println("Arquivo de pedidos não encontrado.");
+	            return; // Sai da função caso o arquivo não exista
+	        }
+
+	        // Variável de controle para saber se o pedido foi encontrado
+	        boolean pedidoEncontrado = false;
+
+	        // Percorre os pedidos e altera o status do pedido com a senha especificada
+	        for (Map<String, Object> pedidoNovo : pedidos) {
+	            if (pedidoNovo.containsKey("reference_id")) {
+	                Object referenceId = pedidoNovo.get("reference_id");
+	                String referenceIdStr = String.valueOf(referenceId);
+
+	                if (referenceIdStr.equals(senha)) {
+	                    // Atualiza o status
+	                    pedidoNovo.put("status", novoStatus);
+
+	                    // Adiciona o horário apenas se o status for "cancelado" ou "entregue"
+	                    if ("cancelado".equalsIgnoreCase(novoStatus) || "entregue".equalsIgnoreCase(novoStatus)) {
+	                        // Formata a hora no formato desejado (exemplo: HH:mm:ss)
+	                        String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+	                        pedidoNovo.put("hora", horaAtual); // Adiciona a hora formatada
+	                    }
+
+	                    pedidoEncontrado = true;
+	                    break;
+	                }
+	            }
+	        }
+
+	        if (!pedidoEncontrado) {
+	            System.out.println("Pedido com a senha especificada não encontrado.");
+	        } else {
+	            // Escreve a lista de pedidos de volta no arquivo JSON
+	            objectMapper.writeValue(file, pedidos);
+	            System.out.println("Status atualizado com sucesso!");
+
+	            // Atualizar pedidos após alteração de status
+	            pedidoServ.carregarPedidos();  // Recarregar pedidos para refletir as alterações
+	        }
+
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
 	}
+
 
 	private synchronized void escrever(List<?> registro, String caminhoArq) {
 		// Salva a lista atualizada de volta ao arquivo

@@ -1,0 +1,121 @@
+package com.lucas.demo.model;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
+/*@JsonIgnoreProperties(ignoreUnknown = true)
+public class ItemXml {
+
+	@JacksonXmlProperty(localName = "id") // Mapeia o campo 'id' no XML
+	private int referenceId;
+
+	@JacksonXmlProperty(localName = "description") // Mapeia o campo 'description' no XML
+	private String name;
+
+	@JacksonXmlProperty(localName = "quantity") // Mapeia o campo 'quantity' no XML
+	private int quantity;
+
+	@JacksonXmlProperty(localName = "status") // Mapeia o campo 'status' (caso exista no XML)
+	private String status;
+
+	// Getters e Setters
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public int getReferenceId() {
+		return referenceId;
+	}
+
+	public void setReferenceId(int referenceId) {
+		this.referenceId = referenceId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	@Override
+	public String toString() {
+		return "Item{" + "referenceId=" + referenceId + ", name='" + name + '\'' + ", quantity=" + quantity
+				+ ", status='" + status + '\'' + '}';
+	}*/
+
+public class ItemXml {
+    @JacksonXmlProperty(localName = "id")
+    private String referenceId;
+
+    @JacksonXmlProperty(localName = "description")
+    private String name;
+
+    @JacksonXmlProperty(localName = "quantity")
+    private int quantity;
+
+    @JacksonXmlProperty(localName = "amount")
+    private double amount;
+    
+    @JacksonXmlProperty(localName = "status")
+    private String status;
+
+	public String getReferenceId() {
+		return referenceId;
+	}
+
+	public void setReferenceId(String referenceId) {
+		this.referenceId = referenceId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Item{" + "referenceId=" + referenceId + ", name='" + name + '\'' + ", quantity=" + quantity
+				+ ", status='" + status + '\'' + '}';
+	}
+
+}

@@ -1,0 +1,86 @@
+package com.lucas.demo.model;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ItemXml {
+	@JacksonXmlProperty(localName = "id")
+	private int referenceId;
+
+	@JacksonXmlProperty(localName = "description")
+	private String name;
+
+	@JacksonXmlProperty(localName = "quantity")
+	private int quantity;
+
+	@JacksonXmlProperty(localName = "amount")
+	private double amount;
+
+	@JacksonXmlProperty(localName = "status")
+	private String status;
+
+	// Construtor vazio necessário para a desserialização
+	public ItemXml() {
+	}
+
+	// Construtor que aceita strings para desserializar
+	@JsonCreator
+	public ItemXml(@JacksonXmlProperty(localName = "id") String referenceId,
+			@JacksonXmlProperty(localName = "description") String name,
+			@JacksonXmlProperty(localName = "quantity") String quantity,
+			@JacksonXmlProperty(localName = "amount") String amount) {
+		this.referenceId = Integer.parseInt(referenceId);
+		this.name = name;
+		this.quantity = Integer.parseInt(quantity);
+		this.amount = Double.parseDouble(amount);
+	}
+
+	public int getReferenceId() {
+		return referenceId;
+	}
+
+	public void setReferenceId(int referenceId) {
+		this.referenceId = referenceId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Item{" + "referenceId=" + referenceId + ", name='" + name + '\'' + ", quantity=" + quantity
+				+ ", status='" + status + '\'' + '}';
+	}
+
+}

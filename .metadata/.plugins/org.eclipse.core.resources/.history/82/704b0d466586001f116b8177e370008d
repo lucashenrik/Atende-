@@ -1,0 +1,29 @@
+package com.lucas.demo.model;
+
+import java.util.List;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
+public class PedidosXml {
+
+	@JacksonXmlElementWrapper(useWrapping = false)
+	@JacksonXmlProperty(localName = "item")
+	private List<ItemXml> items;
+
+	public PedidosXml() {
+	}
+
+	public List<ItemXml> getItems() {
+		return items;
+	}
+
+	public void setItems(List<ItemXml> items) {
+		this.items = items;
+	}
+
+	@Override
+	public String toString() {
+		return "Pedidos{" + "items=" + items + '}';
+	}
+}

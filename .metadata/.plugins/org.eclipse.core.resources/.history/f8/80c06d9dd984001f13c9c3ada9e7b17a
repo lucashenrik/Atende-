@@ -1,0 +1,75 @@
+package infra;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lucas.demo.model.UserData;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+	
+	 @Bean
+	    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+	        http
+	            .csrf(csrf -> csrf.disable()) // Desabilitar CSRF para facilitar testes
+	            .authorizeHttpRequests(authz -> authz
+	                .requestMatchers("/auth/login").permitAll() // Permitir acesso ao endpoint de login
+	                .requestMatchers("/public/**").permitAll() // Permitir acesso a qualquer rota que comece com /public
+	                .requestMatchers("/pedido/lista-pedidos").authenticated() // Requer autenticação para este endpoint
+	                .anyRequest().authenticated() // Requer autenticação para qualquer outra rota
+	            )
+	            .formLogin(form -> form
+	                .loginPage("/auth/login") // Endpoint do seu login
+	                .permitAll() // Permitir acesso a todos para a página de login
+	            )
+	            .logout(logout -> logout
+	                .permitAll() // Permitir acesso a todos para logout
+	            );
+
+	        return http.build();
+	    }
+
+	 
+	    @Bean
+	    public UserDetailsService userDetailsService() {
+	        return username -> {
+	            System.out.println("Buscando usuário: " + username);
+	            try {
+	                ObjectMapper objectMapper = new ObjectMapper();
+	                UserData userData = objectMapper.readValue(new File("C:\\Users\\Lucas\\Documents\\Projetos\\demo\\user.json"), UserData.class);
+
+	                return userData.getUsers().stream()
+	                    .filter(user -> user.getUsername().equals(username))
+	                    .findFirst()
+	                    .map(user -> User.withUsername(user.getUsername())
+	                                      .password(user.getPassword())
+	                                      .roles("USER") // Ou outra role, se aplicável
+	                                      .build())
+	                    .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado: " + username));
+	            } catch (IOException e) {
+	                throw new RuntimeException("Falha ao carregar usuários", e);
+	            }
+	        };
+	    }
+
+	    @Bean
+	    public PasswordEncoder passwordEncoder() {
+	        return new BCryptPasswordEncoder();
+	    }
+}

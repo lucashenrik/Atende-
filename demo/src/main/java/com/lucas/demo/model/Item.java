@@ -1,23 +1,25 @@
 package com.lucas.demo.model;
 
+import java.time.LocalTime;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Item {
-    @JsonProperty("reference_id")
-    private int referenceId;
 
-    @JsonProperty("name")
-    private String name;
+	@JsonProperty("reference_id")
+	private int referenceId;
+	@JsonProperty("name")
+	private String name;
+	@JsonProperty("quantity")
+	private int quantity;
+	@JsonProperty("status")
+	private String status;
+	@JsonProperty("hora")
+	private LocalTime hora;
 
-    @JsonProperty("quantity")
-    private int quantity;
-    
-    @JsonProperty("status")
-    private String status;
-
-    public String getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
@@ -26,63 +28,40 @@ public class Item {
 	}
 
 	public int getReferenceId() {
-        return referenceId;
-    }
+		return referenceId;
+	}
 
-    public void setReferenceId(int referenceId) {
-        this.referenceId = referenceId;
-    }
+	public void setReferenceId(int referenceId) {
+		this.referenceId = referenceId;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public int getQuantity() {
-        return quantity;
-    }
+	public int getQuantity() {
+		return quantity;
+	}
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	public LocalTime getHora() {
+		return hora;
+	}
 
-    @Override
-    public String toString() {
-        return "Pedido{" +
-                "referenceId='" + referenceId + '\'' +
-                ", name='" + name + '\'' +
-                ", quantity=" + quantity + '/' +
-                ", status=" + status +
-                '}';
-    }
+	public void setHora(LocalTime hora) {
+		this.hora = hora;
+	}
 
-	/*
-	 * @XmlElement(name = "id") int id;
-	 * 
-	 * @XmlElement(name = "quantity") // Atualizado para "quantity" int quantity;
-	 * 
-	 * @XmlElement(name = "description") // Atualizado para "description" String
-	 * description;
-	 * 
-	 * public Pedido() { super(); }
-	 * 
-	 * public Pedido(int id, int quantity, String description) { super(); this.id =
-	 * id; this.quantity = quantity; this.description = description; }
-	 * 
-	 * public int getId() { return id; }
-	 * 
-	 * public void setId(int id) { this.id = id; }
-	 * 
-	 * public int getQuantity() { return quantity; }
-	 * 
-	 * public void setQuantity(int quantity) { this.quantity = quantity; }
-	 * 
-	 * public String getDescription() { return description; }
-	 * 
-	 * public void setDescription(String description) { this.description =
-	 * description; }
-	 */
+	@Override
+	public String toString() {
+		return "Pedido{" + "referenceId='" + referenceId + '\'' + ", name='" + name + '\'' + ", quantity=" + quantity
+				+ '/' + ", status=" + status + '/' + ", hora=" + hora + '\'' + '}';
+	}
 }
