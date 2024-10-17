@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+/*@JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemXml {
 	@JacksonXmlProperty(localName = "id")
 	private int referenceId;
@@ -42,7 +42,31 @@ public class ItemXml {
 		this.quantity = Integer.parseInt(quantity);
 		this.amount = Double.parseDouble(amount);
 		this.hora = LocalTime.parse(hora);
-	}
+	}*/
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ItemXml {
+
+    @JacksonXmlProperty(localName = "id")
+    private int referenceId;
+
+    @JacksonXmlProperty(localName = "description")
+    private String name;
+
+    @JacksonXmlProperty(localName = "quantity")
+    private int quantity;
+
+    @JacksonXmlProperty(localName = "amount")
+    private double amount;
+
+    @JacksonXmlProperty(localName = "status")
+    private String status;
+
+    @JacksonXmlProperty(localName = "hora")
+    private LocalTime hora;
+
+    // Construtor vazio necessário para a desserialização
+    public ItemXml() {}
 
 	public int getReferenceId() {
 		return referenceId;

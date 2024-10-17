@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -419,6 +420,8 @@ public class PedidoServico {
 			int id = item.getReferenceId();
 			int quantity = item.getQuantity();
 
+			String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+            
 			String description = item.getName();
 
 			Map<String, String> novoItem = new HashMap<>();
@@ -426,7 +429,7 @@ public class PedidoServico {
 			novoItem.put("quantity", String.valueOf(quantity));
 			novoItem.put("description", description);
 			novoItem.put("status", "andamento");
-			//novoItem.put("hora", null);
+			novoItem.put("hora", horaAtual); // Adiciona a hora formatada
 
 			// pedidoMemoria.add(novoItem);
 
@@ -562,7 +565,7 @@ public class PedidoServico {
 							String statusItem = item.get("status");
 
 							// Verifica se o pedido já está na lista antes de adicionar
-							if ("entregue".equals(statusItem)) {
+							if ("entregue".equals(statusItem) || ("cancelar".equals(statusItem))) {
 								// Adiciona pedidos entregues
 								if (!pedidosEntregues.contains(item)) {
 									pedidosEntregues.add(item);

@@ -27,7 +27,8 @@ public class ArquivoService {
 	@Lazy
 	@Autowired
 	PedidoServico pedidoServ;
-
+	
+	 
 	ObjectMapper mapper = new ObjectMapper();
 
 	public void escreverCodigo(String notificationCode) {
@@ -144,6 +145,10 @@ public class ArquivoService {
 			}
 		}
 		
+	
+		 // Formata a hora no formato desejado (exemplo: HH:mm:ss)
+	    String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+
 		// Inicialize novoPedido se ainda não estiver inicializado
 		Map<String, String> novoPedido = new HashMap<>();
 
@@ -153,7 +158,8 @@ public class ArquivoService {
 		novoPedido.put("reference_id", String.valueOf(item.getReferenceId()));
 		novoPedido.put("description", item.getName());
 		novoPedido.put("status", "andamento");
-
+		novoPedido.put("hora", horaAtual); // Adiciona a hora formatada
+		
 		pedidoList.add(novoPedido); // Adiciona o novo item à lista
 
 		// Escreve no arquivo apenas uma vez após adicionar todos os pedidos
@@ -224,7 +230,7 @@ public class ArquivoService {
 		}
 	}*/
 	
-	public synchronized void alterarStatus(String senha, String novoStatus) {
+	public synchronized void alterarStatus(String senha, String novoStatus, String hora) {
 	    ObjectMapper objectMapper = new ObjectMapper();
 
 	    try {
@@ -248,20 +254,22 @@ public class ArquivoService {
 	        // Variável de controle para saber se o pedido foi encontrado
 	        boolean pedidoEncontrado = false;
 
-	        // Percorre os pedidos e altera o status do pedido com a senha especificada
+	        // Percorre os pedidos e altera o status do pedido com a senha e hora especificadas
 	        for (Map<String, Object> pedidoNovo : pedidos) {
-	            if (pedidoNovo.containsKey("reference_id")) {
+	            if (pedidoNovo.containsKey("reference_id") && pedidoNovo.containsKey("hora")) {
 	                Object referenceId = pedidoNovo.get("reference_id");
 	                String referenceIdStr = String.valueOf(referenceId);
-
-	                if (referenceIdStr.equals(senha)) {
+	                String horaPedido = String.valueOf(pedidoNovo.get("hora"));
+	                
+	                if (referenceIdStr.equals(senha) && horaPedido.equals(hora)) {
 	                    // Atualiza o status
 	                    pedidoNovo.put("status", novoStatus);
 
 	                    // Adiciona o horário apenas se o status for "cancelado" ou "entregue"
-	                    if ("cancelado".equalsIgnoreCase(novoStatus) || "entregue".equalsIgnoreCase(novoStatus)) {
-	                        // Formata a hora no formato desejado (exemplo: HH:mm:ss)
+	                    if ("cancelar".equalsIgnoreCase(novoStatus) || "entregue".equalsIgnoreCase(novoStatus)) {
+	                    	 // Formata a hora no formato desejado (exemplo: HH:mm:ss)
 	                        String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+
 	                        pedidoNovo.put("hora", horaAtual); // Adiciona a hora formatada
 	                    }
 
@@ -272,7 +280,7 @@ public class ArquivoService {
 	        }
 
 	        if (!pedidoEncontrado) {
-	            System.out.println("Pedido com a senha especificada não encontrado.");
+	            System.out.println("Pedido com a senha e hora especificados não encontrado.");
 	        } else {
 	            // Escreve a lista de pedidos de volta no arquivo JSON
 	            objectMapper.writeValue(file, pedidos);
