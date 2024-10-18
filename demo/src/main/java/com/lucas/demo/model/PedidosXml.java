@@ -9,7 +9,6 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PedidosXml {
 
-	// Corrigido para associar ao campo "items" corretamente
 	@JacksonXmlElementWrapper(useWrapping = true)
 	@JacksonXmlProperty(localName = "item")
 	private List<ItemXml> items;

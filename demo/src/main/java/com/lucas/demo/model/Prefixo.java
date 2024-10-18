@@ -5,7 +5,6 @@ import java.util.Objects;
 public class Prefixo {
 	private String prefixo;
 
-	// Construtores, getters e setters
 	public Prefixo() {
 	}
 

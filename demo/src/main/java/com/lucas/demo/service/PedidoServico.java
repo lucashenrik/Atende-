@@ -45,29 +45,34 @@ public class PedidoServico {
 	@Autowired
 	PrefixosService prefixoServ;
 
-	String email = "lucashenrik033@gmail.com";
-
-	String token = "ba79ef80-4713-434c-909b-8c6dc51fbe4dd4c9f894450b9b139fc8315617c7637a1317-a9e8-4b9f-8388-d772c4c1c537";
+	@Autowired
+	private UserConfigService userConfigService;
 
 	LocalDate data = LocalDate.now();
 
 	ObjectMapper mapper = new ObjectMapper();
 
-	String diretorio = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\Registros\\Pedidos";
-	String caminhoArq = diretorio + "\\pedidos_" + data + ".json";
+	/*
+	 * String diretorio =
+	 * "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\Registros\\Pedidos"; String
+	 * caminhoArq = diretorio + "\\pedidos_" + data + ".json";
+	 * 
+	 * set PAGBANK_EMAIL="lucashenrik033@gmail.com" set PAGBANK_TOKEN=
+	 * "e9d7a3d2-52e3-4721-a5c5-11ed8d58e5bb29e6562845b6a5b62f19766ea92afc776e7b-780d-4ef5-8045-af078e1c9040"
+	 */
+
+	String diretorioAtual = System.getProperty("user.dir");
+	// Volte um nível removendo o último "demo" do caminho
+	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+	String caminhoArq = diretorioPrincipal + "\\registros\\pedidos\\pedidos_" + data + ".json";
 
 	private List<Map<String, String>> pedidoMemoria = Collections.synchronizedList(new ArrayList<>());
-	// private List<Map<String, String>> pedidoMemoria = new ArrayList<>();
-	int iMemoria;
+
 	List<Map<String, String>> pedidosEmArquivo = new ArrayList<>();
-	int iArquivo;
 
 	List<Map<String, String>> pedidosVerficados = new ArrayList<>();
 
 	List<Map<String, String>> pedidosEntregues = new ArrayList<>();
-
-	// List<String> prefixos = Arrays.asList("Jantinha", "Batata", "Porção",
-	// "Taboa");
 
 	List<String> prefixosComoString;
 
@@ -89,199 +94,40 @@ public class PedidoServico {
 		return item;
 	}
 
-	public String getUrl(String noticacaoCode) {
-		// String getUrl =
-		// "https://ws.pagseguro.uol.com.br/v3/transactions/notifications/" +
-		// noticacaoCode +"?email="+ email +"&token=" + token;
+	// Retorna url para buscar informacoes do pedido
+	/*
+	 * public String getUrl(String noticacaoCode) { String getUrl =
+	 * "https://ws.pagseguro.uol.com.br/v3/transactions/notifications/" +
+	 * noticacaoCode + "?email=" + email + "&token=" + token;
+	 * 
+	 * // String getUrl = //
+	 * "https://ws.pagseguro.uol.com.br/v3/transactions/notifications/6BCE80-91D8FDD8FD9A-56645B1FB394-E3BD42?email=lucashenrik033@gmail.com&token=e9d7a3d2-52e3-4721-a5c5-11ed8d58e5bb29e6562845b6a5b62f19766ea92afc776e7b-780d-4ef5-8045-af078e1c9040";
+	 * System.out.println(getUrl); return getUrl; }
+	 */
 
-		String getUrl = "https://ws.pagseguro.uol.com.br/v3/transactions/notifications/6BCE80-91D8FDD8FD9A-56645B1FB394-E3BD42?email=lucashenrik033@gmail.com&token=e9d7a3d2-52e3-4721-a5c5-11ed8d58e5bb29e6562845b6a5b62f19766ea92afc776e7b-780d-4ef5-8045-af078e1c9040";
+	public String getUrl(String noticacaoCode) {
+		Map<String, String> userConfig = userConfigService.getEmailAndToken();
+		String email = userConfig.get("email");
+		String token = userConfig.get("token");
+
+		String getUrl = "https://ws.pagseguro.uol.com.br/v3/transactions/notifications/" + noticacaoCode + "?email="
+				+ email + "&token=" + token;
+
 		return getUrl;
 	}
 
+	// Retorna a url para o servidor que processa o pedido
 	public String urlProcess(String notificacaoCode) {
 		String urlProcess = "http://localhost:8080/pedido/processar-notificacao?notificacaoCode=" + notificacaoCode;
 
 		return urlProcess;
 	}
 
-	/*
-	 * public void processarItens(String json) { ObjectMapper objectMapper = new
-	 * ObjectMapper(); List<Item> items = new ArrayList<>();
-	 * 
-	 * try { JsonNode rootNode = objectMapper.readTree(json); JsonNode itemsNode =
-	 * rootNode.path("items");
-	 * 
-	 * if (!itemsNode.isArray()) { throw new
-	 * ErroProcessamentoException("O JSON enviado não contém o campo 'items' ou está malformado."
-	 * ); }
-	 * 
-	 * for (JsonNode itemNode : itemsNode) { Item novoItem =
-	 * objectMapper.treeToValue(itemNode, Item.class);
-	 * 
-	 * if (começaComPrefixo(novoItem.getName())) { Item itemExistente =
-	 * encontrarItemNaLista(items, novoItem);
-	 * 
-	 * if (itemExistente != null) {
-	 * itemExistente.setQuantity(itemExistente.getQuantity() +
-	 * novoItem.getQuantity()); } else { items.add(novoItem); } } else { //
-	 * System.out.println("Item não contém prefixo: " + novoItem.getName()); } }
-	 * 
-	 * // Exibir e escrever os itens processados for (Item item : items) {
-	 * arquivoServ.escreverPedido(item); System.out.println("Item: " + item); }
-	 * 
-	 * } catch (JsonProcessingException e) { // Captura o erro ao tentar processar o
-	 * JSON malformado e lança exceção // personalizada throw new
-	 * ErroProcessamentoException("Erro ao processar JSON malformado", e); } }
-	 */
-
-	/*
-	 * public void processarItens(String xml) { XmlMapper xmlMapper = new
-	 * XmlMapper();
-	 * 
-	 * try { // Converte o XML para uma árvore JSON JsonNode rootNode =
-	 * xmlMapper.readTree(xml);
-	 * 
-	 * // Verifica a existência do campo 'items' JsonNode itemsNode =
-	 * rootNode.get("items");
-	 * 
-	 * if (itemsNode == null) { // Se o campo 'items' não for encontrado, lança
-	 * exceção throw new
-	 * ErroProcessamentoException("O XML enviado não contém o campo 'items' ou está malformado."
-	 * ); } else { // Exibe o conteúdo do campo 'items' (para depuração)
-	 * System.out.println("Campo 'items' encontrado: " + itemsNode.toString());
-	 * 
-	 * // Processar os itens dentro do campo 'items' if (itemsNode != null) {
-	 * List<ItemXml> itensProcessados = new ArrayList<>();
-	 * 
-	 * for (JsonNode itemNode : itemsNode) { // Converte cada nó em um objeto
-	 * ItemXml ItemXml novoItem = xmlMapper.treeToValue(itemNode, ItemXml.class);
-	 * 
-	 * if (começaComPrefixo(novoItem.getName())) { ItemXml itemExistente =
-	 * encontrarItemNaLista(itensProcessados, novoItem);
-	 * 
-	 * if (itemExistente != null) { // Atualiza a quantidade se o item já existir
-	 * itemExistente.setQuantity(itemExistente.getQuantity() +
-	 * novoItem.getQuantity()); } else { // Adiciona o novo item à lista
-	 * itensProcessados.add(novoItem); } } }
-	 * 
-	 * // Exibe e escreve os itens processados for (ItemXml item : itensProcessados)
-	 * { arquivoServ.escreverPedido(item); System.out.println("Item processado: " +
-	 * item); } } }
-	 * 
-	 * } catch (IOException e) { throw new
-	 * ErroProcessamentoException("Erro ao ler o XML", e); } catch (Exception e) {
-	 * throw new ErroProcessamentoException("Erro ao processar o XML", e); } }
-	 */
-
-	/*
-	 * public void processarItens(String xml) { XmlMapper xmlMapper = new
-	 * XmlMapper();
-	 * 
-	 * try { // Converte o XML para uma árvore JSON JsonNode rootNode =
-	 * xmlMapper.readTree(xml);
-	 * 
-	 * // Verifica a existência do campo 'items' JsonNode itemsNode =
-	 * rootNode.get("items");
-	 * 
-	 * if (itemsNode == null) { throw new
-	 * ErroProcessamentoException("O XML enviado não contém o campo 'items' ou está malformado."
-	 * ); } else { System.out.println("Campo 'items' encontrado: " +
-	 * itemsNode.toString());
-	 * 
-	 * // Processar os itens dentro do campo 'items' JsonNode itemArrayNode =
-	 * itemsNode.get("item"); // Acessa o array de itens
-	 * 
-	 * if (itemArrayNode != null && itemArrayNode.isArray()) { // Verifica se é um
-	 * array List<ItemXml> itensProcessados = new ArrayList<>();
-	 * 
-	 * for (JsonNode itemNode : itemArrayNode) { ItemXml novoItem =
-	 * xmlMapper.treeToValue(itemNode, ItemXml.class);
-	 * 
-	 * // Verifica se o novoItem não é nulo antes de processar if (novoItem != null
-	 * && começaComPrefixo(novoItem.getName())) { processarItem(novoItem,
-	 * itensProcessados); } }
-	 * 
-	 * // Exibe e escreve os itens processados for (ItemXml item : itensProcessados)
-	 * { arquivoServ.escreverPedido(item); System.out.println("Item processado: " +
-	 * item); } } }
-	 * 
-	 * } catch (IOException e) { throw new
-	 * ErroProcessamentoException("Erro ao ler o XML", e); } catch (Exception e) {
-	 * throw new ErroProcessamentoException("Erro ao processar o XML", e); } }
-	 * 
-	 * // Método auxiliar para processar os itens private void processarItem(ItemXml
-	 * novoItem, List<ItemXml> itensProcessados) { if (novoItem != null &&
-	 * começaComPrefixo(novoItem.getName())) { ItemXml itemExistente =
-	 * encontrarItemNaLista(itensProcessados, novoItem);
-	 * 
-	 * if (itemExistente != null) { // Atualiza a quantidade se o item já existir
-	 * itemExistente.setQuantity(itemExistente.getQuantity() +
-	 * novoItem.getQuantity()); } else { // Adiciona o novo item à lista
-	 * itensProcessados.add(novoItem); } } }
-	 */
-
-	/*
-	 * public void processarItens(String xml) { XmlMapper xmlMapper = new
-	 * XmlMapper();
-	 * 
-	 * try { // Converte o XML para uma árvore JSON JsonNode rootNode =
-	 * xmlMapper.readTree(xml);
-	 * 
-	 * // Verifica a existência do campo 'items' JsonNode itemsNode =
-	 * rootNode.get("items");
-	 * 
-	 * //System.out.println(itemsNode); if (itemsNode == null) { throw new
-	 * ErroProcessamentoException("O XML enviado não contém o campo 'items' ou está malformado."
-	 * ); } else { System.out.println("Campo 'items' encontrado: " +
-	 * itemsNode.toString());
-	 * 
-	 * // Processar os itens dentro do campo 'items' JsonNode itemArrayNode =
-	 * itemsNode.get("item"); // Acessa o array de itens
-	 * 
-	 * if (itemArrayNode != null) { // Verifica se é um array List<ItemXml>
-	 * itensProcessados = new ArrayList<>();
-	 * 
-	 * for (JsonNode itemNode : itemArrayNode) { // Verifica se os campos
-	 * obrigatórios existem e são válidos if (itemNode.hasNonNull("id") &&
-	 * itemNode.hasNonNull("description") && itemNode.hasNonNull("quantity")) { //
-	 * Converte o nó JSON em objeto ItemXml ItemXml novoItem =
-	 * xmlMapper.treeToValue(itemNode, ItemXml.class);
-	 * 
-	 * // Verifica se o novoItem não é nulo e se o nome segue um prefixo esperado if
-	 * (novoItem != null && começaComPrefixo(novoItem.getName())) {
-	 * processarItem(novoItem, itensProcessados); } else {
-	 * System.out.println("Item ignorado: " + itemNode.toString()); } } else {
-	 * System.out.println("Item malformado: " + itemNode.toString()); } }
-	 * 
-	 * // Exibe e escreve os itens processados for (ItemXml item : itensProcessados)
-	 * { try { arquivoServ.escreverPedido(item); } catch (ErroArquivoException e) {
-	 * System.err.println("Erro ao abrir ou escrever no arquivo: " +
-	 * e.getMessage()); } catch (Exception e) {
-	 * System.err.println("Erro inesperado ao salvar o item: " + e.getMessage()); }
-	 * 
-	 * } } else { throw new
-	 * ErroProcessamentoException("Campo 'item' não é um array ou está ausente."); }
-	 * }
-	 * 
-	 * } catch (IOException e) { throw new
-	 * ErroProcessamentoException("Erro ao ler o XML", e); } catch
-	 * (ErroProcessamentoException e) { throw e; // Já é nossa exceção esperada,
-	 * re-lançamos } catch (Exception e) { throw new
-	 * ErroProcessamentoException("Erro inesperado ao processar o XML", e); } }
-	 * 
-	 * // Método auxiliar para processar os itens private void processarItem(ItemXml
-	 * novoItem, List<ItemXml> itensProcessados) { if (novoItem != null &&
-	 * começaComPrefixo(novoItem.getName())) { ItemXml itemExistente =
-	 * encontrarItemNaLista(itensProcessados, novoItem);
-	 * 
-	 * if (itemExistente != null) { // Atualiza a quantidade se o item já existir
-	 * itemExistente.setQuantity(itemExistente.getQuantity() +
-	 * novoItem.getQuantity()); } else { // Adiciona o novo item à lista
-	 * itensProcessados.add(novoItem); } } }
-	 */// funcionaondo
-
-	public void processarItens(String xml) {
+	// Recebe o xml e processa
+	public boolean processarItens(String xml) {
 		XmlMapper xmlMapper = new XmlMapper();
+
+		boolean sucesso = false;
 
 		try {
 			// Converte o XML para uma árvore JSON
@@ -314,6 +160,7 @@ public class PedidoServico {
 				// Exibe e escreve os itens processados
 				for (ItemXml item : itensProcessados) {
 					try {
+						sucesso = true;
 						arquivoServ.escreverPedido(item);
 					} catch (ErroArquivoException e) {
 						System.err.println("Erro ao abrir ou escrever no arquivo: " + e.getMessage());
@@ -326,10 +173,12 @@ public class PedidoServico {
 		} catch (IOException e) {
 			throw new ErroProcessamentoException("Erro ao ler o XML", e);
 		} catch (ErroProcessamentoException e) {
-			throw e; // Já é nossa exceção esperada, re-lançamos
+			throw e;
 		} catch (Exception e) {
 			throw new ErroProcessamentoException("Erro inesperado ao processar o XML", e);
 		}
+
+		return sucesso;
 	}
 
 	// Método auxiliar para processar um único itemNode
@@ -369,25 +218,6 @@ public class PedidoServico {
 		}
 	}
 
-	/*
-	 * // Método auxiliar para processar os itens private void processarItem(ItemXml
-	 * novoItem, List<ItemXml> itensProcessados) { if (novoItem != null &&
-	 * começaComPrefixo(novoItem.getName())) { ItemXml itemExistente =
-	 * encontrarItemNaLista(itensProcessados, novoItem);
-	 * 
-	 * if (itemExistente != null) { // Atualiza a quantidade se o item já existir
-	 * itemExistente.setQuantity(itemExistente.getQuantity() +
-	 * novoItem.getQuantity()); } else { // Adiciona o novo item à lista
-	 * itensProcessados.add(novoItem); } } }
-	 * 
-	 * 
-	 * 
-	 * // Método para encontrar um item com o mesmo nome e ID de referência na lista
-	 * private Item encontrarItemNaLista(List<Item> items, Item novoItem) { for
-	 * (Item item : items) { if (item.getName().equals(novoItem.getName())) { return
-	 * item; } } return null; }
-	 */
-
 	// Método para encontrar um item com o mesmo nome e ID de referência na lista
 	private ItemXml encontrarItemNaLista(List<ItemXml> items, ItemXml novoItem) {
 		for (ItemXml item : items) {
@@ -398,30 +228,13 @@ public class PedidoServico {
 		return null;
 	}
 
-	/*
-	 * public void adicionarItem(Item item) { try { int id = item.getReferenceId();
-	 * int quantity = item.getQuantity(); String description = item.getName();
-	 * 
-	 * Map<String, String> novoItem = new HashMap<>(); novoItem.put("reference_id",
-	 * String.valueOf(id)); novoItem.put("quantity", String.valueOf(quantity));
-	 * novoItem.put("description", description); novoItem.put("status",
-	 * "andamento");
-	 * 
-	 * // pedidoMemoria.add(novoItem);
-	 * 
-	 * System.out.println("Pedido memoria.size: " + pedidoMemoria.size());
-	 * 
-	 * } catch (ItemNaoEncontradoException e) { throw new
-	 * ItemNaoEncontradoException("Não foi possivel adicionar item. ", e); } }
-	 */
-
 	public void adicionarItem(ItemXml item) {
 		try {
 			int id = item.getReferenceId();
 			int quantity = item.getQuantity();
 
 			String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-            
+
 			String description = item.getName();
 
 			Map<String, String> novoItem = new HashMap<>();
@@ -431,124 +244,20 @@ public class PedidoServico {
 			novoItem.put("status", "andamento");
 			novoItem.put("hora", horaAtual); // Adiciona a hora formatada
 
-			// pedidoMemoria.add(novoItem);
-
-			System.out.println("Pedido memoria.size: " + pedidoMemoria.size());
+			pedidoMemoria.add(novoItem);
 
 		} catch (ItemNaoEncontradoException e) {
 			throw new ItemNaoEncontradoException("Não foi possivel adicionar item. ", e);
 		}
 	}
 
-	/*
-	 * public synchronized void carregarPedidos() {
-	 * 
-	 * // Limpa a lista antes de carregar os pedidos pedidosVerficados.clear();
-	 * 
-	 * try { File arquivo = new File(caminhoArq);
-	 * 
-	 * if (pedidoMemoria.size() < pedidosEmArquivo.size() ||
-	 * pedidoMemoria.isEmpty()) { if (arquivo.exists()) { try { pedidosEmArquivo =
-	 * mapper.readValue(arquivo, new TypeReference<List<Map<String, String>>>() {
-	 * });
-	 * 
-	 * for (Map<String, String> item : pedidosEmArquivo) { String statusItem =
-	 * item.get("status"); if ("entregue".equals(statusItem)) { // if
-	 * (statusItem.equals("entregue")) { pedidosEntregues.add(item); } else {
-	 * pedidosVerficados.add(item); pedidoMemoria.add(item); } }
-	 * 
-	 * int quantidadeNoArquivo = pedidosEmArquivo.size();
-	 * System.out.println("Quantidade de pedidos no arquivo: " +
-	 * quantidadeNoArquivo); //
-	 * System.out.println("Pedidos carregados com sucesso do arquivo."); } catch
-	 * (IOException e) { //
-	 * System.out.println("Falha ao carregar pedidos do arquivo: " + throw new
-	 * ErroArquivoException("Falha ao carregar pedidos do arquivo: ", e); } } } }
-	 * catch (ErroArquivoException e) { throw new ErroArquivoException("Arquivo " +
-	 * caminhoArq + " não encontrado."); } System.out.println("Items nao entregues"
-	 * + pedidosVerficados); System.out.println("Items entregues: " +
-	 * pedidosEntregues); // System.out.println("Items nao entregues" +
-	 * pedidosEmArquivo); }
-	 */
-
-	/*
-	 * public synchronized void carregarPedidos() { // Limpa as listas de pedidos
-	 * verificados e entregues pedidosVerficados.clear(); pedidosEntregues.clear();
-	 * 
-	 * try { File arquivo = new File(caminhoArq);
-	 * 
-	 * // Verifica se o arquivo existe if (arquivo.exists()) { try { // Carrega os
-	 * pedidos do arquivo pedidosEmArquivo = mapper.readValue(arquivo, new
-	 * TypeReference<List<Map<String, String>>>() {});
-	 * 
-	 * // Exibe os pedidos lidos do arquivo
-	 * System.out.println("Pedidos lidos do arquivo: " + pedidosEmArquivo);
-	 * 
-	 * // Processa os pedidos for (Map<String, String> item : pedidosEmArquivo) {
-	 * String statusItem = item.get("status");
-	 * 
-	 * if ("entregue".equals(statusItem)) { // Adiciona à lista de pedidos entregues
-	 * pedidosEntregues.add(item); } else { // Adiciona todos os pedidos não
-	 * entregues diretamente pedidosVerficados.add(item); } }
-	 * 
-	 * // Exibe a quantidade de pedidos carregados do arquivo int
-	 * quantidadeNoArquivo = pedidosEmArquivo.size();
-	 * System.out.println("Quantidade de pedidos no arquivo: " +
-	 * quantidadeNoArquivo); } catch (IOException e) { throw new
-	 * ErroArquivoException("Falha ao carregar pedidos do arquivo: ", e); } } }
-	 * catch (ErroArquivoException e) { throw new ErroArquivoException("Arquivo " +
-	 * caminhoArq + " não encontrado."); }
-	 * 
-	 * // Exibe os pedidos System.out.println("Pedidos não entregues: " +
-	 * pedidosVerficados); System.out.println("Pedidos entregues: " +
-	 * pedidosEntregues); }
-	 */
-
-	// ignora pedidos com ids iguais
-	/*
-	 * public synchronized void carregarPedidos() {
-	 * 
-	 * try { File arquivo = new File(caminhoArq);
-	 * 
-	 * // Carrega os pedidos do arquivo apenas se houver novos pedidos ou se a
-	 * memória estiver vazia if (pedidoMemoria.isEmpty() || pedidoMemoria.size() <
-	 * pedidosEmArquivo.size()) { if (arquivo.exists()) { try { // Ler pedidos do
-	 * arquivo pedidosEmArquivo = mapper.readValue(arquivo, new
-	 * TypeReference<List<Map<String, String>>>() { });
-	 * 
-	 * // Atualiza as listas de pedidos, sem limpar toda a memória for (Map<String,
-	 * String> item : pedidosEmArquivo) { String statusItem = item.get("status");
-	 * 
-	 * if ("entregue".equals(statusItem)) { // Adiciona apenas se ainda não estiver
-	 * na lista de entregues if (!pedidosEntregues.contains(item)) {
-	 * pedidosEntregues.add(item); } } else { // Adiciona apenas se ainda não
-	 * estiver na lista de não entregues if (!pedidosVerficados.contains(item)) {
-	 * pedidosVerficados.add(item); pedidoMemoria.add(item); // Cache em memória } }
-	 * }
-	 * 
-	 * int quantidadeNoArquivo = pedidosEmArquivo.size();
-	 * System.out.println("Quantidade de pedidos no arquivo: " +
-	 * quantidadeNoArquivo);
-	 * 
-	 * } catch (IOException e) { throw new
-	 * ErroArquivoException("Falha ao carregar pedidos do arquivo: ", e); } } } else
-	 * { // Utiliza a memória caso não haja novos pedidos
-	 * System.out.println("Usando pedidos armazenados em memória."); } } catch
-	 * (ErroArquivoException e) { throw new ErroArquivoException("Arquivo " +
-	 * caminhoArq + " não encontrado."); }
-	 * 
-	 * // Exibir resultados System.out.println("Items nao entregues: " +
-	 * pedidosVerficados); System.out.println("Items entregues: " +
-	 * pedidosEntregues); }
-	 */
-
-	public synchronized void carregarPedidos() {
-
+	public synchronized boolean carregarPedidos() {
 		// Limpa as listas antes de recarregar os pedidos
 		pedidosVerficados.clear();
 		pedidosEntregues.clear();
 		pedidoMemoria.clear();
 
+		boolean sucesso = true;
 		try {
 			File arquivo = new File(caminhoArq);
 
@@ -581,30 +290,28 @@ public class PedidoServico {
 							}
 						}
 
-						int quantidadeNoArquivo = pedidosEmArquivo.size();
-						System.out.println("Quantidade de pedidos no arquivo: " + quantidadeNoArquivo);
-
 					} catch (IOException e) {
+						sucesso = false;
 						throw new ErroArquivoException("Falha ao carregar pedidos do arquivo: ", e);
 					}
 				}
-			} else {
-				// Utiliza a memória caso não haja novos pedidos
-				System.out.println("Usando pedidos armazenados em memória.");
 			}
+
 		} catch (ErroArquivoException e) {
+			sucesso = false;
 			throw new ErroArquivoException("Arquivo " + caminhoArq + " não encontrado.");
 		}
 
 		// Exibir resultados, sem ignorar itens repetidos
 		System.out.println("Pedidos nao entregues: " + pedidosVerficados);
 		System.out.println("Pedidos entregues: " + pedidosEntregues);
+
+		return sucesso;
 	}
 
 	public List<String> contar() {
 
 		try {
-
 			// Mapa para armazenar o nome do item e a quantidade correspondente
 			Map<String, Integer> contagemItems = new HashMap<>();
 
@@ -614,9 +321,11 @@ public class PedidoServico {
 
 			// Percorre a lista de pedidos e conta a quantidade de cada item
 			for (Map<String, String> item : pedidosVerficados) {
-				String nomeItem = item.get("description");
 
-				if (nomeItem != null) {
+				String nomeItem = item.get("description");
+				String status = item.get("status");
+
+				if (("andamento".equals(status) && nomeItem != null)) {
 					String quantityString = item.get("quantity");
 					int quantity = Integer.parseInt(quantityString);
 					// Verifica se o item já foi contado, se sim, incrementa, senão adiciona
@@ -654,19 +363,4 @@ public class PedidoServico {
 	private boolean começaComPrefixo(String descricao) {
 		return descricao != null && prefixosComoString.stream().anyMatch(descricao::startsWith);
 	}
-
-	public void limparLista() {
-		pedidosVerficados.clear();
-		// carregarPedidos();
-	}
-
-	/*
-	 * private boolean começaComPrefixo(String descricao) { return
-	 * prefixosComoString.stream().anyMatch(descricao::startsWith); }
-	 */
-
-	/*
-	 * private boolean começaComPrefixo(String descricao) { return
-	 * prefixos.stream().anyMatch(descricao::startsWith); }
-	 */
 }

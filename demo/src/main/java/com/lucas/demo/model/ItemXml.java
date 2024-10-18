@@ -2,47 +2,8 @@ package com.lucas.demo.model;
 
 import java.time.LocalTime;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-
-/*@JsonIgnoreProperties(ignoreUnknown = true)
-public class ItemXml {
-	@JacksonXmlProperty(localName = "id")
-	private int referenceId;
-
-	@JacksonXmlProperty(localName = "description")
-	private String name;
-
-	@JacksonXmlProperty(localName = "quantity")
-	private int quantity;
-
-	@JacksonXmlProperty(localName = "amount")
-	private double amount;
-
-	@JacksonXmlProperty(localName = "status")
-	private String status;
-
-	@JacksonXmlProperty(localName = "hora")
-	private LocalTime hora;
-
-	// Construtor vazio necessário para a desserialização
-	public ItemXml() {
-	}
-
-	// Construtor que aceita strings para desserializar
-	@JsonCreator
-	public ItemXml(@JacksonXmlProperty(localName = "id") String referenceId,
-			@JacksonXmlProperty(localName = "description") String name,
-			@JacksonXmlProperty(localName = "quantity") String quantity,
-			@JacksonXmlProperty(localName = "amount") String amount,
-			@JacksonXmlProperty(localName = "hora") String hora) {
-		this.referenceId = Integer.parseInt(referenceId);
-		this.name = name;
-		this.quantity = Integer.parseInt(quantity);
-		this.amount = Double.parseDouble(amount);
-		this.hora = LocalTime.parse(hora);
-	}*/
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemXml {
@@ -65,7 +26,6 @@ public class ItemXml {
     @JacksonXmlProperty(localName = "hora")
     private LocalTime hora;
 
-    // Construtor vazio necessário para a desserialização
     public ItemXml() {}
 
 	public int getReferenceId() {
@@ -121,5 +81,4 @@ public class ItemXml {
 		return "Pedido{" + "referenceId='" + referenceId + '\'' + ", name='" + name + '\'' + ", quantity=" + quantity
 				+ '/' + ", status=" + status + '/' + ", hora=" + hora + '\'' + '}';
 	}
-
 }

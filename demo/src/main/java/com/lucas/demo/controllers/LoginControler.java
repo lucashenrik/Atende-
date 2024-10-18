@@ -1,12 +1,8 @@
 package com.lucas.demo.controllers;
 
-import java.util.List;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,40 +25,12 @@ public class LoginControler {
 	
 	@PostMapping("/login")
 	public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password, HttpSession session) {
+		 
 		if (authService.autenticacao(username, password)){
 			session.setAttribute("user", username);
 			return ResponseEntity.ok("Login sucesso!");
 		}
 		
 		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-	}
-	
-	@GetMapping("/lista-pedidos")
-	public ResponseEntity<?> getLista(HttpSession session) {
-		if(verificarSessao(session)) {
-			pedidoServ.carregarPedidos();
-			List<Map<String, String>> pedidos = pedidoServ.getPedidoList();
-			// pedidos.forEach(System.out::println);
-
-			return ResponseEntity.ok(pedidos);
-		}
-		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-	}
-	
-	public boolean verificarSessao(HttpSession session) {
-		if (session.getAttribute("user") != null) {
-			return true;
-		}
-		return false;
-	}
-	
-
-	@GetMapping("/rota-protegida")
-	public String rotaProtegida(HttpSession session) {
-		if (session.getAttribute("user") != null) {
-			return "Bem vindo!!!";
-		}
-		
-		return "Voce precisa estar logado";
 	}
 }

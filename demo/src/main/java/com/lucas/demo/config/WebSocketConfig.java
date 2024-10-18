@@ -10,16 +10,6 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
-	/*
-	 * @Override public void configureMessageBroker(MessageBrokerRegistry config) {
-	 * config.enableSimpleBroker("/topic");
-	 * config.setApplicationDestinationPrefixes("/app"); }
-	 * 
-	 * @Override public void registerStompEndpoints(StompEndpointRegistry registry)
-	 * { registry.addEndpoint("/ws-notifications").setAllowedOriginPatterns(
-	 * "http://localhost:3000") // Use // allowedOriginPatterns .withSockJS(); }
-	 */
-
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry config) {
 		config.enableSimpleBroker("/topic");
@@ -36,5 +26,4 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         .withSockJS()
         .setHeartbeatTime(25000); // Opcional: aumenta o tempo de timeout da conexão.
 	}
-	
 }

@@ -4,9 +4,7 @@ import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
 
-import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.lucas.demo.exceptions.ErroProcessamentoException;
 import com.lucas.demo.service.ArquivoService;
@@ -29,8 +28,6 @@ import jakarta.servlet.http.HttpSession;
 @ControllerAdvice
 @RestController
 @RequestMapping("/pedido")
-//@CrossOrigin(origins = "http://localhost:3000")
-//@CrossOrigin(origins = "http://192.168.1.5:3000")
 public class PedidoControler {
 
 	@Autowired
@@ -39,72 +36,53 @@ public class PedidoControler {
 	@Autowired
 	ArquivoService arquivoServ;
 
-	// private final List<SseEmitter> emitters = new ArrayList<>();
-	List<SseEmitter> emitters = new CopyOnWriteArrayList<>();
-
 	RestTemplate restTemplate = new RestTemplate();
-	
+
 	@Autowired
-    private SimpMessagingTemplate messagingTemplate;
-	
-	@PostMapping("/notificacoes")
-	public ResponseEntity<?> processarNotificacoes(@RequestBody String json) throws ErroProcessamentoException {
-		System.out.println(json);
-		pedidoServ.processarItens(json);
-		pedidoServ.getPedidoList();
+	private SimpMessagingTemplate messagingTemplate;
 
-		 // Envie uma mensagem para o WebSocket
-        messagingTemplate.convertAndSend("/topic/notifications", "Nova notificação recebida!");
-		return ResponseEntity.ok("Sucesso!!");
-	}
+	// Recebe o Webhook e extrai o notificationCode
+	/*@PostMapping("/notificationCode")
+	public ResponseEntity<?> receiveNotification(@RequestBody String notificacaoCode) {
 
-	/*
-	 * @PostMapping("/notificationCode") public ResponseEntity<?>
-	 * receiveNotification(@RequestBody String notificacaoCode) {
-	 * 
-	 * System.out.println("Received notificationCode: " + notificacaoCode);
-	 * 
-	 * arquivoServ.escreverCodigo(notificacaoCode);
-	 * 
-	 * String urlProcess = pedidoServ.urlProcess(notificacaoCode);
-	 * 
-	 * try { // Realiza a requisicao GET ResponseEntity<String> response =
-	 * restTemplate.getForEntity(urlProcess, String.class); return
-	 * ResponseEntity.ok(response.getBody()); } catch (Exception e) {
-	 * e.printStackTrace(); return
-	 * ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).
-	 * body("Erro ao processar notificação."); } }
-	 */
+		try {
+			// Decodifica a string codificada em URL
+			String decodedNotification = URLDecoder.decode(notificacaoCode, StandardCharsets.UTF_8.name());
 
-	/*
-	 * @PostMapping("/notificationCode") public ResponseEntity<?>
-	 * receiveNotification(@RequestBody String notificacaoCode) {
-	 * 
-	 * System.out.println(notificacaoCode); // Extrai o valor de notificationCode do
-	 * corpo da requisição String[] params = notificacaoCode.split("&"); String
-	 * notificationCode = null;
-	 * 
-	 * for (String param : params) { if (param.startsWith("notificationCode=")) {
-	 * notificationCode = param.split("=")[1]; // Pega o valor após o
-	 * "notificationCode=" break; } }
-	 * 
-	 * if (notificationCode == null) { return
-	 * ResponseEntity.badRequest().body("notificationCode não encontrado."); }
-	 * 
-	 * System.out.println("Received notificationCode: " + notificationCode);
-	 * 
-	 * // Escreve o código extraído arquivoServ.escreverCodigo(notificationCode);
-	 * 
-	 * String urlProcess = pedidoServ.getUrl(notificationCode);
-	 * 
-	 * try { // Realiza a requisição GET ResponseEntity<String> response =
-	 * restTemplate.getForEntity(urlProcess, String.class);
-	 * 
-	 * return ResponseEntity.ok(response.getBody()); } catch (Exception e) {
-	 * e.printStackTrace(); return
-	 * ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).
-	 * body("Erro ao processar notificação."); } }
-	 */
+			// System.out.println("Decoded notification: " + decodedNotification);
+
+			// Extrai o valor de notificationCode do corpo da requisição
+			String[] params = decodedNotification.split("&");
+			String notificationCode = null;
+
+			for (String param : params) {
+				if (param.startsWith("notificationCode=")) {
+					notificationCode = param.split("=")[1]; // Pega o valor após o "notificationCode="
+					break;
+				}
+			}
+
+			if (notificationCode == null) {
+				return ResponseEntity.badRequest().body("notificationCode não encontrado.");
+			}
+
+			// Escreve o notificationCode extraído
+			// arquivoServ.escreverCodigo(notificationCode);
+
+			// Cria a url para fazer a requisição com o notificationCode
+			String urlProcess = pedidoServ.getUrl(notificationCode);
+
+			// Realiza a requisição GET
+			ResponseEntity<String> response = restTemplate.getForEntity(urlProcess, String.class);
+
+			
+			return processarNotificacoes(response.getBody());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar notificação.");
+		}
+	}*/
 
 	@PostMapping("/notificationCode")
 	public ResponseEntity<?> receiveNotification(@RequestBody String notificacaoCode) {
@@ -130,129 +108,117 @@ public class PedidoControler {
 				return ResponseEntity.badRequest().body("notificationCode não encontrado.");
 			}
 
-			// System.out.println("Received notificationCode: " + notificationCode);
+			// Escreve o notificationCode extraído
+			// arquivoServ.escreverCodigo(notificationCode);
 
-			// Escreve o código extraído
-			arquivoServ.escreverCodigo(notificationCode);
-
+			// Cria a url para fazer a requisição com o notificationCode
 			String urlProcess = pedidoServ.getUrl(notificationCode);
 
-			// Realiza a requisição GET
-			ResponseEntity<String> response = restTemplate.getForEntity(urlProcess, String.class);
-			return processarNotificacoes(response.getBody());
+			  // Realiza a requisição GET com tratamento de exceções HTTP
+	        try {
+	            ResponseEntity<String> response = restTemplate.getForEntity(urlProcess, String.class);
+	            return processarNotificacoes(response.getBody());
 
-			// return ResponseEntity.ok(response.getBody());
-		} catch (Exception e) {
-			e.printStackTrace();
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar notificação.");
-		} /*
-			 * try { processarNotificacoes(String response); } catch (Exception e) {
-			 * e.printStackTrace(); return
-			 * ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).
-			 * body("Erro ao fazer o post."); }
-			 */
+	        } catch (HttpClientErrorException e) {
+	            // Captura erros de cliente (4xx) como o 401 Unauthorized
+	            if (e.getStatusCode() == HttpStatus.UNAUTHORIZED) {
+	                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Erro de autenticação: email ou token incorretos.");
+	            } else if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
+	                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Recurso não encontrado.");
+	            } else {
+	                return ResponseEntity.status(e.getStatusCode()).body("Erro de cliente: " + e.getMessage());
+	            }
+	        } catch (HttpServerErrorException e) {
+	            // Captura erros de servidor (5xx)
+	            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body("Erro no servidor PagBank: " + e.getMessage());
+	        }
 
+	    } catch (Exception e) {
+	        // Captura qualquer outra exceção que não seja de HTTP
+	        e.printStackTrace();
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar notificação.");
+	    }
+	}
+	
+	// Processa a resposta xml
+	@PostMapping("/notificacoes")
+	public ResponseEntity<?> processarNotificacoes(@RequestBody String json) throws ErroProcessamentoException {
+		// System.out.println(json);
+		boolean sucesso = pedidoServ.processarItens(json);
+
+		if (sucesso == true) {
+			pedidoServ.getPedidoList();
+
+			// Envie uma mensagem para o WebSocket
+			avisarFrontEnd();
+
+			return new ResponseEntity<>(HttpStatus.CREATED);
+		}
+
+		return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
-	/*
-	 * @GetMapping("/processar-notificacao") public ResponseEntity<?>
-	 * buscarPedido(@RequestParam("notificacaoCode") String notificacaoCode) {
-	 * 
-	 * String url = pedidoServ.getUrl(notificacaoCode);
-	 * 
-	 * try { // Realiza a requisicao GET ResponseEntity<String> response =
-	 * restTemplate.getForEntity(url, String.class); String xmlResponse =
-	 * response.getBody();
-	 * 
-	 * Item item = pedidoServ.xmlParaPedido(xmlResponse);
-	 * 
-	 * arquivoServ.escreverPedido(item);
-	 * 
-	 * String message = "Salvo"; return ResponseEntity.ok(message);
-	 * 
-	 * } catch (Exception e) { e.printStackTrace(); return
-	 * ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).
-	 * body("Erro ao consultar notificação."); } }
-	 */
-
-	/*
-	 * @PostMapping("/alterar-status") public ResponseEntity<?>
-	 * alterarStatus(@RequestBody String senha, String novoStatus){
-	 * System.out.println("senha no controler: " + senha);
-	 * arquivoServ.alterarStatus(senha, novoStatus);
-	 * 
-	 * return new ResponseEntity<>("Status alterado com sucesso",
-	 * HttpStatus.CREATED); }
-	 */
-
+	// Altera o status de um item
 	@PostMapping("/alterar-status")
-	public ResponseEntity<?> alterarStatusPedido(@RequestBody Map<String, String> payload) {
-		System.out.println("aios");
-		String senha = payload.get("pedidoId");
-		String novoStatus = payload.get("novoStatus");
-		String hora = payload.get("hora");
+	public ResponseEntity<?> alterarStatusPedido(@RequestBody Map<String, String> payload, HttpSession session) {
+		if (verificarSessao(session)) {
+			String senha = payload.get("pedidoId");
+			String novoStatus = payload.get("novoStatus");
+			String hora = payload.get("hora");
 
-		System.out.println("  PedidoId:" + senha + "  NovoStatus: " + novoStatus + "  Hora:" + hora);
-		arquivoServ.alterarStatus(senha, novoStatus, hora);
-		
-		messagingTemplate.convertAndSend("/topic/notifications", "Nova notificação recebida!");
+			// System.out.println(" PedidoId:" + senha + " NovoStatus: " + novoStatus + "
+			// Hora:" + hora);
+			arquivoServ.alterarStatus(senha, novoStatus, hora);
 
-		return new ResponseEntity<>("Status alterado com sucesso", HttpStatus.CREATED);
+			avisarFrontEnd();
+
+			return new ResponseEntity<>("Status alterado com sucesso", HttpStatus.CREATED);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
+	// Retorna uma lista com a contagem de cada item
 	@GetMapping("/contar")
-	public ResponseEntity<?> contarPedidos() {
-		List<String> listaContagem = pedidoServ.contar();
-		return ResponseEntity.ok(listaContagem);
+	public ResponseEntity<?> contarPedidos(HttpSession session) {
+		if (verificarSessao(session)) {
+			List<String> listaContagem = pedidoServ.contar();
+			return ResponseEntity.ok(listaContagem);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
+	// Retorna uma lista apenas com pedidos entregues ou cancelados
 	@GetMapping("/entregues")
-	public ResponseEntity<?> getPedidosEntregues() {
-		List<Map<String, String>> pedidosEntregue = pedidoServ.getPedidosEntregues();
+	public ResponseEntity<?> getPedidosEntregues(HttpSession session) {
 
-		return ResponseEntity.ok(pedidosEntregue);
+		if (verificarSessao(session)) {
+			List<Map<String, String>> pedidosEntregue = pedidoServ.getPedidosEntregues();
+			return ResponseEntity.ok(pedidosEntregue);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
-
-	/*
-	 * @PostMapping("/notificacoes") public ResponseEntity<?>
-	 * processarNotificacoes(@RequestHeader("x-authenticity-token") String
-	 * tokenRecebido, @RequestBody String json) throws ErroProcessamentoException {
-	 * 
-	 * String token = "meu-token";
-	 * 
-	 * if(!isNotificationAuthentic(token, json, tokenRecebido)) { return
-	 * ResponseEntity.status(HttpStatus.UNAUTHORIZED).
-	 * body("Notificação não autenticada"); }
-	 * 
-	 * pedidoServ.processarItens(json); pedidoServ.getPedidoList(); return
-	 * ResponseEntity.ok("Sucesso!!"); }
-	 */
-
+	// Retorna uma lista com pedidos prontos ou em produção
 	@GetMapping("/lista-pedidos")
 	public ResponseEntity<?> getLista(HttpSession session) {
-		// if(verificarSessao(session)) {
-		pedidoServ.carregarPedidos();
-		List<Map<String, String>> pedidos = pedidoServ.getPedidoList();
-		// pedidos.forEach(System.out::println);
 
-		return ResponseEntity.ok(pedidos);
-		// }
-		// return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		if (verificarSessao(session)) {
+			pedidoServ.carregarPedidos();
+			List<Map<String, String>> pedidos = pedidoServ.getPedidoList();
+
+			return ResponseEntity.ok(pedidos);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
-	public boolean verificarSessao(HttpSession session) {
+	private void avisarFrontEnd() {
+		messagingTemplate.convertAndSend("/topic/notifications", "Nova notificação recebida!");
+	}
+
+	private boolean verificarSessao(HttpSession session) {
 		if (session.getAttribute("user") != null) {
 			return true;
 		}
 		return false;
-	}
-
-	public static boolean isNotificationAuthentic(String token, String requestBody, String receivedToken) {
-		// Gerar o hash SHA-256 usando o token e o payload (corpo da requisição)
-		String calculatedHash = DigestUtils.sha256Hex(token + "-" + requestBody);
-
-		// Comparar o hash gerado com o token de autenticidade recebido no header
-		return calculatedHash.equals(receivedToken);
 	}
 }

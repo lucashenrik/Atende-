@@ -15,9 +15,4 @@ public class WebConfig implements WebMvcConfigurer {
 	            .allowedHeaders("*")
 	            .allowCredentials(true);
 	}
-	/*@Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/ws/**").allowedOrigins("http://localhost:3000"); // ajuste a porta conforme necessário
-    }*/
-	
 }
