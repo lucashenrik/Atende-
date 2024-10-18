@@ -1,0 +1,28 @@
+package com.lucas.demo.controllers;
+
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class NotificationController {
+
+    private final SimpMessagingTemplate messagingTemplate;
+
+    public NotificationController(SimpMessagingTemplate messagingTemplate) {
+        this.messagingTemplate = messagingTemplate;
+    }
+
+    // Método para processar uma mensagem recebida
+    @MessageMapping("/send")
+    @SendTo("/topic/notifications")
+    public String processMessage(String message) {
+        return message; // Envia a mensagem de volta para o frontend
+    }
+
+    // Envia uma mensagem para todos os clientes conectados
+    public void sendNotification(String message) {
+        messagingTemplate.convertAndSend("/topic/notifications", message);
+    }
+}

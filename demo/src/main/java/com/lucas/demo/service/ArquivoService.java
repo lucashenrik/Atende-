@@ -39,7 +39,7 @@ public class ArquivoService {
 	// Volte um nível removendo o último "demo" do caminho
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
 
-	String caminhoArq = diretorioPrincipal + "\\registros\\pedidos\\pedidos_" + data + ".json";
+	String caminhoArq = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
 
 	public void escreverCodigo(String notificationCode) {
 

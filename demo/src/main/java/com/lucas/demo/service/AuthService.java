@@ -21,7 +21,7 @@ public class AuthService {
 	// Volte um nível removendo o último "demo" do caminho
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
 
-	String caminho = diretorioPrincipal + "\\user.json";
+	String caminho = diretorioPrincipal + "/atendeMais/user.json";
 	// String caminho = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\user.json";
 
 	public boolean autenticacao(String username, String password) {

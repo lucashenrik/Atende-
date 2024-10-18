@@ -21,6 +21,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.lucas.demo.exceptions.ErroProcessamentoException;
 import com.lucas.demo.service.ArquivoService;
+import com.lucas.demo.service.AuthService;
 import com.lucas.demo.service.PedidoServico;
 
 import jakarta.servlet.http.HttpSession;
@@ -29,6 +30,9 @@ import jakarta.servlet.http.HttpSession;
 @RestController
 @RequestMapping("/pedido")
 public class PedidoControler {
+
+	@Autowired
+	private AuthService authService;
 
 	@Autowired
 	PedidoServico pedidoServ;
@@ -42,48 +46,6 @@ public class PedidoControler {
 	private SimpMessagingTemplate messagingTemplate;
 
 	// Recebe o Webhook e extrai o notificationCode
-	/*@PostMapping("/notificationCode")
-	public ResponseEntity<?> receiveNotification(@RequestBody String notificacaoCode) {
-
-		try {
-			// Decodifica a string codificada em URL
-			String decodedNotification = URLDecoder.decode(notificacaoCode, StandardCharsets.UTF_8.name());
-
-			// System.out.println("Decoded notification: " + decodedNotification);
-
-			// Extrai o valor de notificationCode do corpo da requisição
-			String[] params = decodedNotification.split("&");
-			String notificationCode = null;
-
-			for (String param : params) {
-				if (param.startsWith("notificationCode=")) {
-					notificationCode = param.split("=")[1]; // Pega o valor após o "notificationCode="
-					break;
-				}
-			}
-
-			if (notificationCode == null) {
-				return ResponseEntity.badRequest().body("notificationCode não encontrado.");
-			}
-
-			// Escreve o notificationCode extraído
-			// arquivoServ.escreverCodigo(notificationCode);
-
-			// Cria a url para fazer a requisição com o notificationCode
-			String urlProcess = pedidoServ.getUrl(notificationCode);
-
-			// Realiza a requisição GET
-			ResponseEntity<String> response = restTemplate.getForEntity(urlProcess, String.class);
-
-			
-			return processarNotificacoes(response.getBody());
-
-		} catch (Exception e) {
-			e.printStackTrace();
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar notificação.");
-		}
-	}*/
-
 	@PostMapping("/notificationCode")
 	public ResponseEntity<?> receiveNotification(@RequestBody String notificacaoCode) {
 
@@ -91,8 +53,6 @@ public class PedidoControler {
 			// Decodifica a string codificada em URL
 			String decodedNotification = URLDecoder.decode(notificacaoCode, StandardCharsets.UTF_8.name());
 
-			// System.out.println("Decoded notification: " + decodedNotification);
-
 			// Extrai o valor de notificationCode do corpo da requisição
 			String[] params = decodedNotification.split("&");
 			String notificationCode = null;
@@ -107,9 +67,6 @@ public class PedidoControler {
 			if (notificationCode == null) {
 				return ResponseEntity.badRequest().body("notificationCode não encontrado.");
 			}
-
-			// Escreve o notificationCode extraído
-			// arquivoServ.escreverCodigo(notificationCode);
 
 			// Cria a url para fazer a requisição com o notificationCode
 			String urlProcess = pedidoServ.getUrl(notificationCode);
@@ -161,13 +118,11 @@ public class PedidoControler {
 	// Altera o status de um item
 	@PostMapping("/alterar-status")
 	public ResponseEntity<?> alterarStatusPedido(@RequestBody Map<String, String> payload, HttpSession session) {
-		if (verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			String senha = payload.get("pedidoId");
 			String novoStatus = payload.get("novoStatus");
 			String hora = payload.get("hora");
 
-			// System.out.println(" PedidoId:" + senha + " NovoStatus: " + novoStatus + "
-			// Hora:" + hora);
 			arquivoServ.alterarStatus(senha, novoStatus, hora);
 
 			avisarFrontEnd();
@@ -180,7 +135,7 @@ public class PedidoControler {
 	// Retorna uma lista com a contagem de cada item
 	@GetMapping("/contar")
 	public ResponseEntity<?> contarPedidos(HttpSession session) {
-		if (verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			List<String> listaContagem = pedidoServ.contar();
 			return ResponseEntity.ok(listaContagem);
 		}
@@ -191,7 +146,7 @@ public class PedidoControler {
 	@GetMapping("/entregues")
 	public ResponseEntity<?> getPedidosEntregues(HttpSession session) {
 
-		if (verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			List<Map<String, String>> pedidosEntregue = pedidoServ.getPedidosEntregues();
 			return ResponseEntity.ok(pedidosEntregue);
 		}
@@ -202,7 +157,7 @@ public class PedidoControler {
 	@GetMapping("/lista-pedidos")
 	public ResponseEntity<?> getLista(HttpSession session) {
 
-		if (verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			pedidoServ.carregarPedidos();
 			List<Map<String, String>> pedidos = pedidoServ.getPedidoList();
 
@@ -213,12 +168,5 @@ public class PedidoControler {
 
 	private void avisarFrontEnd() {
 		messagingTemplate.convertAndSend("/topic/notifications", "Nova notificação recebida!");
-	}
-
-	private boolean verificarSessao(HttpSession session) {
-		if (session.getAttribute("user") != null) {
-			return true;
-		}
-		return false;
 	}
 }

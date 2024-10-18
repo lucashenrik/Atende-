@@ -1,11 +1,1 @@
-[ {
-  "prefixo" : "Jantinha"
-}, {
-  "prefixo" : "Batata"
-}, {
-  "prefixo" : "Porção"
-}, {
-  "prefixo" : "Taboa"
-}, {
-  "prefixo" : "Venda"
-} ]
+[{"prefixo":"Batata"},{"prefixo":"Porção"},{"prefixo":"Taboa"},{"prefixo":"Venda"},{"prefixo":"Jantinha"}]

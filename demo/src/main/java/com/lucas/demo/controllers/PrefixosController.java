@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lucas.demo.model.Prefixo;
+import com.lucas.demo.service.AuthService;
 import com.lucas.demo.service.PrefixosService;
 
 import jakarta.servlet.http.HttpSession;
@@ -23,11 +24,14 @@ import jakarta.servlet.http.HttpSession;
 public class PrefixosController {
 
 	@Autowired
+	private AuthService authService;
+	
+	@Autowired
 	PrefixosService prefixoServ;
 
 	@GetMapping("/buscar-prefixo")
 	public ResponseEntity<?> buscarPrefixos(HttpSession session) {
-		if (verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			// Carregar prefixos do arquivo
 			List<Prefixo> prefixosCarregados = prefixoServ.carregarPrefixos(); // Chama o método que agora retorna a
 																				// lista de prefixos
@@ -42,7 +46,7 @@ public class PrefixosController {
 
 	@PostMapping("/adicionar-prefixo")
 	public ResponseEntity<?> addPrefixo(@RequestBody Map<String, String> request, HttpSession session) {
-		if (verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			String novoPrefixo = request.get("prefixo");
 			prefixoServ.adicionarPrefixo(novoPrefixo);
 
@@ -53,7 +57,7 @@ public class PrefixosController {
 
 	@DeleteMapping("/excluir-prefixo")
 	public ResponseEntity<?> excluirPrefixo(@RequestBody Prefixo prefixo, HttpSession session) {
-		if (verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			// Carregar prefixos antes de tentar excluir
 			prefixoServ.carregarPrefixos();
 
@@ -63,12 +67,5 @@ public class PrefixosController {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-	}
-
-	private boolean verificarSessao(HttpSession session) {
-		if (session.getAttribute("user") != null) {
-			return true;
-		}
-		return false;
 	}
 }

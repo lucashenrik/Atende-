@@ -25,8 +25,18 @@ public class PrefixosService {
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 	private final List<String> prefixosCarregados = new ArrayList<>();
-	private final String diretorio = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\Prefixos";
-	private final String caminhoArq = diretorio + "\\prefixos_.json";
+	
+	String diretorioAtual = System.getProperty("user.dir");
+
+	// Volte um nível removendo o último "demo" do caminho
+	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+
+	private final String diretorio = diretorioPrincipal + "/atendeMais/Prefixos";
+	
+	String caminhoArq = diretorio + "/prefixos_.json";
+
+	
+	//private final String caminhoArq = diretorio + "\\prefixos_.json";
 
 	public PrefixosService(ObjectMapper objectMapper) {
 		this.objectMapper = objectMapper;
@@ -130,13 +140,6 @@ public class PrefixosService {
 				break;
 			}
 		}
-
-		/*
-		 * if (!encontrado) { throw new ErroArquivoException("Prefixo não encontrado.");
-		 * } else { // Salvar os prefixos atualizados no arquivo
-		 * salvarPrefixosNoArquivo(prefixosList);
-		 * System.out.println("Prefixo removido com sucesso."); }
-		 */
 
 		if (encontrado) {
 			salvarPrefixosNoArquivo(prefixosList);

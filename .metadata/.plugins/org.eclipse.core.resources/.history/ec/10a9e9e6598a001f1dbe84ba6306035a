@@ -1,0 +1,21 @@
+package infra;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
+import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+
+@Configuration
+@EnableWebSocketMessageBroker
+public class WebSocketConfig {
+
+	public void registroStompEndpoints(StompEndpointRegistry registro) {
+		 // Define o endpoint que o frontend irá conectar
+		registro.addEndpoint("/ws").setAllowedOrigins("*").withSockJS();
+	}
+	
+	public void configureMessageBroker(org.springframework.messaging.simp.config.MessageBrokerRegistry registro) {
+		  // Define o prefixo usado para as mensagens destinadas ao frontend
+		registro.enableSimpleBroker("/topic");
+		registro.setApplicationDestinationPrefixes("/app");
+	}
+}

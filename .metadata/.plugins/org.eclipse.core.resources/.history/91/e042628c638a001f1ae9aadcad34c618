@@ -1,0 +1,13 @@
+package infra;
+
+import org.springframework.web.socket.TextMessage;
+import org.springframework.web.socket.WebSocketSession;
+import org.springframework.web.socket.handler.TextWebSocketHandler;
+
+public class MyWebSocketHandler extends TextWebSocketHandler {
+    @Override
+    public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+        // Aqui você processaria as mensagens recebidas, se necessário
+        session.sendMessage(new TextMessage("Mensagem recebida: " + message.getPayload()));
+    }
+}

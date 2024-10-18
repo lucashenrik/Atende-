@@ -1832,3 +1832,694 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2024-10-18 12:01:31 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5228d7bb]]
 2024-10-18 12:01:31 - Stopped.
 2024-10-18 12:01:31 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:01:31 - Starting DemoApplication using Java 21.0.3 with PID 7156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 12:01:31 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 12:01:31 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 12:01:31 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 12:01:31 - Tomcat initialized with port 8080 (http)
+2024-10-18 12:01:31 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:01:31 - Starting service [Tomcat]
+2024-10-18 12:01:31 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 12:01:31 - Initializing Spring embedded WebApplicationContext
+2024-10-18 12:01:31 - Root WebApplicationContext: initialization completed in 156 ms
+2024-10-18 12:01:31 - Iniciando carregamento de prefixos...
+2024-10-18 12:01:31 - LiveReload server is running on port 35729
+2024-10-18 12:01:31 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:01:31 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 12:01:31 - Starting...
+2024-10-18 12:01:31 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5eb558ed]]
+2024-10-18 12:01:31 - Started.
+2024-10-18 12:01:31 - Started DemoApplication in 0.282 seconds (process running for 3919.329)
+2024-10-18 12:01:31 - Condition evaluation unchanged
+2024-10-18 12:02:31 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-18 12:06:40 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-18 12:06:40 - Stopping...
+2024-10-18 12:06:40 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5eb558ed]]
+2024-10-18 12:06:40 - Stopped.
+2024-10-18 12:06:40 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:40 - Starting DemoApplication using Java 21.0.3 with PID 7156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 12:06:40 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 12:06:40 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 12:06:40 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 12:06:40 - Tomcat initialized with port 8080 (http)
+2024-10-18 12:06:40 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:40 - Starting service [Tomcat]
+2024-10-18 12:06:40 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 12:06:40 - Initializing Spring embedded WebApplicationContext
+2024-10-18 12:06:40 - Root WebApplicationContext: initialization completed in 167 ms
+2024-10-18 12:06:40 - Iniciando carregamento de prefixos...
+2024-10-18 12:06:40 - LiveReload server is running on port 35729
+2024-10-18 12:06:40 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:40 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 12:06:40 - Starting...
+2024-10-18 12:06:40 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6bc432dc]]
+2024-10-18 12:06:40 - Started.
+2024-10-18 12:06:40 - Started DemoApplication in 0.274 seconds (process running for 4228.227)
+2024-10-18 12:06:40 - Condition evaluation unchanged
+2024-10-18 12:06:44 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-18 12:06:44 - Stopping...
+2024-10-18 12:06:44 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6bc432dc]]
+2024-10-18 12:06:44 - Stopped.
+2024-10-18 12:06:44 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:44 - Starting DemoApplication using Java 21.0.3 with PID 7156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 12:06:44 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 12:06:44 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 12:06:44 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 12:06:44 - Tomcat initialized with port 8080 (http)
+2024-10-18 12:06:44 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:44 - Starting service [Tomcat]
+2024-10-18 12:06:44 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 12:06:44 - Initializing Spring embedded WebApplicationContext
+2024-10-18 12:06:44 - Root WebApplicationContext: initialization completed in 190 ms
+2024-10-18 12:06:44 - Iniciando carregamento de prefixos...
+2024-10-18 12:06:44 - LiveReload server is running on port 35729
+2024-10-18 12:06:44 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:44 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 12:06:44 - Starting...
+2024-10-18 12:06:44 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@37afb746]]
+2024-10-18 12:06:44 - Started.
+2024-10-18 12:06:44 - Started DemoApplication in 0.3 seconds (process running for 4232.079)
+2024-10-18 12:06:44 - Condition evaluation unchanged
+2024-10-18 12:06:56 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-18 12:06:56 - Stopping...
+2024-10-18 12:06:56 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@37afb746]]
+2024-10-18 12:06:56 - Stopped.
+2024-10-18 12:06:56 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:56 - Starting DemoApplication using Java 21.0.3 with PID 7156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 12:06:56 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 12:06:56 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 12:06:56 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 12:06:56 - Tomcat initialized with port 8080 (http)
+2024-10-18 12:06:56 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:56 - Starting service [Tomcat]
+2024-10-18 12:06:56 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 12:06:56 - Initializing Spring embedded WebApplicationContext
+2024-10-18 12:06:56 - Root WebApplicationContext: initialization completed in 219 ms
+2024-10-18 12:06:56 - Iniciando carregamento de prefixos...
+2024-10-18 12:06:56 - LiveReload server is running on port 35729
+2024-10-18 12:06:56 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:06:56 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 12:06:56 - Starting...
+2024-10-18 12:06:56 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4f10a93f]]
+2024-10-18 12:06:56 - Started.
+2024-10-18 12:06:56 - Started DemoApplication in 0.33 seconds (process running for 4244.142)
+2024-10-18 12:06:56 - Condition evaluation unchanged
+2024-10-18 12:07:56 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-18 12:08:12 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-18 12:08:12 - Stopping...
+2024-10-18 12:08:12 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4f10a93f]]
+2024-10-18 12:08:12 - Stopped.
+2024-10-18 12:08:12 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:12 - Starting DemoApplication using Java 21.0.3 with PID 7156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 12:08:12 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 12:08:12 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 12:08:12 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 12:08:12 - Tomcat initialized with port 8080 (http)
+2024-10-18 12:08:12 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:12 - Starting service [Tomcat]
+2024-10-18 12:08:12 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 12:08:12 - Initializing Spring embedded WebApplicationContext
+2024-10-18 12:08:12 - Root WebApplicationContext: initialization completed in 172 ms
+2024-10-18 12:08:12 - Iniciando carregamento de prefixos...
+2024-10-18 12:08:12 - LiveReload server is running on port 35729
+2024-10-18 12:08:12 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:12 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 12:08:12 - Starting...
+2024-10-18 12:08:12 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7c490112]]
+2024-10-18 12:08:12 - Started.
+2024-10-18 12:08:12 - Started DemoApplication in 0.293 seconds (process running for 4320.57)
+2024-10-18 12:08:12 - Condition evaluation unchanged
+2024-10-18 12:08:17 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-18 12:08:17 - Stopping...
+2024-10-18 12:08:17 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7c490112]]
+2024-10-18 12:08:17 - Stopped.
+2024-10-18 12:08:17 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:17 - Starting DemoApplication using Java 21.0.3 with PID 7156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 12:08:17 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 12:08:17 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 12:08:17 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 12:08:17 - Tomcat initialized with port 8080 (http)
+2024-10-18 12:08:17 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:17 - Starting service [Tomcat]
+2024-10-18 12:08:17 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 12:08:17 - Initializing Spring embedded WebApplicationContext
+2024-10-18 12:08:17 - Root WebApplicationContext: initialization completed in 188 ms
+2024-10-18 12:08:17 - Iniciando carregamento de prefixos...
+2024-10-18 12:08:17 - LiveReload server is running on port 35729
+2024-10-18 12:08:17 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:17 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 12:08:17 - Starting...
+2024-10-18 12:08:17 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b846ccd]]
+2024-10-18 12:08:17 - Started.
+2024-10-18 12:08:17 - Started DemoApplication in 0.31 seconds (process running for 4325.428)
+2024-10-18 12:08:17 - Condition evaluation unchanged
+2024-10-18 12:08:22 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-18 12:08:22 - Stopping...
+2024-10-18 12:08:22 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b846ccd]]
+2024-10-18 12:08:22 - Stopped.
+2024-10-18 12:08:22 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:22 - Starting DemoApplication using Java 21.0.3 with PID 7156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 12:08:22 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 12:08:22 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 12:08:22 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 12:08:22 - Tomcat initialized with port 8080 (http)
+2024-10-18 12:08:22 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:22 - Starting service [Tomcat]
+2024-10-18 12:08:22 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 12:08:22 - Initializing Spring embedded WebApplicationContext
+2024-10-18 12:08:22 - Root WebApplicationContext: initialization completed in 140 ms
+2024-10-18 12:08:22 - Iniciando carregamento de prefixos...
+2024-10-18 12:08:22 - LiveReload server is running on port 35729
+2024-10-18 12:08:22 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:08:22 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 12:08:22 - Starting...
+2024-10-18 12:08:22 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@70cb27bc]]
+2024-10-18 12:08:22 - Started.
+2024-10-18 12:08:22 - Started DemoApplication in 0.259 seconds (process running for 4330.252)
+2024-10-18 12:08:22 - Condition evaluation unchanged
+2024-10-18 12:09:08 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-18 12:09:08 - Stopping...
+2024-10-18 12:09:08 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@70cb27bc]]
+2024-10-18 12:09:08 - Stopped.
+2024-10-18 12:09:08 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:09:08 - Starting DemoApplication using Java 21.0.3 with PID 7156 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 12:09:08 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 12:09:08 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 12:09:08 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 12:09:08 - Tomcat initialized with port 8080 (http)
+2024-10-18 12:09:08 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:09:08 - Starting service [Tomcat]
+2024-10-18 12:09:08 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 12:09:08 - Initializing Spring embedded WebApplicationContext
+2024-10-18 12:09:08 - Root WebApplicationContext: initialization completed in 158 ms
+2024-10-18 12:09:08 - Iniciando carregamento de prefixos...
+2024-10-18 12:09:08 - LiveReload server is running on port 35729
+2024-10-18 12:09:08 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 12:09:08 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 12:09:08 - Starting...
+2024-10-18 12:09:08 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7c75bbe8]]
+2024-10-18 12:09:08 - Started.
+2024-10-18 12:09:08 - Started DemoApplication in 0.249 seconds (process running for 4376.021)
+2024-10-18 12:09:08 - Condition evaluation unchanged
+2024-10-18 13:40:34 - Starting DemoApplicationTests using Java 21.0.3 with PID 2648 (started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 13:40:34 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 13:40:35 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 13:40:35 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 13:40:35 - Iniciando carregamento de prefixos...
+2024-10-18 13:40:36 - Starting...
+2024-10-18 13:40:36 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@604d28c6]]
+2024-10-18 13:40:36 - Started.
+2024-10-18 13:40:36 - Started DemoApplicationTests in 2.757 seconds (process running for 4.596)
+2024-10-18 13:40:37 - Stopping...
+2024-10-18 13:40:37 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@604d28c6]]
+2024-10-18 13:40:37 - Stopped.
+2024-10-18 14:59:36 - Starting DemoApplicationTests using Java 21.0.3 with PID 9252 (started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 14:59:36 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 14:59:37 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 14:59:37 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 14:59:37 - Iniciando carregamento de prefixos...
+2024-10-18 14:59:38 - Starting...
+2024-10-18 14:59:38 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6806468e]]
+2024-10-18 14:59:38 - Started.
+2024-10-18 14:59:38 - Started DemoApplicationTests in 2.024 seconds (process running for 3.077)
+2024-10-18 14:59:39 - Stopping...
+2024-10-18 14:59:39 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6806468e]]
+2024-10-18 14:59:39 - Stopped.
+2024-10-18 14:59:50 - Starting DemoApplication using Java 21.0.3 with PID 10388 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 14:59:50 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 14:59:50 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-18 14:59:50 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-18 14:59:50 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-18 14:59:52 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 14:59:52 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 14:59:52 - Tomcat initialized with port 8080 (http)
+2024-10-18 14:59:52 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 14:59:52 - Starting service [Tomcat]
+2024-10-18 14:59:52 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 14:59:52 - Initializing Spring embedded WebApplicationContext
+2024-10-18 14:59:52 - Root WebApplicationContext: initialization completed in 1753 ms
+2024-10-18 14:59:52 - Iniciando carregamento de prefixos...
+2024-10-18 14:59:53 - LiveReload server is running on port 35729
+2024-10-18 14:59:53 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 14:59:53 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 14:59:53 - Starting...
+2024-10-18 14:59:53 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@c76c7ae]]
+2024-10-18 14:59:53 - Started.
+2024-10-18 14:59:53 - Started DemoApplication in 3.402 seconds (process running for 3.836)
+2024-10-18 15:03:20 - Starting DemoApplicationTests using Java 21.0.3 with PID 12808 (started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 15:03:20 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 15:03:21 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 15:03:21 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 15:03:21 - Iniciando carregamento de prefixos...
+2024-10-18 15:03:22 - Starting...
+2024-10-18 15:03:22 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1e76afeb]]
+2024-10-18 15:03:22 - Started.
+2024-10-18 15:03:22 - Started DemoApplicationTests in 2.27 seconds (process running for 3.349)
+2024-10-18 15:03:23 - Stopping...
+2024-10-18 15:03:23 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1e76afeb]]
+2024-10-18 15:03:23 - Stopped.
+2024-10-18 15:11:46 - Starting DemoApplication using Java 21.0.3 with PID 14296 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 15:11:46 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 15:11:46 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-18 15:11:46 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-18 15:11:46 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-18 15:11:47 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 15:11:47 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 15:11:47 - Tomcat initialized with port 8080 (http)
+2024-10-18 15:11:47 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 15:11:47 - Starting service [Tomcat]
+2024-10-18 15:11:47 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 15:11:47 - Initializing Spring embedded WebApplicationContext
+2024-10-18 15:11:47 - Root WebApplicationContext: initialization completed in 1386 ms
+2024-10-18 15:11:48 - Iniciando carregamento de prefixos...
+2024-10-18 15:11:48 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+2024-10-18 15:11:48 - Stopping service [Tomcat]
+2024-10-18 15:11:48 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-18 15:11:48 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 common frames omitted
+Caused by: com.lucas.demo.exceptions.ErroArquivoException: Arquivo de prefixos não encontrado.
+	at com.lucas.demo.service.PrefixosService.carregarPrefixos(PrefixosService.java:118)
+	at com.lucas.demo.service.PedidoServico.init(PedidoServico.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 35 common frames omitted
+2024-10-18 15:14:16 - Starting DemoApplication using Java 21.0.3 with PID 16236 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 15:14:16 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 15:14:16 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-18 15:14:16 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-18 15:14:16 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-18 15:14:17 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 15:14:17 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 15:14:17 - Tomcat initialized with port 8080 (http)
+2024-10-18 15:14:17 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 15:14:17 - Starting service [Tomcat]
+2024-10-18 15:14:17 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 15:14:17 - Initializing Spring embedded WebApplicationContext
+2024-10-18 15:14:17 - Root WebApplicationContext: initialization completed in 1313 ms
+2024-10-18 15:14:17 - Iniciando carregamento de prefixos...
+2024-10-18 15:14:17 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+2024-10-18 15:14:17 - Stopping service [Tomcat]
+2024-10-18 15:14:17 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-18 15:14:17 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 common frames omitted
+Caused by: com.lucas.demo.exceptions.ErroArquivoException: Arquivo de prefixos não encontrado.
+	at com.lucas.demo.service.PrefixosService.carregarPrefixos(PrefixosService.java:118)
+	at com.lucas.demo.service.PedidoServico.init(PedidoServico.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 35 common frames omitted
+2024-10-18 15:15:07 - Starting DemoApplication using Java 21.0.3 with PID 4616 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 15:15:07 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 15:15:07 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-18 15:15:07 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-18 15:15:07 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-18 15:15:08 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 15:15:08 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 15:15:09 - Tomcat initialized with port 8080 (http)
+2024-10-18 15:15:09 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-18 15:15:09 - Starting service [Tomcat]
+2024-10-18 15:15:09 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-18 15:15:09 - Initializing Spring embedded WebApplicationContext
+2024-10-18 15:15:09 - Root WebApplicationContext: initialization completed in 1312 ms
+2024-10-18 15:15:09 - Iniciando carregamento de prefixos...
+2024-10-18 15:15:09 - LiveReload server is running on port 35729
+2024-10-18 15:15:09 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-18 15:15:09 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-18 15:15:09 - Starting...
+2024-10-18 15:15:09 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2cd052f9]]
+2024-10-18 15:15:09 - Started.
+2024-10-18 15:15:09 - Started DemoApplication in 2.573 seconds (process running for 3.069)
+2024-10-18 15:15:51 - Starting DemoApplicationTests using Java 21.0.3 with PID 14112 (started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 15:15:51 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 15:15:52 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 15:15:52 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 15:15:52 - Iniciando carregamento de prefixos...
+2024-10-18 15:15:53 - Starting...
+2024-10-18 15:15:53 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@e62319f]]
+2024-10-18 15:15:53 - Started.
+2024-10-18 15:15:53 - Started DemoApplicationTests in 2.062 seconds (process running for 3.025)
+2024-10-18 15:15:54 - Stopping...
+2024-10-18 15:15:54 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@e62319f]]
+2024-10-18 15:15:54 - Stopped.
+2024-10-18 15:20:44 - Starting DemoApplicationTests using Java 21.0.3 with PID 11020 (started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 15:20:44 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 15:20:44 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 15:20:45 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 15:20:45 - Iniciando carregamento de prefixos...
+2024-10-18 15:20:45 - Starting...
+2024-10-18 15:20:45 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@14efa279]]
+2024-10-18 15:20:45 - Started.
+2024-10-18 15:20:45 - Started DemoApplicationTests in 2.208 seconds (process running for 3.21)
+2024-10-18 15:20:46 - Stopping...
+2024-10-18 15:20:46 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@14efa279]]
+2024-10-18 15:20:46 - Stopped.
+2024-10-18 15:24:39 - Starting DemoApplicationTests using Java 21.0.3 with PID 9076 (started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-18 15:24:39 - No active profile set, falling back to 1 default profile: "default"
+2024-10-18 15:24:40 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-18 15:24:40 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-18 15:24:40 - Iniciando carregamento de prefixos...
+2024-10-18 15:24:40 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+2024-10-18 15:24:40 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-18 15:24:40 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 98 common frames omitted
+Caused by: com.lucas.demo.exceptions.ErroArquivoException: Arquivo de prefixos não encontrado.
+	at com.lucas.demo.service.PrefixosService.carregarPrefixos(PrefixosService.java:118)
+	at com.lucas.demo.service.PedidoServico.init(PedidoServico.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 110 common frames omitted
+2024-10-18 15:24:40 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.lucas.demo.DemoApplicationTests@4a8a0099]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@73c3cd09 testClass = com.lucas.demo.DemoApplicationTests, locations = [], classes = [com.lucas.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1b919693, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2584b82d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7dc19a70, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@700fb871, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@5167f57d, org.springframework.boot.test.context.SpringBootTestAnnotation@4c76f7b], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 73 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 98 common frames omitted
+Caused by: com.lucas.demo.exceptions.ErroArquivoException: Arquivo de prefixos não encontrado.
+	at com.lucas.demo.service.PrefixosService.carregarPrefixos(PrefixosService.java:118)
+	at com.lucas.demo.service.PedidoServico.init(PedidoServico.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 110 common frames omitted

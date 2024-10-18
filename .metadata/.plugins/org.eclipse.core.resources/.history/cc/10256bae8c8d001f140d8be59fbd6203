@@ -1,0 +1,17 @@
+package com.lucas.demo.config;
+
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class WebConfigSame {
+
+	  @Bean
+	    public FilterRegistrationBean<SameSiteCookieFilter> sameSiteFilter() {
+	        FilterRegistrationBean<SameSiteCookieFilter> registrationBean = new FilterRegistrationBean<>();
+	        registrationBean.setFilter(new SameSiteCookieFilter());
+	        registrationBean.addUrlPatterns("/*"); // Aplica o filtro em todas as URLs
+	        return registrationBean;
+	    }
+}

@@ -1,8 +1,1 @@
-{
-    "users": [
-      {
-        "username": "admin",
-        "password": "$2a$10$nS6njCelKdgynQ.tvwvC3OPOrRhn5gX0xgitnwcjkWclY27/h4qim"
-      }
-    ]
-  }
+{"users":[{"username":"admin","password":"$2a$10$nS6njCelKdgynQ.tvwvC3OPOrRhn5gX0xgitnwcjkWclY27/h4qim","email":"lucashenrik033@gmail.com","token":"JsGCTzA+IyHox+xnpwbjRHXD1+uf2uemkKN+wOnXkp0QfpxKOGAii+eygHIatw1zReuPRxI7nLPiuCLr4mOrZxJElTNbZnukWU96jLyDjCIRE0y3Phr0y8aPX1DYXNb2zVSEI6k17n5rbuoIkQ+B0Q=="}]}

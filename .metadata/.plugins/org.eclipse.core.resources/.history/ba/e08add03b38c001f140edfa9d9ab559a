@@ -1,0 +1,178 @@
+package com.lucas.demo.controllers;
+
+import java.io.File;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.lucas.demo.exceptions.ErroProcessamentoException;
+import com.lucas.demo.service.ArquivoService;
+import com.lucas.demo.service.PedidoServico;
+
+import jakarta.servlet.http.HttpSession;
+
+@ControllerAdvice
+@RestController
+@RequestMapping("/pedido")
+public class PedidoControler {
+
+	@Autowired
+	PedidoServico pedidoServ;
+
+	@Autowired
+	ArquivoService arquivoServ;
+
+	RestTemplate restTemplate = new RestTemplate();
+
+	@Autowired
+	private SimpMessagingTemplate messagingTemplate;
+
+	// Recebe o Webhook e extrai o notificationCode
+	@PostMapping("/notificationCode")
+	public ResponseEntity<?> receiveNotification(@RequestBody String notificacaoCode) {
+
+		try {
+			// Decodifica a string codificada em URL
+			String decodedNotification = URLDecoder.decode(notificacaoCode, StandardCharsets.UTF_8.name());
+
+			// System.out.println("Decoded notification: " + decodedNotification);
+
+			// Extrai o valor de notificationCode do corpo da requisição
+			String[] params = decodedNotification.split("&");
+			String notificationCode = null;
+
+			for (String param : params) {
+				if (param.startsWith("notificationCode=")) {
+					notificationCode = param.split("=")[1]; // Pega o valor após o "notificationCode="
+					break;
+				}
+			}
+
+			if (notificationCode == null) {
+				return ResponseEntity.badRequest().body("notificationCode não encontrado.");
+			}
+
+			// Escreve o notificationCode extraído
+			// arquivoServ.escreverCodigo(notificationCode);
+
+			// Cria a url para fazer a requisição com o notificationCode
+			String urlProcess = pedidoServ.getUrl(notificationCode);
+
+			// Realiza a requisição GET
+			ResponseEntity<String> response = restTemplate.getForEntity(urlProcess, String.class);
+
+			return processarNotificacoes(response.getBody());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar notificação.");
+		}
+	}
+
+	// Processa a resposta xml
+	@PostMapping("/notificacoes")
+	public ResponseEntity<?> processarNotificacoes(@RequestBody String json) throws ErroProcessamentoException {
+		//System.out.println(json);
+		boolean sucesso = pedidoServ.processarItens(json);
+
+		if (sucesso == true) {
+			pedidoServ.getPedidoList();
+			
+			// Envie uma mensagem para o WebSocket
+			avisarFrontEnd();
+
+			return new ResponseEntity<>(HttpStatus.CREATED);
+		}
+		
+		return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+
+	// Altera o status de um item
+	@PostMapping("/alterar-status")
+	public ResponseEntity<?> alterarStatusPedido(@RequestBody Map<String, String> payload, HttpSession session) {
+		if (verificarSessao(session)) {
+			String senha = payload.get("pedidoId");
+			String novoStatus = payload.get("novoStatus");
+			String hora = payload.get("hora");
+
+			// System.out.println(" PedidoId:" + senha + " NovoStatus: " + novoStatus + "
+			// Hora:" + hora);
+			arquivoServ.alterarStatus(senha, novoStatus, hora);
+
+			avisarFrontEnd();
+
+			return new ResponseEntity<>("Status alterado com sucesso", HttpStatus.CREATED);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+	}
+
+	// Retorna uma lista com a contagem de cada item
+	@GetMapping("/contar")
+	public ResponseEntity<?> contarPedidos(HttpSession session) {
+		if(verificarSessao(session)) {
+		List<String> listaContagem = pedidoServ.contar();
+		return ResponseEntity.ok(listaContagem);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+	}
+
+	// Retorna uma lista apenas com pedidos entregues ou cancelados
+	@GetMapping("/entregues")
+	public ResponseEntity<?> getPedidosEntregues(HttpSession session) {
+		
+		if (verificarSessao(session)) {
+			List<Map<String, String>> pedidosEntregue = pedidoServ.getPedidosEntregues();
+			return ResponseEntity.ok(pedidosEntregue);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+	}
+
+	// Retorna uma lista com pedidos prontos ou em produção
+	@GetMapping("/lista-pedidos")
+	public ResponseEntity<?> getLista(HttpSession session) {
+
+		if (verificarSessao(session)) {
+			pedidoServ.carregarPedidos();
+			List<Map<String, String>> pedidos = pedidoServ.getPedidoList();
+			 
+			// Obtenha o diretório atual onde o programa está sendo executado
+			String diretorioAtual = System.getProperty("user.dir");
+
+			// Volte um nível removendo o último "demo" do caminho
+			File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+
+			String caminhoModificado = diretorioPrincipal.getAbsolutePath().replace("\\", "\\\\");
+			System.out.println(caminhoModificado);
+			
+			String caminhoArq = caminhoModificado + "\\registros\\codigos-de-notificacao\\notificacaoCode_10/17.json";
+			System.out.println(caminhoArq);
+			
+			return ResponseEntity.ok(pedidos);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+	}
+
+	private void avisarFrontEnd() {
+		messagingTemplate.convertAndSend("/topic/notifications", "Nova notificação recebida!");
+	}
+
+	private boolean verificarSessao(HttpSession session) {
+		if (session.getAttribute("user") != null) {
+			return true;
+		}
+		return false;
+	}
+}

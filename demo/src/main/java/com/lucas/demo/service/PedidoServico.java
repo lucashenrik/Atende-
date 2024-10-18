@@ -52,19 +52,10 @@ public class PedidoServico {
 
 	ObjectMapper mapper = new ObjectMapper();
 
-	/*
-	 * String diretorio =
-	 * "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\Registros\\Pedidos"; String
-	 * caminhoArq = diretorio + "\\pedidos_" + data + ".json";
-	 * 
-	 * set PAGBANK_EMAIL="lucashenrik033@gmail.com" set PAGBANK_TOKEN=
-	 * "e9d7a3d2-52e3-4721-a5c5-11ed8d58e5bb29e6562845b6a5b62f19766ea92afc776e7b-780d-4ef5-8045-af078e1c9040"
-	 */
-
 	String diretorioAtual = System.getProperty("user.dir");
 	// Volte um nível removendo o último "demo" do caminho
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-	String caminhoArq = diretorioPrincipal + "\\registros\\pedidos\\pedidos_" + data + ".json";
+	String caminhoArq = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
 
 	private List<Map<String, String>> pedidoMemoria = Collections.synchronizedList(new ArrayList<>());
 
@@ -95,16 +86,6 @@ public class PedidoServico {
 	}
 
 	// Retorna url para buscar informacoes do pedido
-	/*
-	 * public String getUrl(String noticacaoCode) { String getUrl =
-	 * "https://ws.pagseguro.uol.com.br/v3/transactions/notifications/" +
-	 * noticacaoCode + "?email=" + email + "&token=" + token;
-	 * 
-	 * // String getUrl = //
-	 * "https://ws.pagseguro.uol.com.br/v3/transactions/notifications/6BCE80-91D8FDD8FD9A-56645B1FB394-E3BD42?email=lucashenrik033@gmail.com&token=e9d7a3d2-52e3-4721-a5c5-11ed8d58e5bb29e6562845b6a5b62f19766ea92afc776e7b-780d-4ef5-8045-af078e1c9040";
-	 * System.out.println(getUrl); return getUrl; }
-	 */
-
 	public String getUrl(String noticacaoCode) {
 		Map<String, String> userConfig = userConfigService.getEmailAndToken();
 		String email = userConfig.get("email");
