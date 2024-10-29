@@ -48,14 +48,17 @@ public class PedidoServico {
 	@Autowired
 	private UserConfigService userConfigService;
 
-	LocalDate data = LocalDate.now();
-
 	ObjectMapper mapper = new ObjectMapper();
 
-	String diretorioAtual = System.getProperty("user.dir");
-	// Volte um nível removendo o último "demo" do caminho
-	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-	String caminhoArq = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
+	/*
+	 * String diretorioAtual = System.getProperty("user.dir"); // Volte um nível
+	 * removendo o último "demo" do caminho File diretorioPrincipal = new
+	 * File(diretorioAtual).getParentFile(); String caminhoArq = diretorioPrincipal
+	 * + "/atendeMais/registros/pedidos/pedidos_";
+	 */
+
+	// + data + ".json";
+	// String caminhoArq = diretorioPrincipal + "\\registros\\pedidos\\pedidos_";
 
 	private List<Map<String, String>> pedidoMemoria = Collections.synchronizedList(new ArrayList<>());
 
@@ -225,69 +228,142 @@ public class PedidoServico {
 			novoItem.put("status", "andamento");
 			novoItem.put("hora", horaAtual); // Adiciona a hora formatada
 
-			pedidoMemoria.add(novoItem);
+			// pedidoMemoria.add(novoItem);
 
 		} catch (ItemNaoEncontradoException e) {
 			throw new ItemNaoEncontradoException("Não foi possivel adicionar item. ", e);
 		}
 	}
 
+	/*
+	 * public synchronized boolean carregarPedidos() { // Limpa as listas antes de
+	 * recarregar os pedidos pedidosVerficados.clear(); pedidosEntregues.clear();
+	 * pedidoMemoria.clear();
+	 * 
+	 * boolean sucesso = true; try { File arquivo = new File(verificarHora());
+	 * 
+	 * // Carrega os pedidos do arquivo ou se a memória estiver vazia if
+	 * (pedidoMemoria.isEmpty() || pedidoMemoria.size() < pedidosEmArquivo.size()) {
+	 * if (arquivo.exists()) { try { // Ler pedidos do arquivo pedidosEmArquivo =
+	 * mapper.readValue(arquivo, new TypeReference<List<Map<String, String>>>() {
+	 * });
+	 * 
+	 * // Atualiza as listas de pedidos for (Map<String, String> item :
+	 * pedidosEmArquivo) { String statusItem = item.get("status");
+	 * 
+	 * // Verifica se o pedido já está na lista antes de adicionar if
+	 * ("entregue".equals(statusItem) || ("cancelar".equals(statusItem))) { //
+	 * Adiciona pedidos entregues if (!pedidosEntregues.contains(item)) {
+	 * pedidosEntregues.add(item); } } else { // Adiciona pedidos não entregues if
+	 * (!pedidosVerficados.contains(item)) { pedidosVerficados.add(item); } if
+	 * (!pedidoMemoria.contains(item)) { pedidoMemoria.add(item); } } }
+	 * 
+	 * } catch (IOException e) { sucesso = false; throw new
+	 * ErroArquivoException("Falha ao carregar pedidos do arquivo: ", e); } } }
+	 * 
+	 * } catch (ErroArquivoException e) { sucesso = false; throw new
+	 * ErroArquivoException("Arquivo " + verificarHora() + " não encontrado."); }
+	 * 
+	 * // Exibir resultados, sem ignorar itens repetidos
+	 * //System.out.println("Pedidos nao entregues: " + pedidosVerficados);
+	 * //System.out.println("Pedidos entregues: " + pedidosEntregues);
+	 * 
+	 * return sucesso; }
+	 */
+
 	public synchronized boolean carregarPedidos() {
-		// Limpa as listas antes de recarregar os pedidos
 		pedidosVerficados.clear();
 		pedidosEntregues.clear();
 		pedidoMemoria.clear();
 
 		boolean sucesso = true;
+		LocalDate dataAtual = LocalDate.now();
+		LocalTime horaAtual = LocalTime.now();
+		LocalDate dataAnterior = dataAtual.minusDays(1);
+		String caminhoArquivoAtual = verificarHora(); // Pega o caminho do arquivo baseado na hora atual
+		String caminhoArquivoAnterior = caminhoArquivo(dataAnterior); // Define o caminho do dia anterior
+
 		try {
-			File arquivo = new File(caminhoArq);
-
-			// Carrega os pedidos do arquivo ou se a memória estiver vazia
-			if (pedidoMemoria.isEmpty() || pedidoMemoria.size() < pedidosEmArquivo.size()) {
-				if (arquivo.exists()) {
-					try {
-						// Ler pedidos do arquivo
-						pedidosEmArquivo = mapper.readValue(arquivo, new TypeReference<List<Map<String, String>>>() {
-						});
-
-						// Atualiza as listas de pedidos
-						for (Map<String, String> item : pedidosEmArquivo) {
-							String statusItem = item.get("status");
-
-							// Verifica se o pedido já está na lista antes de adicionar
-							if ("entregue".equals(statusItem) || ("cancelar".equals(statusItem))) {
-								// Adiciona pedidos entregues
-								if (!pedidosEntregues.contains(item)) {
-									pedidosEntregues.add(item);
-								}
-							} else {
-								// Adiciona pedidos não entregues
-								if (!pedidosVerficados.contains(item)) {
-									pedidosVerficados.add(item);
-								}
-								if (!pedidoMemoria.contains(item)) {
-									pedidoMemoria.add(item);
-								}
-							}
-						}
-
-					} catch (IOException e) {
-						sucesso = false;
-						throw new ErroArquivoException("Falha ao carregar pedidos do arquivo: ", e);
-					}
-				}
+			// Carregar pedidos do dia anterior somente se a hora for antes das 7h
+			if (horaAtual.isBefore(LocalTime.of(7, 0))) {
+				carregarPedidosDeArquivo(caminhoArquivoAnterior);
 			}
+
+			// Carregar pedidos do dia atual
+			carregarPedidosDeArquivo(caminhoArquivoAtual);
 
 		} catch (ErroArquivoException e) {
 			sucesso = false;
-			throw new ErroArquivoException("Arquivo " + caminhoArq + " não encontrado.");
+			System.err.println("Erro ao carregar pedidos: " + e.getMessage());
 		}
 
-		// Exibir resultados, sem ignorar itens repetidos
-		System.out.println("Pedidos nao entregues: " + pedidosVerficados);
-		System.out.println("Pedidos entregues: " + pedidosEntregues);
-
 		return sucesso;
+	}
+
+	private void carregarPedidosDeArquivo(String caminhoArquivo) throws ErroArquivoException {
+		File arquivo = new File(caminhoArquivo);
+
+		if (arquivo.exists()) {
+			try {
+				List<Map<String, String>> pedidosArquivo = mapper.readValue(arquivo,
+						new TypeReference<List<Map<String, String>>>() {
+						});
+
+				for (Map<String, String> item : pedidosArquivo) {
+					String statusItem = item.get("status");
+
+					if ("entregue".equals(statusItem) || "cancelar".equals(statusItem)) {
+						if (!pedidosEntregues.contains(item)) {
+							pedidosEntregues.add(item);
+						}
+					} else {
+						if (!pedidosVerficados.contains(item)) {
+							pedidosVerficados.add(item);
+						}
+						if (!pedidoMemoria.contains(item)) {
+							pedidoMemoria.add(item);
+						}
+					}
+				}
+
+			} catch (IOException e) {
+				throw new ErroArquivoException("Falha ao carregar pedidos do arquivo " + caminhoArquivo, e);
+			}
+		} else {
+			throw new ErroArquivoException("Arquivo " + caminhoArquivo + " não encontrado.");
+		}
+	}
+
+	private String caminhoArquivo(LocalDate data) {
+		String diretorioAtual = System.getProperty("user.dir");
+		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+		//return diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
+		return diretorioPrincipal + "\\registros\\pedidos\\pedidos_" + data + ".json";
+	}
+
+	private String verificarHora() {
+		String diretorioAtual = System.getProperty("user.dir");
+
+		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+		//String caminhoAr = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_";
+		String caminhoAr = diretorioPrincipal + "\\registros\\pedidos\\pedidos_";
+		// System.out.println("Entrando no método verificarHora()");
+		// Obtenha a data atual e a hora atual
+		LocalDate hoje = LocalDate.now();
+		LocalTime agora = LocalTime.now();
+		LocalDate data;
+
+		// Se a hora atual for antes das 7h, usar o dia anterior
+		if (agora.isBefore(LocalTime.of(7, 0))) {
+			data = hoje.minusDays(1); // Usa a data anterior
+		} else {
+			data = hoje; // Usa a data atual
+		}
+		// System.out.println("Data: " + data);
+		String caminhoArq = caminhoAr + data + ".json";
+		// System.out.println("Caminho do arquivo: " + caminhoArq);
+
+		return caminhoArq;
 	}
 
 	public List<String> contar() {

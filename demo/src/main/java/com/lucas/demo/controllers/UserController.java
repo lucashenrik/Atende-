@@ -29,17 +29,17 @@ public class UserController {
 	// Endpoint para obter o email e o token
 	@GetMapping("/get")
 	public ResponseEntity<Map<String, String>> getEmailAndToken(HttpSession session) {
-		if (authService.verificarSessao(session)) {
+		//if (authService.verificarSessao(session)) {
 			Map<String, String> response = userConfigService.getEmailAndToken();
 			return ResponseEntity.ok(response);
-		}
-		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		//}
+		//return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
 	// Endpoint para modificar o email e o token
 	@PostMapping("/update")
 	public ResponseEntity<String> updateEmailAndToken(@RequestBody Map<String, String> payload, HttpSession session) {
-		if (authService.verificarSessao(session)) {
+		//if (authService.verificarSessao(session)) {
 			String email = payload.get("email");
 			String token = payload.get("token");
 			try {
@@ -51,8 +51,8 @@ public class UserController {
 			} catch (Exception e) {
 				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao encriptar token.");
 			}
-		}
-		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+	//	}
+	//	return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
 	// Endpoint para atualizar o token encriptado

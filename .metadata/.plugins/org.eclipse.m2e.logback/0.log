@@ -5965,3 +5965,411 @@ Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was
 2024-10-18 17:07:02,811 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-10-18 17:07:02,817 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-10-18 17:07:02,819 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 17:07:25,259 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:07:25,264 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:07:25,266 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 17:07:40,510 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:07:40,515 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:07:40,517 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 17:07:42,059 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:07:42,064 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:07:42,066 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 17:07:54,965 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:07:54,967 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:07:54,969 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 17:08:03,551 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:08:03,554 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:08:03,557 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 17:08:06,775 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:08:06,778 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:08:06,780 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 17:18:31,219 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:18:31,230 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:18:31,232 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 17:18:57,759 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:18:57,768 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 17:18:57,771 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 22:45:44,542 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-10-18 22:59:00,545 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 22:59:00,557 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 22:59:00,561 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 23:00:02,960 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 23:00:02,969 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 23:00:02,974 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 23:00:24,217 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 23:00:24,222 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 23:00:24,228 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-18 23:00:48,829 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 23:00:48,855 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-18 23:00:48,861 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:31:04,076 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-10-19 11:40:14,875 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234 [354])
+2024-10-19 11:40:14,877 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234
+2024-10-19 11:40:14,877 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\aopalliance-1.0.jar
+2024-10-19 11:40:14,878 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\guice-5.1.0.jar
+2024-10-19 11:40:14,878 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\httpclient-4.5.14.jar
+2024-10-19 11:40:14,878 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\httpcore-4.4.16.jar
+2024-10-19 11:40:14,878 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\jansi-2.4.0.jar
+2024-10-19 11:40:14,878 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\jcl-over-slf4j-1.7.36.jar
+2024-10-19 11:40:14,878 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-artifact-3.9.6.jar
+2024-10-19 11:40:14,878 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-builder-support-3.9.6.jar
+2024-10-19 11:40:14,879 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-compat-3.9.6.jar
+2024-10-19 11:40:14,879 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-core-3.9.6.jar
+2024-10-19 11:40:14,879 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-embedder-3.9.6.jar
+2024-10-19 11:40:14,879 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-model-3.9.6.jar
+2024-10-19 11:40:14,879 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-model-builder-3.9.6.jar
+2024-10-19 11:40:14,879 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-plugin-api-3.9.6.jar
+2024-10-19 11:40:14,879 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-repository-metadata-3.9.6.jar
+2024-10-19 11:40:14,879 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-api-1.9.18.jar
+2024-10-19 11:40:14,880 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-connector-basic-1.9.18.jar
+2024-10-19 11:40:14,880 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-impl-1.9.18.jar
+2024-10-19 11:40:14,880 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-named-locks-1.9.18.jar
+2024-10-19 11:40:14,880 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-provider-3.9.6.jar
+2024-10-19 11:40:14,880 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-spi-1.9.18.jar
+2024-10-19 11:40:14,880 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-file-1.9.18.jar
+2024-10-19 11:40:14,880 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-http-1.9.18.jar
+2024-10-19 11:40:14,880 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-wagon-1.9.18.jar
+2024-10-19 11:40:14,881 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-util-1.9.18.jar
+2024-10-19 11:40:14,881 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-settings-3.9.6.jar
+2024-10-19 11:40:14,881 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-settings-builder-3.9.6.jar
+2024-10-19 11:40:14,881 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-shared-utils-3.3.4.jar
+2024-10-19 11:40:14,881 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\org.eclipse.sisu.inject-0.9.0.M2.jar
+2024-10-19 11:40:14,882 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\org.eclipse.sisu.plexus-0.9.0.M2.jar
+2024-10-19 11:40:14,882 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-build-api-0.0.7.jar
+2024-10-19 11:40:14,882 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-cipher-2.0.jar
+2024-10-19 11:40:14,882 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-classworlds-2.7.0.jar
+2024-10-19 11:40:14,883 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-component-annotations-2.1.0.jar
+2024-10-19 11:40:14,883 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-interpolation-1.26.jar
+2024-10-19 11:40:14,883 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-sec-dispatcher-2.0.jar
+2024-10-19 11:40:14,883 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-utils-3.5.1.jar
+2024-10-19 11:40:14,883 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-file-3.5.3.jar
+2024-10-19 11:40:14,884 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-http-3.5.3.jar
+2024-10-19 11:40:14,884 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-http-shared-3.5.3.jar
+2024-10-19 11:40:14,884 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-provider-api-3.5.3.jar
+2024-10-19 11:40:14,885 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.0.0.jre [27])
+2024-10-19 11:40:14,886 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\com.google.guava_33.0.0.jre.jar
+2024-10-19 11:40:14,886 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.12 [584])
+2024-10-19 11:40:14,886 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\slf4j.api_2.0.12.jar
+2024-10-19 11:40:14,886 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [44])
+2024-10-19 11:40:14,886 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2024-10-19 11:40:14,886 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [40])
+2024-10-19 11:40:14,886 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\jakarta.annotation-api_1.3.5.jar
+2024-10-19 11:40:14,887 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.6.0 [75])
+2024-10-19 11:40:14,887 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.apache.commons.cli_1.6.0.jar
+2024-10-19 11:40:14,887 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [77])
+2024-10-19 11:40:14,887 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2024-10-19 11:40:14,887 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.lang3_3.14.0 [81])
+2024-10-19 11:40:14,887 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.apache.commons.lang3_3.14.0.jar
+2024-10-19 11:40:14,887 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [29])
+2024-10-19 11:40:14,887 [Worker-5: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\com.google.guava.failureaccess_1.0.2.jar
+2024-10-19 11:40:14,912 [Worker-5: Launching demo] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\Lucas\Documents\Projetos\demo\demo":
+2024-10-19 11:40:14,915 [Worker-5: Launching demo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always 
+2024-10-19 11:41:01,182 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:41:01,193 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:41:01,198 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:41:16,206 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:41:16,211 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:41:16,215 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:41:36,187 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:41:36,196 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:41:36,200 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:42:19,741 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:42:19,744 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:42:19,747 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:42:39,472 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:42:39,479 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:42:39,483 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:42:41,294 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234 [354])
+2024-10-19 11:42:41,294 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234
+2024-10-19 11:42:41,294 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\aopalliance-1.0.jar
+2024-10-19 11:42:41,294 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\guice-5.1.0.jar
+2024-10-19 11:42:41,295 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\httpclient-4.5.14.jar
+2024-10-19 11:42:41,295 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\httpcore-4.4.16.jar
+2024-10-19 11:42:41,295 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\jansi-2.4.0.jar
+2024-10-19 11:42:41,295 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\jcl-over-slf4j-1.7.36.jar
+2024-10-19 11:42:41,295 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-artifact-3.9.6.jar
+2024-10-19 11:42:41,295 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-builder-support-3.9.6.jar
+2024-10-19 11:42:41,295 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-compat-3.9.6.jar
+2024-10-19 11:42:41,296 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-core-3.9.6.jar
+2024-10-19 11:42:41,296 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-embedder-3.9.6.jar
+2024-10-19 11:42:41,296 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-model-3.9.6.jar
+2024-10-19 11:42:41,296 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-model-builder-3.9.6.jar
+2024-10-19 11:42:41,296 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-plugin-api-3.9.6.jar
+2024-10-19 11:42:41,296 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-repository-metadata-3.9.6.jar
+2024-10-19 11:42:41,297 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-api-1.9.18.jar
+2024-10-19 11:42:41,297 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-connector-basic-1.9.18.jar
+2024-10-19 11:42:41,297 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-impl-1.9.18.jar
+2024-10-19 11:42:41,297 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-named-locks-1.9.18.jar
+2024-10-19 11:42:41,297 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-provider-3.9.6.jar
+2024-10-19 11:42:41,297 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-spi-1.9.18.jar
+2024-10-19 11:42:41,297 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-file-1.9.18.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-http-1.9.18.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-transport-wagon-1.9.18.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-resolver-util-1.9.18.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-settings-3.9.6.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-settings-builder-3.9.6.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\maven-shared-utils-3.3.4.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\org.eclipse.sisu.inject-0.9.0.M2.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\org.eclipse.sisu.plexus-0.9.0.M2.jar
+2024-10-19 11:42:41,298 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-build-api-0.0.7.jar
+2024-10-19 11:42:41,299 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-cipher-2.0.jar
+2024-10-19 11:42:41,299 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-classworlds-2.7.0.jar
+2024-10-19 11:42:41,299 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-component-annotations-2.1.0.jar
+2024-10-19 11:42:41,299 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-interpolation-1.26.jar
+2024-10-19 11:42:41,299 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-sec-dispatcher-2.0.jar
+2024-10-19 11:42:41,299 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\plexus-utils-3.5.1.jar
+2024-10-19 11:42:41,299 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-file-3.5.3.jar
+2024-10-19 11:42:41,299 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-http-3.5.3.jar
+2024-10-19 11:42:41,300 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-http-shared-3.5.3.jar
+2024-10-19 11:42:41,300 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234\jars\wagon-provider-api-3.5.3.jar
+2024-10-19 11:42:41,300 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.0.0.jre [27])
+2024-10-19 11:42:41,300 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\com.google.guava_33.0.0.jre.jar
+2024-10-19 11:42:41,300 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.12 [584])
+2024-10-19 11:42:41,300 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\slf4j.api_2.0.12.jar
+2024-10-19 11:42:41,300 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [44])
+2024-10-19 11:42:41,301 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2024-10-19 11:42:41,301 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [40])
+2024-10-19 11:42:41,301 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\jakarta.annotation-api_1.3.5.jar
+2024-10-19 11:42:41,301 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.6.0 [75])
+2024-10-19 11:42:41,301 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.apache.commons.cli_1.6.0.jar
+2024-10-19 11:42:41,301 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [77])
+2024-10-19 11:42:41,301 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2024-10-19 11:42:41,301 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.lang3_3.14.0 [81])
+2024-10-19 11:42:41,302 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\org.apache.commons.lang3_3.14.0.jar
+2024-10-19 11:42:41,302 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [29])
+2024-10-19 11:42:41,302 [Worker-16: Launching demo] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Program Files\SpringToolSuite-4-4.22.1\plugins\com.google.guava.failureaccess_1.0.2.jar
+2024-10-19 11:42:41,303 [Worker-16: Launching demo] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\Lucas\Documents\Projetos\demo\demo":
+2024-10-19 11:42:41,303 [Worker-16: Launching demo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always 
+2024-10-19 11:43:10,078 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:43:10,086 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:43:10,091 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:43:34,682 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:43:34,690 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:43:34,693 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:43:40,081 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:43:40,090 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:43:40,095 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:44:29,421 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:44:29,424 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:44:29,427 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:54:58,975 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:54:58,981 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:54:58,984 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:56:34,338 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:56:34,343 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:56:34,345 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-19 11:56:58,321 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:56:58,327 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-19 11:56:58,330 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 01:00:53,396 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 01:00:53,405 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 01:00:53,409 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 01:01:27,954 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 01:01:27,963 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 01:01:27,967 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:10:10,724 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:10:10,735 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:10:10,739 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:11:07,176 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:11:07,184 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:11:07,188 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:12:10,228 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:12:10,235 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:12:10,239 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:12:32,131 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:12:32,145 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:12:32,150 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:15:42,041 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:15:42,052 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:15:42,057 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:21:03,569 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:21:03,574 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:21:03,576 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:21:48,222 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:21:48,228 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:21:48,230 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:22:08,422 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:22:08,434 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:22:08,437 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:23:07,873 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:23:07,879 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:23:07,882 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:24:03,796 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:24:03,800 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:24:03,803 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:25:15,601 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:25:15,607 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:25:15,610 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:25:38,683 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:25:38,686 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:25:38,689 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:26:35,464 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:26:35,469 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:26:35,471 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:27:39,065 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:27:39,074 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:27:39,077 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 07:28:34,469 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:28:34,474 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 07:28:34,477 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:03:47,055 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:03:47,063 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:03:47,065 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:04:46,202 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:04:46,211 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:04:46,215 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:05:59,153 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:05:59,159 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:05:59,163 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:07:39,894 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:07:39,903 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:07:39,906 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:12:47,088 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:12:47,094 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:12:47,096 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:13:05,267 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:13:05,272 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:13:05,274 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:13:52,028 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:13:52,036 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:13:52,039 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:14:22,623 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:14:22,628 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:14:22,631 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:16:19,059 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:16:19,068 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:16:19,072 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:16:36,176 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:16:36,180 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:16:36,182 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:16:48,472 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:16:48,478 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:16:48,481 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:17:34,318 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:17:34,325 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:17:34,328 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:17:52,918 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:17:52,924 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:17:52,926 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:18:09,181 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:18:09,184 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:18:09,186 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:30:56,333 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:30:56,342 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:30:56,346 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:31:41,721 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:31:41,729 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:31:41,734 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:32:05,893 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:32:05,897 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:32:05,899 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:32:26,648 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:32:26,655 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:32:26,658 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:32:46,296 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:32:46,304 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:32:46,308 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:40:04,779 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:40:04,788 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:40:04,792 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:40:33,657 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:40:33,661 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:40:33,663 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:43:42,663 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:43:42,668 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:43:42,671 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:46:56,127 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:46:56,133 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:46:56,135 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:49:19,776 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:49:19,782 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:49:19,785 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:51:29,436 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:51:29,441 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:51:29,443 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:53:30,751 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:53:30,760 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:53:30,763 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:55:09,169 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:55:09,178 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:55:09,181 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:57:09,811 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:57:09,816 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:57:09,818 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:57:36,002 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:57:36,008 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:57:36,012 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:57:47,342 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:57:47,347 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:57:47,348 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 08:57:56,513 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:57:56,520 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 08:57:56,523 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:00:52,244 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:00:52,249 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:00:52,251 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:00:55,082 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:00:55,085 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:00:55,087 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:03:22,464 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:03:22,472 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:03:22,475 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:04:28,745 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:04:28,751 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:04:28,755 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:05:39,523 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:05:39,531 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:05:39,534 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:08:19,993 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:08:20,006 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:08:20,009 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:08:26,797 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:08:26,800 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:08:26,807 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:10:30,793 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:10:30,801 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:10:30,804 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:12:12,050 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:12:12,058 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:12:12,060 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 09:26:47,171 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:26:47,176 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 09:26:47,177 [Worker-81: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 10:48:02,963 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 10:48:02,972 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 10:48:02,974 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-20 10:48:38,693 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 10:48:38,704 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-20 10:48:38,709 [Worker-84: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-21 14:26:58,863 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-10-21 15:24:10,263 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-21 15:24:10,293 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-21 15:24:10,298 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:21:25,894 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-10-22 13:22:12,744 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:22:12,755 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:22:12,778 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:30:29,560 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:30:29,608 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:30:29,614 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:36:08,846 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:36:08,852 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:36:08,856 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:40:02,920 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:40:02,931 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:40:02,937 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:43:14,582 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:43:14,593 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:43:14,597 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:43:40,503 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:43:40,510 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:43:40,515 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:44:25,802 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:44:25,811 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:44:25,815 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:45:12,120 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:45:12,125 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:45:12,131 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources
+2024-10-22 13:45:42,629 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:45:42,639 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-10-22 13:45:42,643 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not copying test resources

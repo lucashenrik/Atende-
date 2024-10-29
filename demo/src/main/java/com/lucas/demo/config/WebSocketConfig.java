@@ -22,7 +22,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 	            .setAllowedOrigins("http://localhost:3000")
 	            .withSockJS();*/
 		registry.addEndpoint("/ws-notifications")
-        .setAllowedOrigins("http://localhost:3000")
+        .setAllowedOrigins("http://191.101.70.241:3000")
         .withSockJS()
         .setHeartbeatTime(25000); // Opcional: aumenta o tempo de timeout da conexão.
 	}

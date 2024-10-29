@@ -29,17 +29,16 @@ public class ArquivoService {
 	PedidoServico pedidoServ;
 
 	ObjectMapper mapper = new ObjectMapper();
-	
+
 	List<Map<String, String>> pedidoList = new ArrayList<>();
 
-	LocalDate data = LocalDate.now();
 
 	String diretorioAtual = System.getProperty("user.dir");
 
-	// Volte um nível removendo o último "demo" do caminho
-	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-
-	String caminhoArq = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
+	// String caminhoArq = diretorioPrincipal +
+	// "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
+	// String caminhoArq = diretorioPrincipal +
+	// "\\atendeMais\\registros\\pedidos\\pedidos_" + data + ".json";
 
 	public void escreverCodigo(String notificationCode) {
 
@@ -109,21 +108,21 @@ public class ArquivoService {
 		pedidoList.add(novoPedido);
 
 		// Escreve no arquivo após adicionar todos os pedidos
-		escrever(pedidoList, caminhoArq);
+		escrever(pedidoList, verificarHora());
 
 		// Adiciona o item à memória e realiza a lógica adicional
 		// pedidoServ.adicionarItem(item);
 	}
-	
+
 	public synchronized void alterarStatus(String senha, String novoStatus, String hora) {
 		ObjectMapper objectMapper = new ObjectMapper();
 
 		try {
 			// Carrega o arquivo de pedidos para a lista
-			File file = new File(caminhoArq);
-			
+			File file = new File(verificarHora());
+
 			List<Map<String, Object>> pedidos = new ArrayList<>();
-			
+
 			if (file.exists()) {
 				try {
 					pedidos = objectMapper.readValue(file, new TypeReference<List<Map<String, Object>>>() {
@@ -135,7 +134,8 @@ public class ArquivoService {
 
 			boolean pedidoEncontrado = false;
 
-			// Percorre os pedidos e altera o status do pedido com a senha e hora especificadas
+			// Percorre os pedidos e altera o status do pedido com a senha e hora
+			// especificadas
 			for (Map<String, Object> pedidoNovo : pedidos) {
 				if (pedidoNovo.containsKey("reference_id") && pedidoNovo.containsKey("hora")) {
 					Object referenceId = pedidoNovo.get("reference_id");
@@ -148,7 +148,7 @@ public class ArquivoService {
 
 						// Adiciona o horário apenas se o status for "cancelado" ou "entregue"
 						if ("cancelar".equalsIgnoreCase(novoStatus) || "entregue".equalsIgnoreCase(novoStatus)) {
-							
+
 							String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
 
 							pedidoNovo.put("hora", horaAtual);
@@ -169,7 +169,7 @@ public class ArquivoService {
 					// Atualizar pedidos após alteração de status
 					pedidoServ.carregarPedidos(); // Recarregar pedidos para refletir as alterações
 				} catch (IOException e) {
-					throw new IOException("Pedido com a senha e hora especificados não encontrado.", e); 
+					throw new IOException("Pedido com a senha e hora especificados não encontrado.", e);
 				}
 			}
 
@@ -178,9 +178,58 @@ public class ArquivoService {
 		}
 	}
 
-	private List<Map<String, String>> verificarArquivo(){
-		File file = new File(caminhoArq);
 
+	/*private String verificarHora() {
+
+		// Volte um nível removendo o último "demo" do caminho
+		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+
+		// Obtenha a data atual e a hora atual
+		LocalDate hoje = LocalDate.now();
+		LocalTime agora = LocalTime.now();
+		LocalDate data;
+
+		// Se a hora atual for antes das 7h, usar o dia anterior
+		if (agora.isBefore(LocalTime.of(7, 0))) {
+			data = hoje.minusDays(1); // Usa a data anterior
+		} else {
+			data = hoje; // Usa a data atual
+		}
+		String caminhoArq = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
+		// String caminhoArq = diretorioPrincipal + "\\registros\\pedidos\\pedidos_" +
+		// data + ".json";
+		return caminhoArq;
+	}*/
+	
+	private String verificarHora() {
+	    // Volte um nível removendo o último "demo" do caminho
+	    File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+
+	    // Obtenha a data atual e a hora atual
+	    LocalDate hoje = LocalDate.now();
+	    LocalTime agora = LocalTime.now();
+	    LocalDate data;
+
+	    // Se a hora atual for antes das 7h, usar o dia anterior
+	    if (agora.isBefore(LocalTime.of(7, 0))) {
+	        data = hoje.minusDays(1); // Usa a data anterior
+	    } else {
+	        data = hoje; // Usa a data atual
+	    }
+
+	    // Define o caminho do arquivo de forma limpa a cada chamada
+	    //String caminhoArq = diretorioPrincipal.getAbsolutePath() + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
+	    String caminhoArq = diretorioPrincipal.getAbsolutePath() + "\\registros\\pedidos\\pedidos_" + data + ".json";
+	    //System.out.println("Caminho do arquivo: " + caminhoArq); // Log para verificar o caminho
+	    return caminhoArq;
+	}
+	
+	private List<Map<String, String>> verificarArquivo() {
+		File file = new File(verificarHora());
+
+		// Limpar a lista de pedidos sempre que começar um novo dia
+	    pedidoList = new ArrayList<>();
+	    
 		// Verifica se o arquivo já existe e lê seu conteúdo
 		if (file.exists()) {
 			try {
@@ -190,10 +239,10 @@ public class ArquivoService {
 				throw new ErroLeituraArquivoException("Não foi possivel ler o arquivo.", e.getCause());
 			}
 		}
-		
+
 		return pedidoList;
 	}
-	
+
 	private synchronized void escrever(List<?> registro, String caminhoArq) {
 		// Salva a lista atualizada de volta ao arquivo
 		try (PrintWriter escrever = new PrintWriter(new FileWriter(caminhoArq))) {

@@ -22,7 +22,7 @@ public class AuthService {
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
 
 	String caminho = diretorioPrincipal + "/atendeMais/user.json";
-	// String caminho = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\user.json";
+	 //String caminho = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\user.json";
 
 	public boolean autenticacao(String username, String password) {
 		try {
@@ -33,8 +33,8 @@ public class AuthService {
 			// Verifica se o username e a senha correspondem
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 			for (User user : users) {
-				System.out.println(user.getUsername() + " " + user.getPassword());
-				System.out.println(username + " " + password);
+				//System.out.println(user.getUsername() + " " + user.getPassword());
+				//System.out.println(username + " " + password);
 
 				// Compara a senha bruta com o hash armazenado
 				if (user.getUsername().equals(username) && encoder.matches(password, user.getPassword())) {

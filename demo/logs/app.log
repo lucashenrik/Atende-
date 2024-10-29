@@ -2523,3 +2523,1169 @@ Caused by: com.lucas.demo.exceptions.ErroArquivoException: Arquivo de prefixos n
 	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
 	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
 	... 110 common frames omitted
+2024-10-19 11:42:52 - Starting DemoApplication using Java 21.0.3 with PID 5204 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-19 11:42:53 - No active profile set, falling back to 1 default profile: "default"
+2024-10-19 11:42:53 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-19 11:42:53 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-19 11:42:53 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-19 11:42:54 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-19 11:42:54 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-19 11:42:54 - Tomcat initialized with port 8080 (http)
+2024-10-19 11:42:54 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:42:54 - Starting service [Tomcat]
+2024-10-19 11:42:54 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-19 11:42:54 - Initializing Spring embedded WebApplicationContext
+2024-10-19 11:42:54 - Root WebApplicationContext: initialization completed in 1733 ms
+2024-10-19 11:42:54 - Iniciando carregamento de prefixos...
+2024-10-19 11:42:54 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+2024-10-19 11:42:54 - Stopping service [Tomcat]
+2024-10-19 11:42:54 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-19 11:42:55 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 common frames omitted
+Caused by: com.lucas.demo.exceptions.ErroArquivoException: Arquivo de prefixos não encontrado.
+	at com.lucas.demo.service.PrefixosService.carregarPrefixos(PrefixosService.java:122)
+	at com.lucas.demo.service.PedidoServico.init(PedidoServico.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 35 common frames omitted
+2024-10-19 11:43:12 - Starting DemoApplication using Java 21.0.3 with PID 12552 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-19 11:43:12 - No active profile set, falling back to 1 default profile: "default"
+2024-10-19 11:43:12 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-19 11:43:12 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-19 11:43:12 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-19 11:43:13 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-19 11:43:13 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-19 11:43:13 - Tomcat initialized with port 8080 (http)
+2024-10-19 11:43:13 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:43:13 - Starting service [Tomcat]
+2024-10-19 11:43:13 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-19 11:43:13 - Initializing Spring embedded WebApplicationContext
+2024-10-19 11:43:13 - Root WebApplicationContext: initialization completed in 1331 ms
+2024-10-19 11:43:13 - Iniciando carregamento de prefixos...
+2024-10-19 11:43:13 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+2024-10-19 11:43:13 - Stopping service [Tomcat]
+2024-10-19 11:43:13 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-19 11:43:13 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 common frames omitted
+Caused by: com.lucas.demo.exceptions.ErroArquivoException: Arquivo de prefixos não encontrado.
+	at com.lucas.demo.service.PrefixosService.carregarPrefixos(PrefixosService.java:122)
+	at com.lucas.demo.service.PedidoServico.init(PedidoServico.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 35 common frames omitted
+2024-10-19 11:43:46 - Starting DemoApplication using Java 21.0.3 with PID 13656 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-19 11:43:46 - No active profile set, falling back to 1 default profile: "default"
+2024-10-19 11:43:46 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-19 11:43:46 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-19 11:43:46 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-19 11:43:47 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-19 11:43:47 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-19 11:43:47 - Tomcat initialized with port 8080 (http)
+2024-10-19 11:43:47 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:43:47 - Starting service [Tomcat]
+2024-10-19 11:43:47 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-19 11:43:47 - Initializing Spring embedded WebApplicationContext
+2024-10-19 11:43:47 - Root WebApplicationContext: initialization completed in 1356 ms
+2024-10-19 11:43:47 - Iniciando carregamento de prefixos...
+2024-10-19 11:43:47 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+2024-10-19 11:43:47 - Stopping service [Tomcat]
+2024-10-19 11:43:47 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-19 11:43:47 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 common frames omitted
+Caused by: com.lucas.demo.exceptions.ErroArquivoException: Arquivo de prefixos não encontrado.
+	at com.lucas.demo.service.PrefixosService.carregarPrefixos(PrefixosService.java:122)
+	at com.lucas.demo.service.PedidoServico.init(PedidoServico.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 35 common frames omitted
+2024-10-19 11:44:31 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-19 11:44:31 - No active profile set, falling back to 1 default profile: "default"
+2024-10-19 11:44:31 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-19 11:44:31 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-19 11:44:31 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-19 11:44:32 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-19 11:44:32 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-19 11:44:33 - Tomcat initialized with port 8080 (http)
+2024-10-19 11:44:33 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:44:33 - Starting service [Tomcat]
+2024-10-19 11:44:33 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-19 11:44:33 - Initializing Spring embedded WebApplicationContext
+2024-10-19 11:44:33 - Root WebApplicationContext: initialization completed in 1357 ms
+2024-10-19 11:44:33 - Iniciando carregamento de prefixos...
+2024-10-19 11:44:34 - LiveReload server is running on port 35729
+2024-10-19 11:44:34 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:44:34 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-19 11:44:34 - Starting...
+2024-10-19 11:44:34 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@757565c]]
+2024-10-19 11:44:34 - Started.
+2024-10-19 11:44:34 - Started DemoApplication in 2.838 seconds (process running for 3.31)
+2024-10-19 11:45:34 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-19 11:54:59 - Restarting due to 7 class path changes (0 additions, 2 deletions, 5 modifications)
+2024-10-19 11:54:59 - Stopping...
+2024-10-19 11:54:59 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@757565c]]
+2024-10-19 11:54:59 - Stopped.
+2024-10-19 11:54:59 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:55:00 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-19 11:55:00 - No active profile set, falling back to 1 default profile: "default"
+2024-10-19 11:55:00 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-19 11:55:00 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-19 11:55:00 - Tomcat initialized with port 8080 (http)
+2024-10-19 11:55:00 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:55:00 - Starting service [Tomcat]
+2024-10-19 11:55:00 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-19 11:55:00 - Initializing Spring embedded WebApplicationContext
+2024-10-19 11:55:00 - Root WebApplicationContext: initialization completed in 326 ms
+2024-10-19 11:55:00 - Iniciando carregamento de prefixos...
+2024-10-19 11:55:00 - LiveReload server is running on port 35729
+2024-10-19 11:55:00 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:55:00 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-19 11:55:00 - Starting...
+2024-10-19 11:55:00 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@478f8b83]]
+2024-10-19 11:55:00 - Started.
+2024-10-19 11:55:00 - Started DemoApplication in 0.556 seconds (process running for 629.728)
+2024-10-19 11:55:00 - Condition evaluation unchanged
+2024-10-19 11:56:00 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-19 11:56:35 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-19 11:56:35 - Stopping...
+2024-10-19 11:56:35 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@478f8b83]]
+2024-10-19 11:56:35 - Stopped.
+2024-10-19 11:56:35 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:56:35 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-19 11:56:35 - No active profile set, falling back to 1 default profile: "default"
+2024-10-19 11:56:36 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-19 11:56:36 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-19 11:56:36 - Tomcat initialized with port 8080 (http)
+2024-10-19 11:56:36 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:56:36 - Starting service [Tomcat]
+2024-10-19 11:56:36 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-19 11:56:36 - Initializing Spring embedded WebApplicationContext
+2024-10-19 11:56:36 - Root WebApplicationContext: initialization completed in 269 ms
+2024-10-19 11:56:36 - Iniciando carregamento de prefixos...
+2024-10-19 11:56:36 - LiveReload server is running on port 35729
+2024-10-19 11:56:36 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:56:36 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-19 11:56:36 - Starting...
+2024-10-19 11:56:36 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6e9001a0]]
+2024-10-19 11:56:36 - Started.
+2024-10-19 11:56:36 - Started DemoApplication in 0.459 seconds (process running for 725.387)
+2024-10-19 11:56:36 - Condition evaluation unchanged
+2024-10-19 11:57:00 - Restarting due to 4 class path changes (2 additions, 0 deletions, 2 modifications)
+2024-10-19 11:57:00 - Stopping...
+2024-10-19 11:57:00 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6e9001a0]]
+2024-10-19 11:57:00 - Stopped.
+2024-10-19 11:57:00 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:57:00 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-19 11:57:00 - No active profile set, falling back to 1 default profile: "default"
+2024-10-19 11:57:00 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-19 11:57:00 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-19 11:57:00 - Tomcat initialized with port 8080 (http)
+2024-10-19 11:57:00 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:57:00 - Starting service [Tomcat]
+2024-10-19 11:57:00 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-19 11:57:00 - Initializing Spring embedded WebApplicationContext
+2024-10-19 11:57:00 - Root WebApplicationContext: initialization completed in 270 ms
+2024-10-19 11:57:00 - Iniciando carregamento de prefixos...
+2024-10-19 11:57:00 - LiveReload server is running on port 35729
+2024-10-19 11:57:00 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-19 11:57:00 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-19 11:57:00 - Starting...
+2024-10-19 11:57:00 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@598c27e7]]
+2024-10-19 11:57:00 - Started.
+2024-10-19 11:57:00 - Started DemoApplication in 0.449 seconds (process running for 749.7)
+2024-10-19 11:57:00 - Condition evaluation unchanged
+2024-10-19 11:57:30 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-19 11:57:30 - Initializing Servlet 'dispatcherServlet'
+2024-10-19 11:57:30 - Completed initialization in 1 ms
+2024-10-19 11:58:00 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 01:00:54 - Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-10-20 01:00:54 - Stopping...
+2024-10-20 01:00:54 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@598c27e7]]
+2024-10-20 01:00:54 - Stopped.
+2024-10-20 01:00:54 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 01:00:54 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 01:00:54 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 01:00:55 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 01:00:55 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 01:00:55 - Tomcat initialized with port 8080 (http)
+2024-10-20 01:00:55 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 01:00:55 - Starting service [Tomcat]
+2024-10-20 01:00:55 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 01:00:55 - Initializing Spring embedded WebApplicationContext
+2024-10-20 01:00:55 - Root WebApplicationContext: initialization completed in 374 ms
+2024-10-20 01:00:55 - Iniciando carregamento de prefixos...
+2024-10-20 01:00:55 - LiveReload server is running on port 35729
+2024-10-20 01:00:55 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 01:00:55 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 01:00:55 - Starting...
+2024-10-20 01:00:55 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1334ea13]]
+2024-10-20 01:00:55 - Started.
+2024-10-20 01:00:55 - Started DemoApplication in 0.568 seconds (process running for 877.719)
+2024-10-20 01:00:55 - Condition evaluation unchanged
+2024-10-20 01:01:00 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 01:01:00 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 01:01:00 - Completed initialization in 0 ms
+2024-10-20 01:01:28 - Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-10-20 01:01:28 - Stopping...
+2024-10-20 01:01:28 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1334ea13]]
+2024-10-20 01:01:28 - Stopped.
+2024-10-20 01:01:28 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 01:01:29 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 01:01:29 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 01:01:29 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 01:01:29 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 01:01:29 - Tomcat initialized with port 8080 (http)
+2024-10-20 01:01:29 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 01:01:29 - Starting service [Tomcat]
+2024-10-20 01:01:29 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 01:01:29 - Initializing Spring embedded WebApplicationContext
+2024-10-20 01:01:29 - Root WebApplicationContext: initialization completed in 359 ms
+2024-10-20 01:01:29 - Iniciando carregamento de prefixos...
+2024-10-20 01:01:29 - LiveReload server is running on port 35729
+2024-10-20 01:01:29 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 01:01:29 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 01:01:29 - Starting...
+2024-10-20 01:01:29 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@587271b7]]
+2024-10-20 01:01:29 - Started.
+2024-10-20 01:01:29 - Started DemoApplication in 0.559 seconds (process running for 911.766)
+2024-10-20 01:01:29 - Condition evaluation unchanged
+2024-10-20 01:01:32 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 01:01:32 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 01:01:32 - Completed initialization in 0 ms
+2024-10-20 07:02:22 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 07:10:12 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-20 07:10:12 - Stopping...
+2024-10-20 07:10:12 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@587271b7]]
+2024-10-20 07:10:12 - Stopped.
+2024-10-20 07:10:12 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:10:12 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:10:12 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:10:12 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:10:12 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:10:12 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:10:12 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:10:12 - Starting service [Tomcat]
+2024-10-20 07:10:12 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:10:12 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:10:12 - Root WebApplicationContext: initialization completed in 238 ms
+2024-10-20 07:10:12 - Iniciando carregamento de prefixos...
+2024-10-20 07:10:12 - LiveReload server is running on port 35729
+2024-10-20 07:10:12 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:10:12 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:10:12 - Starting...
+2024-10-20 07:10:12 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3a0f4672]]
+2024-10-20 07:10:12 - Started.
+2024-10-20 07:10:12 - Started DemoApplication in 0.43 seconds (process running for 1442.403)
+2024-10-20 07:10:12 - Condition evaluation unchanged
+2024-10-20 07:11:08 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:11:08 - Stopping...
+2024-10-20 07:11:08 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3a0f4672]]
+2024-10-20 07:11:08 - Stopped.
+2024-10-20 07:11:08 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:11:08 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:11:08 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:11:08 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:11:08 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:11:08 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:11:08 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:11:08 - Starting service [Tomcat]
+2024-10-20 07:11:08 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:11:08 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:11:08 - Root WebApplicationContext: initialization completed in 191 ms
+2024-10-20 07:11:08 - Iniciando carregamento de prefixos...
+2024-10-20 07:11:08 - LiveReload server is running on port 35729
+2024-10-20 07:11:08 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:11:08 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:11:08 - Starting...
+2024-10-20 07:11:08 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1f2f705e]]
+2024-10-20 07:11:08 - Started.
+2024-10-20 07:11:08 - Started DemoApplication in 0.33 seconds (process running for 1498.184)
+2024-10-20 07:11:08 - Condition evaluation unchanged
+2024-10-20 07:12:08 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 07:12:11 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:12:11 - Stopping...
+2024-10-20 07:12:11 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1f2f705e]]
+2024-10-20 07:12:11 - Stopped.
+2024-10-20 07:12:11 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:12:11 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:12:11 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:12:11 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:12:11 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:12:11 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:12:11 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:12:11 - Starting service [Tomcat]
+2024-10-20 07:12:11 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:12:11 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:12:11 - Root WebApplicationContext: initialization completed in 202 ms
+2024-10-20 07:12:11 - Iniciando carregamento de prefixos...
+2024-10-20 07:12:11 - LiveReload server is running on port 35729
+2024-10-20 07:12:11 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:12:11 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:12:11 - Starting...
+2024-10-20 07:12:11 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@74662942]]
+2024-10-20 07:12:11 - Started.
+2024-10-20 07:12:11 - Started DemoApplication in 0.385 seconds (process running for 1561.103)
+2024-10-20 07:12:11 - Condition evaluation unchanged
+2024-10-20 07:12:33 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:12:33 - Stopping...
+2024-10-20 07:12:33 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@74662942]]
+2024-10-20 07:12:33 - Stopped.
+2024-10-20 07:12:33 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:12:33 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:12:33 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:12:33 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:12:33 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:12:33 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:12:33 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:12:33 - Starting service [Tomcat]
+2024-10-20 07:12:33 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:12:33 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:12:33 - Root WebApplicationContext: initialization completed in 206 ms
+2024-10-20 07:12:33 - Iniciando carregamento de prefixos...
+2024-10-20 07:12:33 - LiveReload server is running on port 35729
+2024-10-20 07:12:33 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:12:33 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:12:33 - Starting...
+2024-10-20 07:12:33 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@ea2096]]
+2024-10-20 07:12:33 - Started.
+2024-10-20 07:12:33 - Started DemoApplication in 0.365 seconds (process running for 1583.338)
+2024-10-20 07:12:33 - Condition evaluation unchanged
+2024-10-20 07:13:33 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 07:15:43 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:15:43 - Stopping...
+2024-10-20 07:15:43 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@ea2096]]
+2024-10-20 07:15:43 - Stopped.
+2024-10-20 07:15:43 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:15:43 - Starting DemoApplication using Java 21.0.3 with PID 5920 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:15:43 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:15:43 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:15:43 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:15:43 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:15:43 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:15:43 - Starting service [Tomcat]
+2024-10-20 07:15:43 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:15:43 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:15:43 - Root WebApplicationContext: initialization completed in 244 ms
+2024-10-20 07:15:43 - Iniciando carregamento de prefixos...
+2024-10-20 07:15:44 - LiveReload server is running on port 35729
+2024-10-20 07:15:44 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:15:44 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:15:44 - Starting...
+2024-10-20 07:15:44 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7587cd93]]
+2024-10-20 07:15:44 - Started.
+2024-10-20 07:15:44 - Started DemoApplication in 0.388 seconds (process running for 1773.527)
+2024-10-20 07:15:44 - Condition evaluation unchanged
+2024-10-20 07:16:13 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:16:13 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:16:13 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-20 07:16:13 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-20 07:16:13 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-20 07:16:14 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:16:14 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:16:15 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:16:15 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:16:15 - Starting service [Tomcat]
+2024-10-20 07:16:15 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:16:15 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:16:15 - Root WebApplicationContext: initialization completed in 1365 ms
+2024-10-20 07:16:15 - Iniciando carregamento de prefixos...
+2024-10-20 07:16:15 - LiveReload server is running on port 35729
+2024-10-20 07:16:15 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:16:15 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:16:15 - Starting...
+2024-10-20 07:16:15 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3349172b]]
+2024-10-20 07:16:15 - Started.
+2024-10-20 07:16:15 - Started DemoApplication in 2.558 seconds (process running for 2.983)
+2024-10-20 07:17:15 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 07:19:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 07:19:29 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 07:19:29 - Completed initialization in 2 ms
+2024-10-20 07:21:04 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:21:04 - Stopping...
+2024-10-20 07:21:04 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3349172b]]
+2024-10-20 07:21:04 - Stopped.
+2024-10-20 07:21:04 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:21:04 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:21:04 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:21:05 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:21:05 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:21:05 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:21:05 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:21:05 - Starting service [Tomcat]
+2024-10-20 07:21:05 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:21:05 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:21:05 - Root WebApplicationContext: initialization completed in 379 ms
+2024-10-20 07:21:05 - Iniciando carregamento de prefixos...
+2024-10-20 07:21:05 - LiveReload server is running on port 35729
+2024-10-20 07:21:05 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:21:05 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:21:05 - Starting...
+2024-10-20 07:21:05 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@32cf78ae]]
+2024-10-20 07:21:05 - Started.
+2024-10-20 07:21:05 - Started DemoApplication in 0.617 seconds (process running for 292.518)
+2024-10-20 07:21:05 - Condition evaluation unchanged
+2024-10-20 07:21:49 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:21:49 - Stopping...
+2024-10-20 07:21:49 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@32cf78ae]]
+2024-10-20 07:21:49 - Stopped.
+2024-10-20 07:21:49 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:21:49 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:21:49 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:21:49 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:21:49 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:21:50 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:21:50 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:21:50 - Starting service [Tomcat]
+2024-10-20 07:21:50 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:21:50 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:21:50 - Root WebApplicationContext: initialization completed in 337 ms
+2024-10-20 07:21:50 - Iniciando carregamento de prefixos...
+2024-10-20 07:21:50 - LiveReload server is running on port 35729
+2024-10-20 07:21:50 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:21:50 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:21:50 - Starting...
+2024-10-20 07:21:50 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6680e9a9]]
+2024-10-20 07:21:50 - Started.
+2024-10-20 07:21:50 - Started DemoApplication in 0.574 seconds (process running for 337.332)
+2024-10-20 07:21:50 - Condition evaluation unchanged
+2024-10-20 07:22:10 - Restarting due to 5 class path changes (0 additions, 1 deletion, 4 modifications)
+2024-10-20 07:22:10 - Stopping...
+2024-10-20 07:22:10 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6680e9a9]]
+2024-10-20 07:22:10 - Stopped.
+2024-10-20 07:22:10 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:22:10 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:22:10 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:22:10 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:22:10 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:22:10 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:22:10 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:22:10 - Starting service [Tomcat]
+2024-10-20 07:22:10 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:22:10 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:22:10 - Root WebApplicationContext: initialization completed in 268 ms
+2024-10-20 07:22:10 - Iniciando carregamento de prefixos...
+2024-10-20 07:22:10 - LiveReload server is running on port 35729
+2024-10-20 07:22:10 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:22:10 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:22:10 - Starting...
+2024-10-20 07:22:10 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@ee3cc6d]]
+2024-10-20 07:22:10 - Started.
+2024-10-20 07:22:10 - Started DemoApplication in 0.45 seconds (process running for 357.707)
+2024-10-20 07:22:10 - Condition evaluation unchanged
+2024-10-20 07:23:09 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-20 07:23:09 - Stopping...
+2024-10-20 07:23:09 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@ee3cc6d]]
+2024-10-20 07:23:09 - Stopped.
+2024-10-20 07:23:09 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:23:09 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:23:09 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:23:09 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:23:09 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:23:09 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:23:09 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:23:09 - Starting service [Tomcat]
+2024-10-20 07:23:09 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:23:09 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:23:09 - Root WebApplicationContext: initialization completed in 225 ms
+2024-10-20 07:23:09 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico' defined in file [C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes\com\lucas\demo\service\PedidoServico.class]: Failed to instantiate [com.lucas.demo.service.PedidoServico]: Constructor threw exception
+2024-10-20 07:23:09 - Stopping service [Tomcat]
+2024-10-20 07:23:09 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-20 07:23:09 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginControler': Unsatisfied dependency expressed through field 'pedidoServ': Error creating bean with name 'pedidoServico' defined in file [C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes\com\lucas\demo\service\PedidoServico.class]: Failed to instantiate [com.lucas.demo.service.PedidoServico]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pedidoServico' defined in file [C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes\com\lucas\demo\service\PedidoServico.class]: Failed to instantiate [com.lucas.demo.service.PedidoServico]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.lucas.demo.service.PedidoServico]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:94)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1331)
+	... 34 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error on token(s), misplaced construct(s)
+	Syntax error, insert "Finally" to complete TryStatement
+	Syntax error on token ".", @ expected after this token
+	Syntax error on tokens, SimpleName expected instead
+	Syntax error on token ";", @ expected
+	Syntax error on token "}", delete this token
+
+	at com.lucas.demo.service.PedidoServico.<init>(PedidoServico.java:271)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 36 common frames omitted
+2024-10-20 07:24:05 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:24:05 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:24:05 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:24:05 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:24:05 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:24:05 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:24:05 - Starting service [Tomcat]
+2024-10-20 07:24:05 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:24:05 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:24:05 - Root WebApplicationContext: initialization completed in 220 ms
+2024-10-20 07:24:05 - Iniciando carregamento de prefixos...
+2024-10-20 07:24:05 - LiveReload server is running on port 35729
+2024-10-20 07:24:05 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:24:05 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:24:05 - Starting...
+2024-10-20 07:24:05 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4a8290ae]]
+2024-10-20 07:24:05 - Started.
+2024-10-20 07:24:05 - Started DemoApplication in 0.357 seconds (process running for 472.499)
+2024-10-20 07:24:05 - Condition evaluation unchanged
+2024-10-20 07:25:05 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 07:25:17 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:25:17 - Stopping...
+2024-10-20 07:25:17 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4a8290ae]]
+2024-10-20 07:25:17 - Stopped.
+2024-10-20 07:25:17 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:25:17 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:25:17 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:25:17 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:25:17 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:25:17 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:25:17 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:25:17 - Starting service [Tomcat]
+2024-10-20 07:25:17 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:25:17 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:25:17 - Root WebApplicationContext: initialization completed in 302 ms
+2024-10-20 07:25:17 - Iniciando carregamento de prefixos...
+2024-10-20 07:25:17 - LiveReload server is running on port 35729
+2024-10-20 07:25:17 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:25:17 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:25:17 - Starting...
+2024-10-20 07:25:17 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4906d902]]
+2024-10-20 07:25:17 - Started.
+2024-10-20 07:25:17 - Started DemoApplication in 0.483 seconds (process running for 544.875)
+2024-10-20 07:25:17 - Condition evaluation unchanged
+2024-10-20 07:25:39 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:25:39 - Stopping...
+2024-10-20 07:25:39 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4906d902]]
+2024-10-20 07:25:39 - Stopped.
+2024-10-20 07:25:39 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:25:39 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:25:39 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:25:39 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:25:39 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:25:39 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:25:39 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:25:39 - Starting service [Tomcat]
+2024-10-20 07:25:39 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:25:39 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:25:39 - Root WebApplicationContext: initialization completed in 250 ms
+2024-10-20 07:25:39 - Iniciando carregamento de prefixos...
+2024-10-20 07:25:40 - LiveReload server is running on port 35729
+2024-10-20 07:25:40 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:25:40 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:25:40 - Starting...
+2024-10-20 07:25:40 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2d49368d]]
+2024-10-20 07:25:40 - Started.
+2024-10-20 07:25:40 - Started DemoApplication in 0.411 seconds (process running for 567.132)
+2024-10-20 07:25:40 - Condition evaluation unchanged
+2024-10-20 07:26:36 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:26:36 - Stopping...
+2024-10-20 07:26:36 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2d49368d]]
+2024-10-20 07:26:36 - Stopped.
+2024-10-20 07:26:36 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:26:36 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:26:36 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:26:36 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:26:36 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:26:36 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:26:36 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:26:36 - Starting service [Tomcat]
+2024-10-20 07:26:36 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:26:36 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:26:36 - Root WebApplicationContext: initialization completed in 204 ms
+2024-10-20 07:26:36 - Iniciando carregamento de prefixos...
+2024-10-20 07:26:36 - LiveReload server is running on port 35729
+2024-10-20 07:26:36 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:26:36 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:26:36 - Starting...
+2024-10-20 07:26:36 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@337556b4]]
+2024-10-20 07:26:36 - Started.
+2024-10-20 07:26:36 - Started DemoApplication in 0.358 seconds (process running for 624.015)
+2024-10-20 07:26:36 - Condition evaluation unchanged
+2024-10-20 07:27:36 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 07:27:40 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-20 07:27:40 - Stopping...
+2024-10-20 07:27:40 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@337556b4]]
+2024-10-20 07:27:40 - Stopped.
+2024-10-20 07:27:40 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:27:40 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:27:40 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:27:40 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:27:40 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:27:40 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:27:40 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:27:40 - Starting service [Tomcat]
+2024-10-20 07:27:40 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:27:40 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:27:40 - Root WebApplicationContext: initialization completed in 247 ms
+2024-10-20 07:27:40 - Iniciando carregamento de prefixos...
+2024-10-20 07:27:41 - LiveReload server is running on port 35729
+2024-10-20 07:27:41 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:27:41 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:27:41 - Starting...
+2024-10-20 07:27:41 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@126d5590]]
+2024-10-20 07:27:41 - Started.
+2024-10-20 07:27:41 - Started DemoApplication in 0.417 seconds (process running for 688.102)
+2024-10-20 07:27:41 - Condition evaluation unchanged
+2024-10-20 07:27:55 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 07:27:55 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 07:27:55 - Completed initialization in 1 ms
+2024-10-20 07:28:35 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 07:28:35 - Stopping...
+2024-10-20 07:28:35 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@126d5590]]
+2024-10-20 07:28:35 - Stopped.
+2024-10-20 07:28:35 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:28:35 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 07:28:35 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 07:28:35 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 07:28:35 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 07:28:35 - Tomcat initialized with port 8080 (http)
+2024-10-20 07:28:35 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:28:35 - Starting service [Tomcat]
+2024-10-20 07:28:35 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 07:28:35 - Initializing Spring embedded WebApplicationContext
+2024-10-20 07:28:35 - Root WebApplicationContext: initialization completed in 243 ms
+2024-10-20 07:28:35 - Iniciando carregamento de prefixos...
+2024-10-20 07:28:35 - LiveReload server is running on port 35729
+2024-10-20 07:28:35 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 07:28:35 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 07:28:35 - Starting...
+2024-10-20 07:28:35 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36756539]]
+2024-10-20 07:28:35 - Started.
+2024-10-20 07:28:35 - Started DemoApplication in 0.382 seconds (process running for 742.914)
+2024-10-20 07:28:35 - Condition evaluation unchanged
+2024-10-20 07:28:39 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 07:28:39 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 07:28:39 - Completed initialization in 1 ms
+2024-10-20 07:29:35 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 07:59:35 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2024-10-20 08:03:48 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-20 08:03:48 - Stopping...
+2024-10-20 08:03:49 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36756539]]
+2024-10-20 08:03:49 - Stopped.
+2024-10-20 08:03:49 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:03:49 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 08:03:49 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 08:03:49 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 08:03:49 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 08:03:49 - Tomcat initialized with port 8080 (http)
+2024-10-20 08:03:49 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:03:49 - Starting service [Tomcat]
+2024-10-20 08:03:49 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 08:03:49 - Initializing Spring embedded WebApplicationContext
+2024-10-20 08:03:49 - Root WebApplicationContext: initialization completed in 191 ms
+2024-10-20 08:03:49 - Iniciando carregamento de prefixos...
+2024-10-20 08:03:49 - LiveReload server is running on port 35729
+2024-10-20 08:03:49 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:03:49 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 08:03:49 - Starting...
+2024-10-20 08:03:49 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@59c41a05]]
+2024-10-20 08:03:49 - Started.
+2024-10-20 08:03:49 - Started DemoApplication in 0.328 seconds (process running for 2856.619)
+2024-10-20 08:03:49 - Condition evaluation unchanged
+2024-10-20 08:04:47 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-20 08:04:47 - Stopping...
+2024-10-20 08:04:47 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@59c41a05]]
+2024-10-20 08:04:47 - Stopped.
+2024-10-20 08:04:47 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:04:47 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 08:04:47 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 08:04:47 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 08:04:47 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 08:04:47 - Tomcat initialized with port 8080 (http)
+2024-10-20 08:04:47 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:04:47 - Starting service [Tomcat]
+2024-10-20 08:04:47 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 08:04:47 - Initializing Spring embedded WebApplicationContext
+2024-10-20 08:04:47 - Root WebApplicationContext: initialization completed in 227 ms
+2024-10-20 08:04:47 - Iniciando carregamento de prefixos...
+2024-10-20 08:04:47 - LiveReload server is running on port 35729
+2024-10-20 08:04:47 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:04:47 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 08:04:47 - Starting...
+2024-10-20 08:04:47 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4930d38b]]
+2024-10-20 08:04:47 - Started.
+2024-10-20 08:04:47 - Started DemoApplication in 0.34 seconds (process running for 2914.512)
+2024-10-20 08:04:47 - Condition evaluation unchanged
+2024-10-20 08:05:47 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 08:06:00 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-20 08:06:00 - Stopping...
+2024-10-20 08:06:00 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4930d38b]]
+2024-10-20 08:06:00 - Stopped.
+2024-10-20 08:06:00 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:06:00 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 08:06:00 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 08:06:00 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 08:06:00 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 08:06:00 - Tomcat initialized with port 8080 (http)
+2024-10-20 08:06:00 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:06:00 - Starting service [Tomcat]
+2024-10-20 08:06:00 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 08:06:00 - Initializing Spring embedded WebApplicationContext
+2024-10-20 08:06:00 - Root WebApplicationContext: initialization completed in 151 ms
+2024-10-20 08:06:00 - Iniciando carregamento de prefixos...
+2024-10-20 08:06:00 - LiveReload server is running on port 35729
+2024-10-20 08:06:00 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:06:00 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 08:06:00 - Starting...
+2024-10-20 08:06:00 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3772e414]]
+2024-10-20 08:06:00 - Started.
+2024-10-20 08:06:00 - Started DemoApplication in 0.27 seconds (process running for 2987.504)
+2024-10-20 08:06:00 - Condition evaluation unchanged
+2024-10-20 08:07:00 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 08:07:41 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-20 08:07:41 - Stopping...
+2024-10-20 08:07:41 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3772e414]]
+2024-10-20 08:07:41 - Stopped.
+2024-10-20 08:07:41 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:07:41 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 08:07:41 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 08:07:41 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 08:07:41 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 08:07:41 - Tomcat initialized with port 8080 (http)
+2024-10-20 08:07:41 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:07:41 - Starting service [Tomcat]
+2024-10-20 08:07:41 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 08:07:41 - Initializing Spring embedded WebApplicationContext
+2024-10-20 08:07:41 - Root WebApplicationContext: initialization completed in 171 ms
+2024-10-20 08:07:41 - Iniciando carregamento de prefixos...
+2024-10-20 08:07:41 - LiveReload server is running on port 35729
+2024-10-20 08:07:41 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:07:41 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 08:07:41 - Starting...
+2024-10-20 08:07:41 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7f4400e1]]
+2024-10-20 08:07:41 - Started.
+2024-10-20 08:07:41 - Started DemoApplication in 0.284 seconds (process running for 3089.013)
+2024-10-20 08:07:41 - Condition evaluation unchanged
+2024-10-20 08:07:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 08:07:51 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 08:07:51 - Completed initialization in 0 ms
+2024-10-20 08:08:41 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-20 08:12:48 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-20 08:12:48 - Stopping...
+2024-10-20 08:12:48 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7f4400e1]]
+2024-10-20 08:12:48 - Stopped.
+2024-10-20 08:12:48 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:12:48 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 08:12:48 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 08:12:48 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 08:12:48 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 08:12:48 - Tomcat initialized with port 8080 (http)
+2024-10-20 08:12:48 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:12:48 - Starting service [Tomcat]
+2024-10-20 08:12:48 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 08:12:48 - Initializing Spring embedded WebApplicationContext
+2024-10-20 08:12:48 - Root WebApplicationContext: initialization completed in 220 ms
+2024-10-20 08:12:48 - Iniciando carregamento de prefixos...
+2024-10-20 08:12:48 - LiveReload server is running on port 35729
+2024-10-20 08:12:48 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:12:48 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 08:12:48 - Starting...
+2024-10-20 08:12:48 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@368abb3d]]
+2024-10-20 08:12:48 - Started.
+2024-10-20 08:12:48 - Started DemoApplication in 0.35 seconds (process running for 3395.72)
+2024-10-20 08:12:48 - Condition evaluation unchanged
+2024-10-20 08:12:49 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 08:12:49 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 08:12:49 - Completed initialization in 1 ms
+2024-10-20 08:13:06 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-20 08:13:06 - Stopping...
+2024-10-20 08:13:06 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@368abb3d]]
+2024-10-20 08:13:06 - Stopped.
+2024-10-20 08:13:06 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:13:06 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 08:13:06 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 08:13:06 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 08:13:06 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 08:13:06 - Tomcat initialized with port 8080 (http)
+2024-10-20 08:13:06 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:13:06 - Starting service [Tomcat]
+2024-10-20 08:13:06 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 08:13:06 - Initializing Spring embedded WebApplicationContext
+2024-10-20 08:13:06 - Root WebApplicationContext: initialization completed in 193 ms
+2024-10-20 08:13:06 - Iniciando carregamento de prefixos...
+2024-10-20 08:13:06 - LiveReload server is running on port 35729
+2024-10-20 08:13:06 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:13:06 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 08:13:06 - Starting...
+2024-10-20 08:13:06 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1376a5a9]]
+2024-10-20 08:13:06 - Started.
+2024-10-20 08:13:06 - Started DemoApplication in 0.321 seconds (process running for 3413.833)
+2024-10-20 08:13:06 - Condition evaluation unchanged
+2024-10-20 08:13:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 08:13:12 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 08:13:12 - Completed initialization in 1 ms
+2024-10-20 08:13:53 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-20 08:13:53 - Stopping...
+2024-10-20 08:13:53 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1376a5a9]]
+2024-10-20 08:13:53 - Stopped.
+2024-10-20 08:13:53 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:13:53 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 08:13:53 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 08:13:53 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 08:13:53 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 08:13:53 - Tomcat initialized with port 8080 (http)
+2024-10-20 08:13:53 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:13:53 - Starting service [Tomcat]
+2024-10-20 08:13:53 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 08:13:53 - Initializing Spring embedded WebApplicationContext
+2024-10-20 08:13:53 - Root WebApplicationContext: initialization completed in 158 ms
+2024-10-20 08:13:53 - Iniciando carregamento de prefixos...
+2024-10-20 08:13:53 - LiveReload server is running on port 35729
+2024-10-20 08:13:53 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:13:53 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 08:13:53 - Starting...
+2024-10-20 08:13:53 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@66cb0f09]]
+2024-10-20 08:13:53 - Started.
+2024-10-20 08:13:53 - Started DemoApplication in 0.266 seconds (process running for 3460.481)
+2024-10-20 08:13:53 - Condition evaluation unchanged
+2024-10-20 08:14:00 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-20 08:14:00 - Initializing Servlet 'dispatcherServlet'
+2024-10-20 08:14:00 - Completed initialization in 0 ms
+2024-10-20 08:14:24 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-10-20 08:14:24 - Stopping...
+2024-10-20 08:14:24 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@66cb0f09]]
+2024-10-20 08:14:24 - Stopped.
+2024-10-20 08:14:24 - Stopping ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:14:24 - Starting DemoApplication using Java 21.0.3 with PID 17268 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-20 08:14:24 - No active profile set, falling back to 1 default profile: "default"
+2024-10-20 08:14:24 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-20 08:14:24 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-20 08:14:24 - Tomcat initialized with port 8080 (http)
+2024-10-20 08:14:24 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:14:24 - Starting service [Tomcat]
+2024-10-20 08:14:24 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-20 08:14:24 - Initializing Spring embedded WebApplicationContext
+2024-10-20 08:14:24 - Root WebApplicationContext: initialization completed in 156 ms
+2024-10-20 08:14:24 - Iniciando carregamento de prefixos...
+2024-10-20 08:14:24 - LiveReload server is running on port 35729
+2024-10-20 08:14:24 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-20 08:14:24 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-20 08:14:24 - Starting...
+2024-10-20 08:14:24 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b26e93f]]
+2024-10-20 08:14:24 - Started.
+2024-10-20 08:14:24 - Started DemoApplication in 0.258 seconds (process running for 3491.826)
+2024-10-20 08:14:24 - Condition evaluation unchanged
+2024-10-20 08:15:24 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-22 13:46:04 - Starting DemoApplication using Java 21.0.3 with PID 280 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-22 13:46:04 - No active profile set, falling back to 1 default profile: "default"
+2024-10-22 13:46:04 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-22 13:46:04 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-22 13:46:04 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-22 13:46:08 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-22 13:46:08 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-22 13:46:09 - Tomcat initialized with port 8080 (http)
+2024-10-22 13:46:09 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-22 13:46:09 - Starting service [Tomcat]
+2024-10-22 13:46:09 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-22 13:46:09 - Initializing Spring embedded WebApplicationContext
+2024-10-22 13:46:09 - Root WebApplicationContext: initialization completed in 4598 ms
+2024-10-22 13:50:03 - Starting DemoApplication using Java 21.0.3 with PID 3984 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-22 13:50:03 - No active profile set, falling back to 1 default profile: "default"
+2024-10-22 13:50:04 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-22 13:50:04 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-22 13:50:04 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-22 13:50:05 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-22 13:50:05 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-22 13:50:05 - Tomcat initialized with port 8080 (http)
+2024-10-22 13:50:05 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-22 13:50:05 - Starting service [Tomcat]
+2024-10-22 13:50:05 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-22 13:50:05 - Initializing Spring embedded WebApplicationContext
+2024-10-22 13:50:05 - Root WebApplicationContext: initialization completed in 1929 ms
+2024-10-22 13:50:44 - Starting DemoApplication using Java 21.0.3 with PID 8996 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-22 13:50:44 - No active profile set, falling back to 1 default profile: "default"
+2024-10-22 13:50:44 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-22 13:50:44 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-22 13:50:44 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-22 13:50:45 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-22 13:50:45 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-22 13:50:46 - Tomcat initialized with port 8080 (http)
+2024-10-22 13:50:46 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-22 13:50:46 - Starting service [Tomcat]
+2024-10-22 13:50:46 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-22 13:50:46 - Initializing Spring embedded WebApplicationContext
+2024-10-22 13:50:46 - Root WebApplicationContext: initialization completed in 1397 ms
+2024-10-22 13:50:46 - Iniciando carregamento de prefixos...
+2024-10-22 13:50:47 - LiveReload server is running on port 35729
+2024-10-22 13:50:47 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-22 13:50:47 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-22 13:50:47 - Starting...
+2024-10-22 13:50:47 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4d71a9e4]]
+2024-10-22 13:50:47 - Started.
+2024-10-22 13:50:47 - Started DemoApplication in 2.804 seconds (process running for 3.309)
+2024-10-22 13:50:50 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-22 13:50:50 - Initializing Servlet 'dispatcherServlet'
+2024-10-22 13:50:50 - Completed initialization in 0 ms
+2024-10-22 13:51:21 - Starting DemoApplication using Java 21.0.3 with PID 11808 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-22 13:51:21 - No active profile set, falling back to 1 default profile: "default"
+2024-10-22 13:51:21 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-22 13:51:21 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-22 13:51:21 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-22 13:51:22 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-22 13:51:22 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-22 13:51:22 - Tomcat initialized with port 8080 (http)
+2024-10-22 13:51:22 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-22 13:51:22 - Starting service [Tomcat]
+2024-10-22 13:51:22 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-22 13:51:22 - Initializing Spring embedded WebApplicationContext
+2024-10-22 13:51:22 - Root WebApplicationContext: initialization completed in 1653 ms
+2024-10-22 13:51:29 - Iniciando carregamento de prefixos...
+2024-10-22 13:51:35 - LiveReload server is running on port 35729
+2024-10-22 13:51:35 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-22 13:51:35 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-22 13:51:35 - Starting...
+2024-10-22 13:51:35 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@30bfcff6]]
+2024-10-22 13:51:35 - Started.
+2024-10-22 13:51:35 - Started DemoApplication in 15.066 seconds (process running for 16.008)
+2024-10-22 13:51:58 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-22 13:51:58 - Initializing Servlet 'dispatcherServlet'
+2024-10-22 13:51:58 - Completed initialization in 19 ms
+2024-10-22 13:52:35 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-23 08:56:47 - Starting DemoApplication using Java 21.0.3 with PID 8584 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-23 08:56:47 - No active profile set, falling back to 1 default profile: "default"
+2024-10-23 08:56:47 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-23 08:56:47 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-23 08:56:47 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-23 08:56:49 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-23 08:56:49 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-23 08:56:49 - Tomcat initialized with port 8080 (http)
+2024-10-23 08:56:49 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-23 08:56:49 - Starting service [Tomcat]
+2024-10-23 08:56:49 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-23 08:56:49 - Initializing Spring embedded WebApplicationContext
+2024-10-23 08:56:49 - Root WebApplicationContext: initialization completed in 1864 ms
+2024-10-23 08:56:53 - Iniciando carregamento de prefixos...
+2024-10-23 08:56:58 - LiveReload server is running on port 35729
+2024-10-23 08:56:58 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-23 08:56:58 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-23 08:56:58 - Starting...
+2024-10-23 08:56:58 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@30a137db]]
+2024-10-23 08:56:58 - Started.
+2024-10-23 08:56:58 - Started DemoApplication in 11.699 seconds (process running for 12.531)
+2024-10-23 08:57:05 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-23 08:57:05 - Initializing Servlet 'dispatcherServlet'
+2024-10-23 08:57:05 - Completed initialization in 22 ms
+2024-10-23 08:57:58 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-24 09:05:41 - Starting DemoApplication using Java 21.0.3 with PID 5864 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-24 09:05:41 - No active profile set, falling back to 1 default profile: "default"
+2024-10-24 09:05:41 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-24 09:05:41 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-24 09:05:41 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-24 09:05:42 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-24 09:05:42 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-24 09:05:42 - Tomcat initialized with port 8080 (http)
+2024-10-24 09:05:42 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-24 09:05:42 - Starting service [Tomcat]
+2024-10-24 09:05:42 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-24 09:05:42 - Initializing Spring embedded WebApplicationContext
+2024-10-24 09:05:42 - Root WebApplicationContext: initialization completed in 1559 ms
+2024-10-24 09:05:42 - Iniciando carregamento de prefixos...
+2024-10-24 09:05:43 - LiveReload server is running on port 35729
+2024-10-24 09:05:43 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-24 09:05:43 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-24 09:05:43 - Starting...
+2024-10-24 09:05:43 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3594f6ed]]
+2024-10-24 09:05:43 - Started.
+2024-10-24 09:05:43 - Started DemoApplication in 2.948 seconds (process running for 3.441)
+2024-10-24 09:05:48 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-24 09:05:48 - Initializing Servlet 'dispatcherServlet'
+2024-10-24 09:05:48 - Completed initialization in 1 ms
+2024-10-27 09:06:36 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-27 09:35:19 - Starting DemoApplication using Java 21.0.3 with PID 5976 (C:\Users\Lucas\Documents\Projetos\demo\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\demo)
+2024-10-27 09:35:19 - No active profile set, falling back to 1 default profile: "default"
+2024-10-27 09:35:19 - The Class-Path manifest attribute in C:\Users\Lucas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Lucas/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-10-27 09:35:19 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-27 09:35:19 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-27 09:35:20 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-10-27 09:35:20 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-10-27 09:35:20 - Tomcat initialized with port 8080 (http)
+2024-10-27 09:35:20 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-27 09:35:20 - Starting service [Tomcat]
+2024-10-27 09:35:20 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-27 09:35:20 - Initializing Spring embedded WebApplicationContext
+2024-10-27 09:35:20 - Root WebApplicationContext: initialization completed in 1314 ms
+2024-10-27 09:35:20 - Iniciando carregamento de prefixos...
+2024-10-27 09:35:21 - LiveReload server is running on port 35729
+2024-10-27 09:35:21 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-27 09:35:21 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-27 09:35:21 - Starting...
+2024-10-27 09:35:21 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3828bc6b]]
+2024-10-27 09:35:21 - Started.
+2024-10-27 09:35:21 - Started DemoApplication in 2.494 seconds (process running for 2.953)
+2024-10-27 09:36:21 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2024-10-27 09:37:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-27 09:37:36 - Initializing Servlet 'dispatcherServlet'
+2024-10-27 09:37:36 - Completed initialization in 2 ms
