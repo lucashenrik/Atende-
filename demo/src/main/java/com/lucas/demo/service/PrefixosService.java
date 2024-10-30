@@ -27,19 +27,13 @@ public class PrefixosService {
 	private final List<String> prefixosCarregados = new ArrayList<>();
 	
 	String diretorioAtual = System.getProperty("user.dir");
-
-	// Volte um nível removendo o último "demo" do caminho
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+	private final String diretorio = diretorioPrincipal + "/atendeMais/Prefixos";
+	String caminhoArq = diretorio + "/prefixos_.json";
+	
+	//private final String diretorio = diretorioPrincipal + "\\Prefixos";
+	//String caminhoArq = diretorio + "\\prefixos_.json";
 
-	//private final String diretorio = diretorioPrincipal + "/atendeMais/Prefixos";
-	
-	//String caminhoArq = diretorio + "/prefixos_.json";
-	
-	private final String diretorio = diretorioPrincipal + "\\Prefixos";
-	
-	String caminhoArq = diretorio + "\\prefixos_.json";
-
-	
 	//private final String caminhoArq = diretorio + "\\prefixos_.json";
 
 	public PrefixosService(ObjectMapper objectMapper) {

@@ -32,7 +32,6 @@ public class ArquivoService {
 
 	List<Map<String, String>> pedidoList = new ArrayList<>();
 
-
 	String diretorioAtual = System.getProperty("user.dir");
 
 	// String caminhoArq = diretorioPrincipal +
@@ -109,9 +108,6 @@ public class ArquivoService {
 
 		// Escreve no arquivo após adicionar todos os pedidos
 		escrever(pedidoList, verificarHora());
-
-		// Adiciona o item à memória e realiza a lógica adicional
-		// pedidoServ.adicionarItem(item);
 	}
 
 	public synchronized void alterarStatus(String senha, String novoStatus, String hora) {
@@ -166,7 +162,6 @@ public class ArquivoService {
 					objectMapper.writeValue(file, pedidos);
 					System.out.println("Status atualizado com sucesso!");
 
-					// Atualizar pedidos após alteração de status
 					pedidoServ.carregarPedidos(); // Recarregar pedidos para refletir as alterações
 				} catch (IOException e) {
 					throw new IOException("Pedido com a senha e hora especificados não encontrado.", e);
@@ -178,13 +173,9 @@ public class ArquivoService {
 		}
 	}
 
-
-	/*private String verificarHora() {
-
-		// Volte um nível removendo o último "demo" do caminho
+	private String verificarHora() {
 		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
 
-		// Obtenha a data atual e a hora atual
 		LocalDate hoje = LocalDate.now();
 		LocalTime agora = LocalTime.now();
 		LocalDate data;
@@ -195,41 +186,25 @@ public class ArquivoService {
 		} else {
 			data = hoje; // Usa a data atual
 		}
-		String caminhoArq = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
-		// String caminhoArq = diretorioPrincipal + "\\registros\\pedidos\\pedidos_" +
-		// data + ".json";
+
+		// Define o caminho do arquivo de forma limpa a cada chamada
+		String caminhoArq = diretorioPrincipal.getAbsolutePath() + "/atendeMais/registros/pedidos/pedidos_" + data
+				+ ".json";
+
+		// String caminhoArq = diretorioPrincipal.getAbsolutePath() +
+		// "\\registros\\pedidos\\pedidos_" + data + ".json";
+		// System.out.println("Caminho do arquivo: " + caminhoArq); // Log para
+		// verificar o caminho
+
 		return caminhoArq;
-	}*/
-	
-	private String verificarHora() {
-	    // Volte um nível removendo o último "demo" do caminho
-	    File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-
-	    // Obtenha a data atual e a hora atual
-	    LocalDate hoje = LocalDate.now();
-	    LocalTime agora = LocalTime.now();
-	    LocalDate data;
-
-	    // Se a hora atual for antes das 7h, usar o dia anterior
-	    if (agora.isBefore(LocalTime.of(7, 0))) {
-	        data = hoje.minusDays(1); // Usa a data anterior
-	    } else {
-	        data = hoje; // Usa a data atual
-	    }
-
-	    // Define o caminho do arquivo de forma limpa a cada chamada
-	    //String caminhoArq = diretorioPrincipal.getAbsolutePath() + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
-	    String caminhoArq = diretorioPrincipal.getAbsolutePath() + "\\registros\\pedidos\\pedidos_" + data + ".json";
-	    //System.out.println("Caminho do arquivo: " + caminhoArq); // Log para verificar o caminho
-	    return caminhoArq;
 	}
-	
+
 	private List<Map<String, String>> verificarArquivo() {
 		File file = new File(verificarHora());
 
 		// Limpar a lista de pedidos sempre que começar um novo dia
-	    pedidoList = new ArrayList<>();
-	    
+		pedidoList = new ArrayList<>();
+
 		// Verifica se o arquivo já existe e lê seu conteúdo
 		if (file.exists()) {
 			try {

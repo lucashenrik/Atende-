@@ -109,6 +109,7 @@ public class PedidoServico {
 
 	// Recebe o xml e processa
 	public boolean processarItens(String xml) {
+		System.out.println(xml);
 		XmlMapper xmlMapper = new XmlMapper();
 
 		boolean sucesso = false;
@@ -161,7 +162,6 @@ public class PedidoServico {
 		} catch (Exception e) {
 			throw new ErroProcessamentoException("Erro inesperado ao processar o XML", e);
 		}
-
 		return sucesso;
 	}
 
@@ -235,42 +235,6 @@ public class PedidoServico {
 		}
 	}
 
-	/*
-	 * public synchronized boolean carregarPedidos() { // Limpa as listas antes de
-	 * recarregar os pedidos pedidosVerficados.clear(); pedidosEntregues.clear();
-	 * pedidoMemoria.clear();
-	 * 
-	 * boolean sucesso = true; try { File arquivo = new File(verificarHora());
-	 * 
-	 * // Carrega os pedidos do arquivo ou se a memória estiver vazia if
-	 * (pedidoMemoria.isEmpty() || pedidoMemoria.size() < pedidosEmArquivo.size()) {
-	 * if (arquivo.exists()) { try { // Ler pedidos do arquivo pedidosEmArquivo =
-	 * mapper.readValue(arquivo, new TypeReference<List<Map<String, String>>>() {
-	 * });
-	 * 
-	 * // Atualiza as listas de pedidos for (Map<String, String> item :
-	 * pedidosEmArquivo) { String statusItem = item.get("status");
-	 * 
-	 * // Verifica se o pedido já está na lista antes de adicionar if
-	 * ("entregue".equals(statusItem) || ("cancelar".equals(statusItem))) { //
-	 * Adiciona pedidos entregues if (!pedidosEntregues.contains(item)) {
-	 * pedidosEntregues.add(item); } } else { // Adiciona pedidos não entregues if
-	 * (!pedidosVerficados.contains(item)) { pedidosVerficados.add(item); } if
-	 * (!pedidoMemoria.contains(item)) { pedidoMemoria.add(item); } } }
-	 * 
-	 * } catch (IOException e) { sucesso = false; throw new
-	 * ErroArquivoException("Falha ao carregar pedidos do arquivo: ", e); } } }
-	 * 
-	 * } catch (ErroArquivoException e) { sucesso = false; throw new
-	 * ErroArquivoException("Arquivo " + verificarHora() + " não encontrado."); }
-	 * 
-	 * // Exibir resultados, sem ignorar itens repetidos
-	 * //System.out.println("Pedidos nao entregues: " + pedidosVerficados);
-	 * //System.out.println("Pedidos entregues: " + pedidosEntregues);
-	 * 
-	 * return sucesso; }
-	 */
-
 	public synchronized boolean carregarPedidos() {
 		pedidosVerficados.clear();
 		pedidosEntregues.clear();
@@ -337,17 +301,20 @@ public class PedidoServico {
 	private String caminhoArquivo(LocalDate data) {
 		String diretorioAtual = System.getProperty("user.dir");
 		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-		//return diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
-		return diretorioPrincipal + "\\registros\\pedidos\\pedidos_" + data + ".json";
+		return diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
+		
+		//return diretorioPrincipal + "\\registros\\pedidos\\pedidos_" + data + ".json";
 	}
 
 	private String verificarHora() {
 		String diretorioAtual = System.getProperty("user.dir");
 
 		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-		//String caminhoAr = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_";
-		String caminhoAr = diretorioPrincipal + "\\registros\\pedidos\\pedidos_";
+		String caminhoAr = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_";
+		
+		//String caminhoAr = diretorioPrincipal + "\\registros\\pedidos\\pedidos_";
 		// System.out.println("Entrando no método verificarHora()");
+		
 		// Obtenha a data atual e a hora atual
 		LocalDate hoje = LocalDate.now();
 		LocalTime agora = LocalTime.now();
@@ -385,6 +352,7 @@ public class PedidoServico {
 				if (("andamento".equals(status) && nomeItem != null)) {
 					String quantityString = item.get("quantity");
 					int quantity = Integer.parseInt(quantityString);
+					
 					// Verifica se o item já foi contado, se sim, incrementa, senão adiciona
 					contagemItems.put(nomeItem, contagemItems.getOrDefault(nomeItem, 0) + quantity);
 				}
@@ -392,10 +360,11 @@ public class PedidoServico {
 
 			// Exibe o resultado final no formato desejado
 			for (Map.Entry<String, Integer> entry : contagemItems.entrySet()) {
-
+				
 				String nomeItem = entry.getKey();
+				String primeiroNomeItem = nomeItem.split(" ")[0];
 				int quantidade = entry.getValue();
-				String result = nomeItem + ": " + quantidade;
+				String result = primeiroNomeItem + ": " + quantidade;
 				listaContagem.add(result);
 			}
 
@@ -406,11 +375,7 @@ public class PedidoServico {
 	}
 
 	public List<Map<String, String>> getPedidoList() {
-		// if (pedidosEmArquivo == null /*|| pedidosEmArquivo.isEmpty()*/) {
 		return pedidosVerficados;
-		// } else {
-		// throw new ErroArquivoException("Nenhum pedido encontrado no arquivo.");
-		// }
 	}
 
 	public List<Map<String, String>> getPedidosEntregues() {

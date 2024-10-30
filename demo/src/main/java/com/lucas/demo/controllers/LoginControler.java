@@ -25,9 +25,11 @@ public class LoginControler {
 	
 	@PostMapping("/login")
 	public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password, HttpSession session) {
-		 
+		System.out.println("entrou em login."); 
+		
 		if (authService.autenticacao(username, password)){
 			session.setAttribute("user", username);
+			System.out.println("Passou pelo if");
 			return ResponseEntity.ok("Login sucesso!");
 		}
 		

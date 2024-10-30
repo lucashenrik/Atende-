@@ -29,17 +29,17 @@ public class UserController {
 	// Endpoint para obter o email e o token
 	@GetMapping("/get")
 	public ResponseEntity<Map<String, String>> getEmailAndToken(HttpSession session) {
-		//if (authService.verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			Map<String, String> response = userConfigService.getEmailAndToken();
 			return ResponseEntity.ok(response);
-		//}
-		//return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
 	// Endpoint para modificar o email e o token
 	@PostMapping("/update")
 	public ResponseEntity<String> updateEmailAndToken(@RequestBody Map<String, String> payload, HttpSession session) {
-		//if (authService.verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			String email = payload.get("email");
 			String token = payload.get("token");
 			try {
@@ -51,32 +51,7 @@ public class UserController {
 			} catch (Exception e) {
 				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao encriptar token.");
 			}
-	//	}
-	//	return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
-
-	// Endpoint para atualizar o token encriptado
-	/*
-	 * @PostMapping("/updateToken") public ResponseEntity<String>
-	 * updateToken(@RequestBody Map<String, String> request) { try { String token =
-	 * request.get("token"); String encryptedToken =
-	 * tokenService.encryptToken(token);
-	 * 
-	 * // Salva o token encriptado no user.json
-	 * userConfigService.updateToken(encryptedToken); return
-	 * ResponseEntity.ok("Token atualizado e encriptado com sucesso."); } catch
-	 * (Exception e) { return
-	 * ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).
-	 * body("Erro ao encriptar token."); } }
-	 * 
-	 * // Endpoint para retornar o token desencriptado
-	 * 
-	 * @GetMapping("/getToken") public ResponseEntity<String> getToken() { try {
-	 * String encryptedToken = userConfigService.getToken(); // Obter o token
-	 * encriptado do arquivo String decryptedToken =
-	 * tokenService.decryptToken(encryptedToken); return
-	 * ResponseEntity.ok(decryptedToken); } catch (Exception e) { return
-	 * ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).
-	 * body("Erro ao desencriptar token."); } }
-	 */
 }

@@ -38,12 +38,15 @@ public class AuthService {
 
 				// Compara a senha bruta com o hash armazenado
 				if (user.getUsername().equals(username) && encoder.matches(password, user.getPassword())) {
+					System.out.println("Login bem-sucedido!");
 					return true; // Login bem-sucedido
 				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Login mal-sucedido!");
+		//return true;
 		return false; // Login falhou
 	}
 
@@ -56,6 +59,7 @@ public class AuthService {
 		if (session.getAttribute("user") != null) {
 			return true;
 		}
+		//return true;
 		return false;
 	}
 }

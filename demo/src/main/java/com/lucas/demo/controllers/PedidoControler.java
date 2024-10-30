@@ -44,11 +44,11 @@ public class PedidoControler {
 
 	@Autowired
 	private SimpMessagingTemplate messagingTemplate;
-	 
+
 	// Recebe o Webhook e extrai o notificationCode
 	@PostMapping("/notificationCode")
 	public ResponseEntity<?> receiveNotification(@RequestBody String notificacaoCode) {
-	
+
 		try {
 			// Decodifica a string codificada em URL
 			String decodedNotification = URLDecoder.decode(notificacaoCode, StandardCharsets.UTF_8.name());
@@ -71,37 +71,39 @@ public class PedidoControler {
 			// Cria a url para fazer a requisição com o notificationCode
 			String urlProcess = pedidoServ.getUrl(notificationCode);
 
-			  // Realiza a requisição GET com tratamento de exceções HTTP
-	        try {
-	            ResponseEntity<String> response = restTemplate.getForEntity(urlProcess, String.class);
-	           
-	            return processarNotificacoes(response.getBody());
+			// Realiza a requisição GET com tratamento de exceções HTTP
+			try {
+				ResponseEntity<String> response = restTemplate.getForEntity(urlProcess, String.class);
 
-	        } catch (HttpClientErrorException e) {
-	            // Captura erros de cliente (4xx) como o 401 Unauthorized
-	            if (e.getStatusCode() == HttpStatus.UNAUTHORIZED) {
-	                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Erro de autenticação: email ou token incorretos.");
-	            } else if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
-	                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Recurso não encontrado.");
-	            } else {
-	                return ResponseEntity.status(e.getStatusCode()).body("Erro de cliente: " + e.getMessage());
-	            }
-	        } catch (HttpServerErrorException e) {
-	            // Captura erros de servidor (5xx)
-	            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body("Erro no servidor PagBank: " + e.getMessage());
-	        }
+				return processarNotificacoes(response.getBody());
 
-	    } catch (Exception e) {
-	        // Captura qualquer outra exceção que não seja de HTTP
-	        e.printStackTrace();
-	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar notificação.");
-	    }
+			} catch (HttpClientErrorException e) {
+				// Captura erros de cliente (4xx) como o 401 Unauthorized
+				if (e.getStatusCode() == HttpStatus.UNAUTHORIZED) {
+					return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+							.body("Erro de autenticação: email ou token incorretos.");
+				} else if (e.getStatusCode() == HttpStatus.NOT_FOUND) {
+					return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Recurso não encontrado.");
+				} else {
+					return ResponseEntity.status(e.getStatusCode()).body("Erro de cliente: " + e.getMessage());
+				}
+			} catch (HttpServerErrorException e) {
+				// Captura erros de servidor (5xx)
+				return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
+						.body("Erro no servidor PagBank: " + e.getMessage());
+			}
+
+		} catch (Exception e) {
+			// Captura qualquer outra exceção que não seja de HTTP
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao processar notificação.");
+		}
 	}
-	
+
 	// Processa a resposta xml
 	@PostMapping("/notificacoes")
 	public ResponseEntity<?> processarNotificacoes(@RequestBody String json) throws ErroProcessamentoException {
-		// System.out.println(json);
+		System.out.println(json);
 		boolean sucesso = pedidoServ.processarItens(json);
 
 		if (sucesso == true) {
@@ -119,7 +121,7 @@ public class PedidoControler {
 	// Altera o status de um item
 	@PostMapping("/alterar-status")
 	public ResponseEntity<?> alterarStatusPedido(@RequestBody Map<String, String> payload, HttpSession session) {
-		//if (authService.verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			String senha = payload.get("pedidoId");
 			String novoStatus = payload.get("novoStatus");
 			String hora = payload.get("hora");
@@ -128,43 +130,43 @@ public class PedidoControler {
 
 			avisarFrontEnd();
 
-			return new ResponseEntity<>("Status alterado com sucesso", HttpStatus.CREATED);
-		//}
-		//return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<>(HttpStatus.OK);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
 	// Retorna uma lista com a contagem de cada item
 	@GetMapping("/contar")
 	public ResponseEntity<?> contarPedidos(HttpSession session) {
-	//	if (authService.verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			List<String> listaContagem = pedidoServ.contar();
 			return ResponseEntity.ok(listaContagem);
-		//}
-		//return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
 	// Retorna uma lista apenas com pedidos entregues ou cancelados
 	@GetMapping("/entregues")
 	public ResponseEntity<?> getPedidosEntregues(HttpSession session) {
 
-		//if (authService.verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			List<Map<String, String>> pedidosEntregue = pedidoServ.getPedidosEntregues();
 			return ResponseEntity.ok(pedidosEntregue);
-		//}
-		//return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
 	// Retorna uma lista com pedidos prontos ou em produção
 	@GetMapping("/lista-pedidos")
 	public ResponseEntity<?> getLista(HttpSession session) {
 
-	//	if (authService.verificarSessao(session)) {
+		if (authService.verificarSessao(session)) {
 			pedidoServ.carregarPedidos();
 			List<Map<String, String>> pedidos = pedidoServ.getPedidoList();
 
 			return ResponseEntity.ok(pedidos);
-		//}
-		//return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+		}
+		return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 	}
 
 	private void avisarFrontEnd() {

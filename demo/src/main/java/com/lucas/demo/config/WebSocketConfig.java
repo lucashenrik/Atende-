@@ -21,9 +21,11 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 	    /*registry.addEndpoint("/ws-notifications")
 	            .setAllowedOrigins("http://localhost:3000")
 	            .withSockJS();*/
-		registry.addEndpoint("/ws-notifications")
-        .setAllowedOrigins("http://191.101.70.241:3000")
+		//registry.addEndpoint("/ws-notifications")
+		//.setAllowedOrigins("http://191.101.70.241:3000")
+		registry.addEndpoint("/wss-notifications")
+        .setAllowedOrigins("https://atende-mais.shop", "https://191.101.70.241:3000", "http://localhost:3000")
         .withSockJS()
-        .setHeartbeatTime(25000); // Opcional: aumenta o tempo de timeout da conexão.
+        .setHeartbeatTime(25000); // Ajusta o tempo de timeout da conexão.
 	}
 }

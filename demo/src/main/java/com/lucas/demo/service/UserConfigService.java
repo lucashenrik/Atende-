@@ -28,8 +28,8 @@ public class UserConfigService {
 	// Volte um nível removendo o último "demo" do caminho
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
 
-	//String caminho = diretorioPrincipal + "/atendeMais/user.json";
-	String caminho = diretorioPrincipal + "\\user.json";
+	String caminho = diretorioPrincipal + "/atendeMais/user.json";
+	//String caminho = diretorioPrincipal + "\\user.json";
 
 	private final ObjectMapper objectMapper = new ObjectMapper();
 	private final Path userFilePath = Paths.get(caminho);
