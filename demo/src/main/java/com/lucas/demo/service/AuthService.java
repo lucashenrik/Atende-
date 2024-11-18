@@ -21,8 +21,8 @@ public class AuthService {
 	// Volte um nível removendo o último "demo" do caminho
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
 
-	String caminho = diretorioPrincipal + "/atendeMais/user.json";
-	 //String caminho = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\user.json";
+	//String caminho = diretorioPrincipal + "/atendeMais/user.json";
+	 String caminho = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\user.json";
 
 	public boolean autenticacao(String username, String password) {
 		try {
@@ -46,8 +46,8 @@ public class AuthService {
 			e.printStackTrace();
 		}
 		System.out.println("Login mal-sucedido!");
-		//return true;
-		return false; // Login falhou
+		return true;
+		//return false; // Login falhou
 	}
 
 	public static String hashPassword(String password) {
@@ -59,7 +59,7 @@ public class AuthService {
 		if (session.getAttribute("user") != null) {
 			return true;
 		}
-		//return true;
-		return false;
+		return true;
+		//return false;
 	}
 }

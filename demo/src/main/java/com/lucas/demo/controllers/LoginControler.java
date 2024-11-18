@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lucas.demo.service.AuthService;
-import com.lucas.demo.service.PedidoServico;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -20,16 +19,12 @@ public class LoginControler {
 	@Autowired
 	private AuthService authService;
 	
-	@Autowired
-	PedidoServico pedidoServ;
-	
 	@PostMapping("/login")
 	public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password, HttpSession session) {
-		System.out.println("entrou em login."); 
 		
 		if (authService.autenticacao(username, password)){
 			session.setAttribute("user", username);
-			System.out.println("Passou pelo if");
+			
 			return ResponseEntity.ok("Login sucesso!");
 		}
 		

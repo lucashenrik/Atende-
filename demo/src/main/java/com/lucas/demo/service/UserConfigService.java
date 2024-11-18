@@ -28,20 +28,17 @@ public class UserConfigService {
 	// Volte um nível removendo o último "demo" do caminho
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
 
-	String caminho = diretorioPrincipal + "/atendeMais/user.json";
-	//String caminho = diretorioPrincipal + "\\user.json";
+	//String caminho = diretorioPrincipal + "/atendeMais/user.json";
+	String caminho = diretorioPrincipal + "\\user.json";
 
 	private final ObjectMapper objectMapper = new ObjectMapper();
 	private final Path userFilePath = Paths.get(caminho);
 
 	public Map<String, String> getEmailAndToken() {
-		//System.out.println(caminho);
 		try {
-			// Lê o arquivo user.json
 			JsonNode root = objectMapper.readTree(Files.newInputStream(userFilePath));
 			JsonNode userNode = root.get("users").get(0); // Pega o primeiro e único usuário
 
-			// Extrai o email do arquivo JSON
 			String email = userNode.get("email").asText();
 
 			// Descriptografa o token
@@ -112,7 +109,7 @@ public class UserConfigService {
 		return (String) userMap.get("token");
 	}
 
-	public String tokenDescripto() throws Exception {
+	private String tokenDescripto() throws Exception {
 		String encryptedToken;
 		String decryptedToken;
 		try {

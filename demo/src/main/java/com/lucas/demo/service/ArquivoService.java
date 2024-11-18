@@ -26,13 +26,13 @@ public class ArquivoService {
 
 	@Lazy
 	@Autowired
-	PedidoServico pedidoServ;
+	private PedidoServico pedidoServ;
 
 	ObjectMapper mapper = new ObjectMapper();
 
-	List<Map<String, String>> pedidoList = new ArrayList<>();
+	private List<Map<String, String>> pedidoList = new ArrayList<>();
 
-	String diretorioAtual = System.getProperty("user.dir");
+	private String diretorioAtual = System.getProperty("user.dir");
 
 	// String caminhoArq = diretorioPrincipal +
 	// "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
@@ -40,8 +40,6 @@ public class ArquivoService {
 	// "\\atendeMais\\registros\\pedidos\\pedidos_" + data + ".json";
 
 	public void escreverCodigo(String notificationCode) {
-
-		// ObjectMapper mapper = new ObjectMapper();
 
 		List<Map<String, String>> codigosList = new ArrayList<>();
 
@@ -57,7 +55,6 @@ public class ArquivoService {
 			data = hoje; // Usa a data atual
 		}
 
-		// Especifica o caminho onde o arquivo será salvo
 		String diretorio = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\Registros\\Codigos-de-notificacao";
 
 		String caminhoArq = diretorio + "//registros//codigos-de-notificacao" + "\\notificacaoCode_" + data + ".json";
@@ -89,7 +86,6 @@ public class ArquivoService {
 	}
 
 	public synchronized void escreverPedido(ItemXml item) {
-
 		verificarArquivo();
 
 		String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
@@ -188,13 +184,13 @@ public class ArquivoService {
 		}
 
 		// Define o caminho do arquivo de forma limpa a cada chamada
-		String caminhoArq = diretorioPrincipal.getAbsolutePath() + "/atendeMais/registros/pedidos/pedidos_" + data
-				+ ".json";
+		//String caminhoArq = diretorioPrincipal.getAbsolutePath() + "/atendeMais/registros/pedidos/pedidos_" + data
+				//+ ".json";
 
-		// String caminhoArq = diretorioPrincipal.getAbsolutePath() +
-		// "\\registros\\pedidos\\pedidos_" + data + ".json";
-		// System.out.println("Caminho do arquivo: " + caminhoArq); // Log para
-		// verificar o caminho
+		String caminhoArq = diretorioPrincipal.getAbsolutePath() +
+		 "\\registros\\pedidos\\pedidos_" + data + ".json";
+		
+		// System.out.println("Caminho do arquivo: " + caminhoArq); 
 
 		return caminhoArq;
 	}

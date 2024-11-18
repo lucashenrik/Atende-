@@ -28,11 +28,11 @@ public class PrefixosService {
 	
 	String diretorioAtual = System.getProperty("user.dir");
 	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-	private final String diretorio = diretorioPrincipal + "/atendeMais/Prefixos";
-	String caminhoArq = diretorio + "/prefixos_.json";
+	//private final String diretorio = diretorioPrincipal + "/atendeMais/Prefixos";
+	//String caminhoArq = diretorio + "/prefixos_.json";
 	
-	//private final String diretorio = diretorioPrincipal + "\\Prefixos";
-	//String caminhoArq = diretorio + "\\prefixos_.json";
+	private final String diretorio = diretorioPrincipal + "\\Prefixos";
+	private final String caminhoArq = diretorio + "\\prefixos_.json";
 
 	//private final String caminhoArq = diretorio + "\\prefixos_.json";
 
@@ -82,12 +82,10 @@ public class PrefixosService {
 		prefixosCarregados.clear();  // Limpa a lista antes de adicionar novos
 		
 		if (!prefixosCarregados.isEmpty()) {
-			// System.out.println("Prefixos já carregados: " + prefixosCarregados);
 			logger.info("Prefixos já carregados: " + prefixosCarregados);
 			return prefixosCarregados.stream().map(Prefixo::new).collect(Collectors.toList());
 		}
 
-		// System.out.println("Iniciando carregamento de prefixos...");
 		logger.info("Iniciando carregamento de prefixos...");
 
 		File file = new File(caminhoArq);
@@ -98,16 +96,12 @@ public class PrefixosService {
 				prefixosList = objectMapper.readValue(file, new TypeReference<List<Prefixo>>() {
 				});
 				
-				//
-				
 				// Extrair os prefixos como uma lista de strings
 				for (Prefixo p : prefixosList) {
 					prefixosCarregados.add(p.getPrefixo());
 				}
 				logger.debug("Prefixos existentes carregados: {}", prefixosCarregados);
-				// System.out.println("Prefixos carregados: " + prefixosCarregados);
 			} catch (IOException e) {
-				// System.err.println("Erro ao ler o arquivo de prefixos: " + e.getMessage());
 				logger.error("Erro ao ler o arquivo: {}", e.getMessage(), e);
 				throw new ErroLeituraArquivoException("Falha ao carregar prefixos do arquivo.", e);
 			}
@@ -116,7 +110,7 @@ public class PrefixosService {
 			throw new ErroArquivoException("Arquivo de prefixos não encontrado.");
 		}
 
-		return prefixosList; // Retorna a lista de prefixos
+		return prefixosList;
 	}
 
 	public void excluirPrefixo(String prefixo) {

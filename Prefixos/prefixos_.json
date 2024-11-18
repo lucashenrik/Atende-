@@ -1,1 +1,9 @@
-[{"prefixo":"Batata"},{"prefixo":"Porção"},{"prefixo":"Taboa"},{"prefixo":"Venda"},{"prefixo":"Jantinha"}]
+[ {
+  "prefixo" : "JANTINHA"
+}, {
+  "prefixo" : "BATATA"
+}, {
+  "prefixo" : "DISCO"
+}, {
+  "prefixo" : "TÁBOA"
+} ]

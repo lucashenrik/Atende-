@@ -27,14 +27,13 @@ public class PrefixosController {
 	private AuthService authService;
 
 	@Autowired
-	PrefixosService prefixoServ;
+	private PrefixosService prefixoServ;
 
 	@GetMapping("/buscar-prefixo")
 	public ResponseEntity<?> buscarPrefixos(HttpSession session) {
 		if (authService.verificarSessao(session)) {
 			// Carregar prefixos do arquivo
-			List<Prefixo> prefixosCarregados = prefixoServ.carregarPrefixos(); // Chama o método que agora retorna a
-																				// lista de prefixos
+			List<Prefixo> prefixosCarregados = prefixoServ.carregarPrefixos();
 
 			if (prefixosCarregados.isEmpty()) {
 				return ResponseEntity.noContent().build(); // Retorna 204 se a lista estiver vazia

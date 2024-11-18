@@ -1,9 +1,14 @@
 package com.lucas.demo.controllers;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.List;
 import java.util.Map;
+
+import javax.imageio.ImageIO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,11 +25,14 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import com.lucas.demo.exceptions.ErroProcessamentoException;
+import com.lucas.demo.model.ImageData;
 import com.lucas.demo.service.ArquivoService;
 import com.lucas.demo.service.AuthService;
 import com.lucas.demo.service.PedidoServico;
 
 import jakarta.servlet.http.HttpSession;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
 
 @ControllerAdvice
 @RestController
@@ -35,15 +43,15 @@ public class PedidoControler {
 	private AuthService authService;
 
 	@Autowired
-	PedidoServico pedidoServ;
+	private PedidoServico pedidoServ;
 
 	@Autowired
-	ArquivoService arquivoServ;
-
-	RestTemplate restTemplate = new RestTemplate();
+	private ArquivoService arquivoServ;
 
 	@Autowired
 	private SimpMessagingTemplate messagingTemplate;
+
+	RestTemplate restTemplate = new RestTemplate();
 
 	// Recebe o Webhook e extrai o notificationCode
 	@PostMapping("/notificationCode")
@@ -103,8 +111,23 @@ public class PedidoControler {
 	// Processa a resposta xml
 	@PostMapping("/notificacoes")
 	public ResponseEntity<?> processarNotificacoes(@RequestBody String json) throws ErroProcessamentoException {
-		System.out.println(json);
+		// System.out.println(json);
 		boolean sucesso = pedidoServ.processarItens(json);
+
+		if (sucesso == true) {
+			pedidoServ.getPedidoList();
+
+			// Envie uma mensagem para o WebSocket
+			avisarFrontEnd();
+
+			return new ResponseEntity<>(HttpStatus.CREATED);
+		}
+
+		return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+
+	public ResponseEntity<?> processarXml(String xml) throws ErroProcessamentoException {
+		boolean sucesso = pedidoServ.processarItens(xml);
 
 		if (sucesso == true) {
 			pedidoServ.getPedidoList();
@@ -171,5 +194,41 @@ public class PedidoControler {
 
 	private void avisarFrontEnd() {
 		messagingTemplate.convertAndSend("/topic/notifications", "Nova notificação recebida!");
+	}
+
+	// Scanner, sem utilidade
+	@PostMapping("/orc")
+	public String processImage(@RequestBody ImageData imageData) {
+		// System.out.println("Iniciando OCR");
+		String tessDataPath = "/usr/share/tesseract-ocr/4.00/tessdata"; // Caminho para tessdata
+
+		try {
+			// Decodificar a imagem Base64
+			byte[] imageBytes = Base64.getDecoder().decode(imageData.getImage().split(",")[1]);
+			BufferedImage img = ImageIO.read(new ByteArrayInputStream(imageBytes));
+
+			// Verifica se a imagem foi carregada corretamente
+			if (img == null) {
+				System.out.println("Erro: a imagem não foi carregada corretamente.");
+				return "Erro ao processar imagem";
+			}
+
+			// Configuração do Tesseract
+			Tesseract tesseract = new Tesseract();
+			tesseract.setDatapath(tessDataPath); // Caminho do tessdata
+			tesseract.setLanguage("eng"); // Definindo o idioma
+
+			// Realizar OCR
+			String result = tesseract.doOCR(img);
+			System.out.println("Texto reconhecido: " + result);
+			return result;
+
+		} catch (TesseractException e) {
+			System.err.println("Erro no Tesseract: " + e.getMessage());
+			return "Erro no Tesseract ao processar a imagem";
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "Erro geral ao processar a imagem";
+		}
 	}
 }

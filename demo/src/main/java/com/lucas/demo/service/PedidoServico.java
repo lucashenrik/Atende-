@@ -40,35 +40,25 @@ public class PedidoServico {
 
 	@Lazy
 	@Autowired
-	ArquivoService arquivoServ;
+	private ArquivoService arquivoServ;
 
 	@Autowired
-	PrefixosService prefixoServ;
+	private PrefixosService prefixoServ;
 
 	@Autowired
 	private UserConfigService userConfigService;
 
 	ObjectMapper mapper = new ObjectMapper();
 
-	/*
-	 * String diretorioAtual = System.getProperty("user.dir"); // Volte um nível
-	 * removendo o último "demo" do caminho File diretorioPrincipal = new
-	 * File(diretorioAtual).getParentFile(); String caminhoArq = diretorioPrincipal
-	 * + "/atendeMais/registros/pedidos/pedidos_";
-	 */
-
-	// + data + ".json";
-	// String caminhoArq = diretorioPrincipal + "\\registros\\pedidos\\pedidos_";
-
 	private List<Map<String, String>> pedidoMemoria = Collections.synchronizedList(new ArrayList<>());
 
-	List<Map<String, String>> pedidosEmArquivo = new ArrayList<>();
+	// private List<Map<String, String>> pedidosEmArquivo = new ArrayList<>();
 
-	List<Map<String, String>> pedidosVerficados = new ArrayList<>();
+	private List<Map<String, String>> pedidosVerficados = new ArrayList<>();
 
-	List<Map<String, String>> pedidosEntregues = new ArrayList<>();
+	private List<Map<String, String>> pedidosEntregues = new ArrayList<>();
 
-	List<String> prefixosComoString;
+	private List<String> prefixosComoString;
 
 	// Mova o carregamento dos prefixos para o método @PostConstruct
 	@PostConstruct
@@ -109,52 +99,49 @@ public class PedidoServico {
 
 	// Recebe o xml e processa
 	public boolean processarItens(String xml) {
-		System.out.println(xml);
+		// System.out.println(xml);
 		XmlMapper xmlMapper = new XmlMapper();
-
 		boolean sucesso = false;
 
 		try {
-			// Converte o XML para uma árvore JSON
+			// Converte o XML para uma árvore JSON para navegar nos nós
 			JsonNode rootNode = xmlMapper.readTree(xml);
 
-			// Verifica a existência do campo 'items'
-			JsonNode itemsNode = rootNode.get("items");
+			// Acessa todos os nós "items" dentro do nó raiz
+			Iterable<JsonNode> itemsNodes = rootNode.findValues("items");
 
-			if (itemsNode == null) {
+			// Verifica se encontrou nós "items"
+			if (!itemsNodes.iterator().hasNext()) {
 				throw new ErroProcessamentoException("O XML enviado não contém o campo 'items' ou está malformado.");
-			} else {
-				System.out.println("Campo 'items' encontrado: " + itemsNode.toString());
+			}
 
-				// Processar os itens dentro do campo 'items'
-				JsonNode itemArrayNode = itemsNode.get("item");
+			List<ItemXml> itensProcessados = new ArrayList<>();
 
-				List<ItemXml> itensProcessados = new ArrayList<>();
+			// Processa cada nó "items" encontrado
+			for (JsonNode itemsNode : itemsNodes) {
+				JsonNode itemArrayNode = itemsNode.path("item");
 
 				// Verifica se 'item' é um array ou objeto único
 				if (itemArrayNode.isArray()) {
-					// Caso seja um array de itens, iteramos normalmente
 					for (JsonNode itemNode : itemArrayNode) {
 						processarItemNode(itemNode, xmlMapper, itensProcessados);
 					}
 				} else {
-					// Caso seja um único item, tratamos diretamente
 					processarItemNode(itemArrayNode, xmlMapper, itensProcessados);
-				}
-
-				// Exibe e escreve os itens processados
-				for (ItemXml item : itensProcessados) {
-					try {
-						sucesso = true;
-						arquivoServ.escreverPedido(item);
-					} catch (ErroArquivoException e) {
-						System.err.println("Erro ao abrir ou escrever no arquivo: " + e.getMessage());
-					} catch (Exception e) {
-						System.err.println("Erro inesperado ao salvar o item: " + e.getMessage());
-					}
 				}
 			}
 
+			// Exibe e escreve os itens processados
+			for (ItemXml item : itensProcessados) {
+				try {
+					sucesso = true;
+					arquivoServ.escreverPedido(item); // Exemplo de escrita dos itens processados
+				} catch (ErroArquivoException e) {
+					System.err.println("Erro ao abrir ou escrever no arquivo: " + e.getMessage());
+				} catch (Exception e) {
+					System.err.println("Erro inesperado ao salvar o item: " + e.getMessage());
+				}
+			}
 		} catch (IOException e) {
 			throw new ErroProcessamentoException("Erro ao ler o XML", e);
 		} catch (ErroProcessamentoException e) {
@@ -177,7 +164,7 @@ public class PedidoServico {
 				if (novoItem != null && começaComPrefixo(novoItem.getName())) {
 					processarItem(novoItem, itensProcessados);
 				} else {
-					System.out.println("Item ignorado: " + itemNode.toString());
+					// System.out.println("Item ignorado: " + itemNode.toString());
 				}
 			} else {
 				System.out.println("Item malformado: " + itemNode.toString());
@@ -196,7 +183,6 @@ public class PedidoServico {
 				// Atualiza a quantidade se o item já existir
 				itemExistente.setQuantity(itemExistente.getQuantity() + novoItem.getQuantity());
 			} else {
-				// Adiciona o novo item à lista
 				itensProcessados.add(novoItem);
 			}
 		}
@@ -301,20 +287,21 @@ public class PedidoServico {
 	private String caminhoArquivo(LocalDate data) {
 		String diretorioAtual = System.getProperty("user.dir");
 		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-		return diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data + ".json";
-		
-		//return diretorioPrincipal + "\\registros\\pedidos\\pedidos_" + data + ".json";
+		// return diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_" + data +
+		// ".json";
+
+		return diretorioPrincipal + "\\registros\\pedidos\\pedidos_" + data + ".json";
 	}
 
 	private String verificarHora() {
 		String diretorioAtual = System.getProperty("user.dir");
 
 		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-		String caminhoAr = diretorioPrincipal + "/atendeMais/registros/pedidos/pedidos_";
-		
-		//String caminhoAr = diretorioPrincipal + "\\registros\\pedidos\\pedidos_";
-		// System.out.println("Entrando no método verificarHora()");
-		
+		// String caminhoAr = diretorioPrincipal +
+		// "/atendeMais/registros/pedidos/pedidos_";
+
+		String caminhoAr = diretorioPrincipal + "\\registros\\pedidos\\pedidos_";
+
 		// Obtenha a data atual e a hora atual
 		LocalDate hoje = LocalDate.now();
 		LocalTime agora = LocalTime.now();
@@ -326,7 +313,6 @@ public class PedidoServico {
 		} else {
 			data = hoje; // Usa a data atual
 		}
-		// System.out.println("Data: " + data);
 		String caminhoArq = caminhoAr + data + ".json";
 		// System.out.println("Caminho do arquivo: " + caminhoArq);
 
@@ -336,31 +322,30 @@ public class PedidoServico {
 	public List<String> contar() {
 
 		try {
-			// Mapa para armazenar o nome do item e a quantidade correspondente
 			Map<String, Integer> contagemItems = new HashMap<>();
 
 			List<String> listaContagem = new ArrayList<>();
 
 			// carregarPedidos();
 
-			// Percorre a lista de pedidos e conta a quantidade de cada item
 			for (Map<String, String> item : pedidosVerficados) {
 
 				String nomeItem = item.get("description");
+				String primeiroNome = nomeItem.split(" ")[0];
 				String status = item.get("status");
 
 				if (("andamento".equals(status) && nomeItem != null)) {
 					String quantityString = item.get("quantity");
 					int quantity = Integer.parseInt(quantityString);
-					
+
 					// Verifica se o item já foi contado, se sim, incrementa, senão adiciona
-					contagemItems.put(nomeItem, contagemItems.getOrDefault(nomeItem, 0) + quantity);
+					contagemItems.put(primeiroNome, contagemItems.getOrDefault(primeiroNome, 0) + quantity);
 				}
 			}
 
 			// Exibe o resultado final no formato desejado
 			for (Map.Entry<String, Integer> entry : contagemItems.entrySet()) {
-				
+
 				String nomeItem = entry.getKey();
 				String primeiroNomeItem = nomeItem.split(" ")[0];
 				int quantidade = entry.getValue();

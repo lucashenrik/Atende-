@@ -34,4 +34,9 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<String> handleErroLeituaArquivoException(ErroLeituraArquivoException ex) {
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	
+	@ExceptionHandler(ErroSocketException.class)
+	public ResponseEntity<String> handleErroSocketException(ErroSocketException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+	}
 }
