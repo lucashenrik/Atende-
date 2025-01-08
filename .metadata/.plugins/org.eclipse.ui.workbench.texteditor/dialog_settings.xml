@@ -6,6 +6,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="home"/>
 			<item value="Passou"/>
 			<item value="passou"/>
 			<item value="caminhoArq"/>
