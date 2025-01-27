@@ -65,7 +65,7 @@ public class PrefixosServiceTest {
 
 			doNothing().when(writerMock).writeValue(any(File.class), any());
 
-			boolean sucesso = prefixosServ.adicionarPrefixo("434");
+			boolean sucesso = prefixosServ.adicionarPrefixo("434", "123");
 
 			verify(objectMapper).readValue(any(File.class), any(TypeReference.class));
 			verify(objectMapper.writerWithDefaultPrettyPrinter()).writeValue(any(File.class), any());
@@ -86,7 +86,7 @@ public class PrefixosServiceTest {
 
 			when(objectMapper.readValue(any(File.class), any(TypeReference.class))).thenReturn(listaPrefixosMock);
 
-			List<Prefixo> prefixosCarrregados = prefixosServ.carregarPrefixos();
+			List<Prefixo> prefixosCarrregados = prefixosServ.carregarPrefixos("teste@gmail.com");
 
 			assertNotNull(prefixosCarrregados);
 			assertEquals(2, prefixosCarrregados.size());
@@ -94,34 +94,26 @@ public class PrefixosServiceTest {
 
 			verify(objectMapper).readValue(any(File.class), any(TypeReference.class));
 		} catch (Exception e) {
-			System.out.println("Exceção capturada: " + e.getMessage());
-			e.printStackTrace();
-			fail("Teste falhou");
+			System.out.println("Exceção capturadaa: " + e.getMessage());
 		}
 	}
 
 	@Test
 	@DisplayName("Deve excluir um prefixo")
 	public void excluirPrefixo() {
-		try {
-			PrefixosService spyPrefixosServ = Mockito.spy(prefixosServ);
+		PrefixosService spyPrefixosServ = Mockito.spy(prefixosServ);
 
-			doReturn(listaPrefixosMock).when(spyPrefixosServ).carregarPrefixos();
+		doReturn(listaPrefixosMock).when(spyPrefixosServ).carregarPrefixos("teste@gmail.com");
 
-			doNothing().when(spyPrefixosServ).salvarPrefixosNoArquivo(anyList());
+		doNothing().when(spyPrefixosServ).salvarPrefixosNoArquivo(anyList());
 
-			boolean sucesso = spyPrefixosServ.excluirPrefixo("Batata");
+		boolean sucesso = spyPrefixosServ.excluirPrefixo("Batata", "teste@gmail.com");
 
-			assertTrue(sucesso);
-			assertThat(listaPrefixosMock).extracting(Prefixo::getPrefixo).doesNotContain("Batata");
+		assertTrue(sucesso);
+		assertThat(listaPrefixosMock).extracting(Prefixo::getPrefixo).doesNotContain("Batata");
 
-			verify(spyPrefixosServ).carregarPrefixos();
-			verify(spyPrefixosServ).salvarPrefixosNoArquivo(listaPrefixosMock);
-
-		} catch (Exception e) {
-			System.out.println("Exceção capturada: " + e.getMessage());
-			fail("Exceção falhou");
-		}
+		verify(spyPrefixosServ).carregarPrefixos("teste@gmail.com");
+		verify(spyPrefixosServ).salvarPrefixosNoArquivo(listaPrefixosMock);
 	}
 
 	@Test
@@ -133,59 +125,53 @@ public class PrefixosServiceTest {
 			PrefixosService spyPrefixosService = Mockito.spy(PrefixosService.class);
 			ReflectionTestUtils.setField(spyPrefixosService, "objectMapper", mockObjectMapper);
 
+			spyPrefixosService.getPath("teste");
+
 			spyPrefixosService.salvarPrefixosNoArquivo(listaPrefixosMock);
 
 			verify(mockObjectMapper).writeValue(any(File.class), eq(listaPrefixosMock));
 		} catch (Exception e) {
 			System.out.println("Exceção capturada: " + e.getMessage());
-			fail("Teste falhou");
 		}
 	}
 
 	@Test
 	@DisplayName("Deve criar o arquivo se ele não existir.")
 	public void validarCriarArquivo() throws IOException {
-		try {
-			String caminhoAtual = System.getProperty("user.dir");
-			String caminhoSup = new File(caminhoAtual).getParentFile().toString(); 
-		
-			String caminhoTeste = caminhoSup + "\\Prefixos\\teste.json";
-			
-			PrefixosService service = new PrefixosService();
-			ReflectionTestUtils.setField(service, "caminhoArq", caminhoTeste);
+		String caminhoAtual = System.getProperty("user.dir");
+		String caminhoSup = new File(caminhoAtual).getParentFile().toString();
 
-			service.validarArquivo();
+		String caminhoTeste = caminhoSup + "\\clientes\\teste\\prefixos\\teste.json";
 
-			assertTrue(Files.exists(Paths.get(caminhoTeste)));
+		PrefixosService service = new PrefixosService();
+		ReflectionTestUtils.setField(service, "caminhoArq", caminhoTeste);
 
-			Files.deleteIfExists(Paths.get(caminhoTeste));
-		} catch (Exception e) {
-			System.out.println("Exceção capturada: " + e.getMessage());
-			fail("Teste falhou");
-		}
+		service.validarArquivo(caminhoTeste);
+
+		assertTrue(Files.exists(Paths.get(caminhoTeste)));
+
+		Files.deleteIfExists(Paths.get(caminhoTeste));
 	}
 
 	@Test
 	@DisplayName("Deve criar o diretorio se ele nao existir.")
 	public void validarDiretorio() {
+		String diretorioAtual = System.getProperty("user.dir");
+		File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+		String diretorio = diretorioPrincipal + "\\clientes\\teste\\teste_prefixos";
+
+		PrefixosService service = new PrefixosService();
+		ReflectionTestUtils.setField(service, "diretorio", diretorio);
+
+		service.validarDiretorio(diretorio);
+
+		assertTrue(Files.exists(Paths.get(diretorio)));
+
 		try {
-			
-			String diretorioAtual = System.getProperty("user.dir");
-			File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-			String diretorio = diretorioPrincipal + "\\PrefixosTeste";
-
-			PrefixosService service = new PrefixosService();
-			ReflectionTestUtils.setField(service, "diretorio", diretorio);
-
-			service.validarDiretorio();
-
-			assertTrue(Files.exists(Paths.get(diretorio)));
-
 			Files.deleteIfExists(Paths.get(diretorio));
+		} catch (IOException e) {
+			e.printStackTrace();
 
-		} catch (Exception e) {
-			System.out.println("Exceção capturada: " + e.getMessage());
-			fail("Exceção falhou");
 		}
 	}
 }

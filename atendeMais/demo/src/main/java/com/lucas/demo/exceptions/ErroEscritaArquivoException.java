@@ -2,12 +2,12 @@ package com.lucas.demo.exceptions;
 
 public class ErroEscritaArquivoException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
-	
-	public ErroEscritaArquivoException (String message, Throwable cause) {
+
+	public ErroEscritaArquivoException(String message, Throwable cause) {
 		super(message, cause);
 	}
 
-	public ErroEscritaArquivoException (String message) {
+	public ErroEscritaArquivoException(String message) {
 		super(message);
 	}
 

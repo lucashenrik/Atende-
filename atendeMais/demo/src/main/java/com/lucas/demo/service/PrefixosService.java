@@ -1,6 +1,8 @@
 package com.lucas.demo.service;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,23 +26,12 @@ public class PrefixosService {
 	private static final Logger logger = LoggerFactory.getLogger(PrefixosService.class);
 
 	private ObjectMapper objectMapper = new ObjectMapper();
-	private final List<String> prefixosCarregados = new ArrayList<>();
+	private List<String> prefixosCarregados = new ArrayList<>();
 
-	String diretorioAtual = System.getProperty("user.dir");
-	File diretorioPrincipal = new File(diretorioAtual).getParentFile();
-
-	// private final String diretorio = diretorioPrincipal + "/atendeMais/Prefixos";
-	// String caminhoArq = diretorio + "/prefixos_.json";
-
-	// private final String diretorio = diretorioPrincipal + "\\Prefixos";
-	// private final String caminhoArq = diretorio + "\\prefixos_.json";
-
-	// private final String caminhoArq = diretorio + "\\prefixos_.json";
-
-	CaminhoInfo caminhoInfo = MudancaSO.separatorParaPrefixos();
-
-	private final String caminhoArq = caminhoInfo.getCaminhoArquivo();
-	private final String diretorio = caminhoInfo.getDiretorio();
+	private CaminhoInfo caminhoInfo = new CaminhoInfo();
+	private String caminhoArqInit;
+	private String caminhoArq;
+	private String diretorio;
 
 	public PrefixosService(ObjectMapper objectMapper) {
 		this.objectMapper = objectMapper;
@@ -49,18 +40,29 @@ public class PrefixosService {
 	public PrefixosService() {
 	}
 
-	public boolean adicionarPrefixo(String prefixo) {
+	protected void getPath(String idCliente) {
+		caminhoInfo = MudancaSO.separatorParaPrefixos(idCliente);
+		caminhoArq = caminhoInfo.getCaminhoArquivo();
+		diretorio = caminhoInfo.getDiretorio();
+	}
 
+	private void getPath() {
+		caminhoInfo = MudancaSO.separatorParaPrefixos();
+		caminhoArqInit = caminhoInfo.getCaminhoArquivo();
+	}
+
+	public boolean adicionarPrefixo(String idCliente, String prefixo) {
+		List<Prefixo> prefixos = new ArrayList<>();
 		boolean sucesso = false;
+
 		prefixosCarregados.clear();
 
-		List<Prefixo> prefixos = new ArrayList<>();
+		getPath(idCliente);
 
-		validarDiretorio();
+		validarDiretorio(diretorio);
+		validarArquivo(caminhoArq);
 
 		File file = new File(caminhoArq);
-
-		validarArquivo();
 
 		// Carrega os prefixos existentes do arquivo
 		if (file.exists()) {
@@ -88,11 +90,44 @@ public class PrefixosService {
 		}
 	}
 
-	public List<Prefixo> carregarPrefixos() {
-		prefixosCarregados.clear(); // Limpa a lista antes de adicionar novos
+	public List<Prefixo> carregarPrefixos(String idCliente) {
 		logger.info("Iniciando carregamento de prefixos...");
+		getPath(idCliente);
 
 		File file = new File(caminhoArq);
+		List<Prefixo> prefixosList = new ArrayList<>();
+
+		prefixosCarregados.clear();
+
+		if (file.exists()) {
+			try {
+				prefixosList = objectMapper.readValue(file, new TypeReference<List<Prefixo>>() {
+				});
+
+				// Extrair os prefixos como uma lista de strings
+				for (Prefixo p : prefixosList) {
+					prefixosCarregados.add(p.getPrefixo());
+				}
+				logger.debug("Prefixos existentes carregados: {}", prefixosCarregados);
+			} catch (IOException e) {
+				logger.error("Erro ao ler o arquivo: {}", e.getMessage(), e);
+				throw new ErroLeituraArquivoException("Falha ao carregar prefixos do arquivo.", e);
+			}
+		} else {
+			System.err.println("Arquivo de prefixos não encontrado: " + caminhoArq);
+			throw new ErroArquivoException("Arquivo de prefixos não encontrado.");
+		}
+		return prefixosList;
+	}
+
+	public List<Prefixo> carregarPrefixos() {
+		prefixosCarregados.clear();
+
+		getPath();
+
+		logger.info("Iniciando carregamento de prefixos...");
+
+		File file = new File(caminhoArqInit);
 		List<Prefixo> prefixosList = new ArrayList<>();
 
 		if (file.exists()) {
@@ -113,18 +148,17 @@ public class PrefixosService {
 			System.err.println("Arquivo de prefixos não encontrado: " + caminhoArq);
 			throw new ErroArquivoException("Arquivo de prefixos não encontrado.");
 		}
-
 		return prefixosList;
 	}
 
-	public boolean excluirPrefixo(String prefixo) {
+	public boolean excluirPrefixo(String prefixo, String idCliente) {
 		boolean sucesso = false;
+		boolean encontrado = false;
+
 		prefixosCarregados.clear();
 
 		// Carregar prefixos do arquivo
-		List<Prefixo> prefixosList = carregarPrefixos();
-
-		boolean encontrado = false;
+		List<Prefixo> prefixosList = carregarPrefixos(idCliente);
 
 		// Usar um Iterator para remover o prefixo
 		Iterator<Prefixo> iterator = prefixosList.iterator();
@@ -145,7 +179,6 @@ public class PrefixosService {
 		} else {
 			throw new ErroArquivoException("Prefixo não encontrado.");
 		}
-
 	}
 
 	public void salvarPrefixosNoArquivo(List<Prefixo> prefixos) {
@@ -157,19 +190,23 @@ public class PrefixosService {
 		}
 	}
 
-	protected void validarArquivo() {
+	protected void validarArquivo(String caminhoArq) {
 		File file = new File(caminhoArq);
 		if (!file.exists()) {
 			try {
 				// Tenta criar o arquivo, se necessário
 				file.createNewFile(); // Usado para garantir que o arquivo existe
+
+				try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+					writer.write("[]");
+				}
 			} catch (IOException e) {
 				throw new ErroArquivoException("Não foi possível criar o arquivo: " + caminhoArq, e);
 			}
 		}
 	}
 
-	protected void validarDiretorio() {
+	protected void validarDiretorio(String diretorio) {
 		File pasta = new File(diretorio);
 		if (!pasta.exists() && !pasta.mkdirs()) {
 			throw new ErroArquivoException("Não foi possível criar o diretório: " + diretorio);

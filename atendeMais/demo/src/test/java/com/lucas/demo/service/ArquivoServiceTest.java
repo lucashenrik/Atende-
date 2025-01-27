@@ -41,7 +41,7 @@ public class ArquivoServiceTest {
 
 	private final String caminhoAtual = SystemProperties.get("user.dir");
 	private final String caminhoSup = new File(caminhoAtual).getParentFile().toString();
-	private final String caminhoTeste = caminhoSup + "\\Teste\\teste.json";
+	private final String caminhoTeste = caminhoSup + "\\clientes\\teste\\teste.json";
 
 	@BeforeEach
 	public void setup() {
@@ -56,9 +56,9 @@ public class ArquivoServiceTest {
 		try {
 			ArquivoService spyArquivoService = Mockito.spy(ArquivoService.class);
 
-			when(spyArquivoService.verificarHora()).thenReturn(caminhoTeste);
+			when(spyArquivoService.verificarHora("teste")).thenReturn(caminhoTeste);
 
-			assertDoesNotThrow(() -> spyArquivoService.escreverPedido(novoItem));
+			assertDoesNotThrow(() -> spyArquivoService.escreverPedido(novoItem, "teste"));
 		} catch (Exception e) {
 			System.out.println("Excecao capturada: " + e.getMessage());
 			e.printStackTrace();
@@ -69,8 +69,8 @@ public class ArquivoServiceTest {
 	@Test
 	@DisplayName("Deve encontrar o arquivo de destino")
 	public void verificarArquivo() {
-		arquivoService.verificarArquivo();
-		assertDoesNotThrow(() -> arquivoService.verificarArquivo());
+		arquivoService.verificarArquivo("teste");
+		assertDoesNotThrow(() -> arquivoService.verificarArquivo("teste"));
 	}
 
 	@Test
@@ -80,16 +80,16 @@ public class ArquivoServiceTest {
 			String id = Integer.toString(novoItem.getReferenceId());
 
 			PedidoServico mockPedidoServ = Mockito.mock(PedidoServico.class);
-			when(mockPedidoServ.carregarPedidos()).thenReturn(true);
+			when(mockPedidoServ.carregarPedidos("teste")).thenReturn(true);
 
 			ArquivoService spyArquivoServ = Mockito.spy(ArquivoService.class);
 			ReflectionTestUtils.setField(spyArquivoServ, "pedidoServ", mockPedidoServ);
-			when(spyArquivoServ.verificarHora()).thenReturn(caminhoTeste);
+			when(spyArquivoServ.verificarHora("teste")).thenReturn(caminhoTeste);
 
-			boolean sucesso = spyArquivoServ.alterarStatus(id, "pronto", dataString);
+			boolean sucesso = spyArquivoServ.alterarStatus(id, "pronto", dataString, "teste");
 
 			assertThat(sucesso).isTrue();
-			Mockito.verify(mockPedidoServ).carregarPedidos();
+			Mockito.verify(mockPedidoServ).carregarPedidos("teste");
 			
 			Files.deleteIfExists(Paths.get(caminhoTeste));
 		} catch (Exception e) {

@@ -8,26 +8,27 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemXml {
 
-    @JacksonXmlProperty(localName = "id")
-    private int referenceId;
+	@JacksonXmlProperty(localName = "id")
+	private int referenceId;
 
-    @JacksonXmlProperty(localName = "description")
-    private String name;
+	@JacksonXmlProperty(localName = "description")
+	private String name;
 
-    @JacksonXmlProperty(localName = "quantity")
-    private int quantity;
+	@JacksonXmlProperty(localName = "quantity")
+	private int quantity;
 
-    @JacksonXmlProperty(localName = "amount")
-    private double amount;
+	@JacksonXmlProperty(localName = "amount")
+	private double amount;
 
-    @JacksonXmlProperty(localName = "status")
-    private String status;
+	@JacksonXmlProperty(localName = "status")
+	private String status;
 
-    @JacksonXmlProperty(localName = "hora")
-    private LocalTime hora;
+	@JacksonXmlProperty(localName = "hora")
+	private LocalTime hora;
 
-    public ItemXml() {}
-    
+	public ItemXml() {
+	}
+
 	public ItemXml(int referenceId, String name, int quantity, double amount, String status, LocalTime hora) {
 		super();
 		this.referenceId = referenceId;

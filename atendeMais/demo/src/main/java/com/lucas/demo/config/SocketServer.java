@@ -18,7 +18,9 @@ import org.springframework.stereotype.Component;
 
 import com.lucas.demo.controllers.PedidoControler;
 import com.lucas.demo.exceptions.ErroSocketException;
+import com.lucas.demo.model.CaminhoInfo;
 import com.lucas.demo.model.Prefixo;
+import com.lucas.demo.service.MudancaSO;
 import com.lucas.demo.service.PrefixosService;
 
 import jakarta.annotation.PostConstruct;
@@ -31,14 +33,23 @@ public class SocketServer {
 
 	@Autowired
 	private PedidoControler pedidoControler;
-	
+
 	private final int port = 9100;
 	private static final Pattern CODE_PATTERN = Pattern.compile("[A-Z]{2}-(\\d{3})");
 	private List<String> produtosEncontrados = new ArrayList<>();
 	private List<String> prefixosString;
 
+	/*@PostConstruct
+	public void init() {
+		List<Prefixo> prefixosP = prefixoServ.carregarPrefixos();
+		prefixosString = prefixosP.stream().map(Prefixo::getPrefixo).collect(Collectors.toList());
+	}*/
+	
 	@PostConstruct
 	public void init() {
+		CaminhoInfo caminhoInfo = MudancaSO.separatorParaPrefixos();
+		String caminho = caminhoInfo.getCaminhoArquivo();
+		System.out.println("Caminho Arquivao: " + caminho);
 		List<Prefixo> prefixosP = prefixoServ.carregarPrefixos();
 		prefixosString = prefixosP.stream().map(Prefixo::getPrefixo).collect(Collectors.toList());
 	}
@@ -105,7 +116,8 @@ public class SocketServer {
 			}
 		}
 
-		//System.out.println("Produtoo: " + produtosEncontrados + ", Código: " + senhaFormatada);
+		// System.out.println("Produtoo: " + produtosEncontrados + ", Código: " +
+		// senhaFormatada);
 
 		if (produtosEncontrados != null && senhaFormatada != null) {
 			criarXml(produtosEncontrados, senhaFormatada);
@@ -156,11 +168,11 @@ public class SocketServer {
 	}
 
 	private String cleanLine(String line) {
-		String cleanedLine = line.replaceAll("\u001B\\[[;\\d]*[A-Za-z]", ""); 
+		String cleanedLine = line.replaceAll("\u001B\\[[;\\d]*[A-Za-z]", "");
 
 		cleanedLine = cleanedLine.replaceAll("[\\x00-\\x1F\\x7F]", "");
-		cleanedLine = cleanedLine.replaceAll("[^\\p{L}\\p{N}\\s]", ""); 
-		cleanedLine = cleanedLine.replaceAll("[^\\x20-\\x7E]", ""); 
+		cleanedLine = cleanedLine.replaceAll("[^\\p{L}\\p{N}\\s]", "");
+		cleanedLine = cleanedLine.replaceAll("[^\\x20-\\x7E]", "");
 		cleanedLine = cleanedLine.trim();
 		cleanedLine = cleanedLine.replaceFirst("^a0Et", "");
 
@@ -189,7 +201,7 @@ public class SocketServer {
 
 		System.out.println(xml);
 
-		pedidoControler.processarXml(xml);
+		//pedidoControler.processarXml(xml);
 	}
 
 	// Teste de impressao

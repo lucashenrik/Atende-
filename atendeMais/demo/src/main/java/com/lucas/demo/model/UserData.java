@@ -12,4 +12,4 @@ public class UserData {
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-} 
+}

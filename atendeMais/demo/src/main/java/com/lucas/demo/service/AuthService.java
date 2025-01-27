@@ -16,16 +16,16 @@ import jakarta.servlet.http.HttpSession;
 @Service
 public class AuthService {
 
-	//String diretorioAtual = System.getProperty("user.dir");
+	// String diretorioAtual = System.getProperty("user.dir");
 
 	// Volte um nível removendo o último "demo" do caminho
-	//File diretorioPrincipal = new File(diretorioAtual).getParentFile();
+	// File diretorioPrincipal = new File(diretorioAtual).getParentFile();
 
 	// String caminho = diretorioPrincipal + "/atendeMais/user.json";
 	// String caminho = "C:\\Users\\Lucas\\Documents\\Projetos\\demo\\user.json";
 
 	String caminho = MudancaSO.separatorParaAuth();
-	
+
 	public boolean autenticacao(String username, String password) {
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();

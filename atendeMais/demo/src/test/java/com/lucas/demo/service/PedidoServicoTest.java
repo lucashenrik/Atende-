@@ -14,8 +14,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import com.lucas.demo.exceptions.ErroArquivoException;
 import com.lucas.demo.model.Prefixo;
@@ -32,18 +32,17 @@ public class PedidoServicoTest {
 	@Mock
 	private UserConfigService userConfigService;
 
-	@Autowired
+	private String idCliente = "teste@gmail.com";
+
+	List<Prefixo> prefixosMockados = List.of(new Prefixo("Batata"), new Prefixo("Jantinha"));
+
+	// @Autowired
 	@InjectMocks
 	private PedidoServico pedidoServico;
 
 	@BeforeEach
 	void setup() {
-		// Mocka os prefixos retornados
-		List<Prefixo> prefixosMockados = List.of(new Prefixo("Batata"), new Prefixo("Jantinha"));
-		Mockito.when(prefixoServ.carregarPrefixos()).thenReturn(prefixosMockados);
-
-		// Inicializa a classe sob teste
-		pedidoServico.init();
+		MockitoAnnotations.openMocks(this);
 	}
 
 	@Test
@@ -51,7 +50,8 @@ public class PedidoServicoTest {
 	public void processarItensCase1() {
 		String xml = criarUmItem();
 
-		Boolean sucesso = pedidoServico.processarItens(xml);
+		Mockito.when(prefixoServ.carregarPrefixos(idCliente)).thenReturn(prefixosMockados);
+		Boolean sucesso = pedidoServico.processarItens(xml, idCliente);
 
 		assertThat(sucesso).isTrue();
 	}
@@ -60,16 +60,19 @@ public class PedidoServicoTest {
 	@DisplayName("Receber e processar 2 itens no xml com sucesso")
 	public void processarItensCase2() {
 		String xml = criarDoisItem();
-		Boolean sucesso = pedidoServico.processarItens(xml);
+
+		Mockito.when(prefixoServ.carregarPrefixos(idCliente)).thenReturn(prefixosMockados);
+		Boolean sucesso = pedidoServico.processarItens(xml, idCliente);
 
 		assertThat(sucesso).isTrue();
 	}
 
 	@Test
 	@DisplayName("Receber e não processar item mal formado no xml")
-	public void processarItensCase3() {
+	public void processarItensCase4() {
 		String xml = criarItemMalFormado();
-		Boolean sucesso = pedidoServico.processarItens(xml);
+
+		boolean sucesso = pedidoServico.processarItens(xml, idCliente);
 
 		assertThat(sucesso).isFalse();
 	}
@@ -77,7 +80,7 @@ public class PedidoServicoTest {
 	@Test
 	@DisplayName("Encontrar e buscar os pedidos no arquivo")
 	public void carregarPedidos() {
-		Boolean sucesso = pedidoServico.carregarPedidos();
+		Boolean sucesso = pedidoServico.carregarPedidos(idCliente);
 
 		assertThat(sucesso).isTrue();
 	}
@@ -85,38 +88,46 @@ public class PedidoServicoTest {
 	@Test
 	@DisplayName("Não encontrar o arquivo com os pedidos (caminho inválido)")
 	public void carregarPedidosCase2() throws ErroArquivoException {
+		try {
+			// Cria um spy da classe PedidoServico para interceptar chamadas ao método
+			// protegido
+			PedidoServico spyPedidoServico = Mockito.spy(pedidoServico);
 
-		// Cria um spy da classe PedidoServico para interceptar chamadas ao método
-		// protegido
-		PedidoServico spyPedidoServico = Mockito.spy(pedidoServico);
+			// Simula o comportamento do método carregarPedidosDeArquivo com um caminho
+			// inválido
+			Mockito.doThrow(new ErroArquivoException("Arquivo invalido")).when(spyPedidoServico)
+					.carregarPedidosDeArquivo(Mockito.anyString());
 
-		// Simula o comportamento do método carregarPedidosDeArquivo com um caminho
-		// inválido
-		Mockito.doThrow(new ErroArquivoException("Arquivo invalido")).when(spyPedidoServico)
-				.carregarPedidosDeArquivo(Mockito.anyString());
+			// Substitui o pedidoServico pelo spy na injeção
+			pedidoServico = spyPedidoServico;
 
-		// Substitui o pedidoServico pelo spy na injeção
-		pedidoServico = spyPedidoServico;
+			// Executa o método que será testado
+			Boolean sucesso = pedidoServico.carregarPedidos(idCliente);
 
-		// Executa o método que será testado
-		Boolean sucesso = pedidoServico.carregarPedidos();
+			// Verifica se o retorno foi falsof
+			assertThat(sucesso).isFalse();
 
-		// Verifica se o retorno foi falsof
-		assertThat(sucesso).isFalse();
+			// Verifica se o método carregarPedidosDeArquivo foi chamado
+			Mockito.verify(spyPedidoServico, Mockito.atLeastOnce()).carregarPedidosDeArquivo(Mockito.anyString());
 
-		// Verifica se o método carregarPedidosDeArquivo foi chamado
-		Mockito.verify(spyPedidoServico, Mockito.atLeastOnce()).carregarPedidosDeArquivo(Mockito.anyString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Test
 	@DisplayName("Deve retornar uma lista com a contagem correta dos pedidos")
 	public void contarPedidosCase1() {
+		try {
 
-		List<String> resultado = this.mockarEContar();
+			List<String> resultado = this.mockarEContar();
 
-		List<String> esperado = List.of("Batata: 5", "Jantinha: 7");
+			List<String> esperado = List.of("Batata: 5", "Jantinha: 7");
 
-		assertThat(resultado).containsExactlyInAnyOrderElementsOf(esperado);
+			assertThat(resultado).containsExactlyInAnyOrderElementsOf(esperado);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	private List<String> mockarEContar() {

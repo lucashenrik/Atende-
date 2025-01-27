@@ -17,6 +17,5 @@ public class ErroLeituraArquivoException extends RuntimeException {
 	public String toString() {
 		return "ErroLeituraArquivoException: " + getMessage() + "- Causa: " + getCause();
 	}
-	
-	
+
 }
