@@ -36,6 +36,7 @@ import com.lucas.demo.model.Item;
 import com.lucas.demo.model.ItemXml;
 import com.lucas.demo.model.PedidosContext;
 import com.lucas.demo.model.Prefixo;
+import com.lucas.demo.model.dto.ResultadoCarregamentoPedidosDTO;
 
 @Service
 public class PedidoServico {
@@ -51,11 +52,15 @@ public class PedidoServico {
 
 	private static final Logger logger = LoggerFactory.getLogger(PedidoServico.class);
 
-	private List<Map<String, String>> pedidoMemoria = Collections.synchronizedList(new ArrayList<>());
-	protected List<Map<String, String>> pedidosVerficados = new ArrayList<>();
-	private List<Map<String, String>> pedidosEntregues = new ArrayList<>();
-	private List<Map<String, String>> pedidosCancelados = new ArrayList<>();
-	// private List<String> prefixosComoString;
+	/*
+	 * private List<Map<String, String>> pedidoMemoria =
+	 * Collections.synchronizedList(new ArrayList<>()); protected List<Map<String,
+	 * String>> pedidosVerficados = new ArrayList<>(); private List<Map<String,
+	 * String>> pedidosEntregues = new ArrayList<>(); private List<Map<String,
+	 * String>> pedidosCancelados = new ArrayList<>(); private List<String>
+	 * prefixosComoString;
+	 */
+
 	private List<String> prefixos;
 
 	/*
@@ -206,10 +211,10 @@ public class PedidoServico {
 		}
 	}
 
-	public synchronized boolean carregarPedidos(String idCliente) {
-		pedidosVerficados.clear();
-		pedidosEntregues.clear();
-		pedidoMemoria.clear();
+	public synchronized ResultadoCarregamentoPedidosDTO carregarPedidos(String idCliente) {
+		// pedidosVerficados.clear();
+		// pedidosEntregues.clear();
+		// pedidoMemoria.clear();
 
 		boolean sucesso = true;
 		LocalDate dataAtual = LocalDate.now();
@@ -218,20 +223,24 @@ public class PedidoServico {
 		String caminhoArquivoAtual = verificarHora(idCliente); // Pega o caminho do arquivo baseado na hora atual
 		String caminhoArquivoAnterior = caminhoArquivo(dataAnterior, idCliente); // Define o caminho do dia anterior
 
+		PedidosContext pedidosContext = new PedidosContext();
+
 		try {
 			// Carregar pedidos do dia anterior somente se a hora for antes das 7h
 			if (horaAtual.isBefore(LocalTime.of(7, 0))) {
-				carregarPedidosDeArquivo(caminhoArquivoAnterior);
+				pedidosContext = carregarPedidosDeArquivo(caminhoArquivoAnterior);
 			}
 
 			// Carregar pedidos do dia atual
-			carregarPedidosDeArquivo(caminhoArquivoAtual);
+			pedidosContext = carregarPedidosDeArquivo(caminhoArquivoAtual);
 
 		} catch (ErroArquivoException e) {
 			sucesso = false;
 			System.err.println("Erro ao carregar pedidos: " + e.getMessage());
 		}
-		return sucesso;
+
+		ResultadoCarregamentoPedidosDTO result = new ResultadoCarregamentoPedidosDTO(sucesso, pedidosContext);
+		return result;
 	}
 
 	protected PedidosContext carregarPedidosDeArquivo(String caminhoArquivo) throws ErroArquivoException {
@@ -246,7 +255,7 @@ public class PedidoServico {
 
 				for (Map<String, String> item : pedidosArquivo) {
 					pedidoContext.getPedidosAll().add(item);
-					
+
 					String statusItem = item.get("status");
 
 					if ("entregue".equals(statusItem)) {
@@ -261,9 +270,9 @@ public class PedidoServico {
 						if (!pedidoContext.getPedidosVerificados().contains(item)) {
 							pedidoContext.getPedidosVerificados().add(item);
 						}
-						if (!pedidoMemoria.contains(item)) {
-							pedidoMemoria.add(item);
-						}
+						/*
+						 * if (!pedidoMemoria.contains(item)) { pedidoMemoria.add(item); }
+						 */
 					}
 				}
 			} catch (IOException e) {
@@ -301,14 +310,14 @@ public class PedidoServico {
 		return caminhoData;
 	}
 
-	public List<String> contar() {
+	public List<String> contar(PedidosContext pedidoContext) {
 
 		try {
 			Map<String, Integer> contagemItems = new HashMap<>();
 
 			List<String> listaContagem = new ArrayList<>();
 
-			for (Map<String, String> item : pedidosVerficados) {
+			for (Map<String, String> item : pedidoContext.getPedidosVerificados()) {
 
 				if (item == null || item.isEmpty()) {
 					continue;
@@ -341,7 +350,7 @@ public class PedidoServico {
 		}
 	}
 
-	public List<String> contar2(List<Map<String, String>> pedidos, String statusDesejado) {
+	public List<String> contar(List<Map<String, String>> pedidos, String statusDesejado) {
 
 		try {
 			Map<String, Integer> contagemItems = new HashMap<>();
@@ -380,17 +389,16 @@ public class PedidoServico {
 		}
 	}
 
-	public List<Map<String, String>> getPedidoList() {
-		return pedidosVerficados;
-	}
-
-	public List<Map<String, String>> getPedidosEntregues() {
-		return pedidosEntregues;
-	}
-
-	public List<Map<String, String>> getPedidosCancleados() {
-		return pedidosCancelados;
-	}
+	/*
+	 * public List<Map<String, String>> getPedidoList() { return pedidosVerficados;
+	 * }
+	 * 
+	 * public List<Map<String, String>> getPedidosEntregues() { return
+	 * pedidosEntregues; }
+	 * 
+	 * public List<Map<String, String>> getPedidosCancleados() { return
+	 * pedidosCancelados; }
+	 */
 
 	private boolean começaComPrefixo(String descricao, String idCliente) {
 		carregarPrefixosString(idCliente);

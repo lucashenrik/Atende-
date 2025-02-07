@@ -76,7 +76,7 @@ public class RelatorioService {
 	public void validarPdfDiariosExist(File relatorioDiario, PedidosContext pedidoContext, String destino,
 			LocalDate data) {
 		if (relatorioDiario.exists()) {
-			System.out.println("Relatorio diario ja existe: " + destino);
+			System.out.println("Relatorio diario ja existe.");
 			this.gerarPDFDiario(pedidoContext, destino, data);
 		} else {
 			this.gerarPDFDiario(pedidoContext, destino, data);
@@ -100,7 +100,7 @@ public class RelatorioService {
 		}
 	}
 
-	public void gerarPdf(LocalDate data, String idCliente) {
+	public File gerarPdf(LocalDate data, String idCliente) {
 		String destino = caminhoRelatorio(data, idCliente);
 		File relatorioDiario = new File(destino);
 
@@ -112,15 +112,17 @@ public class RelatorioService {
 		this.validarPdfDiariosExist(relatorioDiario, pedidoContext, destino, data);
 
 		this.verificarPossivelPdfSemanalECriar(data, caminhoInfo, destino, idCliente);
+		
+		return relatorioDiario;
 	}
 
 	public void gerarPDFDiario(PedidosContext pedidoContext, String destino, LocalDate data) {
 		Document document = new Document();
 		try {
-			List<String> entregues = this.pedidoServico.contar2(pedidoContext.getPedidosEntregues(), "entregue");
-			List<String> cancelados = this.pedidoServico.contar2(pedidoContext.getPedidosCancelados(), "cancelar");
-			List<String> naoEntregeus = this.pedidoServico.contar2(pedidoContext.getPedidosAll(), "pronto");
-
+			List<String> entregues = this.pedidoServico.contar(pedidoContext.getPedidosEntregues(), "entregue");
+			List<String> cancelados = this.pedidoServico.contar(pedidoContext.getPedidosCancelados(), "cancelar");
+			List<String> naoEntregeus = this.pedidoServico.contar(pedidoContext.getPedidosAll(), "pronto");
+			
 			PdfWriter.getInstance(document, new FileOutputStream(destino));
 			document.open();
 
@@ -137,7 +139,7 @@ public class RelatorioService {
 			this.paragrafroMaisVendido(document, maisVendido);
 
 			// 1 Tabela - Produtos e Quantidades
-			this.primeiraTabela(document, naoEntregeus);
+			this.primeiraTabela(document, entregues);
 
 			// 2 Tabela - Produtos e Status
 			List<String> listaStatus = new ArrayList<>();
@@ -215,9 +217,9 @@ public class RelatorioService {
 					continue;
 				}
 
-				List<String> entregues = this.pedidoServico.contar2(pedidosContext.getPedidosEntregues(), "entregue");
-				List<String> cancelados = this.pedidoServico.contar2(pedidosContext.getPedidosCancelados(), "cancelar");
-				List<String> naoEntregues = this.pedidoServico.contar2(pedidosContext.getPedidosAll(), "pronto");
+				List<String> entregues = this.pedidoServico.contar(pedidosContext.getPedidosEntregues(), "entregue");
+				List<String> cancelados = this.pedidoServico.contar(pedidosContext.getPedidosCancelados(), "cancelar");
+				List<String> naoEntregues = this.pedidoServico.contar(pedidosContext.getPedidosAll(), "pronto");
 
 				allEntregues.addAll(entregues);
 				allCancelados.addAll(cancelados);
@@ -274,7 +276,7 @@ public class RelatorioService {
 
 			addLinhaTerceiraTabela(table3, "Entregues", relatoriosDiarios, pedidos -> {
 				if (pedidos.getPedidosEntregues() != null) {
-					List<String> pedidosContado = pedidoServico.contar2(pedidos.getPedidosEntregues(), "entregue");
+					List<String> pedidosContado = pedidoServico.contar(pedidos.getPedidosEntregues(), "entregue");
 					return getQuantidadePedidos(pedidosContado);
 				} else {
 					return " ";
@@ -283,7 +285,7 @@ public class RelatorioService {
 
 			addLinhaTerceiraTabela(table3, "Mais Vendidos", relatoriosDiarios, pedidos -> {
 				if (pedidos.getPedidosAll() != null) {
-					List<String> pedidosContado = pedidoServico.contar2(pedidos.getPedidosAll(), "entregue");
+					List<String> pedidosContado = pedidoServico.contar(pedidos.getPedidosAll(), "entregue");
 					return itemMaisVendidoAux(pedidosContado);
 				} else {
 					return " ";
@@ -292,7 +294,7 @@ public class RelatorioService {
 
 			addLinhaTerceiraTabela(table3, "Cancelados", relatoriosDiarios, pedidos -> {
 				if (pedidos.getPedidosCancelados() != null) {
-					List<String> pedidosContado = pedidoServico.contar2(pedidos.getPedidosCancelados(), "cancelar");
+					List<String> pedidosContado = pedidoServico.contar(pedidos.getPedidosCancelados(), "cancelar");
 					return getQuantidadePedidos(pedidosContado);
 				} else {
 					return " ";

@@ -20,12 +20,12 @@ import com.lucas.demo.infra.security.TokenServico;
 import com.lucas.demo.model.CustomUserDetails;
 import com.lucas.demo.model.EnumRoles;
 import com.lucas.demo.model.Estabelecimento;
-import com.lucas.demo.model.LoginRequestDTO;
-import com.lucas.demo.model.NewRegisterDTO;
-import com.lucas.demo.model.RegisterRequestDTO;
 import com.lucas.demo.model.UserDB;
 import com.lucas.demo.model.dto.AlterarRegisDTO;
+import com.lucas.demo.model.dto.LoginRequestDTO;
 import com.lucas.demo.model.dto.LoginResponseDTO;
+import com.lucas.demo.model.dto.NewRegisterDTO;
+import com.lucas.demo.model.dto.RegisterRequestDTO;
 import com.lucas.demo.repository.DepartRepository;
 import com.lucas.demo.repository.UserRepository;
 

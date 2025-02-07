@@ -18,6 +18,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.lucas.demo.exceptions.ErroProcessamentoException;
 import com.lucas.demo.infra.security.AuthorizationSecurity;
+import com.lucas.demo.model.PedidosContext;
+import com.lucas.demo.model.dto.ResultadoCarregamentoPedidosDTO;
 import com.lucas.demo.service.ArquivoService;
 import com.lucas.demo.service.PedidoServico;
 
@@ -53,7 +55,8 @@ public class PedidoControler {
 		boolean sucesso = pedidoServ.processarItens(json, idCliente);
 
 		if (sucesso == true) {
-			pedidoServ.getPedidoList();
+			pedidoServ.carregarPedidos(idCliente);
+			
 			// Envie uma mensagem para o WebSocket
 			avisarFrontEnd();
 			return new ResponseEntity<>(HttpStatus.CREATED);
@@ -95,7 +98,10 @@ public class PedidoControler {
 		}
 
 		try {
-			List<String> listaContagem = pedidoServ.contar();
+			ResultadoCarregamentoPedidosDTO result = pedidoServ.carregarPedidos(idCliente);
+			PedidosContext pedidosContext = result.getPedidosContext();
+	
+			List<String> listaContagem = pedidoServ.contar(pedidosContext);
 			return ResponseEntity.ok(listaContagem);
 		} catch (Exception e) {
 			throw e;
@@ -112,7 +118,10 @@ public class PedidoControler {
 		}
 
 		try {
-			List<Map<String, String>> pedidosEntregue = pedidoServ.getPedidosEntregues();
+			ResultadoCarregamentoPedidosDTO result = pedidoServ.carregarPedidos(idCliente);
+			PedidosContext pedidosContext = result.getPedidosContext();
+			
+			List<Map<String, String>> pedidosEntregue = pedidosContext.getPedidosEntregues();
 			return ResponseEntity.ok(pedidosEntregue);
 		} catch (Exception e) {
 			throw e;
@@ -129,8 +138,10 @@ public class PedidoControler {
 		}
 		
 		try {
-			pedidoServ.carregarPedidos(idCliente);
-			List<Map<String, String>> pedidos = pedidoServ.getPedidoList();
+			ResultadoCarregamentoPedidosDTO result = pedidoServ.carregarPedidos(idCliente);
+			PedidosContext pedidosContext = result.getPedidosContext();
+			
+			List<Map<String, String>> pedidos = pedidosContext.getPedidosVerificados();
 
 			return ResponseEntity.ok(pedidos);
 		} catch (Exception e) {

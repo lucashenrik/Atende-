@@ -24,6 +24,8 @@ import org.springframework.boot.system.SystemProperties;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import com.lucas.demo.model.ItemXml;
+import com.lucas.demo.model.PedidosContext;
+import com.lucas.demo.model.dto.ResultadoCarregamentoPedidosDTO;
 
 @ExtendWith(MockitoExtension.class)
 public class ArquivoServiceTest {
@@ -80,8 +82,14 @@ public class ArquivoServiceTest {
 			String id = Integer.toString(novoItem.getReferenceId());
 
 			PedidoServico mockPedidoServ = Mockito.mock(PedidoServico.class);
-			when(mockPedidoServ.carregarPedidos("teste")).thenReturn(true);
+			
+			PedidosContext context = new PedidosContext();
+			// Configure o context se necessário, adicionando dados de teste
 
+			ResultadoCarregamentoPedidosDTO resultado = new ResultadoCarregamentoPedidosDTO(true, context);
+			
+			when(mockPedidoServ.carregarPedidos("teste")).thenReturn(resultado);
+			
 			ArquivoService spyArquivoServ = Mockito.spy(ArquivoService.class);
 			ReflectionTestUtils.setField(spyArquivoServ, "pedidoServ", mockPedidoServ);
 			when(spyArquivoServ.verificarHora("teste")).thenReturn(caminhoTeste);

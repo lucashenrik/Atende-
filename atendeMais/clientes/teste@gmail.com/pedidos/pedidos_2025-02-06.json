@@ -9,13 +9,13 @@
   "reference_id" : "4",
   "hora" : "15:57:11",
   "description" : "Batata",
-  "status" : "andamento"
+  "status" : "entregue"
 }, {
   "quantity" : "4",
   "reference_id" : "412",
   "hora" : "15:57:16",
   "description" : "Batata",
-  "status" : "andamento"
+  "status" : "pronto"
 }, {
   "quantity" : "4",
   "reference_id" : "2",

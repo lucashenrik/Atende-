@@ -1,31 +1,10 @@
 package com.lucas.demo.config;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.StringReader;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
+//Devido ao uso da hospedagem esse funcionalidade foi deixada de lado.
+//Essa abordagem foi pensada para funcionar em um ambiente local onde as maquininhas de pagamento
+//se conectam ao sistema como se fosse uma terceira impressora.
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import com.lucas.demo.controllers.PedidoControler;
-import com.lucas.demo.exceptions.ErroSocketException;
-import com.lucas.demo.model.CaminhoInfo;
-import com.lucas.demo.model.Prefixo;
-import com.lucas.demo.service.MudancaSO;
-import com.lucas.demo.service.PrefixosService;
-
-import jakarta.annotation.PostConstruct;
-
-@Component
+/*@Component
 public class SocketServer {
 
 	@Autowired
@@ -39,11 +18,11 @@ public class SocketServer {
 	private List<String> produtosEncontrados = new ArrayList<>();
 	private List<String> prefixosString;
 
-	/*@PostConstruct
+	s@PostConstruct
 	public void init() {
 		List<Prefixo> prefixosP = prefixoServ.carregarPrefixos();
 		prefixosString = prefixosP.stream().map(Prefixo::getPrefixo).collect(Collectors.toList());
-	}*/
+	}
 	
 	@PostConstruct
 	public void init() {
@@ -242,4 +221,4 @@ public class SocketServer {
 			System.err.println("Erro ao enviar dados para a porta 9100: " + e.getMessage());
 		}
 	}
-}
+}*/

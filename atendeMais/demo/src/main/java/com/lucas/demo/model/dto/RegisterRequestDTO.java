@@ -1,4 +1,4 @@
-package com.lucas.demo.model;
+package com.lucas.demo.model.dto;
 
 public record RegisterRequestDTO (String name, String email, String password) {
 }
