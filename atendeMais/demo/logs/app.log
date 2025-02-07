@@ -30000,3 +30000,1467 @@ Caused by: java.lang.ClassNotFoundException: ImageData
 2025-02-06 16:50:28 - Started.
 2025-02-06 16:50:28 - Started DemoApplication in 5.772 seconds (process running for 6.271)
 2025-02-06 16:51:28 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-02-07 13:58:10 - Starting DemoApplication using Java 21.0.3 with PID 11536 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 13:58:10 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 13:58:10 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-07 13:58:10 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-07 13:58:11 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 13:58:12 - Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2025-02-07 13:58:12 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 13:58:12 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 13:58:12 - Tomcat initialized with port 8080 (http)
+2025-02-07 13:58:12 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 13:58:12 - Starting service [Tomcat]
+2025-02-07 13:58:12 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 13:58:12 - Initializing Spring embedded WebApplicationContext
+2025-02-07 13:58:12 - Root WebApplicationContext: initialization completed in 2370 ms
+2025-02-07 13:58:13 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 13:58:13 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-07 13:58:13 - HHH000026: Second-level cache disabled
+2025-02-07 13:58:13 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 13:58:13 - HikariPool-1 - Starting...
+2025-02-07 13:58:15 - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-02-07 13:58:15 - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-02-07 13:58:15 - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityFilter': Unsatisfied dependency expressed through field 'userRepository': Error creating bean with name 'userRepository' defined in com.lucas.demo.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-02-07 13:58:15 - Stopping service [Tomcat]
+2025-02-07 13:58:15 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-02-07 13:58:15 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-07 13:58:15 - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilter': Unsatisfied dependency expressed through field 'userRepository': Error creating bean with name 'userRepository' defined in com.lucas.demo.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.lucas.demo.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 58 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 71 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 83 common frames omitted
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 90 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:152)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:362)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 105 common frames omitted
+2025-02-07 13:59:02 - Starting DemoApplication using Java 21.0.3 with PID 11856 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 13:59:02 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 13:59:02 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-07 13:59:02 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-07 13:59:03 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 13:59:03 - Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2025-02-07 13:59:03 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 13:59:03 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 13:59:03 - Tomcat initialized with port 8080 (http)
+2025-02-07 13:59:03 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 13:59:03 - Starting service [Tomcat]
+2025-02-07 13:59:03 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 13:59:04 - Initializing Spring embedded WebApplicationContext
+2025-02-07 13:59:04 - Root WebApplicationContext: initialization completed in 1808 ms
+2025-02-07 13:59:04 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 13:59:04 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-07 13:59:04 - HHH000026: Second-level cache disabled
+2025-02-07 13:59:04 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 13:59:04 - HikariPool-1 - Starting...
+2025-02-07 13:59:05 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a997a0
+2025-02-07 13:59:05 - HikariPool-1 - Start completed.
+2025-02-07 13:59:06 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 13:59:06 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 13:59:06 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 13:59:07 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 13:59:07 - LiveReload server is running on port 35729
+2025-02-07 13:59:07 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 13:59:07 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 13:59:07 - Starting...
+2025-02-07 13:59:07 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@58d10c5d]]
+2025-02-07 13:59:07 - Started.
+2025-02-07 13:59:07 - Started DemoApplication in 5.977 seconds (process running for 6.464)
+2025-02-07 14:00:07 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-02-07 14:00:38 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 14:00:38 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 14:00:38 - Completed initialization in 2 ms
+2025-02-07 14:03:30 - Resolved [ErroArquivoException: Arquivo C:\Users\Lucas\Documents\Projetos\demo\atendeMais\clientes\lucaspizza@gmail.com\pedidos\pedidos_2025-02-10.json não encontrado. - Causa: null]
+2025-02-07 14:30:07 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2025-02-07 14:34:32 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 14:34:32 - Stopping...
+2025-02-07 14:34:32 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@58d10c5d]]
+2025-02-07 14:34:32 - Stopped.
+2025-02-07 14:34:32 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:34:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:34:32 - HikariPool-1 - Shutdown initiated...
+2025-02-07 14:34:32 - HikariPool-1 - Shutdown completed.
+2025-02-07 14:34:32 - Starting DemoApplication using Java 21.0.3 with PID 11856 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 14:34:32 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 14:34:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 14:34:32 - Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2025-02-07 14:34:32 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 14:34:32 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 14:34:32 - Tomcat initialized with port 8080 (http)
+2025-02-07 14:34:32 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:34:32 - Starting service [Tomcat]
+2025-02-07 14:34:32 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 14:34:32 - Initializing Spring embedded WebApplicationContext
+2025-02-07 14:34:32 - Root WebApplicationContext: initialization completed in 546 ms
+2025-02-07 14:34:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 14:34:32 - HHH000026: Second-level cache disabled
+2025-02-07 14:34:32 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 14:34:32 - HikariPool-2 - Starting...
+2025-02-07 14:34:33 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e9fd39a
+2025-02-07 14:34:33 - HikariPool-2 - Start completed.
+2025-02-07 14:34:33 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 14:34:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:34:33 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 14:34:33 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 14:34:33 - LiveReload server is running on port 35729
+2025-02-07 14:34:33 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:34:33 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 14:34:33 - Starting...
+2025-02-07 14:34:33 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@168d8df6]]
+2025-02-07 14:34:33 - Started.
+2025-02-07 14:34:33 - Started DemoApplication in 1.452 seconds (process running for 2132.51)
+2025-02-07 14:34:33 - Condition evaluation unchanged
+2025-02-07 14:34:35 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-02-07 14:34:35 - Stopping...
+2025-02-07 14:34:35 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@168d8df6]]
+2025-02-07 14:34:35 - Stopped.
+2025-02-07 14:34:35 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:34:35 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:34:35 - HikariPool-2 - Shutdown initiated...
+2025-02-07 14:34:35 - HikariPool-2 - Shutdown completed.
+2025-02-07 14:34:35 - Starting DemoApplication using Java 21.0.3 with PID 11856 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 14:34:35 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 14:34:35 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 14:34:35 - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2025-02-07 14:34:35 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 14:34:35 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 14:34:35 - Tomcat initialized with port 8080 (http)
+2025-02-07 14:34:35 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:34:35 - Starting service [Tomcat]
+2025-02-07 14:34:35 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 14:34:35 - Initializing Spring embedded WebApplicationContext
+2025-02-07 14:34:35 - Root WebApplicationContext: initialization completed in 535 ms
+2025-02-07 14:34:35 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 14:34:35 - HHH000026: Second-level cache disabled
+2025-02-07 14:34:35 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 14:34:35 - HikariPool-3 - Starting...
+2025-02-07 14:34:35 - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20e82f23
+2025-02-07 14:34:35 - HikariPool-3 - Start completed.
+2025-02-07 14:34:36 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 14:34:36 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:34:36 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 14:34:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 14:34:36 - LiveReload server is running on port 35729
+2025-02-07 14:34:36 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:34:36 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 14:34:36 - Starting...
+2025-02-07 14:34:36 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@10777bd8]]
+2025-02-07 14:34:36 - Started.
+2025-02-07 14:34:36 - Started DemoApplication in 0.995 seconds (process running for 2135.014)
+2025-02-07 14:34:36 - Condition evaluation unchanged
+2025-02-07 14:35:08 - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-02-07 14:35:08 - Stopping...
+2025-02-07 14:35:08 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@10777bd8]]
+2025-02-07 14:35:08 - Stopped.
+2025-02-07 14:35:08 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:35:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:35:08 - HikariPool-3 - Shutdown initiated...
+2025-02-07 14:35:08 - HikariPool-3 - Shutdown completed.
+2025-02-07 14:35:08 - Starting DemoApplication using Java 21.0.3 with PID 11856 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 14:35:08 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 14:35:09 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 14:35:09 - Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2025-02-07 14:35:09 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 14:35:09 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 14:35:09 - Tomcat initialized with port 8080 (http)
+2025-02-07 14:35:09 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:35:09 - Starting service [Tomcat]
+2025-02-07 14:35:09 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 14:35:09 - Initializing Spring embedded WebApplicationContext
+2025-02-07 14:35:09 - Root WebApplicationContext: initialization completed in 647 ms
+2025-02-07 14:35:09 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 14:35:09 - HHH000026: Second-level cache disabled
+2025-02-07 14:35:09 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 14:35:09 - HikariPool-4 - Starting...
+2025-02-07 14:35:09 - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@730b9d03
+2025-02-07 14:35:09 - HikariPool-4 - Start completed.
+2025-02-07 14:35:09 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 14:35:09 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 14:35:09 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 14:35:09 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 14:35:09 - LiveReload server is running on port 35729
+2025-02-07 14:35:09 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 14:35:09 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 14:35:09 - Starting...
+2025-02-07 14:35:09 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@355466be]]
+2025-02-07 14:35:09 - Started.
+2025-02-07 14:35:09 - Started DemoApplication in 1.171 seconds (process running for 2168.577)
+2025-02-07 14:35:09 - Condition evaluation unchanged
+2025-02-07 14:36:09 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-02-07 15:02:39 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:02:39 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:02:39 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-07 15:02:39 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-07 15:02:40 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:02:41 - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:02:41 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:02:41 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:02:41 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:02:41 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:02:41 - Starting service [Tomcat]
+2025-02-07 15:02:41 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:02:41 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:02:41 - Root WebApplicationContext: initialization completed in 1911 ms
+2025-02-07 15:02:42 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:02:42 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-07 15:02:42 - HHH000026: Second-level cache disabled
+2025-02-07 15:02:42 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:02:42 - HikariPool-1 - Starting...
+2025-02-07 15:02:42 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25a38bfb
+2025-02-07 15:02:42 - HikariPool-1 - Start completed.
+2025-02-07 15:02:43 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:02:43 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:02:44 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:02:44 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:02:45 - LiveReload server is running on port 35729
+2025-02-07 15:02:45 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:02:45 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:02:45 - Starting...
+2025-02-07 15:02:45 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7069ad9f]]
+2025-02-07 15:02:45 - Started.
+2025-02-07 15:02:45 - Started DemoApplication in 5.763 seconds (process running for 6.225)
+2025-02-07 15:02:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:02:53 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:02:53 - Completed initialization in 4 ms
+2025-02-07 15:02:53 - Resolved [ErroArquivoException: Diretório de pedidos não encontrado: C:\Users\Lucas\Documents\Projetos\demo\atendeMais\clientes\lucaspizza@gmail.com\relatorios\relatorio_ - Causa: null]
+2025-02-07 15:03:45 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-02-07 15:03:51 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:03:51 - Stopping...
+2025-02-07 15:03:51 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7069ad9f]]
+2025-02-07 15:03:51 - Stopped.
+2025-02-07 15:03:51 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:03:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:03:51 - HikariPool-1 - Shutdown initiated...
+2025-02-07 15:03:51 - HikariPool-1 - Shutdown completed.
+2025-02-07 15:03:51 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:03:51 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:03:51 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:03:51 - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:03:51 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:03:51 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:03:51 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:03:51 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:03:51 - Starting service [Tomcat]
+2025-02-07 15:03:51 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:03:52 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:03:52 - Root WebApplicationContext: initialization completed in 506 ms
+2025-02-07 15:03:52 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:03:52 - HHH000026: Second-level cache disabled
+2025-02-07 15:03:52 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:03:52 - HikariPool-2 - Starting...
+2025-02-07 15:03:52 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f90ca0a
+2025-02-07 15:03:52 - HikariPool-2 - Start completed.
+2025-02-07 15:03:52 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:03:52 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:03:52 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:03:52 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:03:52 - LiveReload server is running on port 35729
+2025-02-07 15:03:52 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:03:52 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:03:52 - Starting...
+2025-02-07 15:03:52 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5ddb19a3]]
+2025-02-07 15:03:52 - Started.
+2025-02-07 15:03:52 - Started DemoApplication in 1.027 seconds (process running for 73.556)
+2025-02-07 15:03:52 - Condition evaluation unchanged
+2025-02-07 15:03:58 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:03:58 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:03:58 - Completed initialization in 1 ms
+2025-02-07 15:03:58 - Resolved [ErroArquivoException: Diretório de pedidos não encontrado: C:\Users\Lucas\Documents\Projetos\demo\atendeMais\clientes\lucaspizza@gmail.com\relatorios\relatorio_2025-02-09.pdf - Causa: null]
+2025-02-07 15:04:50 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:04:50 - Stopping...
+2025-02-07 15:04:50 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5ddb19a3]]
+2025-02-07 15:04:50 - Stopped.
+2025-02-07 15:04:50 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:04:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:04:50 - HikariPool-2 - Shutdown initiated...
+2025-02-07 15:04:50 - HikariPool-2 - Shutdown completed.
+2025-02-07 15:04:50 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:04:50 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:04:50 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:04:51 - Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:04:51 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:04:51 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:04:51 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:04:51 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:04:51 - Starting service [Tomcat]
+2025-02-07 15:04:51 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:04:51 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:04:51 - Root WebApplicationContext: initialization completed in 690 ms
+2025-02-07 15:04:51 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:04:51 - HHH000026: Second-level cache disabled
+2025-02-07 15:04:51 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:04:51 - HikariPool-3 - Starting...
+2025-02-07 15:04:51 - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e00433b
+2025-02-07 15:04:51 - HikariPool-3 - Start completed.
+2025-02-07 15:04:51 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:04:51 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:04:51 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:04:51 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:04:51 - LiveReload server is running on port 35729
+2025-02-07 15:04:51 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:04:51 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:04:51 - Starting...
+2025-02-07 15:04:51 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@47996a2]]
+2025-02-07 15:04:51 - Started.
+2025-02-07 15:04:51 - Started DemoApplication in 1.268 seconds (process running for 132.823)
+2025-02-07 15:04:51 - Condition evaluation unchanged
+2025-02-07 15:04:54 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:04:54 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:04:54 - Completed initialization in 1 ms
+2025-02-07 15:05:43 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:05:43 - Stopping...
+2025-02-07 15:05:43 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@47996a2]]
+2025-02-07 15:05:43 - Stopped.
+2025-02-07 15:05:43 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:05:43 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:05:43 - HikariPool-3 - Shutdown initiated...
+2025-02-07 15:05:43 - HikariPool-3 - Shutdown completed.
+2025-02-07 15:05:43 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:05:43 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:05:43 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:05:44 - Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:05:44 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:05:44 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:05:44 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:05:44 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:05:44 - Starting service [Tomcat]
+2025-02-07 15:05:44 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:05:44 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:05:44 - Root WebApplicationContext: initialization completed in 430 ms
+2025-02-07 15:05:44 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:05:44 - HHH000026: Second-level cache disabled
+2025-02-07 15:05:44 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:05:44 - HikariPool-4 - Starting...
+2025-02-07 15:05:44 - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@180ea27f
+2025-02-07 15:05:44 - HikariPool-4 - Start completed.
+2025-02-07 15:05:44 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:05:44 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:05:44 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:05:44 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:05:44 - LiveReload server is running on port 35729
+2025-02-07 15:05:44 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:05:44 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:05:44 - Starting...
+2025-02-07 15:05:44 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@412bb88d]]
+2025-02-07 15:05:44 - Started.
+2025-02-07 15:05:44 - Started DemoApplication in 0.81 seconds (process running for 185.547)
+2025-02-07 15:05:44 - Condition evaluation unchanged
+2025-02-07 15:05:45 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:05:45 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:05:45 - Completed initialization in 1 ms
+2025-02-07 15:06:37 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:06:37 - Stopping...
+2025-02-07 15:06:37 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@412bb88d]]
+2025-02-07 15:06:37 - Stopped.
+2025-02-07 15:06:37 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:37 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:06:37 - HikariPool-4 - Shutdown initiated...
+2025-02-07 15:06:37 - HikariPool-4 - Shutdown completed.
+2025-02-07 15:06:37 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:06:37 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:06:37 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:06:37 - Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:06:37 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:06:37 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:06:37 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:06:37 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:37 - Starting service [Tomcat]
+2025-02-07 15:06:37 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:06:37 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:06:37 - Root WebApplicationContext: initialization completed in 396 ms
+2025-02-07 15:06:37 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:06:37 - HHH000026: Second-level cache disabled
+2025-02-07 15:06:37 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:06:37 - HikariPool-5 - Starting...
+2025-02-07 15:06:37 - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@779c8228
+2025-02-07 15:06:37 - HikariPool-5 - Start completed.
+2025-02-07 15:06:38 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:06:38 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:06:38 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:06:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:06:38 - LiveReload server is running on port 35729
+2025-02-07 15:06:38 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:38 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:06:38 - Starting...
+2025-02-07 15:06:38 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@22425c32]]
+2025-02-07 15:06:38 - Started.
+2025-02-07 15:06:38 - Started DemoApplication in 0.856 seconds (process running for 239.366)
+2025-02-07 15:06:38 - Condition evaluation unchanged
+2025-02-07 15:06:47 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:06:47 - Stopping...
+2025-02-07 15:06:47 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@22425c32]]
+2025-02-07 15:06:47 - Stopped.
+2025-02-07 15:06:47 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:47 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:06:47 - HikariPool-5 - Shutdown initiated...
+2025-02-07 15:06:47 - HikariPool-5 - Shutdown completed.
+2025-02-07 15:06:48 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:06:48 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:06:48 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:06:48 - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:06:48 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:06:48 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:06:48 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:06:48 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:48 - Starting service [Tomcat]
+2025-02-07 15:06:48 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:06:48 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:06:48 - Root WebApplicationContext: initialization completed in 385 ms
+2025-02-07 15:06:48 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:06:48 - HHH000026: Second-level cache disabled
+2025-02-07 15:06:48 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:06:48 - HikariPool-6 - Starting...
+2025-02-07 15:06:48 - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b9f9d23
+2025-02-07 15:06:48 - HikariPool-6 - Start completed.
+2025-02-07 15:06:48 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:06:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:06:48 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:06:48 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:06:48 - LiveReload server is running on port 35729
+2025-02-07 15:06:48 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:48 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:06:48 - Starting...
+2025-02-07 15:06:48 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3ca40d8e]]
+2025-02-07 15:06:48 - Started.
+2025-02-07 15:06:48 - Started DemoApplication in 0.76 seconds (process running for 249.838)
+2025-02-07 15:06:48 - Condition evaluation unchanged
+2025-02-07 15:06:52 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:06:52 - Stopping...
+2025-02-07 15:06:52 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3ca40d8e]]
+2025-02-07 15:06:52 - Stopped.
+2025-02-07 15:06:52 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:06:52 - HikariPool-6 - Shutdown initiated...
+2025-02-07 15:06:52 - HikariPool-6 - Shutdown completed.
+2025-02-07 15:06:52 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:06:52 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:06:52 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:06:52 - Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:06:52 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:06:52 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:06:52 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:06:52 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:52 - Starting service [Tomcat]
+2025-02-07 15:06:52 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:06:52 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:06:52 - Root WebApplicationContext: initialization completed in 431 ms
+2025-02-07 15:06:52 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:06:52 - HHH000026: Second-level cache disabled
+2025-02-07 15:06:52 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:06:52 - HikariPool-7 - Starting...
+2025-02-07 15:06:52 - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e030c91
+2025-02-07 15:06:52 - HikariPool-7 - Start completed.
+2025-02-07 15:06:52 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:06:52 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:06:52 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:06:53 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:06:53 - LiveReload server is running on port 35729
+2025-02-07 15:06:53 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:06:53 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:06:53 - Starting...
+2025-02-07 15:06:53 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@17d0ea57]]
+2025-02-07 15:06:53 - Started.
+2025-02-07 15:06:53 - Started DemoApplication in 0.808 seconds (process running for 254.216)
+2025-02-07 15:06:53 - Condition evaluation unchanged
+2025-02-07 15:07:08 - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-02-07 15:07:08 - Stopping...
+2025-02-07 15:07:08 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@17d0ea57]]
+2025-02-07 15:07:08 - Stopped.
+2025-02-07 15:07:09 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:07:09 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:07:09 - HikariPool-7 - Shutdown initiated...
+2025-02-07 15:07:09 - HikariPool-7 - Shutdown completed.
+2025-02-07 15:07:09 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:07:09 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:07:09 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:07:09 - Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:07:09 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:07:09 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:07:09 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:07:09 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:07:09 - Starting service [Tomcat]
+2025-02-07 15:07:09 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:07:09 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:07:09 - Root WebApplicationContext: initialization completed in 303 ms
+2025-02-07 15:07:09 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:07:09 - HHH000026: Second-level cache disabled
+2025-02-07 15:07:09 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:07:09 - HikariPool-8 - Starting...
+2025-02-07 15:07:09 - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8b45d81
+2025-02-07 15:07:09 - HikariPool-8 - Start completed.
+2025-02-07 15:07:09 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:07:09 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:07:09 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:07:09 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'relatorioController': Unsatisfied dependency expressed through field 'relatorioService': Error creating bean with name 'relatorioService': Unsatisfied dependency expressed through field 'apagarPedidos': Error creating bean with name 'apagarPedidos': Lookup method resolution failed
+2025-02-07 15:07:09 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:07:09 - HikariPool-8 - Shutdown initiated...
+2025-02-07 15:07:09 - HikariPool-8 - Shutdown completed.
+2025-02-07 15:07:09 - Stopping service [Tomcat]
+2025-02-07 15:07:09 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-07 15:07:09 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'relatorioController': Unsatisfied dependency expressed through field 'relatorioService': Error creating bean with name 'relatorioService': Unsatisfied dependency expressed through field 'apagarPedidos': Error creating bean with name 'apagarPedidos': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lucas.demo.DemoApplication.main(DemoApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'relatorioService': Unsatisfied dependency expressed through field 'apagarPedidos': Error creating bean with name 'apagarPedidos': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'apagarPedidos': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1314)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1209)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 37 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.lucas.demo.service.ApagarPedidos] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6243dc4f]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
+	... 50 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: CaminhoInfo
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3578)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2676)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 52 common frames omitted
+Caused by: java.lang.ClassNotFoundException: CaminhoInfo
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 56 common frames omitted
+2025-02-07 15:07:51 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:07:51 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:07:51 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:07:51 - Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:07:51 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:07:51 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:07:51 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:07:51 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:07:51 - Starting service [Tomcat]
+2025-02-07 15:07:51 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:07:51 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:07:51 - Root WebApplicationContext: initialization completed in 390 ms
+2025-02-07 15:07:51 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:07:51 - HHH000026: Second-level cache disabled
+2025-02-07 15:07:51 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:07:51 - HikariPool-9 - Starting...
+2025-02-07 15:07:51 - HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27843230
+2025-02-07 15:07:51 - HikariPool-9 - Start completed.
+2025-02-07 15:07:51 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:07:51 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:07:51 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:07:51 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:07:51 - LiveReload server is running on port 35729
+2025-02-07 15:07:51 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:07:51 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:07:51 - Starting...
+2025-02-07 15:07:51 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@65e56229]]
+2025-02-07 15:07:51 - Started.
+2025-02-07 15:07:51 - Started DemoApplication in 0.788 seconds (process running for 313.059)
+2025-02-07 15:07:51 - Condition evaluation unchanged
+2025-02-07 15:07:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:07:53 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:07:53 - Completed initialization in 1 ms
+2025-02-07 15:08:51 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-02-07 15:15:47 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:15:47 - Stopping...
+2025-02-07 15:15:47 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@65e56229]]
+2025-02-07 15:15:47 - Stopped.
+2025-02-07 15:15:47 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:15:47 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:15:47 - HikariPool-9 - Shutdown initiated...
+2025-02-07 15:15:47 - HikariPool-9 - Shutdown completed.
+2025-02-07 15:15:47 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:15:47 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:15:47 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:15:47 - Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:15:47 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:15:47 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:15:47 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:15:47 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:15:47 - Starting service [Tomcat]
+2025-02-07 15:15:47 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:15:47 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:15:47 - Root WebApplicationContext: initialization completed in 295 ms
+2025-02-07 15:15:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:15:47 - HHH000026: Second-level cache disabled
+2025-02-07 15:15:47 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:15:47 - HikariPool-10 - Starting...
+2025-02-07 15:15:47 - HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@224b7a97
+2025-02-07 15:15:47 - HikariPool-10 - Start completed.
+2025-02-07 15:15:47 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:15:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:15:47 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:15:47 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:15:47 - LiveReload server is running on port 35729
+2025-02-07 15:15:47 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:15:47 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:15:47 - Starting...
+2025-02-07 15:15:47 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7df17d18]]
+2025-02-07 15:15:47 - Started.
+2025-02-07 15:15:47 - Started DemoApplication in 0.608 seconds (process running for 788.749)
+2025-02-07 15:15:47 - Condition evaluation unchanged
+2025-02-07 15:16:39 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:16:39 - Stopping...
+2025-02-07 15:16:39 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7df17d18]]
+2025-02-07 15:16:39 - Stopped.
+2025-02-07 15:16:39 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:16:39 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:16:39 - HikariPool-10 - Shutdown initiated...
+2025-02-07 15:16:39 - HikariPool-10 - Shutdown completed.
+2025-02-07 15:16:39 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:16:39 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:16:39 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:16:39 - Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:16:39 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:16:39 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:16:39 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:16:39 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:16:39 - Starting service [Tomcat]
+2025-02-07 15:16:39 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:16:39 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:16:39 - Root WebApplicationContext: initialization completed in 290 ms
+2025-02-07 15:16:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:16:39 - HHH000026: Second-level cache disabled
+2025-02-07 15:16:39 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:16:39 - HikariPool-11 - Starting...
+2025-02-07 15:16:39 - HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e197e9
+2025-02-07 15:16:39 - HikariPool-11 - Start completed.
+2025-02-07 15:16:39 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:16:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:16:39 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:16:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:16:40 - LiveReload server is running on port 35729
+2025-02-07 15:16:40 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:16:40 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:16:40 - Starting...
+2025-02-07 15:16:40 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@77ac77aa]]
+2025-02-07 15:16:40 - Started.
+2025-02-07 15:16:40 - Started DemoApplication in 0.605 seconds (process running for 841.181)
+2025-02-07 15:16:40 - Condition evaluation unchanged
+2025-02-07 15:16:48 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:16:48 - Stopping...
+2025-02-07 15:16:48 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@77ac77aa]]
+2025-02-07 15:16:48 - Stopped.
+2025-02-07 15:16:48 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:16:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:16:48 - HikariPool-11 - Shutdown initiated...
+2025-02-07 15:16:48 - HikariPool-11 - Shutdown completed.
+2025-02-07 15:16:48 - Starting DemoApplication using Java 21.0.3 with PID 15064 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:16:48 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:16:49 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:16:49 - Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:16:49 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:16:49 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:16:49 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:16:49 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:16:49 - Starting service [Tomcat]
+2025-02-07 15:16:49 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:16:49 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:16:49 - Root WebApplicationContext: initialization completed in 268 ms
+2025-02-07 15:16:49 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:16:49 - HHH000026: Second-level cache disabled
+2025-02-07 15:16:49 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:16:49 - HikariPool-12 - Starting...
+2025-02-07 15:16:49 - HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@398a8e20
+2025-02-07 15:16:49 - HikariPool-12 - Start completed.
+2025-02-07 15:16:49 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:16:49 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:16:49 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:16:49 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:16:49 - LiveReload server is running on port 35729
+2025-02-07 15:16:49 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:16:49 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:16:49 - Starting...
+2025-02-07 15:16:49 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5c62c7cf]]
+2025-02-07 15:16:49 - Started.
+2025-02-07 15:16:49 - Started DemoApplication in 0.579 seconds (process running for 850.47)
+2025-02-07 15:16:49 - Condition evaluation unchanged
+2025-02-07 15:17:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:17:12 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:17:12 - Completed initialization in 1 ms
+2025-02-07 15:21:37 - Starting DemoApplication using Java 21.0.3 with PID 12916 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:21:37 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:21:37 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-07 15:21:37 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-07 15:21:38 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:21:38 - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:21:38 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:21:38 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:21:39 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:21:39 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:21:39 - Starting service [Tomcat]
+2025-02-07 15:21:39 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:21:39 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:21:39 - Root WebApplicationContext: initialization completed in 1945 ms
+2025-02-07 15:21:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:21:39 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-07 15:21:39 - HHH000026: Second-level cache disabled
+2025-02-07 15:21:39 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:21:39 - HikariPool-1 - Starting...
+2025-02-07 15:21:40 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27fb45e1
+2025-02-07 15:21:40 - HikariPool-1 - Start completed.
+2025-02-07 15:21:40 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:21:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:21:41 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:21:41 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:21:42 - LiveReload server is running on port 35729
+2025-02-07 15:21:42 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:21:42 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:21:42 - Starting...
+2025-02-07 15:21:42 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@22a2d366]]
+2025-02-07 15:21:42 - Started.
+2025-02-07 15:21:42 - Started DemoApplication in 6.015 seconds (process running for 6.552)
+2025-02-07 15:21:44 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:21:44 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:21:44 - Completed initialization in 1 ms
+2025-02-07 15:21:45 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IndexOutOfBoundsException: Index 7 out of bounds for length 7] with root cause
+java.lang.IndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+	at com.lucas.demo.service.RelatorioService.verificarPossivelPdfSemanalECriar(RelatorioService.java:105)
+	at com.lucas.demo.service.RelatorioService.gerarPdf(RelatorioService.java:125)
+	at com.lucas.demo.controllers.RelatorioController.getContagem(RelatorioController.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.lucas.demo.infra.security.SecurityFilter.doFilterInternal(SecurityFilter.java:43)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-02-07 15:21:47 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IndexOutOfBoundsException: Index 7 out of bounds for length 7] with root cause
+java.lang.IndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+	at com.lucas.demo.service.RelatorioService.verificarPossivelPdfSemanalECriar(RelatorioService.java:105)
+	at com.lucas.demo.service.RelatorioService.gerarPdf(RelatorioService.java:125)
+	at com.lucas.demo.controllers.RelatorioController.getContagem(RelatorioController.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.lucas.demo.infra.security.SecurityFilter.doFilterInternal(SecurityFilter.java:43)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-02-07 15:22:42 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-02-07 15:27:48 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:27:48 - Stopping...
+2025-02-07 15:27:48 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@22a2d366]]
+2025-02-07 15:27:48 - Stopped.
+2025-02-07 15:27:48 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:27:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:27:48 - HikariPool-1 - Shutdown initiated...
+2025-02-07 15:27:48 - HikariPool-1 - Shutdown completed.
+2025-02-07 15:27:49 - Starting DemoApplication using Java 21.0.3 with PID 12916 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:27:49 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:27:49 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:27:49 - Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:27:49 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:27:49 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:27:49 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:27:49 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:27:49 - Starting service [Tomcat]
+2025-02-07 15:27:49 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:27:49 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:27:49 - Root WebApplicationContext: initialization completed in 590 ms
+2025-02-07 15:27:49 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:27:49 - HHH000026: Second-level cache disabled
+2025-02-07 15:27:49 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:27:49 - HikariPool-2 - Starting...
+2025-02-07 15:27:49 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19ecf04a
+2025-02-07 15:27:49 - HikariPool-2 - Start completed.
+2025-02-07 15:27:49 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:27:49 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:27:49 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:27:50 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:27:50 - LiveReload server is running on port 35729
+2025-02-07 15:27:50 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:27:50 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:27:50 - Starting...
+2025-02-07 15:27:50 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1ee019eb]]
+2025-02-07 15:27:50 - Started.
+2025-02-07 15:27:50 - Started DemoApplication in 1.144 seconds (process running for 374.096)
+2025-02-07 15:27:50 - Condition evaluation unchanged
+2025-02-07 15:28:17 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:28:17 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:28:17 - Completed initialization in 1 ms
+2025-02-07 15:28:50 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-02-07 15:35:22 - Starting DemoApplication using Java 21.0.3 with PID 13164 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:35:22 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:35:22 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-07 15:35:22 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-07 15:35:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:35:23 - Finished Spring Data repository scanning in 71 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:35:24 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:35:24 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:35:24 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:35:24 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:35:24 - Starting service [Tomcat]
+2025-02-07 15:35:24 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:35:24 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:35:24 - Root WebApplicationContext: initialization completed in 1853 ms
+2025-02-07 15:35:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:35:24 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-07 15:35:24 - HHH000026: Second-level cache disabled
+2025-02-07 15:35:25 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:35:25 - HikariPool-1 - Starting...
+2025-02-07 15:35:25 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27fb45e1
+2025-02-07 15:35:25 - HikariPool-1 - Start completed.
+2025-02-07 15:35:26 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:35:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:35:26 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:35:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:35:27 - LiveReload server is running on port 35729
+2025-02-07 15:35:27 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:35:27 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:35:27 - Starting...
+2025-02-07 15:35:27 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@22a2d366]]
+2025-02-07 15:35:27 - Started.
+2025-02-07 15:35:27 - Started DemoApplication in 5.582 seconds (process running for 6.044)
+2025-02-07 15:35:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:35:34 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:35:34 - Completed initialization in 2 ms
+2025-02-07 15:35:35 - Arquivo deletado.
+2025-02-07 15:35:35 - Arquivo deletado.
+2025-02-07 15:35:35 - Arquivo deletado.
+2025-02-07 15:35:35 - Arquivo deletado.
+2025-02-07 15:35:35 - Arquivo deletado.
+2025-02-07 15:35:35 - Arquivo deletado.
+2025-02-07 15:35:35 - Arquivo deletado.
+2025-02-07 15:36:07 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:36:07 - Stopping...
+2025-02-07 15:36:07 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@22a2d366]]
+2025-02-07 15:36:07 - Stopped.
+2025-02-07 15:36:07 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:36:07 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:36:07 - HikariPool-1 - Shutdown initiated...
+2025-02-07 15:36:07 - HikariPool-1 - Shutdown completed.
+2025-02-07 15:36:07 - Starting DemoApplication using Java 21.0.3 with PID 13164 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:36:07 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:36:07 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:36:07 - Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:36:07 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:36:07 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:36:07 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:36:07 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:36:07 - Starting service [Tomcat]
+2025-02-07 15:36:07 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:36:08 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:36:08 - Root WebApplicationContext: initialization completed in 581 ms
+2025-02-07 15:36:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:36:08 - HHH000026: Second-level cache disabled
+2025-02-07 15:36:08 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:36:08 - HikariPool-2 - Starting...
+2025-02-07 15:36:08 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@159e9295
+2025-02-07 15:36:08 - HikariPool-2 - Start completed.
+2025-02-07 15:36:08 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:36:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:36:08 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:36:08 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:36:08 - LiveReload server is running on port 35729
+2025-02-07 15:36:08 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:36:08 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:36:08 - Starting...
+2025-02-07 15:36:08 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b595e26]]
+2025-02-07 15:36:08 - Started.
+2025-02-07 15:36:08 - Started DemoApplication in 1.139 seconds (process running for 46.706)
+2025-02-07 15:36:08 - Condition evaluation unchanged
+2025-02-07 15:37:08 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-02-07 15:39:00 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:39:00 - Stopping...
+2025-02-07 15:39:00 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b595e26]]
+2025-02-07 15:39:00 - Stopped.
+2025-02-07 15:39:00 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:39:00 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:39:00 - HikariPool-2 - Shutdown initiated...
+2025-02-07 15:39:00 - HikariPool-2 - Shutdown completed.
+2025-02-07 15:39:00 - Starting DemoApplication using Java 21.0.3 with PID 13164 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:39:00 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:39:01 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:39:01 - Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:39:01 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:39:01 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:39:01 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:39:01 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:39:01 - Starting service [Tomcat]
+2025-02-07 15:39:01 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:39:01 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:39:01 - Root WebApplicationContext: initialization completed in 390 ms
+2025-02-07 15:39:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:39:01 - HHH000026: Second-level cache disabled
+2025-02-07 15:39:01 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:39:01 - HikariPool-3 - Starting...
+2025-02-07 15:39:01 - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6153fbe4
+2025-02-07 15:39:01 - HikariPool-3 - Start completed.
+2025-02-07 15:39:01 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:39:01 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:39:01 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:39:01 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:39:01 - LiveReload server is running on port 35729
+2025-02-07 15:39:01 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:39:01 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:39:01 - Starting...
+2025-02-07 15:39:01 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4ba2efbe]]
+2025-02-07 15:39:01 - Started.
+2025-02-07 15:39:01 - Started DemoApplication in 0.801 seconds (process running for 219.71)
+2025-02-07 15:39:01 - Condition evaluation unchanged
+2025-02-07 15:39:32 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:39:32 - Stopping...
+2025-02-07 15:39:32 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4ba2efbe]]
+2025-02-07 15:39:32 - Stopped.
+2025-02-07 15:39:32 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:39:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:39:32 - HikariPool-3 - Shutdown initiated...
+2025-02-07 15:39:32 - HikariPool-3 - Shutdown completed.
+2025-02-07 15:39:32 - Starting DemoApplication using Java 21.0.3 with PID 13164 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:39:32 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:39:33 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:39:33 - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:39:33 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:39:33 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:39:33 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:39:33 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:39:33 - Starting service [Tomcat]
+2025-02-07 15:39:33 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:39:33 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:39:33 - Root WebApplicationContext: initialization completed in 378 ms
+2025-02-07 15:39:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:39:33 - HHH000026: Second-level cache disabled
+2025-02-07 15:39:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:39:33 - HikariPool-4 - Starting...
+2025-02-07 15:39:33 - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@574bfb83
+2025-02-07 15:39:33 - HikariPool-4 - Start completed.
+2025-02-07 15:39:33 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:39:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:39:33 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:39:33 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:39:33 - LiveReload server is running on port 35729
+2025-02-07 15:39:33 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:39:33 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:39:33 - Starting...
+2025-02-07 15:39:33 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@64c0030c]]
+2025-02-07 15:39:33 - Started.
+2025-02-07 15:39:33 - Started DemoApplication in 0.759 seconds (process running for 251.804)
+2025-02-07 15:39:33 - Condition evaluation unchanged
+2025-02-07 15:40:03 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-07 15:40:03 - Stopping...
+2025-02-07 15:40:03 - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@64c0030c]]
+2025-02-07 15:40:03 - Stopped.
+2025-02-07 15:40:03 - Stopping ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:40:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:40:03 - HikariPool-4 - Shutdown initiated...
+2025-02-07 15:40:03 - HikariPool-4 - Shutdown completed.
+2025-02-07 15:40:03 - Starting DemoApplication using Java 21.0.3 with PID 13164 (C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo\target\classes started by Lucas in C:\Users\Lucas\Documents\Projetos\demo\atendeMais\demo)
+2025-02-07 15:40:03 - No active profile set, falling back to 1 default profile: "default"
+2025-02-07 15:40:04 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-07 15:40:04 - Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-02-07 15:40:04 - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-02-07 15:40:04 - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-02-07 15:40:04 - Tomcat initialized with port 8080 (http)
+2025-02-07 15:40:04 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:40:04 - Starting service [Tomcat]
+2025-02-07 15:40:04 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-02-07 15:40:04 - Initializing Spring embedded WebApplicationContext
+2025-02-07 15:40:04 - Root WebApplicationContext: initialization completed in 355 ms
+2025-02-07 15:40:04 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-07 15:40:04 - HHH000026: Second-level cache disabled
+2025-02-07 15:40:04 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-07 15:40:04 - HikariPool-5 - Starting...
+2025-02-07 15:40:04 - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@314cc889
+2025-02-07 15:40:04 - HikariPool-5 - Start completed.
+2025-02-07 15:40:04 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-07 15:40:04 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-07 15:40:04 - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-07 15:40:04 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-07 15:40:04 - LiveReload server is running on port 35729
+2025-02-07 15:40:04 - Starting ProtocolHandler ["http-nio-8080"]
+2025-02-07 15:40:04 - Tomcat started on port 8080 (http) with context path '/'
+2025-02-07 15:40:04 - Starting...
+2025-02-07 15:40:04 - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@11f8539f]]
+2025-02-07 15:40:04 - Started.
+2025-02-07 15:40:04 - Started DemoApplication in 0.707 seconds (process running for 282.772)
+2025-02-07 15:40:04 - Condition evaluation unchanged
+2025-02-07 15:40:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07 15:40:14 - Initializing Servlet 'dispatcherServlet'
+2025-02-07 15:40:14 - Completed initialization in 0 ms
+2025-02-07 15:40:14 - Resolved [ErroArquivoException: Arquivo C:\Users\Lucas\Documents\Projetos\demo\atendeMais\clientes\lucaspizza@gmail.com\pedidos\pedidos_2025-02-09.json não encontrado. - Causa: null]

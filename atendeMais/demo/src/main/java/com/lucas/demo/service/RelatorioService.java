@@ -14,6 +14,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.function.Function;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,9 +39,14 @@ import com.lucas.demo.model.PedidosContext;
 @Service
 public class RelatorioService {
 
+	private static final Logger logger = LoggerFactory.getLogger(ApagarPedidos.class);
+	
 	@Autowired
 	PedidoServico pedidoServico;
 
+	@Autowired
+	ApagarPedidos apagarPedidos;
+	
 	Font fontTitulo = new Font(FontFactory.getFont(FontFactory.HELVETICA_BOLD, 24, Font.ITALIC));
 	Font fontSubTitulo = new Font(FontFactory.getFont(FontFactory.HELVETICA, 18, Font.ITALIC));
 	Font fontTexto = new Font(FontFactory.getFont(FontFactory.HELVETICA, 13));
@@ -73,16 +80,28 @@ public class RelatorioService {
 		return diasDaSemana;
 	}
 
+	// Ja nao tem utilidade
 	public void validarPdfDiariosExist(File relatorioDiario, PedidosContext pedidoContext, String destino,
 			LocalDate data) {
 		if (relatorioDiario.exists()) {
-			System.out.println("Relatorio diario ja existe.");
+			logger.info("Relatorio diario ja existe.");
 			this.gerarPDFDiario(pedidoContext, destino, data);
 		} else {
 			this.gerarPDFDiario(pedidoContext, destino, data);
 		}
 	}
 
+	public void criarTodosRelatoriosDiarios(LocalDate data, String idCliente) {
+		List<LocalDate> diasSemanas = obterDiasDaSemana(data);
+		for (int i = 0; i < diasSemanas.size(); i++) {
+			LocalDate dia = diasSemanas.get(i);
+			if (i == diasSemanas.size() - 1) {
+				continue;
+			}
+			gerarPdf(dia, idCliente);
+		}
+	}
+	
 	public void verificarPossivelPdfSemanalECriar(LocalDate data, CaminhoInfo caminhoInfo, String destino,
 			String idCliente) {
 		if (data.getDayOfWeek() == DayOfWeek.SUNDAY) {
@@ -97,6 +116,10 @@ public class RelatorioService {
 			String destinoSemanal = caminhoArq + nomeMes + "_semana_" + semanaDoMes + ".pdf";
 
 			this.gerarPDFSemanal(destino, destinoSemanal, data, idCliente, semanaDoMes, nomeMes);
+			
+			this.criarTodosRelatoriosDiarios(data, idCliente);
+			
+			apagarPedidos.verificarEApagarPedidosSemana(obterDiasDaSemanaNull(data), MudancaSO.separatorParaPedidos(idCliente));
 		}
 	}
 
@@ -151,7 +174,7 @@ public class RelatorioService {
 			document.add(new Paragraph("        *Os pedidos cancelados não são incluidos na quantidade total*",
 					fontTextoVermelha));
 
-			System.out.println("PDF gerado com sucesso em: " + destino);
+			logger.info("PDF gerado com sucesso em: " + destino);
 		} catch (Exception e) {
 			throw new ErroRelatorioException("Erro ao gerar relatorio diário.");
 		} finally {
@@ -168,6 +191,8 @@ public class RelatorioService {
 			List<PedidosContext> relatoriosDiarios = this.lerOsRelatoriosDiarios(diasDaSemana, idCliente);
 
 			this.consolidarRelatoriosDiarios(document, relatoriosDiarios, destinoSemanal, semanaDoMes, mes);
+			
+			
 		} catch (Exception e) {
 			throw new ErroRelatorioException("Erro ao gerar relatorio semanal.");
 		} finally {
@@ -253,7 +278,7 @@ public class RelatorioService {
 
 			document.close();
 
-			System.out.println("PDF gerado com sucesso emmm: " + destinoSemanal);
+			logger.info("PDF gerado com sucesso em: " + destinoSemanal);
 		} catch (Exception e) {
 			throw new ErroRelatorioException("Erro ao consolidar relatorios diarios.");
 		}
@@ -390,7 +415,7 @@ public class RelatorioService {
 					table.addCell(produto);
 					table.addCell(quantidade);
 				} else {
-					System.out.println("Formato invalido.");
+					logger.error("Formato invalido.");
 				}
 			}
 
