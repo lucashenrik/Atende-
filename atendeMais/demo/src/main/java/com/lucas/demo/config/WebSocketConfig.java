@@ -19,8 +19,10 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
 		registry.addEndpoint("/wss-notifications")
-				// .setAllowedOrigins("http://192.168.1.6:3000", "http://localhost:3000")
-				.setAllowedOrigins("https://atende-mais.shop", "https://191.101.70.241:3000", "http://localhost:3000")
+				// .setAllowedOrigins("https://atende-mais.shop",
+				// "https://atende-mais.shop:8080", "https://191.101.70.241:3000",
+				// "http://localhost:3000")
+				.setAllowedOriginPatterns("*") // Permite todas origens (em desenvolvimento)
 				.withSockJS().setHeartbeatTime(25000); // Ajusta o tempo de timeout da conexão.
 	}
 }

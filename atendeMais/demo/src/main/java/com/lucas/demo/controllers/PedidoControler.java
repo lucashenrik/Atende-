@@ -1,5 +1,6 @@
 package com.lucas.demo.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -25,7 +27,7 @@ import com.lucas.demo.service.PedidoServico;
 
 @ControllerAdvice
 @RestController
-@RequestMapping("/pedido")
+@RequestMapping("/api/v1/pedido")
 public class PedidoControler {
 
 	@Autowired
@@ -56,7 +58,7 @@ public class PedidoControler {
 
 		if (sucesso == true) {
 			pedidoServ.carregarPedidos(idCliente);
-			
+
 			// Envie uma mensagem para o WebSocket
 			avisarFrontEnd();
 			return new ResponseEntity<>(HttpStatus.CREATED);
@@ -100,7 +102,7 @@ public class PedidoControler {
 		try {
 			ResultadoCarregamentoPedidosDTO result = pedidoServ.carregarPedidos(idCliente);
 			PedidosContext pedidosContext = result.getPedidosContext();
-	
+
 			List<String> listaContagem = pedidoServ.contar(pedidosContext);
 			return ResponseEntity.ok(listaContagem);
 		} catch (Exception e) {
@@ -120,9 +122,16 @@ public class PedidoControler {
 		try {
 			ResultadoCarregamentoPedidosDTO result = pedidoServ.carregarPedidos(idCliente);
 			PedidosContext pedidosContext = result.getPedidosContext();
-			
+
 			List<Map<String, String>> pedidosEntregue = pedidosContext.getPedidosEntregues();
-			return ResponseEntity.ok(pedidosEntregue);
+			List<Map<String, String>> pedidosCancelados = pedidosContext.getPedidosCancelados();
+
+			List<Map<String, String>> pedidosUnidos = new ArrayList<>();
+
+			pedidosUnidos.addAll(pedidosEntregue);
+			pedidosUnidos.addAll(pedidosCancelados);
+
+			return ResponseEntity.ok(pedidosUnidos);
 		} catch (Exception e) {
 			throw e;
 		}
@@ -136,11 +145,27 @@ public class PedidoControler {
 		if (idCliente == null) {
 			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
 		}
-		
+
 		try {
 			ResultadoCarregamentoPedidosDTO result = pedidoServ.carregarPedidos(idCliente);
 			PedidosContext pedidosContext = result.getPedidosContext();
-			
+
+			List<Map<String, String>> pedidos = pedidosContext.getPedidosVerificados();
+
+			return ResponseEntity.ok(pedidos);
+		} catch (Exception e) {
+			throw e;
+		}
+	}
+
+	// Retorna uma lista com pedidos prontos ou em produção
+	@GetMapping("/{idEstabelecimento}/pedidos-clientes")
+	public ResponseEntity<?> getPedidoClientes(@PathVariable String idEstabelecimento) {
+
+		try {
+			ResultadoCarregamentoPedidosDTO result = pedidoServ.carregarPedidos(idEstabelecimento);
+			PedidosContext pedidosContext = result.getPedidosContext();
+
 			List<Map<String, String>> pedidos = pedidosContext.getPedidosVerificados();
 
 			return ResponseEntity.ok(pedidos);

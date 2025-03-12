@@ -32,7 +32,7 @@ import com.lucas.demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
 public class AuthController {
 
@@ -101,7 +101,7 @@ public class AuthController {
 			this.estabelRepository.save(newEstabelecimento);
 			Estabelecimento estabelecimento = estabelRepository.findByEmail(dto.email()).get();
 			
-			UserDB newUser = new UserDB(dto.name(), dto.email(), passwordEnconder, EnumRoles.USER, estabelecimento);
+			UserDB newUser = new UserDB(dto.name(), dto.email(), passwordEnconder, EnumRoles.ADMIN, estabelecimento);
 			this.userRepository.save(newUser);
 			
 			return new ResponseEntity<>(HttpStatus.CREATED);

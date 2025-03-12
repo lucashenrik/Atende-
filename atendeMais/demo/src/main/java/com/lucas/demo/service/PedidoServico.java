@@ -212,9 +212,6 @@ public class PedidoServico {
 	}
 
 	public synchronized ResultadoCarregamentoPedidosDTO carregarPedidos(String idCliente) {
-		// pedidosVerficados.clear();
-		// pedidosEntregues.clear();
-		// pedidoMemoria.clear();
 
 		boolean sucesso = true;
 		LocalDate dataAtual = LocalDate.now();

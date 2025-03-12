@@ -20,7 +20,7 @@ import com.lucas.demo.model.Prefixo;
 import com.lucas.demo.service.PrefixosService;
 
 @RestController
-@RequestMapping("/prefixos")
+@RequestMapping("/api/v1/prefixos")
 public class PrefixosController {
 
 	@Autowired

@@ -44,4 +44,9 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<String> handleErroRelatorioException(ErroRelatorioException ex){
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	
+	@ExceptionHandler
+	public ResponseEntity<String> handleErroInvalidTokenException(InvalidTokenException ex){
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNAUTHORIZED);
+	}
 }

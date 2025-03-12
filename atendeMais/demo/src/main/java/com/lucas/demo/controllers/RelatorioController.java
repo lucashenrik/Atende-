@@ -20,7 +20,7 @@ import com.lucas.demo.infra.security.AuthorizationSecurity;
 import com.lucas.demo.service.RelatorioService;
 
 @RestController
-@RequestMapping("/relatorio")
+@RequestMapping("/api/v1/relatorio")
 public class RelatorioController {
 
 	@Autowired
