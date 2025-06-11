@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class AuthorizationSecurity {
 
 	@Autowired
-	TokenServico tokenServico;
+	TokenService tokenServico;
 
 	public String getToken(String authHeader) {
 		String token = authHeader.replace("Bearer ", "");

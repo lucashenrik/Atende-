@@ -10,9 +10,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.lucas.demo.model.CustomUserDetails;
-import com.lucas.demo.model.UserDB;
-import com.lucas.demo.repository.UserRepository;
+import com.lucas.demo.infra.model.UserDB;
+import com.lucas.demo.infra.repository.UserRepository;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -22,7 +21,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 public class SecurityFilter extends OncePerRequestFilter {
 	@Autowired
-	TokenServico tokenService;
+	TokenService tokenService;
 
 	@Autowired
 	UserRepository userRepository;

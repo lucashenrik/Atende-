@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.lucas.demo.infra.service.PrefixosService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -29,13 +30,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.lucas.demo.model.Prefixo;
+import com.lucas.demo.infra.model.Prefixo;
 
 @ExtendWith(MockitoExtension.class)
 public class PrefixosServiceTest {
@@ -43,14 +43,22 @@ public class PrefixosServiceTest {
 	@Mock
 	private ObjectMapper objectMapper;
 
-	@Autowired
 	@InjectMocks
 	private PrefixosService prefixosServ;
+	
+	public PrefixosServiceTest(PrefixosService prefixosServ) {
+		super();
+		this.prefixosServ = prefixosServ;
+	}
 
 	List<Prefixo> listaPrefixos = new ArrayList<>(Arrays.asList(new Prefixo("123"), new Prefixo("234")));
-
 	List<Prefixo> listaPrefixosMock = new ArrayList<>(Arrays.asList(new Prefixo("Batata"), new Prefixo("Jantinha")));
 
+	String caminhoAtual = System.getProperty("user.dir");
+	String caminhoSup = new File(caminhoAtual).getParentFile().toString();
+
+	String caminhoTeste = caminhoSup + "\\clientes\\teste\\prefixos\\teste.json";
+	
 	@SuppressWarnings("unchecked")
 	@Test
 	@DisplayName("Deve adicionar um novo prefixo")
@@ -65,7 +73,7 @@ public class PrefixosServiceTest {
 
 			doNothing().when(writerMock).writeValue(any(File.class), any());
 
-			boolean sucesso = prefixosServ.adicionarPrefixo("434", "123");
+			boolean sucesso = prefixosServ.createNewPrefixo("434", "123");
 
 			verify(objectMapper).readValue(any(File.class), any(TypeReference.class));
 			verify(objectMapper.writerWithDefaultPrettyPrinter()).writeValue(any(File.class), any());
@@ -86,7 +94,7 @@ public class PrefixosServiceTest {
 
 			when(objectMapper.readValue(any(File.class), any(TypeReference.class))).thenReturn(listaPrefixosMock);
 
-			List<Prefixo> prefixosCarrregados = prefixosServ.carregarPrefixos("teste@gmail.com");
+			List<Prefixo> prefixosCarrregados = prefixosServ.getAllPrefixos("teste@gmail.com");
 
 			assertNotNull(prefixosCarrregados);
 			assertEquals(2, prefixosCarrregados.size());
@@ -94,7 +102,7 @@ public class PrefixosServiceTest {
 
 			verify(objectMapper).readValue(any(File.class), any(TypeReference.class));
 		} catch (Exception e) {
-			System.out.println("Exceção capturadaa: " + e.getMessage());
+			System.out.println("Exceção capturada: " + e.getMessage());
 		}
 	}
 
@@ -103,17 +111,17 @@ public class PrefixosServiceTest {
 	public void excluirPrefixo() {
 		PrefixosService spyPrefixosServ = Mockito.spy(prefixosServ);
 
-		doReturn(listaPrefixosMock).when(spyPrefixosServ).carregarPrefixos("teste@gmail.com");
+		doReturn(listaPrefixosMock).when(spyPrefixosServ).getAllPrefixos("teste@gmail.com");
+		
+		doNothing().when(spyPrefixosServ).salvarPrefixosNoArquivo(anyList(), caminhoTeste);
 
-		doNothing().when(spyPrefixosServ).salvarPrefixosNoArquivo(anyList());
-
-		boolean sucesso = spyPrefixosServ.excluirPrefixo("Batata", "teste@gmail.com");
+		boolean sucesso = spyPrefixosServ.deletePrefixo("Batata", "teste@gmail.com");
 
 		assertTrue(sucesso);
 		assertThat(listaPrefixosMock).extracting(Prefixo::getPrefixo).doesNotContain("Batata");
 
-		verify(spyPrefixosServ).carregarPrefixos("teste@gmail.com");
-		verify(spyPrefixosServ).salvarPrefixosNoArquivo(listaPrefixosMock);
+		verify(spyPrefixosServ).getAllPrefixos("teste@gmail.com");
+		verify(spyPrefixosServ).salvarPrefixosNoArquivo(listaPrefixosMock, caminhoTeste);
 	}
 
 	@Test
@@ -125,9 +133,7 @@ public class PrefixosServiceTest {
 			PrefixosService spyPrefixosService = Mockito.spy(PrefixosService.class);
 			ReflectionTestUtils.setField(spyPrefixosService, "objectMapper", mockObjectMapper);
 
-			spyPrefixosService.getPath("teste");
-
-			spyPrefixosService.salvarPrefixosNoArquivo(listaPrefixosMock);
+			spyPrefixosService.salvarPrefixosNoArquivo(listaPrefixosMock, caminhoTeste);
 
 			verify(mockObjectMapper).writeValue(any(File.class), eq(listaPrefixosMock));
 		} catch (Exception e) {
