@@ -3,10 +3,12 @@ package com.lucas.demo.infra.controllers;
 import com.lucas.demo.application.EstabelecimentoUseCase;
 import com.lucas.demo.application.UserUserCase;
 import com.lucas.demo.infra.context.ConvertEstabelecimento;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -33,37 +35,27 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/v1/auth")
-@RequiredArgsConstructor
 public class AuthController {
 
 	private EstabelecimentoUseCase estabelecimentoUseCase;
 	private UserUserCase userUserCase;
-	private UserRepository userRepository;
-	private DepartRepository estabelRepository;
 	private PasswordEncoder passwordEncoder;
 	private TokenService tokenService;
 	private AuthenticationManager authenticationManager;
-	private AuthorizationSecurity auth;
 
-	public AuthController(EstabelecimentoUseCase estabelecimentoUseCase, UserUserCase userUserCase, UserRepository userRepository, DepartRepository estabelRepository,
-						  PasswordEncoder passwordEncoder, TokenService tokenService, AuthenticationManager authenticationManager,
-						  AuthorizationSecurity auth) {
+	@Autowired
+	public AuthController(EstabelecimentoUseCase estabelecimentoUseCase, UserUserCase userUserCase, TokenService tokenService, AuthenticationManager authenticationManager) {
 		super();
 		this.estabelecimentoUseCase = estabelecimentoUseCase;
 		this.userUserCase = userUserCase;
-		this.userRepository = userRepository;
-		this.estabelRepository = estabelRepository;
-		this.passwordEncoder = passwordEncoder;
 		this.tokenService = tokenService;
 		this.authenticationManager = authenticationManager;
-		this.auth = auth;
 	}
 
 	@PostMapping("/login")
 	public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginRequestDTO body) {
 		var authToken = new UsernamePasswordAuthenticationToken(body.email(), body.password());
 		var authentication = authenticationManager.authenticate(authToken);
-
 		CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
 		UserDB user = userDetails.getUserDB();
 		String token = tokenService.generateToken(user);
@@ -72,21 +64,16 @@ public class AuthController {
 	}
 
 	@PostMapping("/registrar-usuario")
-	public ResponseEntity<Void> register(@RequestBody RegisterRequestDTO dto,
-			@RequestHeader("Authorization") String authHeader) {
-		String idEstabelecimento = auth.validarToken(authHeader);
+	public ResponseEntity<Void> register(@RequestBody RegisterRequestDTO dto) {
+		CustomUserDetails userDetails = (CustomUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
 		userUserCase.createNewUser(dto);
 		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
 
 	@PutMapping("/alterar")
-	public ResponseEntity<?> alterar(@RequestBody AlterarRegistDTO dto,
-			@RequestHeader("Authorization") String authHeader) {
-		String idCliente = auth.validarToken(authHeader);
-		if (idCliente == null) {
-			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-		}
+	public ResponseEntity<?> alterar(@RequestBody AlterarRegistDTO dto) {
+		this.getUsername();
 
 		userUserCase.updateUser(dto);
 		return ResponseEntity.status(HttpStatus.OK).build();
@@ -96,5 +83,10 @@ public class AuthController {
 	public ResponseEntity<?> registro(@RequestBody NewRegisterDTO dto) {
 		estabelecimentoUseCase.createNewEstabelecimento(dto);
 		return ResponseEntity.status(HttpStatus.CREATED).build();
+	}
+
+	private String getUsername(){
+		CustomUserDetails userDetails = (CustomUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return userDetails.getUsername();
 	}
 }

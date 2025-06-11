@@ -4,12 +4,14 @@ import java.io.File;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import com.lucas.demo.infra.security.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,11 +25,11 @@ import com.lucas.demo.infra.service.RelatorioService;
 @RequestMapping("/api/v1/relatorio")
 public class RelatorioController {
 
-	@Autowired
 	RelatorioService relatorioService;
 
-	@Autowired
-	AuthorizationSecurity auth;
+	public RelatorioController(RelatorioService relatorioService) {
+		this.relatorioService = relatorioService;
+	}
 
 	@GetMapping("/getRelatorio")
 	public ResponseEntity<Resource> getContagem(@RequestHeader("Authorization") String authHeader,
@@ -36,8 +38,7 @@ public class RelatorioController {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		LocalDate data = LocalDate.parse(dataString, formatter);
 
-		String token = auth.getToken(authHeader);
-		String estabelecimentoId = auth.getIdCliente(token);
+		String estabelecimentoId = this.getUsername();
 		
 		File relatorio = relatorioService.gerarPdf (data, estabelecimentoId);		
 		Resource resource = new FileSystemResource(relatorio);
@@ -50,5 +51,10 @@ public class RelatorioController {
 				.contentLength(relatorio.length())
 				.contentType(MediaType.APPLICATION_PDF)
 				.body(resource);
+	}
+
+	private String getUsername(){
+		CustomUserDetails userDetails = (CustomUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return userDetails.getUsername();
 	}
 }

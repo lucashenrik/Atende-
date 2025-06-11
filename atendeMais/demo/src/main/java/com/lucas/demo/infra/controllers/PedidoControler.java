@@ -6,10 +6,13 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.lucas.demo.application.PedidoUseCase;
+import com.lucas.demo.infra.model.dto.AlterarStatusDTO;
+import com.lucas.demo.infra.security.CustomUserDetails;
 import com.lucas.demo.infra.service.PedidoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,53 +32,33 @@ import com.lucas.demo.infra.service.ArquivoService;
 public class PedidoControler {
 
 	private PedidoUseCase pedidoUseCase;
-	private final ArquivoService arquivoService;
 	private final SimpMessagingTemplate messagingTemplate;
-	private final AuthorizationSecurity authorizationSecurity;
 
-	public PedidoControler(PedidoUseCase pedidoUseCase, ArquivoService arquivoService,
-						   SimpMessagingTemplate messagingTemplate, AuthorizationSecurity authorizationSecurity) {
-		super();
+	public PedidoControler(PedidoUseCase pedidoUseCase, SimpMessagingTemplate messagingTemplate) {
 		this.pedidoUseCase = pedidoUseCase;
-		this.arquivoService = arquivoService;
 		this.messagingTemplate = messagingTemplate;
-		this.authorizationSecurity = authorizationSecurity;
 	}
 
 	// Processa a resposta xml
 	@PostMapping("/notificacoes")
-	public ResponseEntity<?> processarNotificacoes(@RequestBody String json,
-			@RequestHeader("Authorization") String authHeader) throws ErroProcessamentoException {
-
-		String estabelecimentoId = authorizationSecurity.validarToken(authHeader);
-		if (estabelecimentoId == null) {
-			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-		}
+	public ResponseEntity<?> processarNotificacoes(@RequestBody String json) throws ErroProcessamentoException {
+		String estabelecimentoId = this.getUsername();
 
 		boolean processamentoBemSucedido = pedidoUseCase.newOrder(json, estabelecimentoId);
 		if (processamentoBemSucedido) {
 			pedidoUseCase.getOrders(estabelecimentoId);
 			notificarFrontEnd();// Envie uma mensagem para o WebSocket
-			return new ResponseEntity<>(HttpStatus.CREATED);
 		}
-		return new ResponseEntity<>("Erro desconhecido durante o processamento.", HttpStatus.INTERNAL_SERVER_ERROR);
+
+		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 
 	// Altera o status de um item
 	@PostMapping("/alterar-status")
-	public ResponseEntity<?> alterarStatusPedido(@RequestBody Map<String, String> payload,
-			@RequestHeader("Authorization") String authHeader) {
+	public ResponseEntity<?> alterarStatusPedido(@RequestBody AlterarStatusDTO payload) {
+		String estabelecimentoId = this.getUsername();
 
-		String estabelecimentoId = authorizationSecurity.validarToken(authHeader);
-		if (estabelecimentoId == null) {
-			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-		}
-
-		String pedidoId = payload.get("pedidoId");
-		String novoStatus = payload.get("novoStatus");
-		String hora = payload.get("hora");
-
-		pedidoUseCase.updateStatusOrder(pedidoId, novoStatus, hora, estabelecimentoId);
+		pedidoUseCase.updateStatusOrder(payload.pedidoId(), payload.novoStatus(), payload.hora(), estabelecimentoId);
 		notificarFrontEnd();
 
 		return new ResponseEntity<>(HttpStatus.OK);
@@ -83,72 +66,43 @@ public class PedidoControler {
 
 	// Retorna uma lista com a contagem de cada item
 	@GetMapping("/contar")
-	public ResponseEntity<?> contarPedidos(@RequestHeader("Authorization") String authHeader) {
+	public ResponseEntity<?> contarPedidos() {
+		String estabelecimentoId = this.getUsername();
 
-		String estabelecimentoId = authorizationSecurity.validarToken(authHeader);
-		if (estabelecimentoId == null) {
-			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-		}
-
-		ResultadoCarregamentoPedidosDTO resultado = pedidoUseCase.getOrders(estabelecimentoId);
-		PedidosContext pedidosContext = resultado.getPedidosContext();
-		List<String> contagemPedidos = pedidoUseCase.count(pedidosContext);
-
-		return ResponseEntity.ok(contagemPedidos);
+		List<String> quantityOrders = pedidoUseCase.countOrders(estabelecimentoId);
+		return ResponseEntity.ok(quantityOrders);
 	}
 
 	// Retorna uma lista apenas com pedidos entregues ou cancelados
 	@GetMapping("/entregues")
-	public ResponseEntity<?> getPedidosEntregues(@RequestHeader("Authorization") String authHeader) {
+	public ResponseEntity<?> getPedidosEntregues() {
+		String estabelecimentoId = this.getUsername();
+		List<Map<String, String>> ordersDelivered = pedidoUseCase.getOrdersDelivered(estabelecimentoId);
 
-		String estabelecimentoId = authorizationSecurity.validarToken(authHeader);
-		if (estabelecimentoId == null) {
-			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-		}
-
-		ResultadoCarregamentoPedidosDTO resultado = pedidoUseCase.getOrders(estabelecimentoId);
-		PedidosContext pedidosContext = resultado.getPedidosContext();
-		List<Map<String, String>> pedidosEntregue = pedidosContext.getPedidosEntregues();
-		List<Map<String, String>> pedidosCancelados = pedidosContext.getPedidosCancelados();
-
-		List<Map<String, String>> pedidosCombinados = new ArrayList<>();
-		pedidosCombinados.addAll(pedidosEntregue);
-		pedidosCombinados.addAll(pedidosCancelados);
-
-		return ResponseEntity.ok(pedidosCombinados);
+		return ResponseEntity.ok(ordersDelivered);
 	}
 
 	// Retorna uma lista com pedidos prontos ou em produção
 	@GetMapping("/lista-pedidos")
-	public ResponseEntity<?> getLista(@RequestHeader("Authorization") String authHeader) {
+	public ResponseEntity<?> getLista() {
+		String estabelecimentoId = this.getUsername();
+		List<Map<String, String>> ordersNoDelivered = pedidoUseCase.getOrdersNoDelivered(estabelecimentoId);
 
-		String estabelecimentoId = authorizationSecurity.validarToken(authHeader);
-		if (estabelecimentoId == null) {
-			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-		}
-
-		ResultadoCarregamentoPedidosDTO resultado = pedidoUseCase.getOrders(estabelecimentoId);
-		PedidosContext pedidosContext = resultado.getPedidosContext();
-		List<Map<String, String>> pedidosVerificados = pedidosContext.getPedidosVerificados();
-
-		return ResponseEntity.ok(pedidosVerificados);
+		return ResponseEntity.ok(ordersNoDelivered);
 	}
 
 	// Retorna uma lista com pedidos prontos ou em produção
 	@GetMapping("/{idEstabelecimento}/pedidos-clientes")
 	public ResponseEntity<?> getPedidoClientes(@PathVariable String idEstabelecimento,
 			@RequestBody List<String> pedidoIds) {
+		List<Map<String, String>> orderForClients = pedidoUseCase.getOrdersForClients(idEstabelecimento, pedidoIds);
 
-		ResultadoCarregamentoPedidosDTO resultado = pedidoUseCase.getOrders(idEstabelecimento);
-		PedidosContext pedidosContext = resultado.getPedidosContext();
-		List<Map<String, String>> pedidosVerificados = pedidosContext.getPedidosVerificados();
+		return ResponseEntity.ok(orderForClients);
+	}
 
-		List<Map<String, String>> pedidoComId = pedidosVerificados.stream()
-				.filter(p -> pedidoIds.contains(p.get("id"))
-						&& (p.get("status").equals("andamento") || p.get("status").equals("pronto")))
-				.collect(Collectors.toList());
-
-		return ResponseEntity.ok(pedidoComId);
+	private String getUsername(){
+		CustomUserDetails userDetails = (CustomUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return userDetails.getUsername();
 	}
 
 	private void notificarFrontEnd() {

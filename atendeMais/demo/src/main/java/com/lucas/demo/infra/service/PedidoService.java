@@ -128,6 +128,39 @@ public class PedidoService implements PedidosGetway {
         return items.stream().filter(p -> p.getName().equals(novoItem.getName())).findFirst().orElse(null);
     }
 
+    @Override
+    public List<Map<String, String>> getOrdersDelivered(String estabelecimentoId){
+        ResultadoCarregamentoPedidosDTO resultado = this.getOrders(estabelecimentoId);
+        PedidosContext pedidosContext = resultado.getPedidosContext();
+        List<Map<String, String>> pedidosEntregue = pedidosContext.getPedidosEntregues();
+        List<Map<String, String>> pedidosCancelados = pedidosContext.getPedidosCancelados();
+
+        List<Map<String, String>> pedidosCombinados = new ArrayList<>();
+        pedidosCombinados.addAll(pedidosEntregue);
+        pedidosCombinados.addAll(pedidosCancelados);
+
+        return pedidosCombinados;
+    }
+
+    @Override
+    public List<Map<String, String>> getOrdersNoDelivered(String estabelecimentoId){
+        ResultadoCarregamentoPedidosDTO resultado = this.getOrders(estabelecimentoId);
+        PedidosContext pedidosContext = resultado.getPedidosContext();
+        return pedidosContext.getPedidosVerificados();
+    }
+
+    @Override
+    public List<Map<String, String>> getOrdersForClients(String estabelecimentoId, List<String> idOrders){
+        ResultadoCarregamentoPedidosDTO resultado = this.getOrders(estabelecimentoId);
+        PedidosContext pedidosContext = resultado.getPedidosContext();
+        List<Map<String, String>> pedidosVerificados = pedidosContext.getPedidosVerificados();
+
+        return pedidosVerificados.stream()
+                .filter(p -> idOrders.contains(p.get("id"))
+                        && (p.get("status").equals("andamento") || p.get("status").equals("pronto")))
+                .collect(Collectors.toList());
+    }
+
     // Método para retornar os pedidos DTO
     @Override
     public synchronized ResultadoCarregamentoPedidosDTO getOrders(String estabelecimentoId) {
@@ -225,12 +258,18 @@ public class PedidoService implements PedidosGetway {
     }
 
     @Override
+    public List<String> countOrders(String estabelecimentoId) {
+        ResultadoCarregamentoPedidosDTO resultado = this.getOrders(estabelecimentoId);
+        PedidosContext pedidosContext = resultado.getPedidosContext();
+        return this.count(pedidosContext);
+    }
+
     public List<String> count(PedidosContext pedidosContext) {
-        return this.contar(pedidosContext.getPedidosVerificados(), "andamento");
+        return this.contarPorStatus(pedidosContext.getPedidosVerificados(), "andamento");
     }
 
     public List<String> contar(List<Map<String, String>> pedidos, String statusDesejado) {
-        return this.contar(pedidos, statusDesejado);
+        return this.contarPorStatus(pedidos, statusDesejado);
     }
 
     public List<String> contarPorStatus(List<Map<String, String>> pedidos, String statusDesejado) {
