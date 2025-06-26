@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import com.lucas.demo.infra.security.CustomUserDetails;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -13,12 +12,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lucas.demo.infra.security.AuthorizationSecurity;
 import com.lucas.demo.infra.service.RelatorioService;
 
 @RestController
@@ -32,8 +29,7 @@ public class RelatorioController {
 	}
 
 	@GetMapping("/getRelatorio")
-	public ResponseEntity<Resource> getContagem(@RequestHeader("Authorization") String authHeader,
-			@RequestParam("dataString") String dataString) {
+	public ResponseEntity<Resource> getContagem(@RequestParam("dataString") String dataString) {
 		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		LocalDate data = LocalDate.parse(dataString, formatter);

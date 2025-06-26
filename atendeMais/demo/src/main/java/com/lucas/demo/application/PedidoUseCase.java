@@ -3,6 +3,7 @@ package com.lucas.demo.application;
 import com.lucas.demo.getway.PedidosGetway;
 import com.lucas.demo.infra.context.PedidosContext;
 import com.lucas.demo.infra.context.ResultadoCarregamentoPedidosDTO;
+import com.lucas.demo.infra.model.NewNotificationEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
@@ -15,17 +16,22 @@ import java.util.stream.Collectors;
 public class PedidoUseCase {
 
     private PedidosGetway pedidosGetway;
+    private final ApplicationEventPublisher eventPublisher;
 
-    public PedidoUseCase(PedidosGetway pedidosGetway){
+    public PedidoUseCase(PedidosGetway pedidosGetway, ApplicationEventPublisher eventPublisher){
         this.pedidosGetway = pedidosGetway;
+        this.eventPublisher = eventPublisher;
     }
 
-    public boolean newOrder(String xml, String estabelecimentoId){
-        return pedidosGetway.createNewOrder(xml, estabelecimentoId);
+    public void newOrder(String xml, String estabelecimentoId){
+        pedidosGetway.createNewOrder(xml, estabelecimentoId);
+        eventPublisher.publishEvent(new NewNotificationEvent("Nova notificação recebida!"));
     }
 
     public boolean updateStatusOrder(String referenceId, String newStatus, String timestamp, String estabelecimentoId){
-        return pedidosGetway.updateStatusOrder(referenceId, newStatus, timestamp, estabelecimentoId);
+        boolean sucess = pedidosGetway.updateStatusOrder(referenceId, newStatus, timestamp, estabelecimentoId);
+        eventPublisher.publishEvent(new NewNotificationEvent("Nova notificação recebida!"));
+        return sucess;
     }
 
     public List<String> countOrders(String estabelecimentoId){

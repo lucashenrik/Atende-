@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -146,7 +147,7 @@ public class RelatorioService {
 		try {
 			List<String> entregues = this.pedidoServico.contar(pedidoContext.getPedidosEntregues(), "entregue");
 			List<String> cancelados = this.pedidoServico.contar(pedidoContext.getPedidosCancelados(), "cancelar");
-			List<String> naoEntregeus = this.pedidoServico.contar(pedidoContext.getPedidosAll(), "pronto");
+			List<String> naoEntregues = this.pedidoServico.contar(pedidoContext.getPedidosAll(), "pronto");
 
 			PdfWriter.getInstance(document, new FileOutputStream(destino));
 			document.open();
@@ -170,8 +171,9 @@ public class RelatorioService {
 			List<String> listaStatus = new ArrayList<>();
 			listaStatus.addAll(entregues);
 			listaStatus.addAll(cancelados);
-			listaStatus.addAll(naoEntregeus);
-			this.segundaTabela(document, listaStatus);
+			listaStatus.addAll(naoEntregues);
+
+            this.segundaTabela(document, entregues, cancelados, naoEntregues);
 
 			document.add(new Paragraph("        *Os pedidos cancelados não são incluidos na quantidade total*",
 					fontTextoVermelha));
@@ -269,7 +271,7 @@ public class RelatorioService {
 			listaStatus.add(getQuantidadePedidos(allEntregues));
 			listaStatus.add(getQuantidadePedidos(allCancelados));
 			listaStatus.add(getQuantidadePedidos(allNaoEntregues));
-			this.segundaTabela(document, listaStatus);
+            this.segundaTabela(document, allEntregues , allCancelados, allNaoEntregues);
 
 			// 3 Tabela - Pedidos Diarios
 			criarTerceiraTabelaSemanal(document, relatoriosDiarios);
@@ -426,44 +428,43 @@ public class RelatorioService {
 		}
 	}
 
-	public void segundaTabela(Document document, List<String> listaStatus) {
-		try {
-			PdfPTable table = new PdfPTable(3);
-			table.setSpacingBefore(16f);
-			table.setSpacingAfter(20f);
-			table.setWidthPercentage(90);
+	public void segundaTabela(Document document,  List<String> entregues,
+                              List<String> cancelados,
+                              List<String> naoEntregues) {
+        try {
+            PdfPTable table = new PdfPTable(3);
+            table.setSpacingBefore(16f);
+            table.setSpacingAfter(20f);
+            table.setWidthPercentage(90);
+            for (int i = 0; i < 3; i++) table.getDefaultCell().setPadding(8f);
 
-			for (int i = 0; i < 3; i++) {
-				table.getDefaultCell().setPadding(8f); // Aumenta o padding de todas as células da tabela
-			}
+            // cabeçalhos
+            table.addCell(headerCell("Entregues"));
+            table.addCell(headerCell("Cancelados"));
+            table.addCell(headerCell("Não Entregues"));
 
-			PdfPCell segHeaderCell1 = new PdfPCell(new Phrase("Entregues", fontTextoBold));
-			segHeaderCell1.setBackgroundColor(BaseColor.LIGHT_GRAY);
-			segHeaderCell1.setPadding(8f);
-			table.addCell(segHeaderCell1);
+            // quantas linhas temos de verdade?
+            int maxLinhas = Stream.of(entregues.size(), cancelados.size(), naoEntregues.size())
+                    .max(Integer::compare).orElse(0);
 
-			PdfPCell segHeaderCell2 = new PdfPCell(new Phrase("Cancelados", fontTextoBold));
-			segHeaderCell2.setBackgroundColor(BaseColor.LIGHT_GRAY);
-			segHeaderCell2.setPadding(8f);
-			table.addCell(segHeaderCell2);
+            for (int i = 0; i < maxLinhas; i++) {
+                table.addCell(i < entregues.size()    ? entregues.get(i)    : "");
+                table.addCell(i < cancelados.size()   ? cancelados.get(i)   : "");
+                table.addCell(i < naoEntregues.size() ? naoEntregues.get(i) : "");
+            }
 
-			PdfPCell segHeaderCell3 = new PdfPCell(new Phrase("Não Entregues", fontTextoBold));
-			segHeaderCell3.setBackgroundColor(BaseColor.LIGHT_GRAY);
-			segHeaderCell3.setPadding(8f);
-			table.addCell(segHeaderCell3);
+            document.add(table);
+        } catch (DocumentException e) {
+            throw new ErroRelatorioException("Erro ao gerar segunda tabela.", e);
+        }
+    }
 
-			for (String item : listaStatus) {
-
-				PdfPCell dataCell = new PdfPCell(new Phrase(item));
-				dataCell.setPadding(8f); // Padding
-				table.addCell(dataCell);
-			}
-
-			document.add(table);
-		} catch (Exception e) {
-			throw new ErroRelatorioException("Erro ao gerar segunda tabela.");
-		}
-	}
+    private PdfPCell headerCell(String title) {
+        PdfPCell cell = new PdfPCell(new Phrase(title, fontTextoBold));
+        cell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+        cell.setPadding(8f);
+        return cell;
+    }
 
 	public String itemMaisVendido(List<String> listAll) {
 		String itemMaisVendido = null;

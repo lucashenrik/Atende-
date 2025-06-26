@@ -1,21 +1,14 @@
 package com.lucas.demo.infra.service;
 
-import com.lucas.demo.domain.exceptions.ErroUserException;
 import com.lucas.demo.domain.models.EnumRoles;
 import com.lucas.demo.domain.models.User;
 import com.lucas.demo.getway.UserGetway;
-import com.lucas.demo.infra.context.ConvertEstabelecimento;
 import com.lucas.demo.infra.context.ConvertUser;
-import com.lucas.demo.infra.model.EstabelecimentoDB;
 import com.lucas.demo.infra.model.UserDB;
 import com.lucas.demo.infra.model.dto.AlterarRegistDTO;
 import com.lucas.demo.infra.repository.DepartRepository;
 import com.lucas.demo.infra.repository.UserRepository;
-import com.lucas.demo.infra.security.AuthorizationSecurity;
 import com.lucas.demo.infra.security.CustomUserDetails;
-import com.lucas.demo.infra.security.TokenService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -29,9 +22,14 @@ public class UserService implements UserGetway {
     private UserRepository userRepository;
     private DepartRepository estabelRepository;
     private PasswordEncoder passwordEncoder;
-    private AuthorizationSecurity auth;
     private AuthenticationManager authenticationManager;
 
+    public UserService(UserRepository userRepository, DepartRepository estabelRepository, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
+        this.userRepository = userRepository;
+        this.estabelRepository = estabelRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.authenticationManager = authenticationManager;
+    }
 
     @Override
     public void save(User user) {

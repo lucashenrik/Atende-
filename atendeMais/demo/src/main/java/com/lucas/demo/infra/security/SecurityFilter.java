@@ -31,6 +31,7 @@ public class SecurityFilter extends OncePerRequestFilter {
 			throws ServletException, IOException {
 		var token = this.recoverToken(request);
 		if (token != null) {
+			try {
 			var email = tokenService.validateToken(token);
 			UserDB user = userRepository.findByEmail(email)
 					.orElseThrow(() -> new UsernameNotFoundException("User not found"));
@@ -38,6 +39,14 @@ public class SecurityFilter extends OncePerRequestFilter {
 
 			var authentication = new UsernamePasswordAuthenticationToken(userDetails, null, user.getAuthorities());
 			SecurityContextHolder.getContext().setAuthentication(authentication);
+			} catch (UsernameNotFoundException ex) {
+				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+				response.setContentType("application/json");
+				response.getWriter().write(
+						"{\"erro\":\"" + ex.getMessage() + "\"}"
+				);
+				return; // NÃO chama o filterChain
+			}
 		}
 		filterChain.doFilter(request, response);
 	}

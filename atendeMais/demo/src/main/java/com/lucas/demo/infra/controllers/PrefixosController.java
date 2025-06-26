@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.lucas.demo.application.PrefixosUseCase;
+import com.lucas.demo.domain.exceptions.ErroPrefixoException;
 import com.lucas.demo.infra.security.CustomUserDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,11 +13,9 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lucas.demo.infra.security.AuthorizationSecurity;
 import com.lucas.demo.infra.security.TokenService;
 import com.lucas.demo.infra.model.Prefixo;
 
@@ -24,12 +23,10 @@ import com.lucas.demo.infra.model.Prefixo;
 @RequestMapping("/api/v1/prefixos")
 public class PrefixosController {
 
-	private final AuthorizationSecurity auth;
 	private PrefixosUseCase prefixosUseCase;
 	private final TokenService tokenServico;
 
-	public PrefixosController(AuthorizationSecurity auth, PrefixosUseCase prefixosUseCase, TokenService tokenServico) {
-		this.auth = auth;
+	public PrefixosController(PrefixosUseCase prefixosUseCase, TokenService tokenServico) {
 		this.prefixosUseCase = prefixosUseCase;
 		this.tokenServico = tokenServico;
 	}
@@ -43,10 +40,14 @@ public class PrefixosController {
 	}
 
 	@PostMapping("/adicionar-prefixo")
-	public ResponseEntity<Void> addPrefixo(@RequestBody Map<String, String> request) {
+	public ResponseEntity<Void> addPrefixo(@RequestBody Prefixo request) {
 		String idCliente = this.getUsername();
 
-		String novoPrefixo = request.get("prefixo");
+		if (request.getPrefixo() == null){
+			throw new ErroPrefixoException("Campo 'prefixo' é obrigatório");
+		}
+
+		String novoPrefixo = request.getPrefixo();
 		prefixosUseCase.createNewPrefixo(idCliente, novoPrefixo);
 
 		return ResponseEntity.status(HttpStatus.CREATED).build();
@@ -55,6 +56,11 @@ public class PrefixosController {
 	@DeleteMapping("/excluir-prefixo")
 	public ResponseEntity<?> excluirPrefixo(@RequestBody Prefixo prefixo) {
 		String idCliente = this.getUsername();
+
+		if (prefixo.getPrefixo() == null){
+			throw new ErroPrefixoException("Campo 'prefixo' é obrigatório");
+		}
+
 		prefixosUseCase.deletePrefixo(prefixo.getPrefixo(), idCliente);
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}

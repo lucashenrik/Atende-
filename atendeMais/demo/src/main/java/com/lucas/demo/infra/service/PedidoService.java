@@ -1,10 +1,12 @@
 package com.lucas.demo.infra.service;
 
+import com.fasterxml.jackson.core.io.JsonEOFException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.lucas.demo.domain.exceptions.ErroArquivoException;
+import com.lucas.demo.domain.exceptions.ErroPrefixoException;
 import com.lucas.demo.domain.exceptions.ErroProcessamentoException;
 import com.lucas.demo.getway.PedidosGetway;
 import com.lucas.demo.infra.context.CaminhoInfo;
@@ -83,6 +85,8 @@ public class PedidoService implements PedidosGetway {
             return sucesso;
         } catch (IOException e) {
             throw new ErroProcessamentoException("Erro ao ler o XML", e);
+        } catch (ErroPrefixoException e) {
+            throw new ErroPrefixoException("Erro: Item ignorado (Prefixo não encontrado)", e);
         } catch (ErroProcessamentoException e) {
             throw new ErroProcessamentoException("Erro: {}", e);
         } catch (Exception e) {
@@ -97,17 +101,24 @@ public class PedidoService implements PedidosGetway {
             if (itemNode.hasNonNull("id") && itemNode.hasNonNull("description") && itemNode.hasNonNull("quantity")) {
                 // Converte o nó JSON em objeto ItemXml
                 ItemXml novoItem = xmlMapper.treeToValue(itemNode, ItemXml.class);
+
                 // Verifica se o novoItem não é nulo e se o nome segue um prefixo esperado
-                if (novoItem != null && this.comecaComPrefixo(novoItem.getName(), estabelecimentoId)) {
-                    this.adicionarOuAtualizarItem(novoItem, itensProcessados);
-                } else {
-                    logger.info("Item ignorado (nulo ou sem nenhum dos prefixos): {}", itemNode.toString());
-                }
+                this.isNullNotPrefixo(novoItem, estabelecimentoId, itensProcessados);
             } else {
                 logger.warn("Item malformado: {}", itemNode.toString());
             }
+        } catch (ErroPrefixoException e) {
+            throw e;
         } catch (Exception e) {
-            logger.error("Erro ao processar item: {}", e.getMessage(), e);
+            throw new ErroProcessamentoException("Item malformado.");
+        }
+    }
+
+    private void isNullNotPrefixo(ItemXml item, String estabelecimentoId, List<ItemXml> itensProcessados){
+        if (item != null && this.comecaComPrefixo(item.getName(), estabelecimentoId)) {
+            this.adicionarOuAtualizarItem(item, itensProcessados);
+        } else {
+            throw new ErroPrefixoException("Item ignorado(não contém nenhum dos prefixo)");
         }
     }
 

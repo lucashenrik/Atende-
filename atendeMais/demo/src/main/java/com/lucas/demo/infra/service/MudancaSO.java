@@ -61,7 +61,7 @@ public class MudancaSO {
 			diretorio = diretorioPrincipal + "\\clientes\\" + estabelecimentoId + "\\relatorios";
 			caminhoArquivo = diretorio + "\\relatorio_";
 		} else {
-			diretorio = diretorioPrincipal + "/atendeMais/clientes" + estabelecimentoId + "/relatorios";
+			diretorio = diretorioPrincipal + "/atendeMais/clientes/" + estabelecimentoId + "/relatorios";
 			 caminhoArquivo = diretorio + "/relatorio_";
 		}
 		return new CaminhoInfo(caminhoArquivo, diretorio);

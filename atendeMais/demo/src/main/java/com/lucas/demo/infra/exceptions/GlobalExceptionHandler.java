@@ -16,6 +16,11 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
 	}
 
+	@ExceptionHandler
+	public  ResponseEntity<String> handleErroPrefixoException(ErroPrefixoException ex){
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+	}
+
 	@ExceptionHandler(ItemNaoEncontradoException.class)
 	public ResponseEntity<String> handleItemNaoEncontradoException(ItemNaoEncontradoException ex) {
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
@@ -48,6 +53,11 @@ public class GlobalExceptionHandler {
 	
 	@ExceptionHandler
 	public ResponseEntity<String> handleErroInvalidTokenException(InvalidTokenException ex){
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNAUTHORIZED);
+	}
+
+	@ExceptionHandler
+	public ResponseEntity<String> handleErroLoginInvalidoException(LoginInvalidoException ex){
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNAUTHORIZED);
 	}
 }

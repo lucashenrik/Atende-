@@ -22,7 +22,7 @@ public class UserUserCase {
             User user = new User(dto.name(), dto.email(), dto.password(), EnumRoles.ADMIN);
             userGetway.save(user);
         } else {
-            new ErroUserException("Este email já esta em uso.");
+            throw new ErroUserException("Este email já esta em uso.");
         }
     }
 

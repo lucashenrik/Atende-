@@ -16,13 +16,6 @@ public class NotificationController {
 		this.template = template;
 	}
 
-	@GetMapping("/send-notification")
-	public ResponseEntity<String> sendNotification() {
-		String message = "Nova notificação!";
-		template.convertAndSend("/topic/notifications", message);
-		return ResponseEntity.ok("Notificação enviada!");
-	}
-
 	// Método para processar uma mensagem recebida
 	@MessageMapping("/send")
 	@SendTo("/topic/notifications")
