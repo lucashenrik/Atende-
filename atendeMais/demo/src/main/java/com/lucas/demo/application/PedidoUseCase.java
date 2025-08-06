@@ -28,8 +28,8 @@ public class PedidoUseCase {
         eventPublisher.publishEvent(new NewNotificationEvent("Nova notificação recebida!"));
     }
 
-    public boolean updateStatusOrder(String referenceId, String newStatus, String timestamp, String estabelecimentoId){
-        boolean sucess = pedidosGetway.updateStatusOrder(referenceId, newStatus, timestamp, estabelecimentoId);
+    public boolean updateStatusOrder(int id, String newStatus, String estabelecimentoId){
+        boolean sucess = pedidosGetway.updateStatusOrder(id, newStatus, estabelecimentoId);
         eventPublisher.publishEvent(new NewNotificationEvent("Nova notificação recebida!"));
         return sucess;
     }
@@ -38,15 +38,15 @@ public class PedidoUseCase {
        return pedidosGetway.countOrders(estabelecimentoId);
     }
 
-    public List<Map<String, String>> getOrdersDelivered(String estabelecimentoId){
+    public List<Map<String, Object>> getOrdersDelivered(String estabelecimentoId){
         return pedidosGetway.getOrdersDelivered(estabelecimentoId);
     }
 
-    public List<Map<String, String>> getOrdersNoDelivered(String estabelecimentoId){
+    public List<Map<String, Object>> getOrdersNoDelivered(String estabelecimentoId){
        return pedidosGetway.getOrdersNoDelivered(estabelecimentoId);
     }
 
-    public List<Map<String, String>> getOrdersForClients(String estabelecimentoId, List<String> idOrders){
+    public List<Map<String, Object>> getOrdersForClients(String estabelecimentoId, List<String> idOrders){
        return pedidosGetway.getOrdersForClients(estabelecimentoId, idOrders);
     }
 

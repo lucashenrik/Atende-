@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;app/src/ReportWebVitals&apos; to &apos;ReportWebVitals.jsx&apos;" description="Rename resource &apos;ReportWebVitals&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ReportWebVitals" name="ReportWebVitals.jsx" stamp="1726075987486" updateReferences="true"/>
-</session>

@@ -8,10 +8,10 @@ import java.util.Map;
 
 public interface PedidosGetway {
     boolean createNewOrder(String xml, String estabelecimentoId);
-    boolean updateStatusOrder(String referenceId, String newStatus, String timestamp, String estabelecimentoId);
+    boolean updateStatusOrder(int id, String newStatus, String estabelecimentoId);
     ResultadoCarregamentoPedidosDTO getOrders(String estabelecimentoId);
-    List<Map<String, String>> getOrdersNoDelivered(String estabelecimentoId);
-    List<Map<String, String>> getOrdersDelivered(String estabelecimentoId);
-    List<Map<String, String>> getOrdersForClients(String estabelecimentoId, List<String> idOrders);
+    List<Map<String, Object>> getOrdersNoDelivered(String estabelecimentoId);
+    List<Map<String, Object>> getOrdersDelivered(String estabelecimentoId);
+    List<Map<String, Object>> getOrdersForClients(String estabelecimentoId, List<String> idOrders);
     List<String> countOrders(String estabelecimentoId);
 }

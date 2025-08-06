@@ -1,4 +1,4 @@
 package com.lucas.demo.infra.model.dto;
 
-public record AlterarStatusDTO(String pedidoId, String novoStatus, String hora) {
+public record AlterarStatusDTO(int id, String novoStatus) {
 }

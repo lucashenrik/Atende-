@@ -8,7 +8,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemXml {
 
-	@JacksonXmlProperty(localName = "id")
+	@JacksonXmlProperty(localName = "reference_id")
 	private int referenceId;
 
 	@JacksonXmlProperty(localName = "description")
@@ -30,7 +30,6 @@ public class ItemXml {
 	}
 
 	public ItemXml(int referenceId, String name, int quantity, double amount, String status, LocalTime hora) {
-		super();
 		this.referenceId = referenceId;
 		this.name = name;
 		this.quantity = quantity;

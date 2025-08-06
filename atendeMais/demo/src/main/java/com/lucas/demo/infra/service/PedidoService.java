@@ -98,7 +98,7 @@ public class PedidoService implements PedidosGetway {
     private void processarItemNode(JsonNode itemNode, List<ItemXml> itensProcessados, String estabelecimentoId) {
         try {
             // Verifica se os campos obrigatórios existem e são válidos
-            if (itemNode.hasNonNull("id") && itemNode.hasNonNull("description") && itemNode.hasNonNull("quantity")) {
+            if (itemNode.hasNonNull("reference_id") && itemNode.hasNonNull("description") && itemNode.hasNonNull("quantity")) {
                 // Converte o nó JSON em objeto ItemXml
                 ItemXml novoItem = xmlMapper.treeToValue(itemNode, ItemXml.class);
 
@@ -140,13 +140,13 @@ public class PedidoService implements PedidosGetway {
     }
 
     @Override
-    public List<Map<String, String>> getOrdersDelivered(String estabelecimentoId){
+    public List<Map<String, Object>> getOrdersDelivered(String estabelecimentoId){
         ResultadoCarregamentoPedidosDTO resultado = this.getOrders(estabelecimentoId);
         PedidosContext pedidosContext = resultado.getPedidosContext();
-        List<Map<String, String>> pedidosEntregue = pedidosContext.getPedidosEntregues();
-        List<Map<String, String>> pedidosCancelados = pedidosContext.getPedidosCancelados();
+        List<Map<String, Object>> pedidosEntregue = pedidosContext.getPedidosEntregues();
+        List<Map<String, Object>> pedidosCancelados = pedidosContext.getPedidosCancelados();
 
-        List<Map<String, String>> pedidosCombinados = new ArrayList<>();
+        List<Map<String, Object>> pedidosCombinados = new ArrayList<>();
         pedidosCombinados.addAll(pedidosEntregue);
         pedidosCombinados.addAll(pedidosCancelados);
 
@@ -154,20 +154,20 @@ public class PedidoService implements PedidosGetway {
     }
 
     @Override
-    public List<Map<String, String>> getOrdersNoDelivered(String estabelecimentoId){
+    public List<Map<String, Object>> getOrdersNoDelivered(String estabelecimentoId){
         ResultadoCarregamentoPedidosDTO resultado = this.getOrders(estabelecimentoId);
         PedidosContext pedidosContext = resultado.getPedidosContext();
         return pedidosContext.getPedidosVerificados();
     }
 
     @Override
-    public List<Map<String, String>> getOrdersForClients(String estabelecimentoId, List<String> idOrders){
+    public List<Map<String, Object>> getOrdersForClients(String estabelecimentoId, List<String> idOrders){
         ResultadoCarregamentoPedidosDTO resultado = this.getOrders(estabelecimentoId);
         PedidosContext pedidosContext = resultado.getPedidosContext();
-        List<Map<String, String>> pedidosVerificados = pedidosContext.getPedidosVerificados();
+        List<Map<String, Object>> pedidosVerificados = pedidosContext.getPedidosVerificados();
 
         return pedidosVerificados.stream()
-                .filter(p -> idOrders.contains(p.get("id"))
+                .filter(p -> idOrders.contains(p.get("reference_id"))
                         && (p.get("status").equals("andamento") || p.get("status").equals("pronto")))
                 .collect(Collectors.toList());
     }
@@ -198,11 +198,11 @@ public class PedidoService implements PedidosGetway {
     }
 
     @Override
-    public synchronized boolean updateStatusOrder(String referenceId, String novoStatus, String hora, String estabelecimentoId) {
+    public synchronized boolean updateStatusOrder(int id, String novoStatus, String estabelecimentoId) {
         boolean sucesso = false;
         try {
             PedidosEFile payload = arquivoService.getPedidos(estabelecimentoId);
-            boolean pedidoEncontrado = this.atualizarStatusPedido(referenceId, novoStatus, hora, payload);
+            boolean pedidoEncontrado = this.atualizarStatusPedido(id, novoStatus, payload);
             if (pedidoEncontrado) {
                 mapper.writeValue(payload.file(), payload.pedidos());
                 sucesso = true;
@@ -214,16 +214,26 @@ public class PedidoService implements PedidosGetway {
         return sucesso;
     }
 
-    protected boolean atualizarStatusPedido(String referenceId, String novoStatus, String hora, PedidosEFile payload) {
-        // Percorre os pedidos e altera o status do pedido com a senha e hora
-        // especificadas
+    protected boolean atualizarStatusPedido(int id, String novoStatus, PedidosEFile payload) {
+        Logger logger = LoggerFactory.getLogger(getClass());
+
         for (Map<String, Object> pedido : payload.pedidos()) {
-            String ref = String.valueOf(pedido.get("reference_id"));
-            String pedidoHora = String.valueOf(pedido.get("hora"));
-            if (ref.equals(referenceId) && pedidoHora.equals(hora)) {
+            Object idObj   = pedido.get("id");
+
+            // Compara id numérico e hora exata
+            if (idObj instanceof Number
+                    && ((Number) idObj).intValue() == id) {
+
+                // Atualiza status
                 pedido.put("status", novoStatus);
-                if ("cancelar".equalsIgnoreCase(novoStatus) || "entregue".equalsIgnoreCase(novoStatus)) {
-                    String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+
+                // Se for cancelar ou entregue, atualiza também a hora
+                if ("cancelar".equalsIgnoreCase(novoStatus)
+                        || "entregue".equalsIgnoreCase(novoStatus)) {
+
+                    String horaAtual = LocalTime
+                            .now()
+                            .format(DateTimeFormatter.ofPattern("HH:mm:ss"));
                     pedido.put("hora", horaAtual);
                 }
                 return true;
@@ -242,12 +252,12 @@ public class PedidoService implements PedidosGetway {
         }
 
         try {
-            List<Map<String, String>> pedidosArquivo = jsonMapper.readValue(arquivo,
-                    new TypeReference<List<Map<String, String>>>() {
+            List<Map<String, Object>> pedidosArquivo = jsonMapper.readValue(arquivo,
+                    new TypeReference<List<Map<String, Object>>>() {
                     });
-            for (Map<String, String> pedido : pedidosArquivo) {
+            for (Map<String, Object> pedido : pedidosArquivo) {
                 pedidoContext.getPedidosAll().add(pedido);
-                String statusItem = pedido.get("status");
+                String statusItem = pedido.get("status").toString();
                 if ("entregue".equals(statusItem)) {
                     if (!pedidoContext.getPedidosEntregues().contains(pedido)) {
                         pedidoContext.getPedidosEntregues().add(pedido);
@@ -279,20 +289,20 @@ public class PedidoService implements PedidosGetway {
         return this.contarPorStatus(pedidosContext.getPedidosVerificados(), "andamento");
     }
 
-    public List<String> contar(List<Map<String, String>> pedidos, String statusDesejado) {
+    public List<String> contar(List<Map<String, Object>> pedidos, String statusDesejado) {
         return this.contarPorStatus(pedidos, statusDesejado);
     }
 
-    public List<String> contarPorStatus(List<Map<String, String>> pedidos, String statusDesejado) {
+    public List<String> contarPorStatus(List<Map<String, Object>> pedidos, String statusDesejado) {
         Map<String, Integer> contagemItems = new HashMap<>();
-        for (Map<String, String> pedido : pedidos) {
+        for (Map<String, Object> pedido : pedidos) {
             if (pedido == null || pedido.isEmpty())
                 continue;
-            String descricao = pedido.get("description");
+            String descricao = pedido.get("description").toString();
             String primeiroNome = descricao.split(" ")[0];
-            String status = pedido.get("status");
+            String status = pedido.get("status").toString();
             if ((statusDesejado.equals(status))) {
-                int quantidade = Integer.parseInt(pedido.get("quantity"));
+                int quantidade = Integer.parseInt(pedido.get("quantity").toString());
                 // Verifica se o item já foi contado, se sim, incrementa, senão adiciona
                 contagemItems.put(primeiroNome, contagemItems.getOrDefault(primeiroNome, 0) + quantidade);
             }

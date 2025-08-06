@@ -5,24 +5,24 @@ import java.util.List;
 import java.util.Map;
 
 public class PedidosContext {
-	protected List<Map<String, String>> pedidosAll = new ArrayList<>();
-	protected List<Map<String, String>> pedidosVerificados = new ArrayList<>();
-	private List<Map<String, String>> pedidosEntregues = new ArrayList<>();
-	private List<Map<String, String>> pedidosCancelados = new ArrayList<>();
+	protected List<Map<String, Object>> pedidosAll = new ArrayList<>();
+	protected List<Map<String, Object>> pedidosVerificados = new ArrayList<>();
+	private List<Map<String, Object>> pedidosEntregues = new ArrayList<>();
+	private List<Map<String, Object>> pedidosCancelados = new ArrayList<>();
 
-	public List<Map<String, String>> getPedidosAll() {
+	public List<Map<String, Object>> getPedidosAll() {
 		return pedidosAll;
 	}
 
-	public List<Map<String, String>> getPedidosVerificados() {
+	public List<Map<String, Object>> getPedidosVerificados() {
 		return pedidosVerificados;
 	}
 
-	public List<Map<String, String>> getPedidosEntregues() {
+	public List<Map<String, Object>> getPedidosEntregues() {
 		return pedidosEntregues;
 	}
 
-	public List<Map<String, String>> getPedidosCancelados() {
+	public List<Map<String, Object>> getPedidosCancelados() {
 		return pedidosCancelados;
 	}
 

@@ -1,6 +1,26 @@
-/.metadata/
+# IDEs
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+.factorypath
 
-atendemais/demo/src/main/resources/application.properties
-atendemais/clientes
-atendemais/Prefixos
-atendemais/Registros
+# Maven
+/target/
+/logs/
+/*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Eclipse metadata
+.metadata/
+
+# Gerado automaticamente
+*.tmp
+*.bak
+
+#Projeto
+src/main/resources/application.properties

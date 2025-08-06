@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="238d0309-d28f-4359-b4b0-40a013d15edb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/MainAplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/PedidoControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/PedidoControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/PrefixosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/PrefixosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/RelatorioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/RelatorioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/model/LoginRequeste.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/model/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/model/dto/AlterarRegisDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/model/dto/AlterarRegistDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/model/dto/LoginResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/model/dto/LoginResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/ArquivoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/ArquivoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/MudancaSO.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/MudancaSO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/PedidoServico.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/PedidoServico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/PrefixosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/PrefixosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/RelatorioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/RelatorioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/TokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/com/lucas/demo/service/UserConfigService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/java/infra/PasswordUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/test/java/com/lucas/demo/service/ArquivoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/test/java/com/lucas/demo/service/ArquivoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/test/java/com/lucas/demo/service/PedidoServicoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/test/java/com/lucas/demo/service/PedidoServicoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/test/java/com/lucas/demo/service/PrefixosServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/atendeMais/demo/src/test/java/com/lucas/demo/service/PrefixosServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atendeMais/demo/src/test/java/com/lucas/demo/service/TesteTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2y3Pq1KoZQps8cp71QsCUcZ05RS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refatorando-back-end&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lucas/Documents/Projetos/demo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="238d0309-d28f-4359-b4b0-40a013d15edb" name="Changes" comment="" />
+      <created>1749060471115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749060471115</updated>
+    </task>
+    <servers />
+  </component>
+</project>

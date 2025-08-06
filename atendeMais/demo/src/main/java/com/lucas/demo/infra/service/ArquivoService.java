@@ -7,10 +7,7 @@ import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import com.lucas.demo.getway.ArquivoGetway;
 import org.slf4j.Logger;
@@ -37,9 +34,11 @@ public class ArquivoService implements ArquivoGetway {
 		String horaAtual = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
 
 		// Carrega ou inicializa a lista de pedidos a partir do arquivo
-		List<Map<String, String>> pedidosExistentes = this.carregarPedidosDoArquivo(estabelecimentoId);
+		List<Map<String, Object>> pedidosExistentes = this.carregarPedidosDoArquivo(estabelecimentoId);
 
-		Map<String, String> novoPedido = new HashMap<>();
+		Map<String, Object> novoPedido = new HashMap<>();
+		int newId = this.lastId(pedidosExistentes);
+		novoPedido.put("id", newId);
 		novoPedido.put("quantity", String.valueOf(item.getQuantity()));
 		novoPedido.put("reference_id", String.valueOf(item.getReferenceId()));
 		novoPedido.put("description", item.getName());
@@ -50,6 +49,16 @@ public class ArquivoService implements ArquivoGetway {
 
 		this.escrever(pedidosExistentes, this.obterCaminhoArquivo(estabelecimentoId)); // Escreve no arquivo após adicionar todos os
 																	// pedidos
+	}
+
+	private int lastId(List<Map<String, Object>> pedidos){
+		int maxId = pedidos.stream()
+				.map(p -> p.get("id"))
+				.filter(Objects::nonNull)
+				.mapToInt((o -> Integer.parseInt(o.toString())))
+				.max()
+				.orElse(0);
+		return maxId + 1;
 	}
 
 	@Override
@@ -82,15 +91,15 @@ public class ArquivoService implements ArquivoGetway {
 		return caminhoBase + data + ".json";
 	}
 
-	protected List<Map<String, String>> carregarPedidosDoArquivo(String estabelecimentoId) {
+	protected List<Map<String, Object>> carregarPedidosDoArquivo(String estabelecimentoId) {
 		String caminho = this.obterCaminhoArquivo(estabelecimentoId);
 		File file = new File(caminho);
-		List<Map<String, String>> pedidoList = new ArrayList<>();
+		List<Map<String, Object>> pedidoList = new ArrayList<>();
 
 		// Verifica se o arquivo já existe e lê seu conteúdo
 		if (file.exists()) {
 			try {
-				pedidoList = mapper.readValue(file, new TypeReference<List<Map<String, String>>>() {
+				pedidoList = mapper.readValue(file, new TypeReference<List<Map<String, Object>>>() {
 				});
 			} catch (IOException e) {
 				throw new ErroArquivoException("Arquivo nao encontrado.", e.getCause());

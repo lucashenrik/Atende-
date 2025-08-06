@@ -9,12 +9,7 @@ import com.lucas.demo.infra.security.CustomUserDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.lucas.demo.domain.exceptions.ErroProcessamentoException;
 
@@ -44,7 +39,7 @@ public class PedidoControler {
 	public ResponseEntity<?> alterarStatusPedido(@RequestBody AlterarStatusDTO payload) {
 		String estabelecimentoId = this.getUsername();
 
-		pedidoUseCase.updateStatusOrder(payload.pedidoId(), payload.novoStatus(), payload.hora(), estabelecimentoId);
+		pedidoUseCase.updateStatusOrder(payload.id(), payload.novoStatus(), estabelecimentoId);
 
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
@@ -62,7 +57,7 @@ public class PedidoControler {
 	@GetMapping("/entregues")
 	public ResponseEntity<?> getPedidosEntregues() {
 		String estabelecimentoId = this.getUsername();
-		List<Map<String, String>> ordersDelivered = pedidoUseCase.getOrdersDelivered(estabelecimentoId);
+		List<Map<String, Object>> ordersDelivered = pedidoUseCase.getOrdersDelivered(estabelecimentoId);
 
 		return ResponseEntity.ok(ordersDelivered);
 	}
@@ -71,7 +66,7 @@ public class PedidoControler {
 	@GetMapping("/lista-pedidos")
 	public ResponseEntity<?> getLista() {
 		String estabelecimentoId = this.getUsername();
-		List<Map<String, String>> ordersNoDelivered = pedidoUseCase.getOrdersNoDelivered(estabelecimentoId);
+		List<Map<String, Object>> ordersNoDelivered = pedidoUseCase.getOrdersNoDelivered(estabelecimentoId);
 
 		return ResponseEntity.ok(ordersNoDelivered);
 	}
@@ -79,8 +74,8 @@ public class PedidoControler {
 	// Retorna uma lista com pedidos prontos ou em produção
 	@GetMapping("/{idEstabelecimento}/pedidos-clientes")
 	public ResponseEntity<?> getPedidoClientes(@PathVariable String idEstabelecimento,
-			@RequestBody List<String> pedidoIds) {
-		List<Map<String, String>> orderForClients = pedidoUseCase.getOrdersForClients(idEstabelecimento, pedidoIds);
+											   @RequestParam List<String> pedidoIds) {
+		List<Map<String, Object>> orderForClients = pedidoUseCase.getOrdersForClients(idEstabelecimento, pedidoIds);
 
 		return ResponseEntity.ok(orderForClients);
 	}
