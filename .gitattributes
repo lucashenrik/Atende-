@@ -1,0 +1,4 @@
+atendeMais/demo/src/main/java/** linguist-language=Java
+
+atendeMais/demo/target/** linguist-vendored
+atendeMais/demo/logs/**   linguist-vendored

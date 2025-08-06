@@ -6,9 +6,14 @@
 .project
 .factorypath
 
-# Maven
-/target/
-/logs/
+# Maven Wrapper
+/.mvn/
+mvnw
+mvnw.cmd
+
+# Build outputs 
+/**/target/
+/**/logs/
 /*.log
 
 # Sistema operacional
@@ -16,11 +21,11 @@
 Thumbs.db
 
 # Eclipse metadata
-.metadata/
+/.metadata/
 
-# Gerado automaticamente
+# Arquivos gerados
 *.tmp
 *.bak
 
-#Projeto
-src/main/resources/application.properties
+# Configuração sensível
+**/src/main/resources/application.properties
